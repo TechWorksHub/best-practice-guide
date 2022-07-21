@@ -1,3 +1,11 @@
+.. contents:: Table of Contents
+    :class: sidebar
+    :depth: 2
+
+.. header:: TechNES AI Best Practices Group: 
+    
+    `Guidance for Electronic Systems Engineers`:strong:
+
 AI/ML Overview and Trade-offs
 =============================
 
@@ -14,7 +22,6 @@ Aims of this document:
 * How much more detail needed
 * What prior experience assumed (general and AI specific)?
 * Make it narrower, focus on applications, examples specific users
-* continued on next slide…
 * Should I even use AI?
 * Need decision steps, choice of algorithm is towards the end, may need to try several
 * different collateral for stages as user gains expertise
@@ -242,8 +249,6 @@ Recurrent Neural Networks
 +-------------------------+---------------------------------------------------------------------------------------------------------------------------+-----------------------------------------------+
 | ANN                     | Description                                                                                                               |          Application                          |
 +=========================+===========================================================================================================================+===============================================+
-|                         |                                                                                                                           |                                               |
-+-------------------------+---------------------------------------------------------------------------------------------------------------------------+-----------------------------------------------+
 | Self-Organizing Map /   | Unsupervised technique producing a 1 or 2-D representation of a higher dimensional dataset such that similar observations | Visualizing data in large datasets, Project   |
 | Kohonen Net             | are clustered to aid onward analysis. The network is trained using competitive rather than error-correction learning so   | prioritization, Seismic or Failure mode       |
 |                         | that nodes ‘move’ within the dataspace to generate a map of the reference data. During iterative training, node weights   | analysis, Artwork creation                    |

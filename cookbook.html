@@ -1,0 +1,604 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+<title>cookbook.rst</title>
+<style type="text/css">
+
+* {
+    font-family: Muli, Helvetica, sans-serif;
+}
+
+body {
+    background-color: #ECEFF1;
+    /* margin: auto; */
+    margin-left: 20rem;
+    /* max-width: 100rem; */
+}
+body > * {
+    background-color: white;
+    line-height: 1.6;
+    padding: 2rem;
+    /* margin: auto; */
+    max-width: 80%;
+}
+
+.sidebar,
+.marginal,
+.admonition.marginal {
+  max-width: 18rem;
+  border: none;
+  background-color: #ECEFF1;
+  margin: 0.5rem;
+  margin-left: -22rem;
+  padding: 0.5rem;
+  position:fixed;
+  clear: left;
+  float: left;
+}
+.sidebar {
+  width: -20%;
+}
+
+div.topic.contents ul {
+    list-style-type: none;
+}
+div.topic.contents a {
+    text-decoration: none;
+    color: inherit;
+}
+
+a.toc-backref {
+    text-decoration: none;
+    color: inherit;
+}
+
+p.subtitle a {
+    text-decoration: none;
+    color: inherit;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+.header {
+    background-color: #5C6BC0;
+    color: white;
+    margin:0;
+
+}
+
+.header strong {
+    font-size: 3em;
+}
+</style>
+</head>
+<body>
+<div class="header">
+<p>TechNES AI Best Practices Group:</p>
+<p><strong>Guidance for Electronic Systems Engineers</strong></p>
+
+<hr class="header"/>
+</div>
+<div class="document">
+
+
+<div class="contents sidebar topic" id="table-of-contents">
+<p class="topic-title">Table of Contents</p>
+<ul class="simple">
+<li><a class="reference internal" href="#ai-ml-overview-and-trade-offs" id="id2">AI/ML Overview and Trade-offs</a><ul>
+<li><a class="reference internal" href="#aims-of-this-document" id="id3">Aims of this document:</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#candidate-documentation-technologies" id="id4">Candidate “Documentation” Technologies</a><ul>
+<li><a class="reference internal" href="#requirements" id="id5">Requirements</a></li>
+<li><a class="reference internal" href="#candidates" id="id6">Candidates</a></li>
+<li><a class="reference internal" href="#non-candidates" id="id7">Non-candidates</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#top-level-decision-steps" id="id8">Top Level Decision steps</a></li>
+<li><a class="reference internal" href="#overview-how-algorithms-learn" id="id9">Overview: How Algorithms Learn</a></li>
+<li><a class="reference internal" href="#neural-network-algorithm-families" id="id10">Neural Network Algorithm Families</a></li>
+<li><a class="reference internal" href="#non-neural-network-algorithm-families" id="id11">Non-Neural Network Algorithm Families</a></li>
+<li><a class="reference internal" href="#mathematical-models" id="id12">Mathematical Models</a></li>
+<li><a class="reference internal" href="#feed-forward-neural-networks" id="id13">Feed Forward Neural Networks</a></li>
+<li><a class="reference internal" href="#recurrent-neural-networks" id="id14">Recurrent Neural Networks</a></li>
+<li><a class="reference internal" href="#id1" id="id15">Recurrent Neural Networks</a></li>
+</ul>
+</div>
+<div class="section" id="ai-ml-overview-and-trade-offs">
+<h1><a class="toc-backref" href="#id2">AI/ML Overview and Trade-offs</a></h1>
+<div class="section" id="aims-of-this-document">
+<h2><a class="toc-backref" href="#id3">Aims of this document:</a></h2>
+<ul class="simple">
+<li>Key considerations to be aware of in employing AI/ML in an embedded system</li>
+<li>Guidance towards application appropriate solutions given relevant trade-offs and system-level requirements</li>
+<li>Doesn’t appear to be anything like this online</li>
+<li>Who are the end users and how will they use it?</li>
+<li>Tim likes “cheat sheets”</li>
+<li>How affected by the type of users (Verification engineer, designer, …)</li>
+<li>Only industry or also academic (note specific to TechNeS, and aimed a professional engineers)</li>
+<li>Can we reuse academic courses</li>
+<li>How much more detail needed</li>
+<li>What prior experience assumed (general and AI specific)?</li>
+<li>Make it narrower, focus on applications, examples specific users</li>
+<li>Should I even use AI?</li>
+<li>Need decision steps, choice of algorithm is towards the end, may need to try several</li>
+<li>different collateral for stages as user gains expertise</li>
+<li>Start with good and bad examples of AI in use</li>
+<li>how to balance information overload: break into steps, separate guides for different problems</li>
+</ul>
+</div>
+</div>
+<div class="section" id="candidate-documentation-technologies">
+<h1><a class="toc-backref" href="#id4">Candidate “Documentation” Technologies</a></h1>
+<div class="section" id="requirements">
+<h2><a class="toc-backref" href="#id5">Requirements</a></h2>
+<ul class="simple">
+<li>Must be good for collaborative work</li>
+<li>Must generate at least PDF, HTML, ideally help files</li>
+<li>Must be able to add mixed media (images/video)</li>
+<li>Needs version control</li>
+<li>Must be freely available to the group</li>
+</ul>
+</div>
+<div class="section" id="candidates">
+<h2><a class="toc-backref" href="#id6">Candidates</a></h2>
+<ul class="simple">
+<li>Restructured Text</li>
+<li>DocBook/DITA</li>
+</ul>
+</div>
+<div class="section" id="non-candidates">
+<h2><a class="toc-backref" href="#id7">Non-candidates</a></h2>
+<ul class="simple">
+<li>Overleaf/LaTex - can’t generate structured HTML</li>
+<li>MS Word/OpenOffice/LibreOffice - can’t generate structured HTML</li>
+<li>Canva - proprietary</li>
+</ul>
+</div>
+</div>
+<div class="section" id="top-level-decision-steps">
+<h1><a class="toc-backref" href="#id8">Top Level Decision steps</a></h1>
+<dl class="docutils">
+<dt>Step 1:</dt>
+<dd>Train user in vocabulary to be able to address the problem accurately.  Enable conversation between engineering and marketing to refine product (may be highly disruptively).</dd>
+<dt>Step 2:</dt>
+<dd>Can you relate your problem to an existing problem AI has already solved (data architecture and algorithm). Or do you need a new AI approach. Is it possible with AI? Or do you even need AI? We need to create the inverse table: what AI can do. Allow user to refine from general to specific AI choice</dd>
+<dt>Step 3:</dt>
+<dd>Identify candidate solutions (data architecture and algorithm), cross-check features against table in this document. Do this hierarchically.  Identify any wider impact on the system by choice of AI.</dd>
+<dt>Step 4:</dt>
+<dd>Identify AI engineering skills needed (training/buy-in)</dd>
+<dt>End step:</dt>
+<dd>Engineer can implement their project</dd>
+</dl>
+</div>
+<div class="section" id="overview-how-algorithms-learn">
+<h1><a class="toc-backref" href="#id9">Overview: How Algorithms Learn</a></h1>
+<table border="1" class="docutils">
+<colgroup>
+<col width="12%" />
+<col width="7%" />
+<col width="81%" />
+</colgroup>
+<thead valign="bottom">
+<tr><th class="head">How AI Algorithms learn</th>
+<th class="head" colspan="2">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr><td>Supervised</td>
+<td colspan="2"><dl class="first last docutils">
+<dt>The model is trained on ‘labelled’ data, where known correct outputs are labelled alongside the input data to enable future classification or predictions, sepcialized variants</dt>
+<dd><ul class="first last simple">
+<li>Semi-supervised: Not all the data is labelled or reliable, so need to mix with unsupervised techniques to pre-process the data</li>
+<li>Self-Supervised: Applying a pre-trained (pretext) supervised learning model to an unsupervised learning problem to address a specific problem</li>
+</ul>
+</dd>
+</dl>
+</td>
+</tr>
+<tr><td>Unsupervised</td>
+<td colspan="2">The model is presented with unlabeled data and so has to exploit inherent qualities in the input data, such as clustering or density / distribution to ‘learn’ how to process it.</td>
+</tr>
+<tr><td>Reinforcement</td>
+<td colspan="2">Technically a class of supervised learning, but usually categorized separately. The model operates without training but in an environment where it’s decision outputs (based on
+given input data) will elicit reward signals (positive and negative feedback). It must thereby optimise it’s internal model of likely success from a given current state.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="neural-network-algorithm-families">
+<h1><a class="toc-backref" href="#id10">Neural Network Algorithm Families</a></h1>
+<table border="1" class="docutils">
+<colgroup>
+<col width="12%" />
+<col width="7%" />
+<col width="81%" />
+</colgroup>
+<thead valign="bottom">
+<tr><th class="head">AI Algorithm Families</th>
+<th class="head" colspan="2">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr><td>Feed Forward Neural
+Networks</td>
+<td colspan="2">A collection of layered, interconnected nodes which sum weighted inputs and applies an activation (mathematical) function to derive output. Input data travels in one direction
+only and exits through output nodes. Before use FFN’s are trained using a training dataset and thus use a supervised learning approach.</td>
+</tr>
+<tr><td>Recurrent Neural
+Networks</td>
+<td colspan="2">By feeding intermediate layer outputs back to the inputs, better prediction of outcomes is achieved. In this way, some information the network possessed in the previous time-
+step is remembered by a memory function.</td>
+</tr>
+<tr><td>Unsupervised Neural
+Networks</td>
+<td colspan="2">The network does not receive a prior training dataset and, instead, is presented with unlabeled data. The network therefore has to exploit inherent qualities in the input data
+to ‘learn’ how to process it. Typically ‘training’ occurs ‘on the job’ e.g. using competitive rather than error-correction learning.</td>
+</tr>
+<tr><td>Graph Neural
+Networks</td>
+<td colspan="2">&nbsp;</td>
+</tr>
+<tr><td>Spiking Neural
+Networks</td>
+<td colspan="2">&nbsp;</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="non-neural-network-algorithm-families">
+<h1><a class="toc-backref" href="#id11">Non-Neural Network Algorithm Families</a></h1>
+<table border="1" class="docutils">
+<colgroup>
+<col width="12%" />
+<col width="7%" />
+<col width="81%" />
+</colgroup>
+<thead valign="bottom">
+<tr><th class="head">AI Algorithm Families</th>
+<th class="head" colspan="2">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr><td>Linear and related</td>
+<td colspan="2"><ul class="first last simple">
+<li>Linear Regression</li>
+<li>Spline Interpolation</li>
+<li>Support Vector Machine (SVM)</li>
+</ul>
+</td>
+</tr>
+<tr><td>Tree Based Methods</td>
+<td colspan="2"><ul class="first last simple">
+<li>Decision trees</li>
+<li>Random Forests</li>
+<li>Boosted/Bagged trees</li>
+<li>Gradient Boosted trees</li>
+</ul>
+</td>
+</tr>
+<tr><td>Nearest Neighbor</td>
+<td colspan="2"><ul class="first last simple">
+<li>K-nearest neighbor</li>
+<li>k-means</li>
+</ul>
+</td>
+</tr>
+<tr><td>Statistical</td>
+<td colspan="2"><ul class="first last simple">
+<li>Naieve Bayes</li>
+<li>T-test/F-test</li>
+<li><dl class="first docutils">
+<dt>Markov Chain Monte Carlo</dt>
+<dd><ul class="first last">
+<li>Simulated Annealing</li>
+<li>Dynamic Causal Modelling</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li>Full Bayesian Methods</li>
+</ul>
+</td>
+</tr>
+<tr><td>Symbolic</td>
+<td colspan="2"><ul class="first last simple">
+<li>Inductive Logic Programming</li>
+</ul>
+</td>
+</tr>
+<tr><td>Bio-Inspired</td>
+<td colspan="2"><ul class="first last simple">
+<li>Genetic Algorithms/Genetic Programming</li>
+<li>Any Colony Optimization</li>
+<li>Particle Swarm Optimization</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="mathematical-models">
+<h1><a class="toc-backref" href="#id12">Mathematical Models</a></h1>
+<table border="1" class="docutils">
+<colgroup>
+<col width="12%" />
+<col width="24%" />
+<col width="8%" />
+<col width="7%" />
+<col width="24%" />
+<col width="24%" />
+</colgroup>
+<thead valign="bottom">
+<tr><th class="head">Algorithm</th>
+<th class="head">Description</th>
+<th class="head">Type</th>
+<th class="head">Learning</th>
+<th class="head">Benefits</th>
+<th class="head">Application</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr><td>Linear Regression</td>
+<td>Line-fit algorithm, according to: y=ax+b.</td>
+<td>Regression</td>
+<td>Supervised</td>
+<td>Efficient for linear relationships e.g. trends
+or forecasts</td>
+<td>Drug-dosage relationships</td>
+</tr>
+<tr><td>Logistic Regression</td>
+<td>Discrete outcomes from linear data.</td>
+<td>Classification</td>
+<td>Supervised</td>
+<td>Efficient for linear relationships when the data
+set is linearly separable</td>
+<td>Medical data, Credit scoring,
+Language processing</td>
+</tr>
+<tr><td>Decision Tree</td>
+<td><p class="first">Data set is split recursively into a tree</p>
+<p class="last">comprising decision nodes and outcome leaves.</p>
+</td>
+<td><p class="first">Classification</p>
+<p class="last">(or Regression)</p>
+</td>
+<td>Supervised</td>
+<td>Fast and efficient to run. Easy to understand
+and interpret. Can handle any type of data</td>
+<td>Data mining, Planning, Fault diagnosis</td>
+</tr>
+<tr><td>Support Vector Machine</td>
+<td>SVM algorithms classify data in n
+(no of features)-dimensional space.</td>
+<td>Classification
+(or Regression)</td>
+<td>Supervised</td>
+<td>Handles high dimensional data, separating things
+into (typically two) groups with more separation
+than other algorithms by projecting the data
+into a more easily separable space.</td>
+<td>Face detection, Handwriting recognition,
+Image classification</td>
+</tr>
+<tr><td>Naieve Bayes</td>
+<td>Simple classification algorithm using
+conditional probability of an event based on
+prior events.</td>
+<td>Classification</td>
+<td>Supervised</td>
+<td>Requires less training data than other
+algorithms and handles both continuous and
+discrete data. Highly scalable with the number
+of predictors and data points. Fast runtime
+enables real-time predictions.</td>
+<td>Face recognition, Weather prediction,
+Medical diagnosis, News classification, Spam
+email detection based on word frequency vs real
+email.</td>
+</tr>
+<tr><td>K-nearest Neighbor</td>
+<td>Classification based on prior classification of
+the majority of (K) nearest neighbors with a
+distance function. (Becomes computationally
+expensive as dataset and dimensionality scale).</td>
+<td><p class="first">Classification</p>
+<p class="last">(or Regression)</p>
+</td>
+<td>Supervised</td>
+<td>Simple to implement and effective for data with
+low dimensionality. There is no training period
+(data is stored only for use later) which makes
+KNN faster than other (trained) algorithms.
+Furthermore, new training data can be added
+seamlessly.</td>
+<td>Text mining, Finance, Medical, Facial
+recognition, Recommendation systems (e.g. music
+based on age, genre, country)</td>
+</tr>
+<tr><td>K-Means</td>
+<td>Classifies data into K clusters through
+recursive clustering of data with similar
+features.</td>
+<td><p class="first">Classification</p>
+<p class="last">(or Regression)</p>
+</td>
+<td>Unsupervised</td>
+<td>Simple to implement and results are easy to
+interpret. Handles large datasets well and
+guarantees convergence. Easily adapts to changes
+in data.</td>
+<td>Image segmentation, Image compression, Biological
+data, Fraud detection, Transport data analysis</td>
+</tr>
+<tr><td>Random Forest</td>
+<td>Average across multiple decision trees
+trained on various subsets of the data.</td>
+<td><p class="first">Classification</p>
+<p class="last">(or Regression)</p>
+</td>
+<td>Supervised</td>
+<td>Reliable predictions that can be understood
+easily. Handles large datasets efficiently.
+More accurate than a single decision tree.</td>
+<td>Finance risk, Medical trends, Stock trading,
+E-commerce</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="feed-forward-neural-networks">
+<h1><a class="toc-backref" href="#id13">Feed Forward Neural Networks</a></h1>
+<table border="1" class="docutils">
+<colgroup>
+<col width="13%" />
+<col width="63%" />
+<col width="24%" />
+</colgroup>
+<thead valign="bottom">
+<tr><th class="head">ANN</th>
+<th class="head">Description</th>
+<th class="head">Application</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr><td>Feed Forward Neural
+Network</td>
+<td>Collection of interconnected nodes, arranged in layers. The basic unit is the Perceptron (or Threshold Logic Unit) - a
+single node which sums weighted inputs and applies an activation function to derive the output. In larger networks with
+multiple nodes, input data travels in one direction, passing through a number of input nodes and exiting through output
+nodes. In a multilayer network (three or more successive layers), each node is connected to all nodes in the next layer.
+The output is a function (activation function) of the sum of all inputs multiplied by their respective weights. During
+training (Supervised Learning), the weights are calculated through backpropagation.</td>
+<td>Data Compression, Pattern Recognition, Machine
+diagnostics, Image / Speech / Handwriting
+Recognition</td>
+</tr>
+<tr><td>Convolutional Neural
+Network</td>
+<td>A form of FFN Inspired by the animal visual cortex. The CNN is a 3D arrangement of neurons, employing convolutional
+processing rather than multiplication in its hidden layers. Each neuron in the first (convolutional) layer only
+processes information from a small part of the input field. The network understands images in parts and computes these
+operations multiple times to process the full image. Nodes are connected only locally to nearby neighbors unlike an FFN.</td>
+<td>Video recognition, semantic parsing and
+paraphrase detection.</td>
+</tr>
+<tr><td>Radial Basis Function
+Neural Network</td>
+<td>A three-layer FFN where the hidden layer uses a non-linear RBF activation function. Classification is performed by
+measuring the input’s similarity to previously trained data points.</td>
+<td>System modelling &amp; control, time series
+prediction, image classification</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="recurrent-neural-networks">
+<h1><a class="toc-backref" href="#id14">Recurrent Neural Networks</a></h1>
+<table border="1" class="docutils">
+<colgroup>
+<col width="13%" />
+<col width="63%" />
+<col width="24%" />
+</colgroup>
+<thead valign="bottom">
+<tr><th class="head">ANN</th>
+<th class="head">Description</th>
+<th class="head">Application</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr><td>Recurrent Neural
+Network</td>
+<td>Layer outputs fed back to the inputs help in predicting outcomes. The first layer is typically a feed forward neural
+network followed by a recurrent layer where some information it had in the previous time-step is remembered by a memory
+function.</td>
+<td>Handwriting / Speech recognition, Language
+modelling &amp; translation, Text summarization,
+Image tagging</td>
+</tr>
+<tr><td>Long short-term memory
+(LSTM)</td>
+<td>A more sophisticated RNN which uses memory gates to regulate information flow through the network so as to improve
+training by avoiding loss of small gradient data during backpropagation.</td>
+<td>Unsegmented connected handwriting recognition,
+speech recognition, robot control, video games</td>
+</tr>
+<tr><td>Sequence to Sequence
+(Seq2Seq)</td>
+<td>Two Recurrent Neural Networks working simultaneously. One RNN is configured as an encoder, processing the input data and
+the second as a decoder which derives the output based on the encoder’s final internal state.</td>
+<td>Machine translation, Speech recognition, Text
+summarization, Conversational models /
+Chat-bots, Video captioning</td>
+</tr>
+<tr><td>Attention network</td>
+<td>Attention networks mimic cognitive attention by enhancing some parts of the input data while diminishing other parts;
+i.e. to focus attention on a small but important part of the data. Learning which part of the data is more important
+than others depends on the context and is trained by the gradient descent algorithm.</td>
+<td>Reasoning, Complex language processing.
+Multi-sensory data processing
+(sound, images, video, and text)</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="id1">
+<h1><a class="toc-backref" href="#id15">Recurrent Neural Networks</a></h1>
+<table border="1" class="docutils">
+<colgroup>
+<col width="13%" />
+<col width="63%" />
+<col width="24%" />
+</colgroup>
+<thead valign="bottom">
+<tr><th class="head">ANN</th>
+<th class="head">Description</th>
+<th class="head">Application</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr><td>Self-Organizing Map /
+Kohonen Net</td>
+<td>Unsupervised technique producing a 1 or 2-D representation of a higher dimensional dataset such that similar observations
+are clustered to aid onward analysis. The network is trained using competitive rather than error-correction learning so
+that nodes ‘move’ within the dataspace to generate a map of the reference data. During iterative training, node weights
+change in order to ‘cluster’ the neurons together to reduce the distance between neuron and input. The map can then
+classify observations for the input space by finding the node with the closest weight vector to the input space vector.</td>
+<td>Visualizing data in large datasets, Project
+prioritization, Seismic or Failure mode
+analysis, Artwork creation</td>
+</tr>
+<tr><td>Generative adversarial
+network (GAN)</td>
+<td>Two neural networks compete in a zero-sum game. The generator network learns to generate new data with the same
+statistics as the training set in an unsupervised way, as it is indirectly trained by the discriminator (the second
+neural network) which can tell how realistic a given input is while it is itself being updated dynamically. GANs are
+also useful for semi-supervised, fully supervised and reinforcement learning.</td>
+<td>Image-to-Image / Text-to-Image Translation,
+Semantic image manipulation and creation,
+Photo editing / blending, Face aging, Video
+prediction, Super-resolution</td>
+</tr>
+<tr><td>Autoencoder</td>
+<td>An autoencoder is a Feed Forward Neural Network which learns an efficient representation (encoding) for a set of
+unlabeled data , through unsupervised learning. The autoencoder consists of two main parts: an encoder that maps the
+input into the code, and a decoder that maps the code to a reconstruction of the input. The encoding is refined by
+attempting to regenerate the input from the encoding whilst minimizing the difference between input and output. The
+network therefore generates new data rather than predicting target values and is thus unsupervised.</td>
+<td>Dimensionality reduction, Information
+retrieval, Anomaly detection Feature
+extraction, Image denoising and compression,
+Image search, Image generation</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</body>
+</html>
