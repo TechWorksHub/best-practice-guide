@@ -3,8 +3,192 @@
     :depth: 2
 
 .. header:: TechNES AI Best Practices Group: 
-    
-    `Guidance for Electronic Systems Engineers`:strong:
+
+
+
+Summary
+=============================
+
+What is Machine Learning, exactly? Is it the same as Artificial Intelligence?
+These terms have exploded in common and industrial usage in the past decade, and
+it is increasingly important to be able to understand and talk precisely about 
+these topics. ML promises to offer firms a new paradigm of automation, yet is 
+often less transparent than other methods. This means that significant care 
+must be taken to avoid undetected mistakes leading to misplaced trust in 
+automated systems that are not performing as expected. Similar problems can 
+arise from data alone if existing human biases are captured by these 
+algorithms. For these reasons, this document will guide engineers to:
+
+* Demystify the jargon surrounding AI and Machine Learning
+* Navigate the vast amount of ML theory, techniques and resources available
+* Solve problems, avoiding common mistakes and wasted efforts
+
+It can be used as a reference before, during and after a machine learning
+project is developed.
+
+
+Introduction
+=============================
+
+“Can machines think?” Was the question posed by Alan Turing in 1950 to open the
+field of Artificial Intelligence. He challenged the world, and himself, to
+replicate natural (human, animal) intelligence artificially, creating systems
+that can think and act rationally. Creating a system that could achieve this to
+the level of a human would be an Artificial General Intelligence (AGI), or a 
+“strong” AI by some definitions. The answer to his question remains unknown to 
+this day, however it is certainly possible for machines to learn. In the sense 
+hat algorithms can adjust themselves to improve performance, “Machine Learning” 
+(a.k.a “weak AI”) is not only possible, but in widespread usage today. 
+
+This forms the core distinction between strong AI and ML. Machine learning 
+algorithms cannot “think” like humans can, but they can use data to “learn” to 
+improve themselves. In this document we will use “ML” to refer to the class of 
+algorithm described by weak AI and Machine Learning, and “AI” to refer to 
+Strong AI and AGI. 
+
+Where AGI refers in some way to an artificial equivalent to the human brain, it 
+is perhaps less intimidating to think of ML as any computer program which learns
+through self-adjustment. The gist of ML is that we write a generic algorithm 
+with a list of settings that determine what the algorithm does. Initially, the 
+settings are decided randomly, so the algorithm won’t do anything useful. But 
+then, we can use data to optimise (tweak) those settings to make the algorithm 
+do what we actually want it to do. Simple!
+
+A great number of techniques come under the umbrella of ML.  These will be 
+broken down in detail later in this document, however an important category to 
+consider is called “deep learning” (DL). Yet another term often (mistakenly) 
+used interchangeably with AI and ML, this refers to a specific subset of ML 
+algorithm, called deep neural networks. Whereas non-DL methods usually expect 
+their input to be made of individually useful elements (think eye colour, jaw 
+length, glasses(Y/N) etc) called “features”, deep neural networks are used to 
+learn to extract useful features from high dimensional data (think the 
+individual pixel values from a photo of a face).
+
+Language frames the way we think, thus it is critical to have a strong 
+understanding of these concepts and associated terminology. Having established 
+here what we mean when we talk about AI, ML and DL, the first aim of this 
+document is to clarify all the remaining technical jargon an engineer might 
+encounter when considering using a machine learning approach to a problem. 
+
+Then, armed with this terminology, we can dive deeper into the details of how to 
+approach building a robust and trustworthy machine learning system.
+
+Overview: Key Concepts and Terminology
+=======================================
+
+In this section, we introduce and overview some of the key concepts and 
+terminology that are important in understanding and discussing AI and machine 
+learning technology. This section is not intended to serve as an exhaustive 
+discussion of the topics in question, but as an introduction to the key points 
+and vocabulary that will frame the rest of the discussion on this topic. Key 
+terms and concepts will be highlighted for the reader, with links to a more 
+detailed description of the term in the appendix.
+
+To briefly review what we discussed in the introduction: the type of 
+intelligence and learning in algorithms that we are interested in in this 
+manual are algorithms that learn mathematical models of the world from some 
+data, in order to make predictions about other unseen or future data. One 
+important idea and terminology that we need to consider first is structured 
+data and unstructured data.
+
+Structured vs Unstructured Data
+AI and Machine Learning models are no different from any other piece of code in 
+requiring their input data to follow a consistent format. Unfortunately, data 
+collected in the real world rarely follows the type of structure and 
+organization that is needed for ingestion by an AI or Machine learning 
+algorithm, and in many cases the work done to transform data into an 
+appropriate structured format is some of the most important work done in any AI 
+and Machine Learning pipeline. We make this distinction between data that has 
+been put into a useful structured format as structured data, and data that 
+exists in a raw, unprocessed format as unstructured data.  
+
+When dealing with data in the real world, we will often split it up into 
+categories or types. One such distinction often made that is especially 
+important in the context of AI and Machine Learning is the split of data into 
+continuous data and discrete data. Continuous data is data that can take on 
+any number of infinite values across a given range, for example, a measure of 
+millimeters of rainfall per hour. Discrete data on the other hand is any type 
+of data that falls into a fixed number of categories. These categories can be 
+both ordinal data in which there is a natural ordering between the categories 
+(shoe size, for example), and nominal data, where the categories are distinct 
+(eye color, for example). While this distinction is important for many parts of 
+AI and Machine Learning, the distinction between whether an AI and Machine 
+Learning algorithm is trying to predict continuous and discrete data is so 
+important that it has its own nomenclature of regression and classification 
+algorithms respectively.
+
+While these distinctions are important, we suggest that readers focus on the 
+practical and functional aspects of this distinction rather than its 
+definitional aspects unless they are doing hard math. Consider, for example, 
+the case of the price paid at a market for an apple. While it may be 
+definitionally appropriate to consider the price as a discrete number (unless 
+our merchant is willing to accept fractional coins), it may be practically 
+more suitable to consider it as continuous. Avoiding such problems is why 
+statisticians use measure theory, which we caution the reader is even less 
+fun than it sounds.  
+
+Regression vs Classification Algorithms
+The distinction between regression (continuous output data) and classification 
+(discrete output data) is particularly important in AI and Machine Learning 
+algorithms, because the type of data that the algorithm outputs has a 
+significant effect on how it must function. Notably, some algorithms (e.g. 
+Support Vector Machines) are really only designed to function in one of these 
+modalities, and require significant adaptations to perform (likely very poorly) 
+in the other.
+
+
+While we have been discussing some of the concepts and terminology around data 
+to this point, we have used the terms “learn”, “learning” and “learning from 
+data” to describe what our algorithms do without really making it explicit what 
+we actually mean by this. One of the reasons that we’ve avoided doing this is 
+that “learning” in the context we’re discussing it is conveniently, without 
+further qualifiers, a term that covers several different ideas. These 
+differences stem from the way that we use data in order to “learn”. The
+most prominent of two of these ideas are supervised learning and unsupervised 
+learning, which are concerned whether we learn from data that list the correct 
+output the algorithms should produce for some given input data (labeled data),
+or simply the input data themselves (unlabeled data). 
+
+Supervised vs Unsupervised vs Reinforcement vs Other Learning
+We use the nomenclature of Supervised vs Unsupervised (vs others) to describe 
+the way in which our algorithms are learning. In Supervised learning, we learn 
+from matched input data/output data pairs, data for which we already have the 
+correct output the algorithms should predict for a set of given inputs 
+(“learning by example”). We call this data labeled data, because our set of 
+input data is labeled with the corresponding correct solutions.For example, 
+we might be interested in predicting the future prices of the stock market from 
+economic indications, by looking at how these economic indicators have predicted 
+its historical past prices. In Unsupervised learning, we only have access to the 
+input data without any corresponding output solution attached. We call this data 
+unlabeled data, and our unsupervised learning algorithms and are generally 
+interested in predicting some quality of this data (“pattern learning”). For 
+example, we might be detecting unusual anomalies of electrical usage in the 
+grid.
+
+While it is generally preferable to use supervised learning when we can 
+because learning by example is easier, there are many situations in which 
+unsupervised approaches are more appropriate. Even putting aside the fact 
+that unlabeled data is easier to collect (since we don’t need to label it), 
+for many problems supervised approaches are simply not practical. In our 
+electrical grid example above, it would be infeasible to train a supervised 
+model to do similar anomaly detection.  By definition, anomalies are rare and 
+unusual data points that fall outside of the usual observations in the data. 
+Creating a labeled dataset of them would be both impractical, and any 
+supervised algorithm that used it would be prescriptive - it would only catch 
+anomalies similar to anomalies we’ve trained on, where an unsupervised approach 
+instead catches ones that are dissimilar to everything we’ve seen so far. 
+
+There are also several other learning approaches that fit within the 
+supervised/unsupervised dichotomy discussed so far. A common one is 
+Reinforcement Learning. In Reinforcement Learning, the algorithm is not fed a 
+set of data, but selects which piece of data it wants to learn from in future 
+from the pieces of data it has had up until now. Another common paradigm is 
+semi-supervised learning, in which an algorithm learns from some set data that 
+is labeled, and some (usually larger) set of data that is unlabelled.
+
+
+
+
 
 AI/ML Overview and Trade-offs
 =============================
