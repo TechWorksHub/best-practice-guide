@@ -88,34 +88,16 @@ To briefly review what we discussed in the introduction: the type of
 intelligence and learning in algorithms that we are interested in in this 
 manual are algorithms that learn mathematical models of the world from some 
 data, in order to make predictions about other unseen or future data. One 
-important idea and terminology that we need to consider first is structured 
+important idea that we need to consider first is structured 
 data and unstructured data.
 
-Structured vs Unstructured Data
-AI and Machine Learning models are no different from any other piece of code in 
-requiring their input data to follow a consistent format. Unfortunately, data 
-collected in the real world rarely follows the type of structure and 
-organization that is needed for ingestion by an AI or Machine learning 
-algorithm, and in many cases the work done to transform data into an 
-appropriate structured format is some of the most important work done in any AI 
-and Machine Learning pipeline. We make this distinction between data that has 
-been put into a useful structured format as structured data, and data that 
-exists in a raw, unprocessed format as unstructured data.  
+Breakaway: Structured vs Unstructured Data
+AI and Machine Learning models are no different from any other computer program in that they require their input data to follow a consistent format. Unfortunately, data collected in the real world rarely follows the type of structure and organization that is needed for ingestion by an AI or Machine learning algorithm, and in many cases the work done to transform data into an appropriate structured format is some of the most important work done in any AI and Machine Learning pipeline. We make this distinction between data that has been put into a useful structured format as structured data, and data that exists in a raw, unprocessed format as unstructured data.  
 
 When dealing with data in the real world, we will often split it up into 
 categories or types. One such distinction often made that is especially 
 important in the context of AI and Machine Learning is the split of data into 
-continuous data and discrete data. Continuous data is data that can take on 
-any number of infinite values across a given range, for example, a measure of 
-millimeters of rainfall per hour. Discrete data on the other hand is any type 
-of data that falls into a fixed number of categories. These categories can be 
-both ordinal data in which there is a natural ordering between the categories 
-(shoe size, for example), and nominal data, where the categories are distinct 
-(eye color, for example). While this distinction is important for many parts of 
-AI and Machine Learning, the distinction between whether an AI and Machine 
-Learning algorithm is trying to predict continuous and discrete data is so 
-important that it has its own nomenclature of regression and classification 
-algorithms respectively.
+continuous data and discrete data. Continuous data can take on any number of infinite values across a given range, for example, a measure of rainfall per hour. Discrete data on the other hand is any type of data that falls into a fixed number of categories. These categories can be both ordinal data in which there is a natural ordering between the categories (shoe size, for example), and nominal data, where the categories are distinct (eye color, for example). While this distinction is important for many parts of AI and Machine Learning, the distinction between whether an AI and Machine Learning algorithm is trying to predict continuous and discrete data is so important that it has its own nomenclature of regression and classification algorithms respectively.
 
 While these distinctions are important, we suggest that readers focus on the 
 practical and functional aspects of this distinction rather than its 
@@ -127,15 +109,8 @@ more suitable to consider it as continuous. Avoiding such problems is why
 statisticians use measure theory, which we caution the reader is even less 
 fun than it sounds.  
 
-Regression vs Classification Algorithms
-The distinction between regression (continuous output data) and classification 
-(discrete output data) is particularly important in AI and Machine Learning 
-algorithms, because the type of data that the algorithm outputs has a 
-significant effect on how it must function. Notably, some algorithms (e.g. 
-Support Vector Machines) are really only designed to function in one of these 
-modalities, and require significant adaptations to perform (likely very poorly) 
-in the other.
-
+Breakaway: Regression vs Classification Algorithms
+The distinction between regression (continuous output data) and classification (discrete output data) is particularly important in AI and Machine Learning algorithms, because the type of data that the algorithm outputs has a significant effect on how it must function. Notably, some algorithms (e.g. Support Vector Machines) are only designed to function in one of these modalities, and require significant adaptations to perform (likely very poorly) in the other.
 
 While we have been discussing some of the concepts and terminology around data 
 to this point, we have used the terms “learn”, “learning” and “learning from 
@@ -149,7 +124,7 @@ learning, which are concerned whether we learn from data that list the correct
 output the algorithms should produce for some given input data (labeled data),
 or simply the input data themselves (unlabeled data). 
 
-Supervised vs Unsupervised vs Reinforcement vs Other Learning
+Breakaway: Supervised vs Unsupervised vs Reinforcement vs Other Learning
 We use the nomenclature of Supervised vs Unsupervised (vs others) to describe 
 the way in which our algorithms are learning. In Supervised learning, we learn 
 from matched input data/output data pairs, data for which we already have the 
