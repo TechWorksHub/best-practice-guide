@@ -1,2361 +1,569 @@
-%PDF-1.4
-%���� ReportLab Generated PDF document http://www.reportlab.com
-1 0 obj
-<<
-/F1 2 0 R /F2 3 0 R /F3 49 0 R
->>
-endobj
-2 0 obj
-<<
-/BaseFont /Helvetica /Encoding /WinAnsiEncoding /Name /F1 /Subtype /Type1 /Type /Font
->>
-endobj
-3 0 obj
-<<
-/BaseFont /Helvetica-Bold /Encoding /WinAnsiEncoding /Name /F2 /Subtype /Type1 /Type /Font
->>
-endobj
-4 0 obj
-<<
-/Border [ 0 0 0 ] /Contents () /Dest [ 46 0 R /XYZ 62.69291 336.0236 0 ] /Rect [ 62.69291 711.0236 108.2629 723.0236 ] /Subtype /Link /Type /Annot
->>
-endobj
-5 0 obj
-<<
-/Border [ 0 0 0 ] /Contents () /Dest [ 46 0 R /XYZ 62.69291 336.0236 0 ] /Rect [ 527.0227 711.7736 532.5827 723.7736 ] /Subtype /Link /Type /Annot
->>
-endobj
-6 0 obj
-<<
-/Border [ 0 0 0 ] /Contents () /Dest [ 47 0 R /XYZ 62.69291 753.0236 0 ] /Rect [ 62.69291 693.0236 141.0429 705.0236 ] /Subtype /Link /Type /Annot
->>
-endobj
-7 0 obj
-<<
-/Border [ 0 0 0 ] /Contents () /Dest [ 47 0 R /XYZ 62.69291 753.0236 0 ] /Rect [ 527.0227 693.7736 532.5827 705.7736 ] /Subtype /Link /Type /Annot
->>
-endobj
-8 0 obj
-<<
-/Border [ 0 0 0 ] /Contents () /Dest [ 47 0 R /XYZ 62.69291 606.0236 0 ] /Rect [ 62.69291 675.0236 121.0229 687.0236 ] /Subtype /Link /Type /Annot
->>
-endobj
-9 0 obj
-<<
-/Border [ 0 0 0 ] /Contents () /Dest [ 47 0 R /XYZ 62.69291 606.0236 0 ] /Rect [ 527.0227 675.7736 532.5827 687.7736 ] /Subtype /Link /Type /Annot
->>
-endobj
-10 0 obj
-<<
-/Border [ 0 0 0 ] /Contents () /Dest [ 47 0 R /XYZ 62.69291 243.0236 0 ] /Rect [ 62.69291 657.0236 263.3029 669.0236 ] /Subtype /Link /Type /Annot
->>
-endobj
-11 0 obj
-<<
-/Border [ 0 0 0 ] /Contents () /Dest [ 47 0 R /XYZ 62.69291 243.0236 0 ] /Rect [ 527.0227 657.7736 532.5827 669.7736 ] /Subtype /Link /Type /Annot
->>
-endobj
-12 0 obj
-<<
-/Border [ 0 0 0 ] /Contents () /Dest [ 50 0 R /XYZ 62.69291 717.0236 0 ] /Rect [ 82.69291 639.0236 358.3829 651.0236 ] /Subtype /Link /Type /Annot
->>
-endobj
-13 0 obj
-<<
-/Border [ 0 0 0 ] /Contents () /Dest [ 50 0 R /XYZ 62.69291 717.0236 0 ] /Rect [ 527.0227 639.7736 532.5827 651.7736 ] /Subtype /Link /Type /Annot
->>
-endobj
-14 0 obj
-<<
-/Border [ 0 0 0 ] /Contents () /Dest [ 50 0 R /XYZ 62.69291 669.0236 0 ] /Rect [ 62.69291 621.0236 158.2629 633.0236 ] /Subtype /Link /Type /Annot
->>
-endobj
-15 0 obj
-<<
-/Border [ 0 0 0 ] /Contents () /Dest [ 50 0 R /XYZ 62.69291 669.0236 0 ] /Rect [ 527.0227 621.7736 532.5827 633.7736 ] /Subtype /Link /Type /Annot
->>
-endobj
-16 0 obj
-<<
-/Border [ 0 0 0 ] /Contents () /Dest [ 50 0 R /XYZ 62.69291 636.0236 0 ] /Rect [ 82.69291 603.0236 137.1729 615.0236 ] /Subtype /Link /Type /Annot
->>
-endobj
-17 0 obj
-<<
-/Border [ 0 0 0 ] /Contents () /Dest [ 50 0 R /XYZ 62.69291 636.0236 0 ] /Rect [ 527.0227 603.7736 532.5827 615.7736 ] /Subtype /Link /Type /Annot
->>
-endobj
-18 0 obj
-<<
-/Border [ 0 0 0 ] /Contents () /Dest [ 50 0 R /XYZ 62.69291 606.0236 0 ] /Rect [ 82.69291 585.0236 172.1629 597.0236 ] /Subtype /Link /Type /Annot
->>
-endobj
-19 0 obj
-<<
-/Border [ 0 0 0 ] /Contents () /Dest [ 50 0 R /XYZ 62.69291 606.0236 0 ] /Rect [ 527.0227 585.7736 532.5827 597.7736 ] /Subtype /Link /Type /Annot
->>
-endobj
-20 0 obj
-<<
-/Border [ 0 0 0 ] /Contents () /Dest [ 50 0 R /XYZ 62.69291 576.0236 0 ] /Rect [ 82.69291 567.0236 169.9329 579.0236 ] /Subtype /Link /Type /Annot
->>
-endobj
-21 0 obj
-<<
-/Border [ 0 0 0 ] /Contents () /Dest [ 50 0 R /XYZ 62.69291 576.0236 0 ] /Rect [ 527.0227 567.7736 532.5827 579.7736 ] /Subtype /Link /Type /Annot
->>
-endobj
-22 0 obj
-<<
-/Border [ 0 0 0 ] /Contents () /Dest [ 50 0 R /XYZ 62.69291 546.0236 0 ] /Rect [ 62.69291 549.0236 84.36291 561.0236 ] /Subtype /Link /Type /Annot
->>
-endobj
-23 0 obj
-<<
-/Border [ 0 0 0 ] /Contents () /Dest [ 50 0 R /XYZ 62.69291 546.0236 0 ] /Rect [ 527.0227 549.7736 532.5827 561.7736 ] /Subtype /Link /Type /Annot
->>
-endobj
-24 0 obj
-<<
-/Border [ 0 0 0 ] /Contents () /Dest [ 50 0 R /XYZ 62.69291 513.0236 0 ] /Rect [ 82.69291 531.0236 187.7429 543.0236 ] /Subtype /Link /Type /Annot
->>
-endobj
-25 0 obj
-<<
-/Border [ 0 0 0 ] /Contents () /Dest [ 50 0 R /XYZ 62.69291 513.0236 0 ] /Rect [ 527.0227 531.7736 532.5827 543.7736 ] /Subtype /Link /Type /Annot
->>
-endobj
-26 0 obj
-<<
-/Border [ 0 0 0 ] /Contents () /Dest [ 50 0 R /XYZ 62.69291 483.0236 0 ] /Rect [ 82.69291 513.0236 150.4929 525.0236 ] /Subtype /Link /Type /Annot
->>
-endobj
-27 0 obj
-<<
-/Border [ 0 0 0 ] /Contents () /Dest [ 50 0 R /XYZ 62.69291 483.0236 0 ] /Rect [ 527.0227 513.7736 532.5827 525.7736 ] /Subtype /Link /Type /Annot
->>
-endobj
-28 0 obj
-<<
-/Border [ 0 0 0 ] /Contents () /Dest [ 50 0 R /XYZ 62.69291 453.0236 0 ] /Rect [ 82.69291 495.0236 150.5029 507.0236 ] /Subtype /Link /Type /Annot
->>
-endobj
-29 0 obj
-<<
-/Border [ 0 0 0 ] /Contents () /Dest [ 50 0 R /XYZ 62.69291 453.0236 0 ] /Rect [ 527.0227 495.7736 532.5827 507.7736 ] /Subtype /Link /Type /Annot
->>
-endobj
-30 0 obj
-<<
-/Border [ 0 0 0 ] /Contents () /Dest [ 50 0 R /XYZ 62.69291 423.0236 0 ] /Rect [ 62.69291 477.0236 261.0629 489.0236 ] /Subtype /Link /Type /Annot
->>
-endobj
-31 0 obj
-<<
-/Border [ 0 0 0 ] /Contents () /Dest [ 50 0 R /XYZ 62.69291 423.0236 0 ] /Rect [ 527.0227 477.7736 532.5827 489.7736 ] /Subtype /Link /Type /Annot
->>
-endobj
-32 0 obj
-<<
-/Border [ 0 0 0 ] /Contents () /Dest [ 50 0 R /XYZ 62.69291 390.0236 0 ] /Rect [ 82.69291 459.0236 126.0329 471.0236 ] /Subtype /Link /Type /Annot
->>
-endobj
-33 0 obj
-<<
-/Border [ 0 0 0 ] /Contents () /Dest [ 50 0 R /XYZ 62.69291 390.0236 0 ] /Rect [ 527.0227 459.7736 532.5827 471.7736 ] /Subtype /Link /Type /Annot
->>
-endobj
-34 0 obj
-<<
-/Border [ 0 0 0 ] /Contents () /Dest [ 50 0 R /XYZ 62.69291 360.0236 0 ] /Rect [ 82.69291 441.0236 202.1629 453.0236 ] /Subtype /Link /Type /Annot
->>
-endobj
-35 0 obj
-<<
-/Border [ 0 0 0 ] /Contents () /Dest [ 50 0 R /XYZ 62.69291 360.0236 0 ] /Rect [ 527.0227 441.7736 532.5827 453.7736 ] /Subtype /Link /Type /Annot
->>
-endobj
-36 0 obj
-<<
-/Border [ 0 0 0 ] /Contents () /Dest [ 50 0 R /XYZ 62.69291 330.0236 0 ] /Rect [ 82.69291 423.0236 156.5929 435.0236 ] /Subtype /Link /Type /Annot
->>
-endobj
-37 0 obj
-<<
-/Border [ 0 0 0 ] /Contents () /Dest [ 50 0 R /XYZ 62.69291 330.0236 0 ] /Rect [ 527.0227 423.7736 532.5827 435.7736 ] /Subtype /Link /Type /Annot
->>
-endobj
-38 0 obj
-<<
-/Border [ 0 0 0 ] /Contents () /Dest [ 53 0 R /XYZ 62.69291 753.0236 0 ] /Rect [ 82.69291 405.0236 163.8229 417.0236 ] /Subtype /Link /Type /Annot
->>
-endobj
-39 0 obj
-<<
-/Border [ 0 0 0 ] /Contents () /Dest [ 53 0 R /XYZ 62.69291 753.0236 0 ] /Rect [ 527.0227 405.7736 532.5827 417.7736 ] /Subtype /Link /Type /Annot
->>
-endobj
-40 0 obj
-<<
-/Border [ 0 0 0 ] /Contents () /Dest [ 53 0 R /XYZ 62.69291 723.0236 0 ] /Rect [ 62.69291 387.0236 210.5029 399.0236 ] /Subtype /Link /Type /Annot
->>
-endobj
-41 0 obj
-<<
-/Border [ 0 0 0 ] /Contents () /Dest [ 53 0 R /XYZ 62.69291 723.0236 0 ] /Rect [ 527.0227 387.7736 532.5827 399.7736 ] /Subtype /Link /Type /Annot
->>
-endobj
-42 0 obj
-<<
-/Border [ 0 0 0 ] /Contents () /Dest [ 53 0 R /XYZ 62.69291 690.0236 0 ] /Rect [ 62.69291 369.0236 113.8229 381.0236 ] /Subtype /Link /Type /Annot
->>
-endobj
-43 0 obj
-<<
-/Border [ 0 0 0 ] /Contents () /Dest [ 53 0 R /XYZ 62.69291 690.0236 0 ] /Rect [ 527.0227 369.7736 532.5827 381.7736 ] /Subtype /Link /Type /Annot
->>
-endobj
-44 0 obj
-<<
-/Border [ 0 0 0 ] /Contents () /Dest [ 53 0 R /XYZ 62.69291 657.0236 0 ] /Rect [ 62.69291 351.0236 108.2529 363.0236 ] /Subtype /Link /Type /Annot
->>
-endobj
-45 0 obj
-<<
-/Border [ 0 0 0 ] /Contents () /Dest [ 53 0 R /XYZ 62.69291 657.0236 0 ] /Rect [ 527.0227 351.7736 532.5827 363.7736 ] /Subtype /Link /Type /Annot
->>
-endobj
-46 0 obj
-<<
-/Annots [ 4 0 R 5 0 R 6 0 R 7 0 R 8 0 R 9 0 R 10 0 R 11 0 R 12 0 R 13 0 R 
-  14 0 R 15 0 R 16 0 R 17 0 R 18 0 R 19 0 R 20 0 R 21 0 R 22 0 R 23 0 R 
-  24 0 R 25 0 R 26 0 R 27 0 R 28 0 R 29 0 R 30 0 R 31 0 R 32 0 R 33 0 R 
-  34 0 R 35 0 R 36 0 R 37 0 R 38 0 R 39 0 R 40 0 R 41 0 R 42 0 R 43 0 R 
-  44 0 R 45 0 R ] /Contents 81 0 R /MediaBox [ 0 0 595.2756 841.8898 ] /Parent 80 0 R /Resources <<
-/Font 1 0 R /ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ]
->> /Rotate 0 
-  /Trans <<
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+<title>cookbook.rst</title>
+<style type="text/css">
 
->> /Type /Page
->>
-endobj
-47 0 obj
-<<
-/Contents 82 0 R /MediaBox [ 0 0 595.2756 841.8898 ] /Parent 80 0 R /Resources <<
-/Font 1 0 R /ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ]
->> /Rotate 0 /Trans <<
+* {
+    font-family: Muli, Helvetica, sans-serif;
+}
 
->> 
-  /Type /Page
->>
-endobj
-48 0 obj
-<<
-/Contents 83 0 R /MediaBox [ 0 0 595.2756 841.8898 ] /Parent 80 0 R /Resources <<
-/Font 1 0 R /ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ]
->> /Rotate 0 /Trans <<
+body {
+    background-color: #ECEFF1;
+    margin-left: 20rem;
+}
+body > * {
+    background-color: white;
+    line-height: 1.6;
+    padding: 2rem;
+    max-width: 80%;
+}
 
->> 
-  /Type /Page
->>
-endobj
-49 0 obj
-<<
-/BaseFont /Helvetica-BoldOblique /Encoding /WinAnsiEncoding /Name /F3 /Subtype /Type1 /Type /Font
->>
-endobj
-50 0 obj
-<<
-/Contents 84 0 R /MediaBox [ 0 0 595.2756 841.8898 ] /Parent 80 0 R /Resources <<
-/Font 1 0 R /ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ]
->> /Rotate 0 /Trans <<
+.sidebar,
+.marginal,
+.admonition.marginal {
+  max-width: 18rem;
+  border: none;
+  background-color: #ECEFF1;
+  margin: 0.5rem;
+  margin-left: -22rem;
+  padding: 0.5rem;
+  position:fixed;
+  clear: left;
+  float: left;
+}
+.sidebar {
+  width: -20%;
+}
 
->> 
-  /Type /Page
->>
-endobj
-51 0 obj
-<<
-/Contents 85 0 R /MediaBox [ 0 0 595.2756 841.8898 ] /Parent 80 0 R /Resources <<
-/Font 1 0 R /ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ]
->> /Rotate 0 /Trans <<
+div.topic.contents ul {
+    list-style-type: none;
+}
+div.topic.contents a {
+    text-decoration: none;
+    color: inherit;
+}
 
->> 
-  /Type /Page
->>
-endobj
-52 0 obj
-<<
-/Contents 86 0 R /MediaBox [ 0 0 595.2756 841.8898 ] /Parent 80 0 R /Resources <<
-/Font 1 0 R /ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ]
->> /Rotate 0 /Trans <<
+a.toc-backref {
+    text-decoration: none;
+    color: inherit;
+}
 
->> 
-  /Type /Page
->>
-endobj
-53 0 obj
-<<
-/Contents 87 0 R /MediaBox [ 0 0 595.2756 841.8898 ] /Parent 80 0 R /Resources <<
-/Font 1 0 R /ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ]
->> /Rotate 0 /Trans <<
+p.subtitle a {
+    text-decoration: none;
+    color: inherit;
+}
 
->> 
-  /Type /Page
->>
-endobj
-54 0 obj
-<<
-/Outlines 56 0 R /PageLabels 88 0 R /PageMode /UseNone /Pages 80 0 R /Type /Catalog
->>
-endobj
-55 0 obj
-<<
-/Author () /CreationDate (D:20221021161936+00'00') /Creator (\(unspecified\)) /Keywords () /ModDate (D:20221021161936+00'00') /Producer (ReportLab PDF Library - www.reportlab.com) 
-  /Subject (\(unspecified\)) /Title () /Trapped /False
->>
-endobj
-56 0 obj
-<<
-/Count 28 /First 57 0 R /Last 79 0 R /Type /Outlines
->>
-endobj
-57 0 obj
-<<
-/Dest [ 46 0 R /XYZ 62.69291 336.0236 0 ] /Next 58 0 R /Parent 56 0 R /Title (Summary)
->>
-endobj
-58 0 obj
-<<
-/Dest [ 47 0 R /XYZ 62.69291 753.0236 0 ] /Next 59 0 R /Parent 56 0 R /Prev 57 0 R /Title (Target Audience)
->>
-endobj
-59 0 obj
-<<
-/Dest [ 47 0 R /XYZ 62.69291 606.0236 0 ] /Next 60 0 R /Parent 56 0 R /Prev 58 0 R /Title (Introduction)
->>
-endobj
-60 0 obj
-<<
-/Count 1 /Dest [ 47 0 R /XYZ 62.69291 243.0236 0 ] /First 61 0 R /Last 61 0 R /Next 62 0 R /Parent 56 0 R 
-  /Prev 59 0 R /Title (Overview: Key Concepts and Terminology)
->>
-endobj
-61 0 obj
-<<
-/Dest [ 50 0 R /XYZ 62.69291 717.0236 0 ] /Parent 60 0 R /Title (Putting it Together: Creating Modern AI and Machine Learning)
->>
-endobj
-62 0 obj
-<<
-/Count 3 /Dest [ 50 0 R /XYZ 62.69291 669.0236 0 ] /First 63 0 R /Last 65 0 R /Next 66 0 R /Parent 56 0 R 
-  /Prev 60 0 R /Title (Running AI Projects)
->>
-endobj
-63 0 obj
-<<
-/Dest [ 50 0 R /XYZ 62.69291 636.0236 0 ] /Next 64 0 R /Parent 62 0 R /Title (Should I AI?)
->>
-endobj
-64 0 obj
-<<
-/Dest [ 50 0 R /XYZ 62.69291 606.0236 0 ] /Next 65 0 R /Parent 62 0 R /Prev 63 0 R /Title (AI Project Decisions)
->>
-endobj
-65 0 obj
-<<
-/Dest [ 50 0 R /XYZ 62.69291 576.0236 0 ] /Parent 62 0 R /Prev 64 0 R /Title (AI Project Workflow)
->>
-endobj
-66 0 obj
-<<
-/Count 3 /Dest [ 50 0 R /XYZ 62.69291 546.0236 0 ] /First 67 0 R /Last 69 0 R /Next 70 0 R /Parent 56 0 R 
-  /Prev 62 0 R /Title (Data)
->>
-endobj
-67 0 obj
-<<
-/Dest [ 50 0 R /XYZ 62.69291 513.0236 0 ] /Next 68 0 R /Parent 66 0 R /Title (The Importance of Data)
->>
-endobj
-68 0 obj
-<<
-/Dest [ 50 0 R /XYZ 62.69291 483.0236 0 ] /Next 69 0 R /Parent 66 0 R /Prev 67 0 R /Title (Collecting Data)
->>
-endobj
-69 0 obj
-<<
-/Dest [ 50 0 R /XYZ 62.69291 453.0236 0 ] /Parent 66 0 R /Prev 68 0 R /Title (Managing Data)
->>
-endobj
-70 0 obj
-<<
-/Count 6 /Dest [ 50 0 R /XYZ 62.69291 423.0236 0 ] /First 71 0 R /Last 76 0 R /Next 77 0 R /Parent 56 0 R 
-  /Prev 66 0 R /Title (Building AI and Machine Learning Models)
->>
-endobj
-71 0 obj
-<<
-/Dest [ 50 0 R /XYZ 62.69291 390.0236 0 ] /Next 72 0 R /Parent 70 0 R /Title (Decisions)
->>
-endobj
-72 0 obj
-<<
-/Dest [ 50 0 R /XYZ 62.69291 360.0236 0 ] /Next 73 0 R /Parent 70 0 R /Prev 71 0 R /Title (Decision Making Flowchart)
->>
-endobj
-73 0 obj
-<<
-/Count 2 /Dest [ 50 0 R /XYZ 62.69291 330.0236 0 ] /First 74 0 R /Last 75 0 R /Next 76 0 R /Parent 70 0 R 
-  /Prev 72 0 R /Title (Neural Networks)
->>
-endobj
-74 0 obj
-<<
-/Dest [ 50 0 R /XYZ 62.69291 300.0236 0 ] /Next 75 0 R /Parent 73 0 R /Title (Architectural Principles of Neural Networks)
->>
-endobj
-75 0 obj
-<<
-/Dest [ 51 0 R /XYZ 62.69291 165.0236 0 ] /Parent 73 0 R /Prev 74 0 R /Title (Neural Network Design and Experimentation Process)
->>
-endobj
-76 0 obj
-<<
-/Dest [ 53 0 R /XYZ 62.69291 753.0236 0 ] /Parent 70 0 R /Prev 73 0 R /Title (Worked Examples)
->>
-endobj
-77 0 obj
-<<
-/Dest [ 53 0 R /XYZ 62.69291 723.0236 0 ] /Next 78 0 R /Parent 56 0 R /Prev 70 0 R /Title (Pitfalls and Common Problems)
->>
-endobj
-78 0 obj
-<<
-/Dest [ 53 0 R /XYZ 62.69291 690.0236 0 ] /Next 79 0 R /Parent 56 0 R /Prev 77 0 R /Title (Resources)
->>
-endobj
-79 0 obj
-<<
-/Dest [ 53 0 R /XYZ 62.69291 657.0236 0 ] /Parent 56 0 R /Prev 78 0 R /Title (Appendix)
->>
-endobj
-80 0 obj
-<<
-/Count 7 /Kids [ 46 0 R 47 0 R 48 0 R 50 0 R 51 0 R 52 0 R 53 0 R ] /Type /Pages
->>
-endobj
-81 0 obj
-<<
-/Length 8528
->>
-stream
-1 0 0 1 0 0 cm  BT /F1 12 Tf 14.4 TL ET
-q
-1 0 0 1 62.69291 732.0236 cm
-q
-BT 1 0 0 1 0 3.5 Tm 21 TL /F2 17.5 Tf 0 0 0 rg (Table of Contents) Tj T* ET
-Q
-Q
-q
-1 0 0 1 62.69291 348.0236 cm
-0 0 0 rg
-BT /F1 10 Tf 12 TL ET
-q
-1 0 0 1 0 363 cm
-q
-BT 1 0 0 1 0 2 Tm 12 TL /F2 10 Tf 0 0 .501961 rg (Summary) Tj T* ET
-Q
-Q
-q
-1 0 0 1 397.8898 363 cm
-q
-0 0 .501961 rg
-0 0 .501961 RG
-BT 1 0 0 1 0 2 Tm /F2 10 Tf 12 TL 66.44 0 Td (1) Tj T* -66.44 0 Td ET
-Q
-Q
-q
-1 0 0 1 0 345 cm
-q
-BT 1 0 0 1 0 2 Tm 12 TL /F2 10 Tf 0 0 .501961 rg (Target Audience) Tj T* ET
-Q
-Q
-q
-1 0 0 1 397.8898 345 cm
-q
-0 0 .501961 rg
-0 0 .501961 RG
-BT 1 0 0 1 0 2 Tm /F2 10 Tf 12 TL 66.44 0 Td (2) Tj T* -66.44 0 Td ET
-Q
-Q
-q
-1 0 0 1 0 327 cm
-q
-BT 1 0 0 1 0 2 Tm 12 TL /F2 10 Tf 0 0 .501961 rg (Introduction) Tj T* ET
-Q
-Q
-q
-1 0 0 1 397.8898 327 cm
-q
-0 0 .501961 rg
-0 0 .501961 RG
-BT 1 0 0 1 0 2 Tm /F2 10 Tf 12 TL 66.44 0 Td (2) Tj T* -66.44 0 Td ET
-Q
-Q
-q
-1 0 0 1 0 309 cm
-q
-BT 1 0 0 1 0 2 Tm 12 TL /F2 10 Tf 0 0 .501961 rg (Overview: Key Concepts and Terminology) Tj T* ET
-Q
-Q
-q
-1 0 0 1 397.8898 309 cm
-q
-0 0 .501961 rg
-0 0 .501961 RG
-BT 1 0 0 1 0 2 Tm /F2 10 Tf 12 TL 66.44 0 Td (2) Tj T* -66.44 0 Td ET
-Q
-Q
-q
-1 0 0 1 0 291 cm
-q
-BT 1 0 0 1 20 2 Tm 12 TL /F1 10 Tf 0 0 .501961 rg (Putting it Together: Creating Modern AI and Machine Learning) Tj T* ET
-Q
-Q
-q
-1 0 0 1 397.8898 291 cm
-q
-0 0 .501961 rg
-0 0 .501961 RG
-BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL 66.44 0 Td (4) Tj T* -66.44 0 Td ET
-Q
-Q
-q
-1 0 0 1 0 273 cm
-q
-BT 1 0 0 1 0 2 Tm 12 TL /F2 10 Tf 0 0 .501961 rg (Running AI Projects) Tj T* ET
-Q
-Q
-q
-1 0 0 1 397.8898 273 cm
-q
-0 0 .501961 rg
-0 0 .501961 RG
-BT 1 0 0 1 0 2 Tm /F2 10 Tf 12 TL 66.44 0 Td (4) Tj T* -66.44 0 Td ET
-Q
-Q
-q
-1 0 0 1 0 255 cm
-q
-BT 1 0 0 1 20 2 Tm 12 TL /F1 10 Tf 0 0 .501961 rg (Should I AI?) Tj T* ET
-Q
-Q
-q
-1 0 0 1 397.8898 255 cm
-q
-0 0 .501961 rg
-0 0 .501961 RG
-BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL 66.44 0 Td (4) Tj T* -66.44 0 Td ET
-Q
-Q
-q
-1 0 0 1 0 237 cm
-q
-BT 1 0 0 1 20 2 Tm 12 TL /F1 10 Tf 0 0 .501961 rg (AI Project Decisions) Tj T* ET
-Q
-Q
-q
-1 0 0 1 397.8898 237 cm
-q
-0 0 .501961 rg
-0 0 .501961 RG
-BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL 66.44 0 Td (4) Tj T* -66.44 0 Td ET
-Q
-Q
-q
-1 0 0 1 0 219 cm
-q
-BT 1 0 0 1 20 2 Tm 12 TL /F1 10 Tf 0 0 .501961 rg (AI Project Workflow) Tj T* ET
-Q
-Q
-q
-1 0 0 1 397.8898 219 cm
-q
-0 0 .501961 rg
-0 0 .501961 RG
-BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL 66.44 0 Td (4) Tj T* -66.44 0 Td ET
-Q
-Q
-q
-1 0 0 1 0 201 cm
-q
-BT 1 0 0 1 0 2 Tm 12 TL /F2 10 Tf 0 0 .501961 rg (Data) Tj T* ET
-Q
-Q
-q
-1 0 0 1 397.8898 201 cm
-q
-0 0 .501961 rg
-0 0 .501961 RG
-BT 1 0 0 1 0 2 Tm /F2 10 Tf 12 TL 66.44 0 Td (4) Tj T* -66.44 0 Td ET
-Q
-Q
-q
-1 0 0 1 0 183 cm
-q
-BT 1 0 0 1 20 2 Tm 12 TL /F1 10 Tf 0 0 .501961 rg (The Importance of Data) Tj T* ET
-Q
-Q
-q
-1 0 0 1 397.8898 183 cm
-q
-0 0 .501961 rg
-0 0 .501961 RG
-BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL 66.44 0 Td (4) Tj T* -66.44 0 Td ET
-Q
-Q
-q
-1 0 0 1 0 165 cm
-q
-BT 1 0 0 1 20 2 Tm 12 TL /F1 10 Tf 0 0 .501961 rg (Collecting Data) Tj T* ET
-Q
-Q
-q
-1 0 0 1 397.8898 165 cm
-q
-0 0 .501961 rg
-0 0 .501961 RG
-BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL 66.44 0 Td (4) Tj T* -66.44 0 Td ET
-Q
-Q
-q
-1 0 0 1 0 147 cm
-q
-BT 1 0 0 1 20 2 Tm 12 TL /F1 10 Tf 0 0 .501961 rg (Managing Data) Tj T* ET
-Q
-Q
-q
-1 0 0 1 397.8898 147 cm
-q
-0 0 .501961 rg
-0 0 .501961 RG
-BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL 66.44 0 Td (4) Tj T* -66.44 0 Td ET
-Q
-Q
-q
-1 0 0 1 0 129 cm
-q
-BT 1 0 0 1 0 2 Tm 12 TL /F2 10 Tf 0 0 .501961 rg (Building AI and Machine Learning Models) Tj T* ET
-Q
-Q
-q
-1 0 0 1 397.8898 129 cm
-q
-0 0 .501961 rg
-0 0 .501961 RG
-BT 1 0 0 1 0 2 Tm /F2 10 Tf 12 TL 66.44 0 Td (4) Tj T* -66.44 0 Td ET
-Q
-Q
-q
-1 0 0 1 0 111 cm
-q
-BT 1 0 0 1 20 2 Tm 12 TL /F1 10 Tf 0 0 .501961 rg (Decisions) Tj T* ET
-Q
-Q
-q
-1 0 0 1 397.8898 111 cm
-q
-0 0 .501961 rg
-0 0 .501961 RG
-BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL 66.44 0 Td (4) Tj T* -66.44 0 Td ET
-Q
-Q
-q
-1 0 0 1 0 93 cm
-q
-BT 1 0 0 1 20 2 Tm 12 TL /F1 10 Tf 0 0 .501961 rg (Decision Making Flowchart) Tj T* ET
-Q
-Q
-q
-1 0 0 1 397.8898 93 cm
-q
-0 0 .501961 rg
-0 0 .501961 RG
-BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL 66.44 0 Td (4) Tj T* -66.44 0 Td ET
-Q
-Q
-q
-1 0 0 1 0 75 cm
-q
-BT 1 0 0 1 20 2 Tm 12 TL /F1 10 Tf 0 0 .501961 rg (Neural Networks) Tj T* ET
-Q
-Q
-q
-1 0 0 1 397.8898 75 cm
-q
-0 0 .501961 rg
-0 0 .501961 RG
-BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL 66.44 0 Td (4) Tj T* -66.44 0 Td ET
-Q
-Q
-q
-1 0 0 1 0 57 cm
-q
-BT 1 0 0 1 20 2 Tm 12 TL /F1 10 Tf 0 0 .501961 rg (Worked Examples) Tj T* ET
-Q
-Q
-q
-1 0 0 1 397.8898 57 cm
-q
-0 0 .501961 rg
-0 0 .501961 RG
-BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL 66.44 0 Td (7) Tj T* -66.44 0 Td ET
-Q
-Q
-q
-1 0 0 1 0 39 cm
-q
-BT 1 0 0 1 0 2 Tm 12 TL /F2 10 Tf 0 0 .501961 rg (Pitfalls and Common Problems) Tj T* ET
-Q
-Q
-q
-1 0 0 1 397.8898 39 cm
-q
-0 0 .501961 rg
-0 0 .501961 RG
-BT 1 0 0 1 0 2 Tm /F2 10 Tf 12 TL 66.44 0 Td (7) Tj T* -66.44 0 Td ET
-Q
-Q
-q
-1 0 0 1 0 21 cm
-q
-BT 1 0 0 1 0 2 Tm 12 TL /F2 10 Tf 0 0 .501961 rg (Resources) Tj T* ET
-Q
-Q
-q
-1 0 0 1 397.8898 21 cm
-q
-0 0 .501961 rg
-0 0 .501961 RG
-BT 1 0 0 1 0 2 Tm /F2 10 Tf 12 TL 66.44 0 Td (7) Tj T* -66.44 0 Td ET
-Q
-Q
-q
-1 0 0 1 0 3 cm
-q
-BT 1 0 0 1 0 2 Tm 12 TL /F2 10 Tf 0 0 .501961 rg (Appendix) Tj T* ET
-Q
-Q
-q
-1 0 0 1 397.8898 3 cm
-q
-0 0 .501961 rg
-0 0 .501961 RG
-BT 1 0 0 1 0 2 Tm /F2 10 Tf 12 TL 66.44 0 Td (7) Tj T* -66.44 0 Td ET
-Q
-Q
-q
-Q
-Q
-q
-1 0 0 1 62.69291 315.0236 cm
-q
-BT 1 0 0 1 0 3.5 Tm 21 TL /F2 17.5 Tf 0 0 0 rg (Summary) Tj T* ET
-Q
-Q
-q
-1 0 0 1 62.69291 189.0236 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 110 Tm /F1 10 Tf 12 TL 1.003059 Tw (Artificial Intelligence \(AI\) and Machine Learning \(ML\) technologies are key to many modern engineering) Tj T* 0 Tw 1.44061 Tw (projects due to their ability to solve many problems that are difficult or impossible with other methods.) Tj T* 0 Tw 1.173059 Tw (While most engineers will find themselves enjoying a significant overlap between these techniques and) Tj T* 0 Tw .302846 Tw (their existing skill set, they are also liable to find that AI and Machine Learning is its own field with its own) Tj T* 0 Tw .497318 Tw (unique demands and \(often hidden\) pitfalls. While there are many resources available for self teaching, it) Tj T* 0 Tw .162651 Tw (is generally assumed the practitioner is either an absolute beginner to engineering, or already a seasoned) Tj T* 0 Tw 2.142765 Tw (expert in AI and ML. In this document, we provide a practical guide to AI and Machine learning for) Tj T* 0 Tw .571984 Tw (electronic systems engineers who already have a strong base of knowledge in electronic systems but no) Tj T* 0 Tw .083735 Tw (specialised expertise. This guide will be practice focused, with the goal of helping engineers to make good) Tj T* 0 Tw (decisions and avoid problems. The guide will cover, among many others areas:) Tj T* ET
-Q
-Q
-q
-1 0 0 1 62.69291 183.0236 cm
-Q
-q
-1 0 0 1 62.69291 183.0236 cm
-Q
-q
-1 0 0 1 62.69291 171.0236 cm
-0 0 0 rg
-BT /F1 10 Tf 12 TL ET
-q
-1 0 0 1 6 -3 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL 10.5 0 Td (\177) Tj T* -10.5 0 Td ET
-Q
-Q
-q
-1 0 0 1 23 -3 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (Technical Language and Core Concepts) Tj T* ET
-Q
-Q
-q
-Q
-Q
-q
-1 0 0 1 62.69291 165.0236 cm
-Q
-q
-1 0 0 1 62.69291 153.0236 cm
-0 0 0 rg
-BT /F1 10 Tf 12 TL ET
-q
-1 0 0 1 6 -3 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL 10.5 0 Td (\177) Tj T* -10.5 0 Td ET
-Q
-Q
-q
-1 0 0 1 23 -3 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (Data, Collection and Common Problems) Tj T* ET
-Q
-Q
-q
-Q
-Q
-q
-1 0 0 1 62.69291 147.0236 cm
-Q
-q
-1 0 0 1 62.69291 135.0236 cm
-0 0 0 rg
-BT /F1 10 Tf 12 TL ET
-q
-1 0 0 1 6 -3 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL 10.5 0 Td (\177) Tj T* -10.5 0 Td ET
-Q
-Q
-q
-1 0 0 1 23 -3 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (Deploying AI and Machine Learning, with Worked Examples) Tj T* ET
-Q
-Q
-q
-Q
-Q
-q
-1 0 0 1 62.69291 129.0236 cm
-Q
-q
-1 0 0 1 62.69291 117.0236 cm
-0 0 0 rg
-BT /F1 10 Tf 12 TL ET
-q
-1 0 0 1 6 -3 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL 10.5 0 Td (\177) Tj T* -10.5 0 Td ET
-Q
-Q
-q
-1 0 0 1 23 -3 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (Existing resources, where to find them and how best to use them) Tj T* ET
-Q
-Q
-q
-Q
-Q
-q
-1 0 0 1 62.69291 111.0236 cm
-Q
-q
-1 0 0 1 62.69291 99.02362 cm
-0 0 0 rg
-BT /F1 10 Tf 12 TL ET
-q
-1 0 0 1 6 -3 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL 10.5 0 Td (\177) Tj T* -10.5 0 Td ET
-Q
-Q
-q
-1 0 0 1 23 -3 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (Common Pitfalls, how to avoid and how to solve) Tj T* ET
-Q
-Q
-q
-Q
-Q
-q
-1 0 0 1 62.69291 99.02362 cm
-Q
-q
-1 0 0 1 56.69291 773.1969 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL 163.4149 0 Td (TechNES AI Best Practices Group:) Tj T* -163.4149 0 Td ET
-Q
-Q
- 
-endstream
-endobj
-82 0 obj
-<<
-/Length 6479
->>
-stream
-1 0 0 1 0 0 cm  BT /F1 12 Tf 14.4 TL ET
-q
-1 0 0 1 62.69291 732.0236 cm
-q
-BT 1 0 0 1 0 3.5 Tm 21 TL /F2 17.5 Tf 0 0 0 rg (Target Audience) Tj T* ET
-Q
-Q
-q
-1 0 0 1 62.69291 618.0236 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 98 Tm /F1 10 Tf 12 TL .635868 Tw (The target audience for this guide is electronic systems engineers with little to no specific expertise in AI) Tj T* 0 Tw .459318 Tw (and Machine Learning techniques. It will be assumed, because of this background, that readers will have) Tj T* 0 Tw 1.321163 Tw (a base level of competence in programming and mathematics, though the guide will err on the side of) Tj T* 0 Tw 1.090651 Tw (caution in respect of assumed knowledge. We may, for example, assume our reader has knowledge of) Tj T* 0 Tw 2.377485 Tw (concepts in basic calculus, but are unlikely to assume that they are able to remember any specific) Tj T* 0 Tw .971412 Tw (formula. We are also assuming that the primary interest in practically deploying these techniques rather) Tj T* 0 Tw 2.91284 Tw (than understanding the theory and context of their development. For readers interested in a more) Tj T* 0 Tw 1.793984 Tw (theoretical treatment, we list several texts in the resources section appropriate to a range of different) Tj T* 0 Tw (levels of background knowledge.) Tj T* ET
-Q
-Q
-q
-1 0 0 1 62.69291 585.0236 cm
-q
-BT 1 0 0 1 0 3.5 Tm 21 TL /F2 17.5 Tf 0 0 0 rg (Introduction) Tj T* ET
-Q
-Q
-q
-1 0 0 1 62.69291 459.0236 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 110 Tm /F1 10 Tf 12 TL 2.201318 Tw (The terms Artificial Intelligence and Machine Learning both lend themselves to the idea that we are) Tj T* 0 Tw .234488 Tw (creating a program that can, in some respect, think and learn in the same way a person can. While it may) Tj T* 0 Tw 1.95811 Tw (be possible to create systems that are capable of this, the current technologies that are deployed in) Tj T* 0 Tw .49152 Tw (practice are much more restricted in scope. Current, practical Artificial Intelligence and Machine Learning) Tj T* 0 Tw .978651 Tw (technology generally refers to programs that are of a statistical, or statistically adjacent nature, and that) Tj T* 0 Tw .01784 Tw (use data to fit some specified mathematical model. While these techniques are proving extremely valuable) Tj T* 0 Tw 2.497674 Tw (in solving otherwise difficult or intractable problems, the fundamentals of the techniques are neither) Tj T* 0 Tw 1.279431 Tw (exceptionally novel nor complicated. In this guide, we aim to show just how simple it can be to deploy) Tj T* 0 Tw .294269 Tw (these techniques in practice, especially for an audience that already has knowledge of electronic systems) Tj T* 0 Tw (engineering.) Tj T* ET
-Q
-Q
-q
-1 0 0 1 62.69291 381.0236 cm
-q
-BT 1 0 0 1 0 62 Tm 1.088651 Tw 12 TL /F1 10 Tf 0 0 0 rg (It is important to acknowledge that, despite the above, no specific definition of Artificial Intelligence and) Tj T* 0 Tw .715814 Tw (Machine Learning that is universally agreed on exists. Furthermore, lacking any significant advancement) Tj T* 0 Tw -0.090015 Tw (in our understanding of what cognition, intelligence, and learning actually mean, this state of affairs is likely) Tj T* 0 Tw .009488 Tw (to continue. Given the practical focus of this guide, it would not be profitable for us to enter into this debate) Tj T* 0 Tw .374692 Tw (at any length. We will therefore, universally use the term \223AI and Machine Learning\224 to refer to algorithms) Tj T* 0 Tw (that are the subject of this guide, and that learn to ) Tj /F2 10 Tf (parameterize) Tj /F1 10 Tf ( a mathematical model from data.) Tj T* ET
-Q
-Q
-q
-1 0 0 1 62.69291 255.0236 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 110 Tm /F1 10 Tf 12 TL .569986 Tw (This guide is structured into 5 sections. In the first section, we discuss the key concepts and terminology) Tj T* 0 Tw .907209 Tw (that are used in AI and Machine Learning and briefly discuss how they come together to motivate us to) Tj T* 0 Tw .014692 Tw (create the field in its current form. With this important background covered, we then move on to discussing) Tj T* 0 Tw .275868 Tw (the practicalities of AI and Machine Learning projects at a high level. We discuss where it\222s appropriate to) Tj T* 0 Tw .45284 Tw (deploy these technologies, a high level workflow and decision making process, and what management of) Tj T* 0 Tw .012765 Tw (these projects looks like. Having covered this, we then begin to drill down into the details of these projects.) Tj T* 0 Tw .567488 Tw (We open this discussion with a review of the key role data, and how it can be managed. This is followed) Tj T* 0 Tw .49284 Tw (with an extensive discussion on the implementation and decision making process of deployment of these) Tj T* 0 Tw .60811 Tw (algorithms with worked examples. We close with a list of pitfalls, common problems and solutions, and a) Tj T* 0 Tw (link to useful further resources.) Tj T* ET
-Q
-Q
-q
-1 0 0 1 62.69291 222.0236 cm
-q
-BT 1 0 0 1 0 3.5 Tm 21 TL /F2 17.5 Tf 0 0 0 rg (Overview: Key Concepts and Terminology) Tj T* ET
-Q
-Q
-q
-1 0 0 1 62.69291 156.0236 cm
-q
-BT 1 0 0 1 0 50 Tm .177045 Tw 12 TL /F1 10 Tf 0 0 0 rg (In this section, we introduce and overview some of the key concepts and terminology that are important in) Tj T* 0 Tw .769269 Tw (understanding and discussing AI and machine learning technology. This section is not intended to serve) Tj T* 0 Tw 2.430574 Tw (as an exhaustive discussion of the topics in question, but as an introduction to the key points and) Tj T* 0 Tw 2.597633 Tw (vocabulary that will frame the rest of the discussion on this topic. Key terms and concepts will be) Tj T* 0 Tw /F2 10 Tf (highlighted) Tj /F1 10 Tf ( for the reader, with links to a more detailed description of the term in the appendix.) Tj T* ET
-Q
-Q
-q
-1 0 0 1 62.69291 102.0236 cm
-q
-BT 1 0 0 1 0 38 Tm .397485 Tw 12 TL /F1 10 Tf 0 0 0 rg (To briefly review what we discussed in the introduction: the type of intelligence and learning in algorithms) Tj T* 0 Tw .799986 Tw (that we are interested in in this manual are algorithms that learn mathematical models of the world from) Tj T* 0 Tw 1.02528 Tw (some data, in order to make predictions about other unseen or future data. One important idea that we) Tj T* 0 Tw (need to consider first is ) Tj /F2 10 Tf (structured data) Tj /F1 10 Tf ( and ) Tj /F2 10 Tf (unstructured data) Tj /F1 10 Tf (.) Tj T* ET
-Q
-Q
-q
-1 0 0 1 56.69291 773.1969 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL 163.4149 0 Td (TechNES AI Best Practices Group:) Tj T* -163.4149 0 Td ET
-Q
-Q
- 
-endstream
-endobj
-83 0 obj
-<<
-/Length 8006
->>
-stream
-1 0 0 1 0 0 cm  BT /F1 12 Tf 14.4 TL ET
-q
-1 0 0 1 62.69291 669.0236 cm
-q
-BT 1 0 0 1 0 74 Tm .811412 Tw 12 TL /F1 10 Tf 0 0 0 rg (Breakaway: Structured vs Unstructured Data AI and Machine Learning models are no different from any) Tj T* 0 Tw .904651 Tw (other computer program in that they require their input data to follow a consistent format. Unfortunately,) Tj T* 0 Tw 1.517045 Tw (data collected in the real world rarely follows the type of structure and organization that is needed for) Tj T* 0 Tw .228876 Tw (ingestion by an AI or Machine learning algorithm, and in many cases the work done to transform data into) Tj T* 0 Tw .046457 Tw (an appropriate structured format is some of the most important work done in any AI and Machine Learning) Tj T* 0 Tw 1.923735 Tw (pipeline. We make this distinction between data that has been put into a useful structured format as) Tj T* 0 Tw /F2 10 Tf (structured data) Tj /F1 10 Tf (, and data that exists in a raw, unprocessed format as ) Tj /F2 10 Tf (unstructured data) Tj /F1 10 Tf (.) Tj T* ET
-Q
-Q
-q
-1 0 0 1 62.69291 543.0236 cm
-q
-BT 1 0 0 1 0 110 Tm 1.884724 Tw 12 TL /F1 10 Tf 0 0 0 rg (When dealing with data in the real world, we will often split it up into categories or types. One such) Tj T* 0 Tw .351654 Tw (distinction often made that is especially important in the context of AI and Machine Learning is the split of) Tj T* 0 Tw .42936 Tw (data into ) Tj /F2 10 Tf (continuous) Tj /F1 10 Tf ( data and ) Tj /F2 10 Tf (discrete) Tj /F1 10 Tf ( data. Continuous data can take on any number of infinite values) Tj T* 0 Tw .450514 Tw (across a given range, for example, a measure of rainfall per hour. Discrete data on the other hand is any) Tj T* 0 Tw 1.307765 Tw (type of data that falls into a fixed number of categories. These categories can be both ) Tj /F2 10 Tf (ordinal) Tj /F1 10 Tf ( data in) Tj T* 0 Tw 1.571984 Tw (which there is a natural ordering between the categories \(shoe size, for example\), and ) Tj /F2 10 Tf (nominal) Tj /F1 10 Tf ( data,) Tj T* 0 Tw .052485 Tw (where the categories are distinct \(eye color, for example\). While this distinction is important for many parts) Tj T* 0 Tw 1.347984 Tw (of AI and Machine Learning, the distinction between whether an AI and Machine Learning algorithm is) Tj T* 0 Tw 3.036235 Tw (trying to predict continuous and discrete data is so important that it has its own nomenclature of) Tj T* 0 Tw /F2 10 Tf (regression) Tj /F1 10 Tf ( and ) Tj /F2 10 Tf (classification) Tj /F1 10 Tf ( algorithms respectively.) Tj T* ET
-Q
-Q
-q
-1 0 0 1 62.69291 477.0236 cm
-q
-BT 1 0 0 1 0 50 Tm 2.624418 Tw 12 TL /F1 10 Tf 0 0 0 rg (Breakaway: Regression vs Classification Algorithms The distinction between ) Tj /F2 10 Tf (regression) Tj /F1 10 Tf ( \(continuous) Tj T* 0 Tw .254269 Tw (output data\) and ) Tj /F2 10 Tf (classification) Tj /F1 10 Tf ( \(discrete output data\) is particularly important in AI and Machine Learning) Tj T* 0 Tw 1.417633 Tw (algorithms, because the type of data that the algorithm outputs has a significant effect on how it must) Tj T* 0 Tw .237318 Tw (function. Notably, some algorithms \(e.g. Support Vector Machines\) are only designed to function in one of) Tj T* 0 Tw (these modalities, and require significant adaptations to perform \(likely very poorly\) in the other.) Tj T* ET
-Q
-Q
-q
-1 0 0 1 62.69291 375.0236 cm
-q
-BT 1 0 0 1 0 86 Tm .339398 Tw 12 TL /F1 10 Tf 0 0 0 rg (While we have been discussing some of the concepts and terminology around data to this point, we have) Tj T* 0 Tw -0.12189 Tw (used the terms \223learn\224, \223learning\224 and \223learning from data\224 to describe what our algorithms do without really) Tj T* 0 Tw .509461 Tw (making it explicit what we actually mean by this. One of the reasons that we\222ve avoided doing this is that) Tj T* 0 Tw 1.055318 Tw (\223learning\224 in the context we\222re discussing it is conveniently, without further qualifiers, a term that covers) Tj T* 0 Tw -0.017235 Tw (several different ideas. These differences stem from the way that we use data in order to \223learn\224. The most) Tj T* 0 Tw 3.01152 Tw (prominent of two of these ideas are ) Tj /F2 10 Tf (supervised learning) Tj /F1 10 Tf ( and ) Tj /F2 10 Tf (unsupervised learning) Tj /F1 10 Tf (, which are) Tj T* 0 Tw .36186 Tw (concerned whether we learn from data that list the correct output the algorithms should produce for some) Tj T* 0 Tw (given input data \() Tj /F2 10 Tf (labeled data) Tj /F1 10 Tf (\), or simply the input data themselves \() Tj /F2 10 Tf (unlabeled data) Tj /F1 10 Tf (\).) Tj T* ET
-Q
-Q
-q
-1 0 0 1 62.69291 237.0236 cm
-q
-BT 1 0 0 1 0 122 Tm .716647 Tw 12 TL /F1 10 Tf 0 0 0 rg (Breakaway: Supervised vs Unsupervised vs Reinforcement vs Other Learning We use the nomenclature) Tj T* 0 Tw .607485 Tw (of ) Tj /F2 10 Tf (Supervised) Tj /F1 10 Tf ( vs ) Tj /F2 10 Tf (Unsupervised) Tj /F1 10 Tf ( \(vs others\) to describe the way in which our algorithms are learning. In) Tj T* 0 Tw .459318 Tw (Supervised learning, we learn from matched input data/output data pairs, data for which we already have) Tj T* 0 Tw .66881 Tw (the correct output the algorithms should predict for a set of given inputs \(\223learning by example\224\). We call) Tj T* 0 Tw 3.682651 Tw (this data ) Tj /F2 10 Tf (labeled data) Tj /F1 10 Tf (, because our set of input data is labeled with the corresponding correct) Tj T* 0 Tw 1.647318 Tw (solutions.For example, we might be interested in predicting the future prices of the stock market from) Tj T* 0 Tw -0.100731 Tw (economic indications, by looking at how these economic indicators have predicted its historical past prices.) Tj T* 0 Tw -0.023349 Tw (In Unsupervised learning, we only have access to the input data without any corresponding output solution) Tj T* 0 Tw .771412 Tw (attached. We call this data ) Tj /F2 10 Tf (unlabeled data) Tj /F1 10 Tf (, and our unsupervised learning algorithms and are generally) Tj T* 0 Tw .609318 Tw (interested in predicting some quality of this data \(\223pattern learning\224\). For example, we might be detecting) Tj T* 0 Tw (unusual anomalies of electrical usage in the grid.) Tj T* ET
-Q
-Q
-q
-1 0 0 1 62.69291 123.0236 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 98 Tm /F1 10 Tf 12 TL .779985 Tw (While it is generally preferable to use supervised learning when we can because learning by example is) Tj T* 0 Tw .873059 Tw (easier, there are many situations in which unsupervised approaches are more appropriate. Even putting) Tj T* 0 Tw .59683 Tw (aside the fact that unlabeled data is easier to collect \(since we don\222t need to label it\), for many problems) Tj T* 0 Tw 3.194269 Tw (supervised approaches are simply not practical. In our electrical grid example above, it would be) Tj T* 0 Tw 1.017318 Tw (infeasible to train a supervised model to do similar anomaly detection. By definition, anomalies are rare) Tj T* 0 Tw .467633 Tw (and unusual data points that fall outside of the usual observations in the data. Creating a labeled dataset) Tj T* 0 Tw 1.322339 Tw (of them would be both impractical, and any supervised algorithm that used it would be prescriptive - it) Tj T* 0 Tw 2.114597 Tw (would only catch anomalies similar to anomalies we\222ve trained on, where an unsupervised approach) Tj T* 0 Tw (instead catches ones that are dissimilar to everything we\222ve seen so far.) Tj T* ET
-Q
-Q
-q
-1 0 0 1 62.69291 81.02362 cm
-q
-BT 1 0 0 1 0 26 Tm 1.224147 Tw 12 TL /F1 10 Tf 0 0 0 rg (There are also several other learning approaches that fit within the supervised/unsupervised dichotomy) Tj T* 0 Tw .019983 Tw (discussed so far. A common one is ) Tj /F2 10 Tf (Reinforcement Learning) Tj /F1 10 Tf (. In Reinforcement Learning, the algorithm is) Tj T* 0 Tw .032598 Tw (not fed a set of data, but selects which piece of data it wants to learn from in future from the pieces of data) Tj T* 0 Tw ET
-Q
-Q
-q
-1 0 0 1 56.69291 773.1969 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL 163.4149 0 Td (TechNES AI Best Practices Group:) Tj T* -163.4149 0 Td ET
-Q
-Q
- 
-endstream
-endobj
-84 0 obj
-<<
-/Length 4735
->>
-stream
-1 0 0 1 0 0 cm  BT /F1 12 Tf 14.4 TL ET
-q
-1 0 0 1 62.69291 729.0236 cm
-q
-BT 1 0 0 1 0 14 Tm .757984 Tw 12 TL /F1 10 Tf 0 0 0 rg (it has had up until now. Another common paradigm is ) Tj /F2 10 Tf (semi-supervised learning) Tj /F1 10 Tf (, in which an algorithm) Tj T* 0 Tw (learns from some set data that is labeled, and some \(usually larger\) set of data that is unlabelled.) Tj T* ET
-Q
-Q
-q
-1 0 0 1 62.69291 699.0236 cm
-q
-BT 1 0 0 1 0 3 Tm 18 TL /F2 15 Tf 0 0 0 rg (Putting it Together: Creating Modern AI and Machine Learning) Tj T* ET
-Q
-Q
-q
-1 0 0 1 62.69291 681.0236 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (WIP) Tj T* ET
-Q
-Q
-q
-1 0 0 1 62.69291 648.0236 cm
-q
-BT 1 0 0 1 0 3.5 Tm 21 TL /F2 17.5 Tf 0 0 0 rg (Running AI Projects) Tj T* ET
-Q
-Q
-q
-1 0 0 1 62.69291 618.0236 cm
-q
-BT 1 0 0 1 0 3 Tm 18 TL /F2 15 Tf 0 0 0 rg (Should I AI?) Tj T* ET
-Q
-Q
-q
-1 0 0 1 62.69291 588.0236 cm
-q
-BT 1 0 0 1 0 3 Tm 18 TL /F2 15 Tf 0 0 0 rg (AI Project Decisions) Tj T* ET
-Q
-Q
-q
-1 0 0 1 62.69291 558.0236 cm
-q
-BT 1 0 0 1 0 3 Tm 18 TL /F2 15 Tf 0 0 0 rg (AI Project Workflow) Tj T* ET
-Q
-Q
-q
-1 0 0 1 62.69291 525.0236 cm
-q
-BT 1 0 0 1 0 3.5 Tm 21 TL /F2 17.5 Tf 0 0 0 rg (Data) Tj T* ET
-Q
-Q
-q
-1 0 0 1 62.69291 495.0236 cm
-q
-BT 1 0 0 1 0 3 Tm 18 TL /F2 15 Tf 0 0 0 rg (The Importance of Data) Tj T* ET
-Q
-Q
-q
-1 0 0 1 62.69291 465.0236 cm
-q
-BT 1 0 0 1 0 3 Tm 18 TL /F2 15 Tf 0 0 0 rg (Collecting Data) Tj T* ET
-Q
-Q
-q
-1 0 0 1 62.69291 435.0236 cm
-q
-BT 1 0 0 1 0 3 Tm 18 TL /F2 15 Tf 0 0 0 rg (Managing Data) Tj T* ET
-Q
-Q
-q
-1 0 0 1 62.69291 402.0236 cm
-q
-BT 1 0 0 1 0 3.5 Tm 21 TL /F2 17.5 Tf 0 0 0 rg (Building AI and Machine Learning Models) Tj T* ET
-Q
-Q
-q
-1 0 0 1 62.69291 372.0236 cm
-q
-BT 1 0 0 1 0 3 Tm 18 TL /F2 15 Tf 0 0 0 rg (Decisions) Tj T* ET
-Q
-Q
-q
-1 0 0 1 62.69291 342.0236 cm
-q
-BT 1 0 0 1 0 3 Tm 18 TL /F2 15 Tf 0 0 0 rg (Decision Making Flowchart) Tj T* ET
-Q
-Q
-q
-1 0 0 1 62.69291 312.0236 cm
-q
-BT 1 0 0 1 0 3 Tm 18 TL /F2 15 Tf 0 0 0 rg (Neural Networks) Tj T* ET
-Q
-Q
-q
-1 0 0 1 62.69291 285.0236 cm
-q
-BT 1 0 0 1 0 2.5 Tm 15 TL /F3 12.5 Tf 0 0 0 rg (Architectural Principles of Neural Networks) Tj T* ET
-Q
-Q
-q
-1 0 0 1 62.69291 243.0236 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 26 Tm /F1 10 Tf 12 TL .166654 Tw (Here we break down some of the key ideas that go into building a more sophisticated neural network than) Tj T* 0 Tw 1.557209 Tw (the basic MLP we used in our first example. Understanding these will allow you to see how even the) Tj T* 0 Tw (world\222s most complex and capable neural networks are put together.) Tj T* ET
-Q
-Q
-q
-1 0 0 1 62.69291 237.0236 cm
-Q
-q
-1 0 0 1 62.69291 237.0236 cm
-Q
-q
-1 0 0 1 62.69291 90.02362 cm
-0 0 0 rg
-BT /F1 10 Tf 12 TL ET
-q
-1 0 0 1 6 132 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL 10.5 0 Td (\177) Tj T* -10.5 0 Td ET
-Q
-Q
-q
-1 0 0 1 23 132 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 2 Tm /F2 10 Tf 12 TL (Convolutional Blocks) Tj T* ET
-Q
-Q
-q
-1 0 0 1 23 -3 cm
-0 0 0 rg
-BT /F1 10 Tf 12 TL ET
-BT 1 0 0 1 0 122 Tm  T* ET
-q
-1 0 0 1 20 126 cm
-Q
-q
-1 0 0 1 20 126 cm
-Q
-q
-1 0 0 1 20 102 cm
-0 0 0 rg
-BT /F1 10 Tf 12 TL ET
-q
-1 0 0 1 6 9 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL 10.5 0 Td (\177) Tj T* -10.5 0 Td ET
-Q
-Q
-q
-1 0 0 1 23 -3 cm
-q
-BT 1 0 0 1 0 14 Tm 2.057251 Tw 12 TL /F2 10 Tf 0 0 0 rg (What:) Tj /F1 10 Tf ( An architectural design shortcut - a combination of convolutional layers, pooling) Tj T* 0 Tw (layers and regularisers packaged into a block which is repeated throughout the network.) Tj T* ET
-Q
-Q
-q
-Q
-Q
-q
-1 0 0 1 20 96 cm
-Q
-q
-1 0 0 1 20 0 cm
-0 0 0 rg
-BT /F1 10 Tf 12 TL ET
-q
-1 0 0 1 6 81 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL 10.5 0 Td (\177) Tj T* -10.5 0 Td ET
-Q
-Q
-q
-1 0 0 1 23 -3 cm
-q
-BT 1 0 0 1 0 86 Tm .58284 Tw 12 TL /F2 10 Tf 0 0 0 rg (Why:) Tj /F1 10 Tf ( Convolutional layers are used to extract local patterns in the input data. By stacking) Tj T* 0 Tw 1.256412 Tw (many convolutional layers on top of each other, higher level relationships are able to be) Tj T* 0 Tw 1.099982 Tw (recognised. In practice, this means the network is able to perform better \(more complex\)) Tj T* 0 Tw 1.269213 Tw (pattern recognition, which is what machine learning is all about. Using a repeating block) Tj T* 0 Tw 2.208555 Tw (structure like the one pictured below has been found to be very effective. Each block) Tj T* 0 Tw .589979 Tw (contains multiple convolutions and a pooling layer to reduce dimensionality. Each element) Tj T* 0 Tw .46284 Tw (of the block is optional and customisable, but the principle of repeating blocks remains the) Tj T* 0 Tw (same.) Tj T* ET
-Q
-Q
-q
-Q
-Q
-q
-1 0 0 1 20 0 cm
-Q
-q
-Q
-Q
-q
-Q
-Q
-q
-1 0 0 1 62.69291 84.02362 cm
-Q
-q
-1 0 0 1 56.69291 773.1969 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL 163.4149 0 Td (TechNES AI Best Practices Group:) Tj T* -163.4149 0 Td ET
-Q
-Q
- 
-endstream
-endobj
-85 0 obj
-<<
-/Length 8974
->>
-stream
-1 0 0 1 0 0 cm  BT /F1 12 Tf 14.4 TL ET
-q
-1 0 0 1 62.69291 636.0236 cm
-0 0 0 rg
-BT /F1 10 Tf 12 TL ET
-q
-1 0 0 1 6 102 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL 10.5 0 Td (\177) Tj T* -10.5 0 Td ET
-Q
-Q
-q
-1 0 0 1 23 102 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 2 Tm /F2 10 Tf 12 TL (Skip Connections) Tj T* ET
-Q
-Q
-q
-1 0 0 1 23 -3 cm
-0 0 0 rg
-BT /F1 10 Tf 12 TL ET
-BT 1 0 0 1 0 92 Tm  T* ET
-q
-1 0 0 1 20 96 cm
-Q
-q
-1 0 0 1 20 96 cm
-Q
-q
-1 0 0 1 20 36 cm
-0 0 0 rg
-BT /F1 10 Tf 12 TL ET
-q
-1 0 0 1 6 45 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL 10.5 0 Td (\177) Tj T* -10.5 0 Td ET
-Q
-Q
-q
-1 0 0 1 23 -3 cm
-q
-BT 1 0 0 1 0 50 Tm .33686 Tw 12 TL /F2 10 Tf 0 0 0 rg (What:) Tj /F1 10 Tf ( Passing the output of one layer in the network directly to later layers in the network,) Tj T* 0 Tw .819147 Tw (\221skipping\222 over the intermediate layers. This can be done through addition, which requires) Tj T* 0 Tw 2.549213 Tw (the dimensions of the layers to be equal, or through appending, which increases the) Tj T* 0 Tw 2.003615 Tw (dimension size. Appending is the safer choice, though comes at greater computational) Tj T* 0 Tw (cost.) Tj T* ET
-Q
-Q
-q
-Q
-Q
-q
-1 0 0 1 20 48 cm
-Q
-q
-1 0 0 1 20 0 cm
-0 0 0 rg
-BT /F1 10 Tf 12 TL ET
-q
-1 0 0 1 6 33 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL 10.5 0 Td (\177) Tj T* -10.5 0 Td ET
-Q
-Q
-q
-1 0 0 1 23 -3 cm
-q
-BT 1 0 0 1 0 38 Tm -0.00939 Tw 12 TL /F2 10 Tf 0 0 0 rg (Why:) Tj /F1 10 Tf ( As we make our networks deeper, we are able to extract higher level features. This is) Tj T* 0 Tw .074597 Tw (extremely powerful, but some new issues begin to emerge. Firstly, the low level information) Tj T* 0 Tw .47311 Tw (can get lost on the way. Secondly, we can run into the vanishing gradient problem. A neat) Tj T* 0 Tw (solution to diminish both of these issues is to use skip connections.) Tj T* ET
-Q
-Q
-q
-Q
-Q
-q
-1 0 0 1 20 0 cm
-Q
-q
-Q
-Q
-q
-Q
-Q
-q
-1 0 0 1 62.69291 630.0236 cm
-Q
-q
-1 0 0 1 62.69291 483.0236 cm
-0 0 0 rg
-BT /F1 10 Tf 12 TL ET
-q
-1 0 0 1 6 132 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL 10.5 0 Td (\177) Tj T* -10.5 0 Td ET
-Q
-Q
-q
-1 0 0 1 23 132 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 2 Tm /F2 10 Tf 12 TL (Bottlenecks) Tj T* ET
-Q
-Q
-q
-1 0 0 1 23 -3 cm
-0 0 0 rg
-BT /F1 10 Tf 12 TL ET
-BT 1 0 0 1 0 122 Tm  T* ET
-q
-1 0 0 1 20 126 cm
-Q
-q
-1 0 0 1 20 126 cm
-Q
-q
-1 0 0 1 20 90 cm
-0 0 0 rg
-BT /F1 10 Tf 12 TL ET
-q
-1 0 0 1 6 21 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL 10.5 0 Td (\177) Tj T* -10.5 0 Td ET
-Q
-Q
-q
-1 0 0 1 23 -3 cm
-q
-BT 1 0 0 1 0 26 Tm -0.11439 Tw 12 TL /F2 10 Tf 0 0 0 rg (What:) Tj /F1 10 Tf ( A bottleneck refers to the shape of the network \(big to small\). Often followed by more) Tj T* 0 Tw .546235 Tw (layers to build the network size back up \(small to big\). The bottleneck itself is the smallest) Tj T* 0 Tw (layer, which can also be called the encoding layer.) Tj T* ET
-Q
-Q
-q
-Q
-Q
-q
-1 0 0 1 20 84 cm
-Q
-q
-1 0 0 1 20 0 cm
-0 0 0 rg
-BT /F1 10 Tf 12 TL ET
-q
-1 0 0 1 6 69 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL 10.5 0 Td (\177) Tj T* -10.5 0 Td ET
-Q
-Q
-q
-1 0 0 1 23 -3 cm
-q
-BT 1 0 0 1 0 74 Tm 1.420814 Tw 12 TL /F2 10 Tf 0 0 0 rg (Why:) Tj /F1 10 Tf ( Many networks utilise the idea of a bottleneck, even beyond simple autoencoders) Tj T* 0 Tw .329213 Tw (\(which are nothing more than a bottleneck in structure\). Compressing data through a small) Tj T* 0 Tw .215814 Tw (encoding layer encourages the network to extract the most distinguishing features from the) Tj T* 0 Tw 2.279985 Tw (data. This is used in a number of different ways. The encoding itself can be used to) Tj T* 0 Tw .126235 Tw (represent the data in a unique and low dimensional form. Or the second half of the network) Tj T* 0 Tw 3.276905 Tw (can use the information from skip connections and the encoding to infer high level) Tj T* 0 Tw (information about the data to solve problems.) Tj T* ET
-Q
-Q
-q
-Q
-Q
-q
-1 0 0 1 20 0 cm
-Q
-q
-Q
-Q
-q
-Q
-Q
-q
-1 0 0 1 62.69291 477.0236 cm
-Q
-q
-1 0 0 1 62.69291 354.0236 cm
-0 0 0 rg
-BT /F1 10 Tf 12 TL ET
-q
-1 0 0 1 6 108 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL 10.5 0 Td (\177) Tj T* -10.5 0 Td ET
-Q
-Q
-q
-1 0 0 1 23 108 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 2 Tm /F2 10 Tf 12 TL (Recurrence) Tj T* ET
-Q
-Q
-q
-1 0 0 1 23 -3 cm
-0 0 0 rg
-BT /F1 10 Tf 12 TL ET
-BT 1 0 0 1 0 98 Tm  T* ET
-q
-1 0 0 1 20 102 cm
-Q
-q
-1 0 0 1 20 102 cm
-Q
-q
-1 0 0 1 20 78 cm
-0 0 0 rg
-BT /F1 10 Tf 12 TL ET
-q
-1 0 0 1 6 9 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL 10.5 0 Td (\177) Tj T* -10.5 0 Td ET
-Q
-Q
-q
-1 0 0 1 23 -3 cm
-q
-BT 1 0 0 1 0 14 Tm .058735 Tw 12 TL /F2 10 Tf 0 0 0 rg (What:) Tj /F1 10 Tf ( A network layer which takes as input some data and a \221state\222 vector, and produces a) Tj T* 0 Tw (new state vector alongside its other output.) Tj T* ET
-Q
-Q
-q
-Q
-Q
-q
-1 0 0 1 20 72 cm
-Q
-q
-1 0 0 1 20 0 cm
-0 0 0 rg
-BT /F1 10 Tf 12 TL ET
-q
-1 0 0 1 6 57 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL 10.5 0 Td (\177) Tj T* -10.5 0 Td ET
-Q
-Q
-q
-1 0 0 1 23 -3 cm
-q
-BT 1 0 0 1 0 62 Tm .144983 Tw 12 TL /F2 10 Tf 0 0 0 rg (Why:) Tj /F1 10 Tf ( The state vector represents some understanding about the state at a given time. The) Tj T* 0 Tw .86881 Tw (idea then is for the layer to take in some data and update this understanding, so that the) Tj T* 0 Tw .024651 Tw (state is different for the next time step. Without recurrence, networks have no notion of time) Tj T* 0 Tw 1.86561 Tw (or way to relate the data coming in now with what came before. This is necessary for) Tj T* 0 Tw 1.019269 Tw (sequential tasks like video or text recognition, and not necessary for static tasks such as) Tj T* 0 Tw (image recognition, hence the discrepancy.) Tj T* ET
-Q
-Q
-q
-Q
-Q
-q
-1 0 0 1 20 0 cm
-Q
-q
-Q
-Q
-q
-Q
-Q
-q
-1 0 0 1 62.69291 348.0236 cm
-Q
-q
-1 0 0 1 62.69291 177.0236 cm
-0 0 0 rg
-BT /F1 10 Tf 12 TL ET
-q
-1 0 0 1 6 156 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL 10.5 0 Td (\177) Tj T* -10.5 0 Td ET
-Q
-Q
-q
-1 0 0 1 23 156 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 2 Tm /F2 10 Tf 12 TL (Attention) Tj T* ET
-Q
-Q
-q
-1 0 0 1 23 -3 cm
-0 0 0 rg
-BT /F1 10 Tf 12 TL ET
-BT 1 0 0 1 0 146 Tm  T* ET
-q
-1 0 0 1 20 150 cm
-Q
-q
-1 0 0 1 20 150 cm
-Q
-q
-1 0 0 1 20 78 cm
-0 0 0 rg
-BT /F1 10 Tf 12 TL ET
-q
-1 0 0 1 6 57 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL 10.5 0 Td (\177) Tj T* -10.5 0 Td ET
-Q
-Q
-q
-1 0 0 1 23 -3 cm
-q
-BT 1 0 0 1 0 62 Tm 1.31152 Tw 12 TL /F2 10 Tf 0 0 0 rg (What:) Tj /F1 10 Tf ( Weighting each element of a sequence of data, according to how important \(how) Tj T* 0 Tw 1.72561 Tw (much attention should be paid to\) it, to solve a given task. Typically, the model will be) Tj T* 0 Tw 1.214983 Tw (outputting another sequence, and as such each element of the output with will require a) Tj T* 0 Tw -0.089349 Tw (different set of attention weights. The full theory behind attention is beyond the scope of this) Tj T* 0 Tw .099984 Tw (guide. It is listed here to give a brief intuition behind transformer models, which are growing) Tj T* 0 Tw (in popularity and based on the principle of attention.) Tj T* ET
-Q
-Q
-q
-Q
-Q
-q
-1 0 0 1 20 72 cm
-Q
-q
-1 0 0 1 20 0 cm
-0 0 0 rg
-BT /F1 10 Tf 12 TL ET
-q
-1 0 0 1 6 57 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL 10.5 0 Td (\177) Tj T* -10.5 0 Td ET
-Q
-Q
-q
-1 0 0 1 23 -3 cm
-q
-BT 1 0 0 1 0 62 Tm .231235 Tw 12 TL /F2 10 Tf 0 0 0 rg (Why:) Tj /F1 10 Tf ( Attention provides a way for a network to take in sequential data all at once, learning) Tj T* 0 Tw 1.233314 Tw (which input elements each output should pay attention to. This offers numerous benefits) Tj T* 0 Tw 1.783828 Tw (over recurrence, such as the ability to be processed in parallel \(recurrent networks are) Tj T* 0 Tw .439069 Tw (inherently sequential so cannot be parallelised\), and removing recency bias. Recency bias) Tj T* 0 Tw .501412 Tw (being the tendency of RNNs to pay more attention to the most recent sequence elements,) Tj T* 0 Tw (rather than the most relevant.) Tj T* ET
-Q
-Q
-q
-Q
-Q
-q
-1 0 0 1 20 0 cm
-Q
-q
-Q
-Q
-q
-Q
-Q
-q
-1 0 0 1 62.69291 177.0236 cm
-Q
-q
-1 0 0 1 62.69291 150.0236 cm
-q
-BT 1 0 0 1 0 2.5 Tm 15 TL /F3 12.5 Tf 0 0 0 rg (Neural Network Design and Experimentation Process) Tj T* ET
-Q
-Q
-q
-1 0 0 1 62.69291 138.0236 cm
-Q
-q
-1 0 0 1 62.69291 138.0236 cm
-Q
-q
-1 0 0 1 62.69291 76.86614 cm
-0 0 0 rg
-BT /F1 10 Tf 12 TL ET
-q
-1 0 0 1 6 46.15748 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL 5.66 0 Td (1.) Tj T* -5.66 0 Td ET
-Q
-Q
-q
-1 0 0 1 23 10.15748 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 38 Tm /F1 10 Tf 12 TL .62561 Tw (Establish a strong baseline. The first thing to do once your data pipeline and evaluation metrics are) Tj T* 0 Tw .589431 Tw (set up, is to try out the simplest neural network design relevant to your problem. Usually this will be) Tj T* 0 Tw .644724 Tw (an MLP. The data will determine the input and output size, so for this make a simple MLP with one) Tj T* 0 Tw .334988 Tw (hidden layer. There is no magic formula to tell you how large to make this hidden layer, the key is to) Tj T* 0 Tw ET
-Q
-Q
-q
-Q
-Q
-q
-1 0 0 1 56.69291 773.1969 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL 163.4149 0 Td (TechNES AI Best Practices Group:) Tj T* -163.4149 0 Td ET
-Q
-Q
- 
-endstream
-endobj
-86 0 obj
-<<
-/Length 9185
->>
-stream
-1 0 0 1 0 0 cm  BT /F1 12 Tf 14.4 TL ET
-q
-1 0 0 1 62.69291 717.0236 cm
-0 0 0 rg
-BT /F1 10 Tf 12 TL ET
-BT 1 0 0 1 6 23 Tm  T* ET
-q
-1 0 0 1 23 -3 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 26 Tm /F1 10 Tf 12 TL .887485 Tw (experiment. Start with \(input size + output size\)/2 if you are unsure. Train and evaluate. This gives) Tj T* 0 Tw .236303 Tw (you a benchmark and some idea of how complex the task will be. If the MLP performs very well, you) Tj T* 0 Tw (may wish to stop there. If not, move on to step 2.) Tj T* ET
-Q
-Q
-q
-Q
-Q
-q
-1 0 0 1 62.69291 711.0236 cm
-Q
-q
-1 0 0 1 62.69291 519.0236 cm
-0 0 0 rg
-BT /F1 10 Tf 12 TL ET
-q
-1 0 0 1 6 177 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL 5.66 0 Td (2.) Tj T* -5.66 0 Td ET
-Q
-Q
-q
-1 0 0 1 23 105 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 74 Tm /F1 10 Tf 12 TL .878555 Tw (Design a neural network specifically for your problem. How? Google it! More specifically, scour the) Tj T* 0 Tw 1.413828 Tw (internet for a research paper, article or competition submission that publishes a machine learning) Tj T* 0 Tw .219987 Tw (model for a problem similar to yours. All kinds of similarity are useful, working on the same data type) Tj T* 0 Tw 1.94784 Tw (\(eg time series, video etc\), or the same problem \(eg anomaly detection, object recognition\), but) Tj T* 0 Tw .702093 Tw (ideally both. For this to be successful, it is likely that the authors have already done a great deal of) Tj T* 0 Tw 1.947485 Tw (the work for us in choosing approximately the right kind of network architecture. Take this as a) Tj T* 0 Tw (starting point.) Tj T* ET
-Q
-Q
-q
-1 0 0 1 23 99 cm
-Q
-q
-1 0 0 1 23 -3 cm
-0 0 0 rg
-BT /F1 10 Tf 12 TL ET
-BT 1 0 0 1 0 2 Tm  T* ET
-q
-1 0 0 1 20 96 cm
-Q
-q
-1 0 0 1 20 96 cm
-Q
-q
-1 0 0 1 20 72 cm
-0 0 0 rg
-BT /F1 10 Tf 12 TL ET
-q
-1 0 0 1 6 9 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL 5.66 0 Td (a.) Tj T* -5.66 0 Td ET
-Q
-Q
-q
-1 0 0 1 23 -3 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 14 Tm /F1 10 Tf 12 TL 4.117126 Tw (The closer their problem is to yours, the less we need to experiment with other) Tj T* 0 Tw (architectures) Tj T* ET
-Q
-Q
-q
-Q
-Q
-q
-1 0 0 1 20 66 cm
-Q
-q
-1 0 0 1 20 30 cm
-0 0 0 rg
-BT /F1 10 Tf 12 TL ET
-q
-1 0 0 1 6 21 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL 5.66 0 Td (b.) Tj T* -5.66 0 Td ET
-Q
-Q
-q
-1 0 0 1 23 -3 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 26 Tm /F1 10 Tf 12 TL 1.701647 Tw (For research papers in particular, models may be more complicated than necessary as) Tj T* 0 Tw .243828 Tw (authors are usually proposing a novel method. We can experiment with removing the more) Tj T* 0 Tw (complicated features, if they don\222t affect performance.) Tj T* ET
-Q
-Q
-q
-Q
-Q
-q
-1 0 0 1 20 24 cm
-Q
-q
-1 0 0 1 20 0 cm
-0 0 0 rg
-BT /F1 10 Tf 12 TL ET
-q
-1 0 0 1 6 9 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL 6.22 0 Td (c.) Tj T* -6.22 0 Td ET
-Q
-Q
-q
-1 0 0 1 23 -3 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 14 Tm /F1 10 Tf 12 TL 1.653059 Tw (If nothing relevant arises, use the baseline model we established earlier as the starting) Tj T* 0 Tw (point.) Tj T* ET
-Q
-Q
-q
-Q
-Q
-q
-1 0 0 1 20 0 cm
-Q
-q
-Q
-Q
-q
-1 0 0 1 23 -3 cm
-Q
-q
-Q
-Q
-q
-1 0 0 1 62.69291 513.0236 cm
-Q
-q
-1 0 0 1 62.69291 171.0236 cm
-0 0 0 rg
-BT /F1 10 Tf 12 TL ET
-q
-1 0 0 1 6 327 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL 5.66 0 Td (3.) Tj T* -5.66 0 Td ET
-Q
-Q
-q
-1 0 0 1 23 243 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 86 Tm /F1 10 Tf 12 TL .20936 Tw (Iteration and experimentation. Given a baseline \(either from step 1 or 2\) and working data pipeline, it) Tj T* 0 Tw 3.660814 Tw (may be surprisingly straightforward to test different ideas, so long as enough computational) Tj T* 0 Tw .834985 Tw (resources are available. Bear your initial goals in mind, don\222t be afraid to stop iterating when these) Tj T* 0 Tw 3.967318 Tw (are met even if it may be possible to squeeze slightly more performance out with further) Tj T* 0 Tw .884147 Tw (experimentation. Very small improvements to measured performance on test data may not actually) Tj T* 0 Tw 1.633318 Tw (translate to a significantly better model in the real world. APIs such as TensorFlow and PyTorch) Tj T* 0 Tw .630651 Tw (make adjusting model architectures as simple as stacking preset functions on top of one and other.) Tj T* 0 Tw (These all come in built with these APIs, and are listed below:) Tj T* ET
-Q
-Q
-q
-1 0 0 1 23 237 cm
-Q
-q
-1 0 0 1 23 -3 cm
-0 0 0 rg
-BT /F1 10 Tf 12 TL ET
-BT 1 0 0 1 0 2 Tm  T* ET
-q
-1 0 0 1 20 234 cm
-Q
-q
-1 0 0 1 20 234 cm
-Q
-q
-1 0 0 1 20 168 cm
-0 0 0 rg
-BT /F1 10 Tf 12 TL ET
-q
-1 0 0 1 6 51 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL 5.66 0 Td (a.) Tj T* -5.66 0 Td ET
-Q
-Q
-q
-1 0 0 1 23 39 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 14 Tm /F1 10 Tf 12 TL .415529 Tw (Regularisers: These may improve generalisation performance without changing the overall) Tj T* 0 Tw (architecture.) Tj T* ET
-Q
-Q
-q
-1 0 0 1 23 33 cm
-Q
-q
-1 0 0 1 23 -3 cm
-0 0 0 rg
-BT /F1 10 Tf 12 TL ET
-BT 1 0 0 1 0 2 Tm  T* ET
-q
-1 0 0 1 20 30 cm
-Q
-q
-1 0 0 1 20 30 cm
-Q
-q
-1 0 0 1 20 18 cm
-0 0 0 rg
-BT /F1 10 Tf 12 TL ET
-q
-1 0 0 1 6 -3 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL 9 0 Td (i.) Tj T* -9 0 Td ET
-Q
-Q
-q
-1 0 0 1 23 -3 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (Dropout) Tj T* ET
-Q
-Q
-q
-Q
-Q
-q
-1 0 0 1 20 12 cm
-Q
-q
-1 0 0 1 20 0 cm
-0 0 0 rg
-BT /F1 10 Tf 12 TL ET
-q
-1 0 0 1 6 -3 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL 6.78 0 Td (ii.) Tj T* -6.78 0 Td ET
-Q
-Q
-q
-1 0 0 1 23 -3 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (Batch normalisation.) Tj T* ET
-Q
-Q
-q
-Q
-Q
-q
-1 0 0 1 20 0 cm
-Q
-q
-Q
-Q
-q
-1 0 0 1 23 -3 cm
-Q
-q
-Q
-Q
-q
-1 0 0 1 20 162 cm
-Q
-q
-1 0 0 1 20 114 cm
-0 0 0 rg
-BT /F1 10 Tf 12 TL ET
-q
-1 0 0 1 6 33 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL 5.66 0 Td (b.) Tj T* -5.66 0 Td ET
-Q
-Q
-q
-1 0 0 1 23 21 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 14 Tm /F1 10 Tf 12 TL .959147 Tw (Dimensionality Manipulations: Scale up or down dimensionality. Often comes at a cost of) Tj T* 0 Tw (information loss in favour of computational efficiency.) Tj T* ET
-Q
-Q
-q
-1 0 0 1 23 15 cm
-Q
-q
-1 0 0 1 23 -3 cm
-0 0 0 rg
-BT /F1 10 Tf 12 TL ET
-BT 1 0 0 1 0 2 Tm  T* ET
-q
-1 0 0 1 20 12 cm
-Q
-q
-1 0 0 1 20 12 cm
-Q
-q
-1 0 0 1 20 0 cm
-0 0 0 rg
-BT /F1 10 Tf 12 TL ET
-q
-1 0 0 1 6 -3 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL 9 0 Td (i.) Tj T* -9 0 Td ET
-Q
-Q
-q
-1 0 0 1 23 -3 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (Max Pooling) Tj T* ET
-Q
-Q
-q
-Q
-Q
-q
-1 0 0 1 20 0 cm
-Q
-q
-Q
-Q
-q
-1 0 0 1 23 -3 cm
-Q
-q
-Q
-Q
-q
-1 0 0 1 20 108 cm
-Q
-q
-1 0 0 1 20 57 cm
-0 0 0 rg
-BT /F1 10 Tf 12 TL ET
-q
-1 0 0 1 6 36 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL 6.22 0 Td (c.) Tj T* -6.22 0 Td ET
-Q
-Q
-q
-1 0 0 1 23 36 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 2 Tm /F2 10 Tf 12 TL (Recurrent modules: for sequential data only.) Tj T* ET
-Q
-Q
-q
-1 0 0 1 23 -3 cm
-0 0 0 rg
-BT /F1 10 Tf 12 TL ET
-BT 1 0 0 1 0 26 Tm  T* ET
-q
-1 0 0 1 20 30 cm
-Q
-q
-1 0 0 1 20 30 cm
-Q
-q
-1 0 0 1 20 18 cm
-0 0 0 rg
-BT /F1 10 Tf 12 TL ET
-q
-1 0 0 1 6 -3 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL 9 0 Td (i.) Tj T* -9 0 Td ET
-Q
-Q
-q
-1 0 0 1 23 -3 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (LSTM) Tj T* ET
-Q
-Q
-q
-Q
-Q
-q
-1 0 0 1 20 12 cm
-Q
-q
-1 0 0 1 20 0 cm
-0 0 0 rg
-BT /F1 10 Tf 12 TL ET
-q
-1 0 0 1 6 -3 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL 6.78 0 Td (ii.) Tj T* -6.78 0 Td ET
-Q
-Q
-q
-1 0 0 1 23 -3 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (GRU) Tj T* ET
-Q
-Q
-q
-Q
-Q
-q
-1 0 0 1 20 0 cm
-Q
-q
-Q
-Q
-q
-Q
-Q
-q
-1 0 0 1 20 51 cm
-Q
-q
-1 0 0 1 20 0 cm
-0 0 0 rg
-BT /F1 10 Tf 12 TL ET
-q
-1 0 0 1 6 36 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL 5.66 0 Td (d.) Tj T* -5.66 0 Td ET
-Q
-Q
-q
-1 0 0 1 23 36 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 2 Tm /F2 10 Tf 12 TL (Other) Tj T* ET
-Q
-Q
-q
-1 0 0 1 23 -3 cm
-0 0 0 rg
-BT /F1 10 Tf 12 TL ET
-BT 1 0 0 1 0 26 Tm  T* ET
-q
-1 0 0 1 20 30 cm
-Q
-q
-1 0 0 1 20 30 cm
-Q
-q
-1 0 0 1 20 18 cm
-0 0 0 rg
-BT /F1 10 Tf 12 TL ET
-q
-1 0 0 1 6 -3 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL 9 0 Td (i.) Tj T* -9 0 Td ET
-Q
-Q
-q
-1 0 0 1 23 -3 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (Convolutions) Tj T* ET
-Q
-Q
-q
-Q
-Q
-q
-1 0 0 1 20 12 cm
-Q
-q
-1 0 0 1 20 0 cm
-0 0 0 rg
-BT /F1 10 Tf 12 TL ET
-q
-1 0 0 1 6 -3 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL 6.78 0 Td (ii.) Tj T* -6.78 0 Td ET
-Q
-Q
-q
-1 0 0 1 23 -3 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL (Skip Connections) Tj T* ET
-Q
-Q
-q
-Q
-Q
-q
-1 0 0 1 20 0 cm
-Q
-q
-Q
-Q
-q
-Q
-Q
-q
-1 0 0 1 20 0 cm
-Q
-q
-Q
-Q
-q
-1 0 0 1 23 -3 cm
-Q
-q
-Q
-Q
-q
-1 0 0 1 62.69291 171.0236 cm
-Q
-q
-1 0 0 1 62.69291 93.02362 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 62 Tm /F1 10 Tf 12 TL 1.777633 Tw (Taking the ideas of others as inspiration, try out some of these ideas and observe their effects, both) Tj T* 0 Tw .830651 Tw (individually and in combination. See the architectural principles section for a breakdown of what each of) Tj T* 0 Tw .10104 Tw (these do. Remember, simplicity is key. A useful method to avoid wasted time is to train and test the model) Tj T* 0 Tw .601751 Tw (after a given small change, one change at a time. If performance doesn\222t improve, don\222t waste any more) Tj T* 0 Tw .752209 Tw (time on changes of that kind. Whereas if you make many changes and then evaluate, you can\222t be sure) Tj T* 0 Tw (which changes are having a positive effect.) Tj T* ET
-Q
-Q
-q
-1 0 0 1 56.69291 773.1969 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL 163.4149 0 Td (TechNES AI Best Practices Group:) Tj T* -163.4149 0 Td ET
-Q
-Q
- 
-endstream
-endobj
-87 0 obj
-<<
-/Length 635
->>
-stream
-1 0 0 1 0 0 cm  BT /F1 12 Tf 14.4 TL ET
-q
-1 0 0 1 62.69291 735.0236 cm
-q
-BT 1 0 0 1 0 3 Tm 18 TL /F2 15 Tf 0 0 0 rg (Worked Examples) Tj T* ET
-Q
-Q
-q
-1 0 0 1 62.69291 702.0236 cm
-q
-BT 1 0 0 1 0 3.5 Tm 21 TL /F2 17.5 Tf 0 0 0 rg (Pitfalls and Common Problems) Tj T* ET
-Q
-Q
-q
-1 0 0 1 62.69291 669.0236 cm
-q
-BT 1 0 0 1 0 3.5 Tm 21 TL /F2 17.5 Tf 0 0 0 rg (Resources) Tj T* ET
-Q
-Q
-q
-1 0 0 1 62.69291 636.0236 cm
-q
-BT 1 0 0 1 0 3.5 Tm 21 TL /F2 17.5 Tf 0 0 0 rg (Appendix) Tj T* ET
-Q
-Q
-q
-1 0 0 1 56.69291 773.1969 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 2 Tm /F1 10 Tf 12 TL 163.4149 0 Td (TechNES AI Best Practices Group:) Tj T* -163.4149 0 Td ET
-Q
-Q
- 
-endstream
-endobj
-88 0 obj
-<<
-/Nums [ 0 89 0 R 1 90 0 R 2 91 0 R 3 92 0 R 4 93 0 R 
-  5 94 0 R 6 95 0 R ]
->>
-endobj
-89 0 obj
-<<
-/S /D /St 1
->>
-endobj
-90 0 obj
-<<
-/S /D /St 2
->>
-endobj
-91 0 obj
-<<
-/S /D /St 3
->>
-endobj
-92 0 obj
-<<
-/S /D /St 4
->>
-endobj
-93 0 obj
-<<
-/S /D /St 5
->>
-endobj
-94 0 obj
-<<
-/S /D /St 6
->>
-endobj
-95 0 obj
-<<
-/S /D /St 7
->>
-endobj
-xref
-0 96
-0000000000 65535 f 
-0000000073 00000 n 
-0000000125 00000 n 
-0000000232 00000 n 
-0000000344 00000 n 
-0000000512 00000 n 
-0000000680 00000 n 
-0000000848 00000 n 
-0000001016 00000 n 
-0000001184 00000 n 
-0000001352 00000 n 
-0000001521 00000 n 
-0000001690 00000 n 
-0000001859 00000 n 
-0000002028 00000 n 
-0000002197 00000 n 
-0000002366 00000 n 
-0000002535 00000 n 
-0000002704 00000 n 
-0000002873 00000 n 
-0000003042 00000 n 
-0000003211 00000 n 
-0000003380 00000 n 
-0000003549 00000 n 
-0000003718 00000 n 
-0000003887 00000 n 
-0000004056 00000 n 
-0000004225 00000 n 
-0000004394 00000 n 
-0000004563 00000 n 
-0000004732 00000 n 
-0000004901 00000 n 
-0000005070 00000 n 
-0000005239 00000 n 
-0000005408 00000 n 
-0000005577 00000 n 
-0000005746 00000 n 
-0000005915 00000 n 
-0000006084 00000 n 
-0000006253 00000 n 
-0000006422 00000 n 
-0000006591 00000 n 
-0000006760 00000 n 
-0000006929 00000 n 
-0000007098 00000 n 
-0000007267 00000 n 
-0000007436 00000 n 
-0000007954 00000 n 
-0000008160 00000 n 
-0000008366 00000 n 
-0000008486 00000 n 
-0000008692 00000 n 
-0000008898 00000 n 
-0000009104 00000 n 
-0000009310 00000 n 
-0000009416 00000 n 
-0000009674 00000 n 
-0000009749 00000 n 
-0000009858 00000 n 
-0000009988 00000 n 
-0000010115 00000 n 
-0000010307 00000 n 
-0000010456 00000 n 
-0000010629 00000 n 
-0000010743 00000 n 
-0000010878 00000 n 
-0000010999 00000 n 
-0000011157 00000 n 
-0000011281 00000 n 
-0000011411 00000 n 
-0000011526 00000 n 
-0000011719 00000 n 
-0000011830 00000 n 
-0000011970 00000 n 
-0000012139 00000 n 
-0000012284 00000 n 
-0000012435 00000 n 
-0000012552 00000 n 
-0000012695 00000 n 
-0000012819 00000 n 
-0000012929 00000 n 
-0000013032 00000 n 
-0000021612 00000 n 
-0000028143 00000 n 
-0000036201 00000 n 
-0000040988 00000 n 
-0000050014 00000 n 
-0000059251 00000 n 
-0000059937 00000 n 
-0000060035 00000 n 
-0000060069 00000 n 
-0000060103 00000 n 
-0000060137 00000 n 
-0000060171 00000 n 
-0000060205 00000 n 
-0000060239 00000 n 
-trailer
-<<
-/ID 
-[<b45eeabd02195f4d08ebdf61b42c1eaf><b45eeabd02195f4d08ebdf61b42c1eaf>]
-% ReportLab generated PDF document -- digest (http://www.reportlab.com)
+table {
+    border-collapse: collapse;
+}
 
-/Info 55 0 R
-/Root 54 0 R
-/Size 96
->>
-startxref
-60273
-%%EOF
+.header {
+    background-color: #5C6BC0;
+    color: white;
+    margin:0;
+
+}
+
+.header strong {
+    font-size: 3em;
+}
+</style>
+</head>
+<body>
+<div class="header">
+TechNES AI Best Practices Group:
+<hr class="header"/>
+</div>
+<div class="document">
+
+
+<div class="contents sidebar topic" id="table-of-contents">
+<p class="topic-title">Table of Contents</p>
+<ul class="simple">
+<li><a class="reference internal" href="#summary" id="id1">Summary</a></li>
+<li><a class="reference internal" href="#target-audience" id="id2">Target Audience</a></li>
+<li><a class="reference internal" href="#introduction" id="id3">Introduction</a></li>
+<li><a class="reference internal" href="#overview-key-concepts-and-terminology" id="id4">Overview: Key Concepts and Terminology</a><ul>
+<li><a class="reference internal" href="#putting-it-together-creating-modern-ai-and-machine-learning" id="id5">Putting it Together: Creating Modern AI and Machine Learning</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#running-ai-projects" id="id6">Running AI Projects</a><ul>
+<li><a class="reference internal" href="#should-i-ai" id="id7">Should I AI?</a></li>
+<li><a class="reference internal" href="#ai-project-decisions" id="id8">AI Project Decisions</a></li>
+<li><a class="reference internal" href="#ai-project-workflow" id="id9">AI Project Workflow</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#data" id="id10">Data</a><ul>
+<li><a class="reference internal" href="#the-importance-of-data" id="id11">The Importance of Data</a></li>
+<li><a class="reference internal" href="#collecting-data" id="id12">Collecting Data</a></li>
+<li><a class="reference internal" href="#managing-data" id="id13">Managing Data</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#building-ai-and-machine-learning-models" id="id14">Building AI and Machine Learning Models</a><ul>
+<li><a class="reference internal" href="#decisions" id="id15">Decisions</a></li>
+<li><a class="reference internal" href="#decision-making-flowchart" id="id16">Decision Making Flowchart</a></li>
+<li><a class="reference internal" href="#neural-networks" id="id17">Neural Networks</a></li>
+<li><a class="reference internal" href="#worked-examples" id="id18">Worked Examples</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#pitfalls-and-common-problems" id="id19">Pitfalls and Common Problems</a></li>
+<li><a class="reference internal" href="#resources" id="id20">Resources</a></li>
+<li><a class="reference internal" href="#appendix" id="id21">Appendix</a></li>
+</ul>
+</div>
+<div class="section" id="summary">
+<h1><a class="toc-backref" href="#id1">Summary</a></h1>
+<p>Artificial Intelligence (AI) and Machine Learning (ML) technologies are key to
+many modern engineering projects due to their ability to solve many problems
+that are difficult or impossible with other methods. While most engineers will
+find themselves enjoying a significant overlap between these techniques and
+their existing skill set, they are also liable to find that AI and Machine
+Learning is its own field with its own unique demands and (often hidden)
+pitfalls. While there are many resources available for self teaching, it is
+generally assumed the practitioner is either an absolute beginner to
+engineering, or already a seasoned expert in AI and ML. In this document, we
+provide a practical guide to AI and Machine learning for  electronic systems
+engineers who already have a strong base of knowledge in electronic systems but
+no specialised expertise. This guide will be practice focused, with the goal of
+helping engineers to make good decisions and avoid problems. The guide will
+cover, among many others areas:</p>
+<ul class="simple">
+<li>Technical Language and Core Concepts</li>
+<li>Data, Collection and Common Problems</li>
+<li>Deploying AI and Machine Learning, with Worked Examples</li>
+<li>Existing resources, where to find them and how best to use them</li>
+<li>Common Pitfalls, how to avoid and how to solve</li>
+</ul>
+</div>
+<div class="section" id="target-audience">
+<h1><a class="toc-backref" href="#id2">Target Audience</a></h1>
+<p>The target audience for this guide is electronic systems engineers with little
+to no specific expertise in AI and Machine Learning techniques. It will be
+assumed, because of this background, that readers will have a base level of
+competence in programming and mathematics, though the guide will err on the
+side of caution in respect of assumed knowledge. We may, for example, assume
+our reader has knowledge of concepts in basic calculus, but are unlikely to
+assume that they are able to remember any specific formula. We are also assuming
+that the primary interest in practically deploying these techniques rather than
+understanding the theory and context of their development. For readers
+interested in a more theoretical treatment, we list several texts in the
+resources section appropriate to a range of different levels of background
+knowledge.</p>
+</div>
+<div class="section" id="introduction">
+<h1><a class="toc-backref" href="#id3">Introduction</a></h1>
+<p>The terms Artificial Intelligence and Machine Learning both lend themselves to
+the idea that we are creating a program that can, in some respect, think and
+learn in the same way a person can. While it may be possible to create systems
+that are capable of this, the current technologies that are deployed in practice
+are much more restricted in scope. Current, practical Artificial Intelligence
+and Machine Learning technology generally refers to programs that are of a
+statistical, or statistically adjacent nature, and that use data to fit some
+specified mathematical model. While these techniques are proving extremely
+valuable in solving otherwise difficult or intractable problems, the
+fundamentals of the techniques are neither exceptionally novel nor complicated.
+In this guide, we aim to show just how simple it can be to deploy these
+techniques in practice, especially for an audience that already has knowledge
+of electronic systems engineering.</p>
+<p>It is important to acknowledge that, despite the above, no specific definition
+of Artificial Intelligence and Machine Learning that is universally agreed on
+exists. Furthermore, lacking any significant advancement in our understanding
+of what cognition, intelligence, and learning actually mean, this state of
+affairs is likely to continue. Given the practical focus of this guide, it would
+not be profitable for us to enter into this debate at any length. We will
+therefore, universally use the term “AI and Machine Learning” to refer to
+algorithms that are the subject of this guide, and that learn to
+<strong>parameterize</strong> a mathematical model from data.</p>
+<p>This guide is structured into 5 sections. In the first section, we discuss the
+key concepts and terminology that are used in AI and Machine Learning and
+briefly discuss how they come together to motivate us to create the field in its
+current form. With this important background covered, we then move on to
+discussing the practicalities of AI and Machine Learning projects at a high
+level. We discuss where it’s appropriate to deploy these technologies, a high
+level workflow and decision making process, and what management of these
+projects looks like. Having covered this, we then begin to drill down into
+the details of these projects. We open this discussion with a review of the
+key role data, and how it can be managed. This is followed with an extensive
+discussion on the implementation and decision making process of deployment of
+these algorithms with worked examples. We close with a list of pitfalls, common
+problems and solutions, and a link to useful further resources.</p>
+</div>
+<div class="section" id="overview-key-concepts-and-terminology">
+<h1><a class="toc-backref" href="#id4">Overview: Key Concepts and Terminology</a></h1>
+<p>In this section, we introduce and overview some of the key concepts and
+terminology that are important in understanding and discussing AI and machine
+learning technology. This section is not intended to serve as an exhaustive
+discussion of the topics in question, but as an introduction to the key points
+and vocabulary that will frame the rest of the discussion on this topic. Key
+terms and concepts will be <strong>highlighted</strong> for the reader, with links to a more
+detailed description of the term in the appendix.</p>
+<p>To briefly review what we discussed in the introduction: the type of
+intelligence and learning in algorithms that we are interested in in this
+manual are algorithms that learn mathematical models of the world from some
+data, in order to make predictions about other unseen or future data. One
+important idea that we need to consider first is <strong>structured
+data</strong> and <strong>unstructured data</strong>.</p>
+<p>Breakaway: Structured vs Unstructured Data
+AI and Machine Learning models are no different from any other computer program
+in that they require their input data to follow a consistent format.
+Unfortunately, data collected in the real world rarely follows the type of
+structure and organization that is needed for ingestion by an AI or Machine
+learning algorithm, and in many cases the work done to transform data into an
+appropriate structured format is some of the most important work done in any AI
+and Machine Learning pipeline. We make this distinction between data that has
+been put into a useful structured format as <strong>structured data</strong>, and data that
+exists in a raw, unprocessed format as <strong>unstructured data</strong>.</p>
+<p>When dealing with data in the real world, we will often split it up into
+categories or types. One such distinction often made that is especially
+important in the context of AI and Machine Learning is the split of data into
+<strong>continuous</strong> data and <strong>discrete</strong> data. Continuous data can take on any
+number of infinite values across a given range, for example, a measure of
+rainfall per hour. Discrete data on the other hand is any type of data that falls into a
+fixed number of categories. These categories can be both <strong>ordinal</strong> data in which
+there is a natural ordering between the categories (shoe size, for example), and
+<strong>nominal</strong> data, where the categories are distinct (eye color, for example). While
+this distinction is important for many parts of AI and Machine Learning, the
+distinction between whether an AI and Machine Learning algorithm is trying to
+predict continuous and discrete data is so important that it has its own
+nomenclature of <strong>regression</strong> and <strong>classification</strong> algorithms respectively.</p>
+<p>Breakaway: Regression vs Classification Algorithms
+The distinction between <strong>regression</strong> (continuous output data) and <strong>classification</strong>
+(discrete output data) is particularly important in AI and Machine Learning
+algorithms, because the type of data that the algorithm outputs has a
+significant effect on how it must function. Notably, some algorithms (e.g.
+Support Vector Machines) are only designed to function in one of these
+modalities, and require significant adaptations to perform (likely very poorly)
+in the other.</p>
+<p>While we have been discussing some of the concepts and terminology around data
+to this point, we have used the terms “learn”, “learning” and “learning from
+data” to describe what our algorithms do without really making it explicit what
+we actually mean by this. One of the reasons that we’ve avoided doing this is
+that “learning” in the context we’re discussing it is conveniently, without
+further qualifiers, a term that covers several different ideas. These
+differences stem from the way that we use data in order to “learn”. The
+most prominent of two of these ideas are <strong>supervised learning</strong> and <strong>unsupervised
+learning</strong>, which are concerned whether we learn from data that list the correct
+output the algorithms should produce for some given input data (<strong>labeled data</strong>),
+or simply the input data themselves (<strong>unlabeled data</strong>).</p>
+<p>Breakaway: Supervised vs Unsupervised vs Reinforcement vs Other Learning
+We use the nomenclature of <strong>Supervised</strong> vs <strong>Unsupervised</strong> (vs others) to describe
+the way in which our algorithms are learning. In Supervised learning, we learn
+from matched input data/output data pairs, data for which we already have the
+correct output the algorithms should predict for a set of given inputs
+(“learning by example”). We call this data <strong>labeled data</strong>, because our set of
+input data is labeled with the corresponding correct solutions.For example,
+we might be interested in predicting the future prices of the stock market from
+economic indications, by looking at how these economic indicators have predicted
+its historical past prices. In Unsupervised learning, we only have access to the
+input data without any corresponding output solution attached. We call this data
+<strong>unlabeled data</strong>, and our unsupervised learning algorithms and are generally
+interested in predicting some quality of this data (“pattern learning”). For
+example, we might be detecting unusual anomalies of electrical usage in the
+grid.</p>
+<p>While it is generally preferable to use supervised learning when we can
+because learning by example is easier, there are many situations in which
+unsupervised approaches are more appropriate. Even putting aside the fact
+that unlabeled data is easier to collect (since we don’t need to label it),
+for many problems supervised approaches are simply not practical. In our
+electrical grid example above, it would be infeasible to train a supervised
+model to do similar anomaly detection.  By definition, anomalies are rare and
+unusual data points that fall outside of the usual observations in the data.
+Creating a labeled dataset of them would be both impractical, and any
+supervised algorithm that used it would be prescriptive - it would only catch
+anomalies similar to anomalies we’ve trained on, where an unsupervised approach
+instead catches ones that are dissimilar to everything we’ve seen so far.</p>
+<p>There are also several other learning approaches that fit within the
+supervised/unsupervised dichotomy discussed so far. A common one is
+<strong>Reinforcement Learning</strong>. In Reinforcement Learning, the algorithm is not fed a
+set of data, but selects which piece of data it wants to learn from in future
+from the pieces of data it has had up until now. Another common paradigm is
+<strong>semi-supervised learning</strong>, in which an algorithm learns from some set data that
+is labeled, and some (usually larger) set of data that is unlabelled.</p>
+<div class="section" id="putting-it-together-creating-modern-ai-and-machine-learning">
+<h2><a class="toc-backref" href="#id5">Putting it Together: Creating Modern AI and Machine Learning</a></h2>
+<p>WIP</p>
+</div>
+</div>
+<div class="section" id="running-ai-projects">
+<h1><a class="toc-backref" href="#id6">Running AI Projects</a></h1>
+<div class="section" id="should-i-ai">
+<h2><a class="toc-backref" href="#id7">Should I AI?</a></h2>
+</div>
+<div class="section" id="ai-project-decisions">
+<h2><a class="toc-backref" href="#id8">AI Project Decisions</a></h2>
+</div>
+<div class="section" id="ai-project-workflow">
+<h2><a class="toc-backref" href="#id9">AI Project Workflow</a></h2>
+</div>
+</div>
+<div class="section" id="data">
+<h1><a class="toc-backref" href="#id10">Data</a></h1>
+<div class="section" id="the-importance-of-data">
+<h2><a class="toc-backref" href="#id11">The Importance of Data</a></h2>
+</div>
+<div class="section" id="collecting-data">
+<h2><a class="toc-backref" href="#id12">Collecting Data</a></h2>
+</div>
+<div class="section" id="managing-data">
+<h2><a class="toc-backref" href="#id13">Managing Data</a></h2>
+</div>
+</div>
+<div class="section" id="building-ai-and-machine-learning-models">
+<h1><a class="toc-backref" href="#id14">Building AI and Machine Learning Models</a></h1>
+<div class="section" id="decisions">
+<h2><a class="toc-backref" href="#id15">Decisions</a></h2>
+</div>
+<div class="section" id="decision-making-flowchart">
+<h2><a class="toc-backref" href="#id16">Decision Making Flowchart</a></h2>
+</div>
+<div class="section" id="neural-networks">
+<h2><a class="toc-backref" href="#id17">Neural Networks</a></h2>
+<div class="section" id="architectural-principles-of-neural-networks">
+<h3>Architectural Principles of Neural Networks</h3>
+<p>Here we break down some of the key ideas that go into building a more
+sophisticated neural network than the basic MLP we used in our first example.
+Understanding these will allow you to see how even the world’s most complex and
+capable neural networks are put together.</p>
+<ul>
+<li><dl class="first docutils">
+<dt>Convolution</dt>
+<dd><ul class="first simple">
+<li><strong>What:</strong></li>
+</ul>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<tt class="docutils">cookbook.rst</tt>, line 246)</p>
+<p>Bullet list ends without a blank line; unexpected unindent.</p>
+</div>
+<p class="last">A filter with learnable parameters.
+* <strong>Why:</strong>
+Computer vision has used filters for many decades, designing filters which slide along (convolve with) an image to pick out features such as sharpness, contrast, vertical/horizontal lines etc. The key insight is that if we instead make the parameters in the filter learnable, the algorithm can itself determine what the optimal filters should look like, from the data alone.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>Pooling</dt>
+<dd><ul class="first simple">
+<li><strong>What:</strong></li>
+</ul>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<tt class="docutils">cookbook.rst</tt>, line 251)</p>
+<p>Bullet list ends without a blank line; unexpected unindent.</p>
+</div>
+<p class="last">A dimensionality reduction technique. Similarly to a convolution, a window is selected on the input, and the corresponding output from this window is the largest activation value found in that window. Then the window is shifted, and the process repeats
+* <strong>Why:</strong>
+Dimensionality reduction can be desirable for many reasons, but pooling has a number of specific advantages. Firstly, it has no parameters to learn, meaning it adds negligible computational requirements during training. Secondly it has been found to be complementary to convolutions. This is likely because convolutions can be thought of as filters searching for specific features, and the pooling then essentially tells the network if those features are present in the given window.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>Convolutional Blocks</dt>
+<dd><ul class="first last simple">
+<li><strong>What:</strong> An architectural design shortcut - a combination of
+convolutional layers, pooling layers and regularisers packaged into a block
+which is repeated throughout the network.</li>
+<li><strong>Why:</strong> Convolutional layers are used to extract local patterns in the
+input data. By stacking many convolutional layers on top of each other,
+higher level relationships are able to be recognised. In practice, this
+means the network is able to perform better (more complex) pattern
+recognition, which is what machine learning is all about. Using a repeating
+block structure like the one pictured below has been found to be very
+effective. Each block contains multiple convolutions and a pooling layer to
+reduce dimensionality. Each element of the block is optional and
+customisable, but the principle of repeating blocks remains the same.</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>Skip Connections</dt>
+<dd><ul class="first last simple">
+<li><strong>What:</strong> Passing the output of one layer in the network directly to later
+layers in the network, ‘skipping’ over the intermediate layers. This can
+be done through addition, which requires the dimensions of the layers to
+be equal, or through appending, which increases the dimension size.
+Appending is the safer choice, though comes at greater computational cost.</li>
+<li><strong>Why:</strong> As we make our networks deeper, we are able to extract higher
+level features. This is extremely powerful, but some new issues begin to
+emerge. Firstly, the low level information can get lost on the way.
+Secondly, we can run into the vanishing gradient problem. A neat solution
+to diminish both of these issues is to use skip connections.</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>Bottlenecks</dt>
+<dd><ul class="first last simple">
+<li><strong>What:</strong> A bottleneck refers to the shape of the network (big to small).
+Often followed by more layers to build the network size back up (small to
+big). The bottleneck itself is the smallest layer, which can also be
+called the encoding layer.</li>
+<li><strong>Why:</strong> Many networks utilise the idea of a bottleneck, even beyond
+simple autoencoders (which are nothing more than a bottleneck in
+structure). Compressing data through a small encoding layer encourages
+the network to extract the most distinguishing features from the data.
+This is used in a number of different ways. The encoding itself can be
+used to represent the data in a unique and low dimensional form. Or the
+second half of the network can use the information from skip connections
+and the encoding to infer high level information about the data to solve
+problems.</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>Recurrence</dt>
+<dd><ul class="first last simple">
+<li><strong>What:</strong> A network layer which takes as input some data and a ‘state’
+vector, and produces a new state vector alongside its other output.</li>
+<li><strong>Why:</strong> The state vector represents some understanding about the state at
+a given time. The idea then is for the layer to take in some data and
+update this understanding, so that the state is different for the next
+time step. Without recurrence, networks have no notion of time or way
+to relate the data coming in now with what came before. This is necessary
+for sequential tasks like video or text recognition, and not necessary for
+static tasks such as image recognition, hence the discrepancy.</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>Attention</dt>
+<dd><ul class="first last simple">
+<li><strong>What:</strong> Weighting each element of a sequence of data, according to how
+important (how much attention should be paid to) it, to solve a given
+task. Typically, the model will be outputting another sequence, and as
+such each element of the output with will require a different set of
+attention weights. The full theory behind attention is beyond the scope of
+this guide. It is listed here to give a brief intuition behind transformer
+models, which are growing in popularity and based on the principle of
+attention.</li>
+<li><strong>Why:</strong> Attention provides a way for a network to take in sequential data
+all at once, learning which input elements each output should pay
+attention to. This offers numerous benefits over recurrence, such as the
+ability to be processed in parallel (recurrent networks are inherently
+sequential so cannot be parallelised), and removing recency bias. Recency
+bias being the tendency of RNNs to pay more attention to the most recent
+sequence elements, rather than the most relevant.</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div>
+<div class="section" id="neural-network-design-and-experimentation-process">
+<h3>Neural Network Design and Experimentation Process</h3>
+<ol class="arabic">
+<li><p class="first">Establish a strong baseline. The first thing to do once your data pipeline
+and evaluation metrics are set up, is to try out the simplest neural network
+design relevant to your problem. Usually this will be an MLP. The data will
+determine the input and output size, so for this make a simple MLP with one
+hidden layer. There is no magic formula to tell you how large to make this
+hidden layer, the key is to experiment. Start with (input size + output
+size)/2 if you are unsure. Train and evaluate. This gives you a benchmark
+and some idea of how complex the task will be. If the MLP performs very well,
+you may wish to stop there. If not, move on to step 2.</p>
+</li>
+<li><p class="first">Design a neural network specifically for your problem. How? Google it! More
+specifically, scour the internet for a research paper, article or competition
+submission that publishes a machine learning model for a problem similar to
+yours. All kinds of similarity are useful, working on the same data type (eg
+time series, video etc), or the same problem (eg anomaly detection, object
+recognition), but ideally both. For this to be successful, it is likely that
+the authors have already done a great deal of the work for us in choosing
+approximately the right kind of network architecture. Take this as a starting
+point.</p>
+<blockquote>
+<ol class="loweralpha simple">
+<li>The closer their problem is to yours, the less we need to experiment with
+other architectures</li>
+<li>For research papers in particular, models may be more complicated than
+necessary as authors are usually proposing a novel method. We can
+experiment with removing the more complicated features, if they don’t
+affect performance.</li>
+<li>If nothing relevant arises, use the baseline model we established earlier
+as the starting point.</li>
+</ol>
+</blockquote>
+</li>
+<li><p class="first">Iteration and experimentation. Given a baseline (either from step 1 or 2) and
+working data pipeline, it may be surprisingly straightforward to test
+different ideas, so long as enough computational resources are available.
+Bear your initial goals in mind, don’t be afraid to stop iterating when these
+are met even if it may be possible to squeeze slightly more performance out
+with further experimentation. Very small improvements to measured performance
+on test data may not actually translate to a significantly better model in
+the real world. APIs such as TensorFlow and PyTorch make adjusting model
+architectures as simple as stacking preset functions on top of one and other.
+These all come in built with these APIs, and are listed below:</p>
+<blockquote>
+<ol class="loweralpha">
+<li><p class="first">Regularisers: These may improve generalisation performance without
+changing the overall architecture.</p>
+<blockquote>
+<ol class="lowerroman simple">
+<li>Dropout</li>
+<li>Batch normalisation.</li>
+</ol>
+</blockquote>
+</li>
+<li><p class="first">Dimensionality Manipulations: Scale up or down dimensionality. Often
+comes at a cost of information loss in favour of computational efficiency.</p>
+<blockquote>
+<ol class="lowerroman simple">
+<li>Max Pooling</li>
+</ol>
+</blockquote>
+</li>
+<li><dl class="first docutils">
+<dt>Recurrent modules: for sequential data only.</dt>
+<dd><ol class="first last lowerroman simple">
+<li>LSTM</li>
+<li>GRU</li>
+</ol>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>Other</dt>
+<dd><ol class="first last lowerroman simple">
+<li>Convolutions</li>
+<li>Skip Connections</li>
+</ol>
+</dd>
+</dl>
+</li>
+</ol>
+</blockquote>
+</li>
+</ol>
+<p>Taking the ideas of others as inspiration, try out some of these ideas and
+observe their effects, both individually and in combination. See the
+architectural principles section for a breakdown of what each of these do.
+Remember, simplicity is key. A useful method to avoid wasted time is to train
+and test the model after a given small change, one change at a time.  If
+performance doesn’t improve, don’t waste any more time on changes of that kind.
+Whereas if you make many changes and then evaluate, you can’t be sure which
+changes are having a positive effect.</p>
+</div>
+</div>
+<div class="section" id="worked-examples">
+<h2><a class="toc-backref" href="#id18">Worked Examples</a></h2>
+</div>
+</div>
+<div class="section" id="pitfalls-and-common-problems">
+<h1><a class="toc-backref" href="#id19">Pitfalls and Common Problems</a></h1>
+</div>
+<div class="section" id="resources">
+<h1><a class="toc-backref" href="#id20">Resources</a></h1>
+</div>
+<div class="section" id="appendix">
+<h1><a class="toc-backref" href="#id21">Appendix</a></h1>
+</div>
+</div>
+</body>
+</html>

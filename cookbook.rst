@@ -241,77 +241,93 @@ sophisticated neural network than the basic MLP we used in our first example.
 Understanding these will allow you to see how even the world’s most complex and
 capable neural networks are put together.
 
-* Convolutional Blocks
-    * **What:** An architectural design shortcut - a combination of 
-      convolutional layers, pooling layers and regularisers packaged into a block
-      which is repeated throughout the network.
+* Convolution
 
-    * **Why:** Convolutional layers are used to extract local patterns in the
-      input data. By stacking many convolutional layers on top of each other,
-      higher level relationships are able to be recognised. In practice, this
-      means the network is able to perform better (more complex) pattern 
-      recognition, which is what machine learning is all about. Using a repeating
-      block structure like the one pictured below has been found to be very
-      effective. Each block contains multiple convolutions and a pooling layer to
-      reduce dimensionality. Each element of the block is optional and
-      customisable, but the principle of repeating blocks remains the same.
+  * **What:** A filter with learnable parameters. 
+
+  * **Why:** Computer vision has used filters for many decades, designing filters which slide along (convolve with) an image to pick out features such as sharpness, contrast, vertical/horizontal lines etc. The key insight is that if we instead make the parameters in the filter learnable, the algorithm can itself determine what the optimal filters should look like, from the data alone. 
+
+* Pooling
+
+  * **What:** A dimensionality reduction technique. Similarly to a convolution, a window is selected on the input, and the corresponding output from this window is the largest activation value found in that window. Then the window is shifted, and the process repeats
+  * **Why:** Dimensionality reduction can be desirable for many reasons, but pooling has a number of specific advantages. Firstly, it has no parameters to learn, meaning it adds negligible computational requirements during training. Secondly it has been found to be complementary to convolutions. This is likely because convolutions can be thought of as filters searching for specific features, and the pooling then essentially tells the network if those features are present in the given window.
+
+* Convolutional Blocks
+
+  * **What:** An architectural design shortcut - a combination of 
+    convolutional layers, pooling layers and regularisers packaged into a block
+    which is repeated throughout the network.
+
+  * **Why:** Convolutional layers are used to extract local patterns in the
+    input data. By stacking many convolutional layers on top of each other,
+    higher level relationships are able to be recognised. In practice, this
+    means the network is able to perform better (more complex) pattern 
+    recognition, which is what machine learning is all about. Using a repeating
+    block structure like the one pictured below has been found to be very
+    effective. Each block contains multiple convolutions and a pooling layer to
+    reduce dimensionality. Each element of the block is optional and
+    customisable, but the principle of repeating blocks remains the same.
 
 * Skip Connections
-    * **What:** Passing the output of one layer in the network directly to later
-      layers in the network, ‘skipping’ over the intermediate layers. This can
-      be done through addition, which requires the dimensions of the layers to
-      be equal, or through appending, which increases the dimension size.
-      Appending is the safer choice, though comes at greater computational cost.
-    * **Why:** As we make our networks deeper, we are able to extract higher
-      level features. This is extremely powerful, but some new issues begin to
-      emerge. Firstly, the low level information can get lost on the way.
-      Secondly, we can run into the vanishing gradient problem. A neat solution
-      to diminish both of these issues is to use skip connections.
+
+  * **What:** Passing the output of one layer in the network directly to later
+    layers in the network, ‘skipping’ over the intermediate layers. This can
+    be done through addition, which requires the dimensions of the layers to
+    be equal, or through appending, which increases the dimension size.
+    Appending is the safer choice, though comes at greater computational cost.
+  * **Why:** As we make our networks deeper, we are able to extract higher
+    level features. This is extremely powerful, but some new issues begin to
+    emerge. Firstly, the low level information can get lost on the way.
+    Secondly, we can run into the vanishing gradient problem. A neat solution
+    to diminish both of these issues is to use skip connections.
 
 * Bottlenecks
-    * **What:** A bottleneck refers to the shape of the network (big to small).
-      Often followed by more layers to build the network size back up (small to
-      big). The bottleneck itself is the smallest layer, which can also be
-      called the encoding layer.
 
-    * **Why:** Many networks utilise the idea of a bottleneck, even beyond
-      simple autoencoders (which are nothing more than a bottleneck in
-      structure). Compressing data through a small encoding layer encourages
-      the network to extract the most distinguishing features from the data.
-      This is used in a number of different ways. The encoding itself can be
-      used to represent the data in a unique and low dimensional form. Or the
-      second half of the network can use the information from skip connections
-      and the encoding to infer high level information about the data to solve
-      problems.
+  * **What:** A bottleneck refers to the shape of the network (big to small).
+    Often followed by more layers to build the network size back up (small to
+    big). The bottleneck itself is the smallest layer, which can also be
+    called the encoding layer.
+
+  * **Why:** Many networks utilise the idea of a bottleneck, even beyond
+    simple autoencoders (which are nothing more than a bottleneck in
+    structure). Compressing data through a small encoding layer encourages
+    the network to extract the most distinguishing features from the data.
+    This is used in a number of different ways. The encoding itself can be
+    used to represent the data in a unique and low dimensional form. Or the
+    second half of the network can use the information from skip connections
+    and the encoding to infer high level information about the data to solve
+    problems.
 
 
 * Recurrence 
-    * **What:** A network layer which takes as input some data and a ‘state’
-      vector, and produces a new state vector alongside its other output. 
-    * **Why:** The state vector represents some understanding about the state at
-      a given time. The idea then is for the layer to take in some data and 
-      update this understanding, so that the state is different for the next
-      time step. Without recurrence, networks have no notion of time or way
-      to relate the data coming in now with what came before. This is necessary
-      for sequential tasks like video or text recognition, and not necessary for
-      static tasks such as image recognition, hence the discrepancy.
+
+  * **What:** A network layer which takes as input some data and a ‘state’
+    vector, and produces a new state vector alongside its other output. 
+  * **Why:** The state vector represents some understanding about the state at
+    a given time. The idea then is for the layer to take in some data and 
+    update this understanding, so that the state is different for the next
+    time step. Without recurrence, networks have no notion of time or way
+    to relate the data coming in now with what came before. This is necessary
+    for sequential tasks like video or text recognition, and not necessary for
+    static tasks such as image recognition, hence the discrepancy.
 
 * Attention
-    * **What:** Weighting each element of a sequence of data, according to how
-      important (how much attention should be paid to) it, to solve a given
-      task. Typically, the model will be outputting another sequence, and as
-      such each element of the output with will require a different set of
-      attention weights. The full theory behind attention is beyond the scope of
-      this guide. It is listed here to give a brief intuition behind transformer
-      models, which are growing in popularity and based on the principle of
-      attention.
-    * **Why:** Attention provides a way for a network to take in sequential data
-      all at once, learning which input elements each output should pay
-      attention to. This offers numerous benefits over recurrence, such as the
-      ability to be processed in parallel (recurrent networks are inherently
-      sequential so cannot be parallelised), and removing recency bias. Recency
-      bias being the tendency of RNNs to pay more attention to the most recent
-      sequence elements, rather than the most relevant.
+
+  * **What:** Weighting each element of a sequence of data, according to how
+    important (how much attention should be paid to) it, to solve a given
+    task. Typically, the model will be outputting another sequence, and as
+    such each element of the output with will require a different set of
+    attention weights. The full theory behind attention is beyond the scope of
+    this guide. It is listed here to give a brief intuition behind transformer
+    models, which are growing in popularity and based on the principle of
+    attention.
+  * **Why:** Attention provides a way for a network to take in sequential data
+    all at once, learning which input elements each output should pay
+    attention to. This offers numerous benefits over recurrence, such as the
+    ability to be processed in parallel (recurrent networks are inherently
+    sequential so cannot be parallelised), and removing recency bias. Recency
+    bias being the tendency of RNNs to pay more attention to the most recent
+    sequence elements, rather than the most relevant.
 
 
 

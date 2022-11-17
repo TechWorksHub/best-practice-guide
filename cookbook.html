@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<meta name="generator" content="Docutils 0.14: http://docutils.sourceforge.net/" />
+<meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 <title>cookbook.rst</title>
 <style type="text/css">
 
@@ -82,7 +82,7 @@ TechNES AI Best Practices Group:
 
 
 <div class="contents sidebar topic" id="table-of-contents">
-<p class="topic-title first">Table of Contents</p>
+<p class="topic-title">Table of Contents</p>
 <ul class="simple">
 <li><a class="reference internal" href="#summary" id="id1">Summary</a></li>
 <li><a class="reference internal" href="#target-audience" id="id2">Target Audience</a></li>
@@ -329,9 +329,17 @@ sophisticated neural network than the basic MLP we used in our first example.
 Understanding these will allow you to see how even the world’s most complex and
 capable neural networks are put together.</p>
 <ul class="simple">
-<li><dl class="first docutils">
-<dt>Convolutional Blocks</dt>
-<dd><ul class="first last">
+<li>Convolution<ul>
+<li><strong>What:</strong> A filter with learnable parameters.</li>
+<li><strong>Why:</strong> Computer vision has used filters for many decades, designing filters which slide along (convolve with) an image to pick out features such as sharpness, contrast, vertical/horizontal lines etc. The key insight is that if we instead make the parameters in the filter learnable, the algorithm can itself determine what the optimal filters should look like, from the data alone.</li>
+</ul>
+</li>
+<li>Pooling<ul>
+<li><strong>What:</strong> A dimensionality reduction technique. Similarly to a convolution, a window is selected on the input, and the corresponding output from this window is the largest activation value found in that window. Then the window is shifted, and the process repeats</li>
+<li><strong>Why:</strong> Dimensionality reduction can be desirable for many reasons, but pooling has a number of specific advantages. Firstly, it has no parameters to learn, meaning it adds negligible computational requirements during training. Secondly it has been found to be complementary to convolutions. This is likely because convolutions can be thought of as filters searching for specific features, and the pooling then essentially tells the network if those features are present in the given window.</li>
+</ul>
+</li>
+<li>Convolutional Blocks<ul>
 <li><strong>What:</strong> An architectural design shortcut - a combination of
 convolutional layers, pooling layers and regularisers packaged into a block
 which is repeated throughout the network.</li>
@@ -345,12 +353,8 @@ effective. Each block contains multiple convolutions and a pooling layer to
 reduce dimensionality. Each element of the block is optional and
 customisable, but the principle of repeating blocks remains the same.</li>
 </ul>
-</dd>
-</dl>
 </li>
-<li><dl class="first docutils">
-<dt>Skip Connections</dt>
-<dd><ul class="first last">
+<li>Skip Connections<ul>
 <li><strong>What:</strong> Passing the output of one layer in the network directly to later
 layers in the network, ‘skipping’ over the intermediate layers. This can
 be done through addition, which requires the dimensions of the layers to
@@ -362,12 +366,8 @@ emerge. Firstly, the low level information can get lost on the way.
 Secondly, we can run into the vanishing gradient problem. A neat solution
 to diminish both of these issues is to use skip connections.</li>
 </ul>
-</dd>
-</dl>
 </li>
-<li><dl class="first docutils">
-<dt>Bottlenecks</dt>
-<dd><ul class="first last">
+<li>Bottlenecks<ul>
 <li><strong>What:</strong> A bottleneck refers to the shape of the network (big to small).
 Often followed by more layers to build the network size back up (small to
 big). The bottleneck itself is the smallest layer, which can also be
@@ -382,12 +382,8 @@ second half of the network can use the information from skip connections
 and the encoding to infer high level information about the data to solve
 problems.</li>
 </ul>
-</dd>
-</dl>
 </li>
-<li><dl class="first docutils">
-<dt>Recurrence</dt>
-<dd><ul class="first last">
+<li>Recurrence<ul>
 <li><strong>What:</strong> A network layer which takes as input some data and a ‘state’
 vector, and produces a new state vector alongside its other output.</li>
 <li><strong>Why:</strong> The state vector represents some understanding about the state at
@@ -398,12 +394,8 @@ to relate the data coming in now with what came before. This is necessary
 for sequential tasks like video or text recognition, and not necessary for
 static tasks such as image recognition, hence the discrepancy.</li>
 </ul>
-</dd>
-</dl>
 </li>
-<li><dl class="first docutils">
-<dt>Attention</dt>
-<dd><ul class="first last">
+<li>Attention<ul>
 <li><strong>What:</strong> Weighting each element of a sequence of data, according to how
 important (how much attention should be paid to) it, to solve a given
 task. Typically, the model will be outputting another sequence, and as
@@ -420,8 +412,6 @@ sequential so cannot be parallelised), and removing recency bias. Recency
 bias being the tendency of RNNs to pay more attention to the most recent
 sequence elements, rather than the most relevant.</li>
 </ul>
-</dd>
-</dl>
 </li>
 </ul>
 </div>
