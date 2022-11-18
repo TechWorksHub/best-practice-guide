@@ -220,12 +220,142 @@ Collecting Data
 Managing Data
 -------------
 
+Validation, Cross Validation and Data Leakage.
+----------------------------------------------
+
+At some point we are going to need to assess our models’ performance on unseen data, as this is the only way to get an unbiased estimate of its performance. There are two popular ways this is done.
+
+K-Fold Cross Validation
+-----------------------
+
+1. **Randomly** split the dataset into K **equal** partitions.
+2. Randomly initialise the model and train on all-but-one of the partitions.
+3. Test model performance on the withheld partition.
+4. Repeat steps 2 and 3, withholding a different partition each time, until all K partitions have been used as the test data.
+5. Combine the K accuracy scores at the end, providing a mean and variancefor the accuracy.
+
+This way, all of the available data is used for both training and testing, while never testing a model on the data on which it was trained. It also serves to avoid any unintended bias that may arise by chance, when the data is randomly partitioned. However, it requires training the model from scratch K times to get a single output. Also, repeatedly running K-Fold Cross Validation and making adjustments, can introduce implicit bias.
+
+This is well suited to training smaller models on small datasets, as the requirement to train many times rules out its use in ‘big data’ applications such as deep learning. If data is limited and your model can be trained many times (at an acceptable cost for you), K-Fold Cross Validation is recommended. Otherwise, read on to the next section.
+
+Train, Validate and Test
+------------------------
+
+
+1. **Randomly** split the dataset into 3 partitions. The proportions of these are up to you, but a sensible split usually looks something like 80%-10%-10% or 60%-20%-20%, (train-validate-test, respectively)*.
+2. While (you’re not yet happy with the performance or you think you can still make improvements):
+
+  a. Train the model on the train set.
+
+  b. Evaluate on the validation set.
+
+  c. Make any changes you like to the model.
+
+3. Evaluate your best performing model(s) on the test set.
+
+This should be the end of the process, with these results being publication/report ready. One should avoid going back and making more changes after this, as that is how implicit bias from the testing set can creep into the model design (data leakage).
+
+\*The larger the datasets, the less variance we can expect between them. So if we expect to do lots of hyperparameter tuning iterations (step 2), we might opt for a 60%-20%-20% split. That way the information we gain from the validation step should be more dependable. If not, the 80%-10%-10% would be preferable simply as we are using more of the data for training, which should give the best model performance.
+
+Points to remember:
+
+* We optimise for performance on the training data, but we **assess** performance on ‘unseen’ (not training) data.
+
+  * If it can perform well on this, we know the model isn’t simply ‘remembering’ the correct answers from its training process but has learned meaningful relationships which apply outside of its training dataset. 
+
+  * We can think of this the same way we might think of assessing the learning ability of a student. That being, they ‘train’ on practice questions and are assessed on ‘test’ questions which require the same skills as the training questions, but the students have never seen them before. Assessing them on questions they have already seen (training data) clearly would not be a sensible way to evaluate their understanding of the topic.
+
+* Unseen data can still influence the model, via influencing the **decisions we make** to improve the model. This is called **data leakage**.
+
+  * This is a very subtle problem which can easily go undetected. 
+
+  * To avoid this, make the train/validate/test as soon as possible, and leave the test dataset untouched until it's time to evaluate our model. This includes not visualising or exploring the test data, to prevent bias in our own thinking.
+
+  * This can again be likened to a student taking a test - if they know what questions are coming up and prepare for those specifically, their test score will end up higher than a true reflection of their ability. 
+
+
 
 Building AI and Machine Learning Models
 =======================================
 
 Decisions
 ---------
+
+Data Pipeline
+#############
+
+Data Pipeline is simply a term used to describe the moving and processing of data from one place to another. While this is a broad term, the case we are concerned with specifically is loading and transforming data from storage in order to be used by a neural network. 
+
+**Train, test, validate:** See earlier section for details. Building the data pipeline is where we must take this into account and avoid the common pitfalls listed in this section.
+
+**Reading the data:** Whichever machine learning API we use, three core functions typically need to be implemented for a custom pipeline:
+
+  * Initialise.
+
+  * Get dataset length. In order to know when an epoch is complete, the class needs to know how much data there is in total. This function is as simple as it sounds.
+
+  * Return the ith datum. A function with a one to one mapping of integers i to data. This is important so that the data loader can shuffle the dataset by shuffling a list of integers from zero to dataset length.
+
+**Transformations**. Transforming data is an important step in machine learning. Normalising data is usually beneficial in this case, but there may also be transformations specific to your task. A decision that should be made early on in this process is when to do these transformations. The options are as follows:
+
+* Add transformations to the data loading step.
+
+    Pros:
+
+    * Simple, readable
+
+    * Easy to change 
+
+    * Minimal code
+
+    Cons:
+
+    * Each transform must be applied many times (every time the data is loaded, once * per epoch per datum). This can be slow.
+
+*  Apply transforms to the entire dataset and save in storage.
+
+    Pros:
+
+    * Faster
+
+    * Only needs to be considered once
+
+    Cons:
+
+    * Harder to quickly experiment with different transformations 
+
+    * Requires either overwriting original data, or doubling storage requirements
+
+* If computational limitations (sufficient RAM:dataset size ratio) allow, there is an optimal middle ground. This is to use the first method but load all the data into RAM before training. 
+
+    Pros:
+
+    *  All the pros of the above methods
+
+    * In addition to avoiding repeated applications of transforms, it also avoids potentially slow read times from storage, in favour of fast reading from RAM.
+
+    Cons:
+    * High RAM requirements, which increase with dataset size. 
+    * Even if HPC allows this, it cannot be tested on local machines with less RAM, without modification.
+
+**Batch Size:** The amount of data the model sees before optimising its parameters at each step. Larger batch sizes will give a better estimate of the true optimal parameter adjustment the model should make, but each step will take longer to compute. There is no universally optimal number for this. It is advisable to use powers of 2, to aid with parallelisation and GPU usage in case this is desired later. Consider starting with a batch size of 32 or 64 and increasing/decreasing if the training is unstable/convergence is too slow, respectively.
+
+**Epochs:** This is the number of full passes through the dataset that the model will see before training finishes. It can either be a fixed number, or an upper bound, only reached if the model does not converge. The latter scheme is preferable for maximising performance, since early stopping (end training as soon as convergence is reached) is known to be a form of regularisation which can improve performance on unseen data. The former may be used for comparing training stability of multiple models.
+
+Training Process
+################
+
+There are a few more decisions to make before we get to designing and training custom neural networks. 
+
+**Loss Function:** This is the quantity that the optimiser will try to minimise, thus it is critical to choose something that, when minimised, makes the model more useful. This function will be applied to the output of the network and the target. For example, the mean square error loss function calculates the mean of the squared error between the output and target, thus minimising this quantity forces the model to try to improve prediction accuracy. This is particularly useful for regression problems in which every element of the output is equally important. However, if we want a model which predicts a probability distribution, we may choose to use the categorical cross entropy or KL-Divergence for example. A detailed breakdown can be found here https://machinelearningmastery.com/how-to-choose-loss-functions-when-training-deep-learning-neural-networks/. 
+
+**Optimiser:** At every step in the optimisation process, the algorithm calculates a way to tweak the parameters which will reduce the loss function. This tweak is actually a gradient vector, which is only locally accurate. This means that the model will improve if we make a small tweak to the parameters in the direction of the gradient, how big should that adjustment be? Deciding this is the job of the optimiser, and can have a significant effect on how well our model learns. Through a number of tricks such as simulating momentum, and warping the loss landscape to make traversal easier, the ADAM optimiser combines all the most successful optimisation tricks available and is by far the most commonly used. While not guaranteeing the best performance, it can be relied upon to provide consistently good optimisation. Experimenting with other optimisers is an option but not as important as the other considerations in this list.
+
+**Validation:** Assessing the models performance on the validation dataset regularly during and after training to give an indication of how well the model is learning, and compare between model candidates. Here we need to consider how frequently we want to validate. Start by validating after every epoch. If more insight is required into the learning procedure, increase this to validate after every batch (or n batches), though this will slow down training.
+*   A number of useful tools exist for visualising the validation process. It is critical to do so, to make sure the model is training as expected. **Tensorboard** is highly robust and sufficient for this, and weights and Biases (**WandB**) is a professional subscription service that offers an alternative with a more intuitive user interface and cloud services for synchronised training across multiple devices. 
+
+Having done all of this, we are ready to experiment with different model architectures. Model architecture design involves skill, intuition, knowledge, and a not insignificant amount of guesswork. Even the world’s top ML researchers could not tell you the optimal number of extra neurons to add to improve model performance without testing it empirically. However, the good news is that these networks are designed to give the best performance they can no matter their design, and you are likely to get reasonably good results within a few attempts. To make this daunting process more systematic, the following section details the key architectural principles that go into the design of a model, and the section after will then lay out a practical guide to follow. 
+
 
 Decision Making Flowchart
 -------------------------
@@ -328,9 +458,6 @@ capable neural networks are put together.
     sequential so cannot be parallelised), and removing recency bias. Recency
     bias being the tendency of RNNs to pay more attention to the most recent
     sequence elements, rather than the most relevant.
-
-
-
 
 Neural Network Design and Experimentation Process
 #################################################

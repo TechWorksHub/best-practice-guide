@@ -101,18 +101,21 @@ TechNES AI Best Practices Group:
 <li><a class="reference internal" href="#the-importance-of-data" id="id11">The Importance of Data</a></li>
 <li><a class="reference internal" href="#collecting-data" id="id12">Collecting Data</a></li>
 <li><a class="reference internal" href="#managing-data" id="id13">Managing Data</a></li>
+<li><a class="reference internal" href="#validation-cross-validation-and-data-leakage" id="id14">Validation, Cross Validation and Data Leakage.</a></li>
+<li><a class="reference internal" href="#k-fold-cross-validation" id="id15">K-Fold Cross Validation</a></li>
+<li><a class="reference internal" href="#train-validate-and-test" id="id16">Train, Validate and Test</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#building-ai-and-machine-learning-models" id="id14">Building AI and Machine Learning Models</a><ul>
-<li><a class="reference internal" href="#decisions" id="id15">Decisions</a></li>
-<li><a class="reference internal" href="#decision-making-flowchart" id="id16">Decision Making Flowchart</a></li>
-<li><a class="reference internal" href="#neural-networks" id="id17">Neural Networks</a></li>
-<li><a class="reference internal" href="#worked-examples" id="id18">Worked Examples</a></li>
+<li><a class="reference internal" href="#building-ai-and-machine-learning-models" id="id17">Building AI and Machine Learning Models</a><ul>
+<li><a class="reference internal" href="#decisions" id="id18">Decisions</a></li>
+<li><a class="reference internal" href="#decision-making-flowchart" id="id19">Decision Making Flowchart</a></li>
+<li><a class="reference internal" href="#neural-networks" id="id20">Neural Networks</a></li>
+<li><a class="reference internal" href="#worked-examples" id="id21">Worked Examples</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#pitfalls-and-common-problems" id="id19">Pitfalls and Common Problems</a></li>
-<li><a class="reference internal" href="#resources" id="id20">Resources</a></li>
-<li><a class="reference internal" href="#appendix" id="id21">Appendix</a></li>
+<li><a class="reference internal" href="#pitfalls-and-common-problems" id="id22">Pitfalls and Common Problems</a></li>
+<li><a class="reference internal" href="#resources" id="id23">Resources</a></li>
+<li><a class="reference internal" href="#appendix" id="id24">Appendix</a></li>
 </ul>
 </div>
 <div class="section" id="summary">
@@ -311,57 +314,151 @@ is labeled, and some (usually larger) set of data that is unlabelled.</p>
 <div class="section" id="managing-data">
 <h2><a class="toc-backref" href="#id13">Managing Data</a></h2>
 </div>
+<div class="section" id="validation-cross-validation-and-data-leakage">
+<h2><a class="toc-backref" href="#id14">Validation, Cross Validation and Data Leakage.</a></h2>
+<p>At some point we are going to need to assess our models’ performance on unseen data, as this is the only way to get an unbiased estimate of its performance. There are two popular ways this is done.</p>
+</div>
+<div class="section" id="k-fold-cross-validation">
+<h2><a class="toc-backref" href="#id15">K-Fold Cross Validation</a></h2>
+<ol class="arabic simple">
+<li><strong>Randomly</strong> split the dataset into K <strong>equal</strong> partitions.</li>
+<li>Randomly initialise the model and train on all-but-one of the partitions.</li>
+<li>Test model performance on the withheld partition.</li>
+<li>Repeat steps 2 and 3, withholding a different partition each time, until all K partitions have been used as the test data.</li>
+<li>Combine the K accuracy scores at the end, providing a mean and variancefor the accuracy.</li>
+</ol>
+<p>This way, all of the available data is used for both training and testing, while never testing a model on the data on which it was trained. It also serves to avoid any unintended bias that may arise by chance, when the data is randomly partitioned. However, it requires training the model from scratch K times to get a single output. Also, repeatedly running K-Fold Cross Validation and making adjustments, can introduce implicit bias.</p>
+<p>This is well suited to training smaller models on small datasets, as the requirement to train many times rules out its use in ‘big data’ applications such as deep learning. If data is limited and your model can be trained many times (at an acceptable cost for you), K-Fold Cross Validation is recommended. Otherwise, read on to the next section.</p>
+</div>
+<div class="section" id="train-validate-and-test">
+<h2><a class="toc-backref" href="#id16">Train, Validate and Test</a></h2>
+<ol class="arabic simple">
+<li><strong>Randomly</strong> split the dataset into 3 partitions. The proportions of these are up to you, but a sensible split usually looks something like 80%-10%-10% or 60%-20%-20%, (train-validate-test, respectively)*.</li>
+<li>While (you’re not yet happy with the performance or you think you can still make improvements):</li>
+</ol>
+<blockquote>
+<ol class="loweralpha simple">
+<li>Train the model on the train set.</li>
+<li>Evaluate on the validation set.</li>
+<li>Make any changes you like to the model.</li>
+</ol>
+</blockquote>
+<ol class="arabic simple" start="3">
+<li>Evaluate your best performing model(s) on the test set.</li>
+</ol>
+<p>This should be the end of the process, with these results being publication/report ready. One should avoid going back and making more changes after this, as that is how implicit bias from the testing set can creep into the model design (data leakage).</p>
+<p>*The larger the datasets, the less variance we can expect between them. So if we expect to do lots of hyperparameter tuning iterations (step 2), we might opt for a 60%-20%-20% split. That way the information we gain from the validation step should be more dependable. If not, the 80%-10%-10% would be preferable simply as we are using more of the data for training, which should give the best model performance.</p>
+<p>Points to remember:</p>
+<ul class="simple">
+<li>We optimise for performance on the training data, but we <strong>assess</strong> performance on ‘unseen’ (not training) data.<ul>
+<li>If it can perform well on this, we know the model isn’t simply ‘remembering’ the correct answers from its training process but has learned meaningful relationships which apply outside of its training dataset.</li>
+<li>We can think of this the same way we might think of assessing the learning ability of a student. That being, they ‘train’ on practice questions and are assessed on ‘test’ questions which require the same skills as the training questions, but the students have never seen them before. Assessing them on questions they have already seen (training data) clearly would not be a sensible way to evaluate their understanding of the topic.</li>
+</ul>
+</li>
+<li>Unseen data can still influence the model, via influencing the <strong>decisions we make</strong> to improve the model. This is called <strong>data leakage</strong>.<ul>
+<li>This is a very subtle problem which can easily go undetected.</li>
+<li>To avoid this, make the train/validate/test as soon as possible, and leave the test dataset untouched until it's time to evaluate our model. This includes not visualising or exploring the test data, to prevent bias in our own thinking.</li>
+<li>This can again be likened to a student taking a test - if they know what questions are coming up and prepare for those specifically, their test score will end up higher than a true reflection of their ability.</li>
+</ul>
+</li>
+</ul>
+</div>
 </div>
 <div class="section" id="building-ai-and-machine-learning-models">
-<h1><a class="toc-backref" href="#id14">Building AI and Machine Learning Models</a></h1>
+<h1><a class="toc-backref" href="#id17">Building AI and Machine Learning Models</a></h1>
 <div class="section" id="decisions">
-<h2><a class="toc-backref" href="#id15">Decisions</a></h2>
+<h2><a class="toc-backref" href="#id18">Decisions</a></h2>
+<div class="section" id="data-pipeline">
+<h3>Data Pipeline</h3>
+<p>Data Pipeline is simply a term used to describe the moving and processing of data from one place to another. While this is a broad term, the case we are concerned with specifically is loading and transforming data from storage in order to be used by a neural network.</p>
+<p><strong>Train, test, validate:</strong> See earlier section for details. Building the data pipeline is where we must take this into account and avoid the common pitfalls listed in this section.</p>
+<p><strong>Reading the data:</strong> Whichever machine learning API we use, three core functions typically need to be implemented for a custom pipeline:</p>
+<blockquote>
+<ul class="simple">
+<li>Initialise.</li>
+<li>Get dataset length. In order to know when an epoch is complete, the class needs to know how much data there is in total. This function is as simple as it sounds.</li>
+<li>Return the ith datum. A function with a one to one mapping of integers i to data. This is important so that the data loader can shuffle the dataset by shuffling a list of integers from zero to dataset length.</li>
+</ul>
+</blockquote>
+<p><strong>Transformations</strong>. Transforming data is an important step in machine learning. Normalising data is usually beneficial in this case, but there may also be transformations specific to your task. A decision that should be made early on in this process is when to do these transformations. The options are as follows:</p>
+<ul>
+<li><p class="first">Add transformations to the data loading step.</p>
+<blockquote>
+<p>Pros:</p>
+<ul class="simple">
+<li>Simple, readable</li>
+<li>Easy to change</li>
+<li>Minimal code</li>
+</ul>
+<p>Cons:</p>
+<ul class="simple">
+<li>Each transform must be applied many times (every time the data is loaded, once * per epoch per datum). This can be slow.</li>
+</ul>
+</blockquote>
+</li>
+<li><p class="first">Apply transforms to the entire dataset and save in storage.</p>
+<blockquote>
+<p>Pros:</p>
+<ul class="simple">
+<li>Faster</li>
+<li>Only needs to be considered once</li>
+</ul>
+<p>Cons:</p>
+<ul class="simple">
+<li>Harder to quickly experiment with different transformations</li>
+<li>Requires either overwriting original data, or doubling storage requirements</li>
+</ul>
+</blockquote>
+</li>
+<li><p class="first">If computational limitations (sufficient RAM:dataset size ratio) allow, there is an optimal middle ground. This is to use the first method but load all the data into RAM before training.</p>
+<blockquote>
+<p>Pros:</p>
+<ul class="simple">
+<li>All the pros of the above methods</li>
+<li>In addition to avoiding repeated applications of transforms, it also avoids potentially slow read times from storage, in favour of fast reading from RAM.</li>
+</ul>
+<p>Cons:
+* High RAM requirements, which increase with dataset size.
+* Even if HPC allows this, it cannot be tested on local machines with less RAM, without modification.</p>
+</blockquote>
+</li>
+</ul>
+<p><strong>Batch Size:</strong> The amount of data the model sees before optimising its parameters at each step. Larger batch sizes will give a better estimate of the true optimal parameter adjustment the model should make, but each step will take longer to compute. There is no universally optimal number for this. It is advisable to use powers of 2, to aid with parallelisation and GPU usage in case this is desired later. Consider starting with a batch size of 32 or 64 and increasing/decreasing if the training is unstable/convergence is too slow, respectively.</p>
+<p><strong>Epochs:</strong> This is the number of full passes through the dataset that the model will see before training finishes. It can either be a fixed number, or an upper bound, only reached if the model does not converge. The latter scheme is preferable for maximising performance, since early stopping (end training as soon as convergence is reached) is known to be a form of regularisation which can improve performance on unseen data. The former may be used for comparing training stability of multiple models.</p>
+</div>
+<div class="section" id="training-process">
+<h3>Training Process</h3>
+<p>There are a few more decisions to make before we get to designing and training custom neural networks.</p>
+<p><strong>Loss Function:</strong> This is the quantity that the optimiser will try to minimise, thus it is critical to choose something that, when minimised, makes the model more useful. This function will be applied to the output of the network and the target. For example, the mean square error loss function calculates the mean of the squared error between the output and target, thus minimising this quantity forces the model to try to improve prediction accuracy. This is particularly useful for regression problems in which every element of the output is equally important. However, if we want a model which predicts a probability distribution, we may choose to use the categorical cross entropy or KL-Divergence for example. A detailed breakdown can be found here <a class="reference external" href="https://machinelearningmastery.com/how-to-choose-loss-functions-when-training-deep-learning-neural-networks/">https://machinelearningmastery.com/how-to-choose-loss-functions-when-training-deep-learning-neural-networks/</a>.</p>
+<p><strong>Optimiser:</strong> At every step in the optimisation process, the algorithm calculates a way to tweak the parameters which will reduce the loss function. This tweak is actually a gradient vector, which is only locally accurate. This means that the model will improve if we make a small tweak to the parameters in the direction of the gradient, how big should that adjustment be? Deciding this is the job of the optimiser, and can have a significant effect on how well our model learns. Through a number of tricks such as simulating momentum, and warping the loss landscape to make traversal easier, the ADAM optimiser combines all the most successful optimisation tricks available and is by far the most commonly used. While not guaranteeing the best performance, it can be relied upon to provide consistently good optimisation. Experimenting with other optimisers is an option but not as important as the other considerations in this list.</p>
+<p><strong>Validation:</strong> Assessing the models performance on the validation dataset regularly during and after training to give an indication of how well the model is learning, and compare between model candidates. Here we need to consider how frequently we want to validate. Start by validating after every epoch. If more insight is required into the learning procedure, increase this to validate after every batch (or n batches), though this will slow down training.
+*   A number of useful tools exist for visualising the validation process. It is critical to do so, to make sure the model is training as expected. <strong>Tensorboard</strong> is highly robust and sufficient for this, and weights and Biases (<strong>WandB</strong>) is a professional subscription service that offers an alternative with a more intuitive user interface and cloud services for synchronised training across multiple devices.</p>
+<p>Having done all of this, we are ready to experiment with different model architectures. Model architecture design involves skill, intuition, knowledge, and a not insignificant amount of guesswork. Even the world’s top ML researchers could not tell you the optimal number of extra neurons to add to improve model performance without testing it empirically. However, the good news is that these networks are designed to give the best performance they can no matter their design, and you are likely to get reasonably good results within a few attempts. To make this daunting process more systematic, the following section details the key architectural principles that go into the design of a model, and the section after will then lay out a practical guide to follow.</p>
+</div>
 </div>
 <div class="section" id="decision-making-flowchart">
-<h2><a class="toc-backref" href="#id16">Decision Making Flowchart</a></h2>
+<h2><a class="toc-backref" href="#id19">Decision Making Flowchart</a></h2>
 </div>
 <div class="section" id="neural-networks">
-<h2><a class="toc-backref" href="#id17">Neural Networks</a></h2>
+<h2><a class="toc-backref" href="#id20">Neural Networks</a></h2>
 <div class="section" id="architectural-principles-of-neural-networks">
 <h3>Architectural Principles of Neural Networks</h3>
 <p>Here we break down some of the key ideas that go into building a more
 sophisticated neural network than the basic MLP we used in our first example.
 Understanding these will allow you to see how even the world’s most complex and
 capable neural networks are put together.</p>
-<ul>
-<li><dl class="first docutils">
-<dt>Convolution</dt>
-<dd><ul class="first simple">
-<li><strong>What:</strong></li>
+<ul class="simple">
+<li>Convolution<ul>
+<li><strong>What:</strong> A filter with learnable parameters.</li>
+<li><strong>Why:</strong> Computer vision has used filters for many decades, designing filters which slide along (convolve with) an image to pick out features such as sharpness, contrast, vertical/horizontal lines etc. The key insight is that if we instead make the parameters in the filter learnable, the algorithm can itself determine what the optimal filters should look like, from the data alone.</li>
 </ul>
-<div class="system-message">
-<p class="system-message-title">System Message: WARNING/2 (<tt class="docutils">cookbook.rst</tt>, line 246)</p>
-<p>Bullet list ends without a blank line; unexpected unindent.</p>
-</div>
-<p class="last">A filter with learnable parameters.
-* <strong>Why:</strong>
-Computer vision has used filters for many decades, designing filters which slide along (convolve with) an image to pick out features such as sharpness, contrast, vertical/horizontal lines etc. The key insight is that if we instead make the parameters in the filter learnable, the algorithm can itself determine what the optimal filters should look like, from the data alone.</p>
-</dd>
-</dl>
 </li>
-<li><dl class="first docutils">
-<dt>Pooling</dt>
-<dd><ul class="first simple">
-<li><strong>What:</strong></li>
+<li>Pooling<ul>
+<li><strong>What:</strong> A dimensionality reduction technique. Similarly to a convolution, a window is selected on the input, and the corresponding output from this window is the largest activation value found in that window. Then the window is shifted, and the process repeats</li>
+<li><strong>Why:</strong> Dimensionality reduction can be desirable for many reasons, but pooling has a number of specific advantages. Firstly, it has no parameters to learn, meaning it adds negligible computational requirements during training. Secondly it has been found to be complementary to convolutions. This is likely because convolutions can be thought of as filters searching for specific features, and the pooling then essentially tells the network if those features are present in the given window.</li>
 </ul>
-<div class="system-message">
-<p class="system-message-title">System Message: WARNING/2 (<tt class="docutils">cookbook.rst</tt>, line 251)</p>
-<p>Bullet list ends without a blank line; unexpected unindent.</p>
-</div>
-<p class="last">A dimensionality reduction technique. Similarly to a convolution, a window is selected on the input, and the corresponding output from this window is the largest activation value found in that window. Then the window is shifted, and the process repeats
-* <strong>Why:</strong>
-Dimensionality reduction can be desirable for many reasons, but pooling has a number of specific advantages. Firstly, it has no parameters to learn, meaning it adds negligible computational requirements during training. Secondly it has been found to be complementary to convolutions. This is likely because convolutions can be thought of as filters searching for specific features, and the pooling then essentially tells the network if those features are present in the given window.</p>
-</dd>
-</dl>
 </li>
-<li><dl class="first docutils">
-<dt>Convolutional Blocks</dt>
-<dd><ul class="first last simple">
+<li>Convolutional Blocks<ul>
 <li><strong>What:</strong> An architectural design shortcut - a combination of
 convolutional layers, pooling layers and regularisers packaged into a block
 which is repeated throughout the network.</li>
@@ -375,12 +472,8 @@ effective. Each block contains multiple convolutions and a pooling layer to
 reduce dimensionality. Each element of the block is optional and
 customisable, but the principle of repeating blocks remains the same.</li>
 </ul>
-</dd>
-</dl>
 </li>
-<li><dl class="first docutils">
-<dt>Skip Connections</dt>
-<dd><ul class="first last simple">
+<li>Skip Connections<ul>
 <li><strong>What:</strong> Passing the output of one layer in the network directly to later
 layers in the network, ‘skipping’ over the intermediate layers. This can
 be done through addition, which requires the dimensions of the layers to
@@ -392,12 +485,8 @@ emerge. Firstly, the low level information can get lost on the way.
 Secondly, we can run into the vanishing gradient problem. A neat solution
 to diminish both of these issues is to use skip connections.</li>
 </ul>
-</dd>
-</dl>
 </li>
-<li><dl class="first docutils">
-<dt>Bottlenecks</dt>
-<dd><ul class="first last simple">
+<li>Bottlenecks<ul>
 <li><strong>What:</strong> A bottleneck refers to the shape of the network (big to small).
 Often followed by more layers to build the network size back up (small to
 big). The bottleneck itself is the smallest layer, which can also be
@@ -412,12 +501,8 @@ second half of the network can use the information from skip connections
 and the encoding to infer high level information about the data to solve
 problems.</li>
 </ul>
-</dd>
-</dl>
 </li>
-<li><dl class="first docutils">
-<dt>Recurrence</dt>
-<dd><ul class="first last simple">
+<li>Recurrence<ul>
 <li><strong>What:</strong> A network layer which takes as input some data and a ‘state’
 vector, and produces a new state vector alongside its other output.</li>
 <li><strong>Why:</strong> The state vector represents some understanding about the state at
@@ -428,12 +513,8 @@ to relate the data coming in now with what came before. This is necessary
 for sequential tasks like video or text recognition, and not necessary for
 static tasks such as image recognition, hence the discrepancy.</li>
 </ul>
-</dd>
-</dl>
 </li>
-<li><dl class="first docutils">
-<dt>Attention</dt>
-<dd><ul class="first last simple">
+<li>Attention<ul>
 <li><strong>What:</strong> Weighting each element of a sequence of data, according to how
 important (how much attention should be paid to) it, to solve a given
 task. Typically, the model will be outputting another sequence, and as
@@ -450,8 +531,6 @@ sequential so cannot be parallelised), and removing recency bias. Recency
 bias being the tendency of RNNs to pay more attention to the most recent
 sequence elements, rather than the most relevant.</li>
 </ul>
-</dd>
-</dl>
 </li>
 </ul>
 </div>
@@ -552,17 +631,17 @@ changes are having a positive effect.</p>
 </div>
 </div>
 <div class="section" id="worked-examples">
-<h2><a class="toc-backref" href="#id18">Worked Examples</a></h2>
+<h2><a class="toc-backref" href="#id21">Worked Examples</a></h2>
 </div>
 </div>
 <div class="section" id="pitfalls-and-common-problems">
-<h1><a class="toc-backref" href="#id19">Pitfalls and Common Problems</a></h1>
+<h1><a class="toc-backref" href="#id22">Pitfalls and Common Problems</a></h1>
 </div>
 <div class="section" id="resources">
-<h1><a class="toc-backref" href="#id20">Resources</a></h1>
+<h1><a class="toc-backref" href="#id23">Resources</a></h1>
 </div>
 <div class="section" id="appendix">
-<h1><a class="toc-backref" href="#id21">Appendix</a></h1>
+<h1><a class="toc-backref" href="#id24">Appendix</a></h1>
 </div>
 </div>
 </body>
