@@ -233,6 +233,7 @@ K-Fold Cross Validation
 3. Test model performance on the withheld partition.
 4. Repeat steps 2 and 3, withholding a different partition each time, until all K partitions have been used as the test data.
 5. Combine the K accuracy scores at the end, providing a mean and variancefor the accuracy.
+6. Make changes to model and repeat until performance is sufficient.
 
 This way, all of the available data is used for both training and testing, while never testing a model on the data on which it was trained. It also serves to avoid any unintended bias that may arise by chance, when the data is randomly partitioned. However, it requires training the model from scratch K times to get a single output. Also, repeatedly running K-Fold Cross Validation and making adjustments, can introduce implicit bias.
 
@@ -243,13 +244,13 @@ Train, Validate and Test
 
 
 1. **Randomly** split the dataset into 3 partitions. The proportions of these are up to you, but a sensible split usually looks something like 80%-10%-10% or 60%-20%-20%, (train-validate-test, respectively)*.
-2. While (you’re not yet happy with the performance or you think you can still make improvements):
+2. Repeat until performance is sufficient:
 
   a. Train the model on the train set.
 
   b. Evaluate on the validation set.
 
-  c. Make any changes you like to the model.
+  c. Make any changes to the model.
 
 3. Evaluate your best performing model(s) on the test set.
 

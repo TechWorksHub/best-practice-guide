@@ -326,6 +326,7 @@ is labeled, and some (usually larger) set of data that is unlabelled.</p>
 <li>Test model performance on the withheld partition.</li>
 <li>Repeat steps 2 and 3, withholding a different partition each time, until all K partitions have been used as the test data.</li>
 <li>Combine the K accuracy scores at the end, providing a mean and variancefor the accuracy.</li>
+<li>Make changes to model and repeat until performance is sufficient.</li>
 </ol>
 <p>This way, all of the available data is used for both training and testing, while never testing a model on the data on which it was trained. It also serves to avoid any unintended bias that may arise by chance, when the data is randomly partitioned. However, it requires training the model from scratch K times to get a single output. Also, repeatedly running K-Fold Cross Validation and making adjustments, can introduce implicit bias.</p>
 <p>This is well suited to training smaller models on small datasets, as the requirement to train many times rules out its use in ‘big data’ applications such as deep learning. If data is limited and your model can be trained many times (at an acceptable cost for you), K-Fold Cross Validation is recommended. Otherwise, read on to the next section.</p>
@@ -334,13 +335,13 @@ is labeled, and some (usually larger) set of data that is unlabelled.</p>
 <h2><a class="toc-backref" href="#id16">Train, Validate and Test</a></h2>
 <ol class="arabic simple">
 <li><strong>Randomly</strong> split the dataset into 3 partitions. The proportions of these are up to you, but a sensible split usually looks something like 80%-10%-10% or 60%-20%-20%, (train-validate-test, respectively)*.</li>
-<li>While (you’re not yet happy with the performance or you think you can still make improvements):</li>
+<li>Repeat until performance is sufficient:</li>
 </ol>
 <blockquote>
 <ol class="loweralpha simple">
 <li>Train the model on the train set.</li>
 <li>Evaluate on the validation set.</li>
-<li>Make any changes you like to the model.</li>
+<li>Make any changes to the model.</li>
 </ol>
 </blockquote>
 <ol class="arabic simple" start="3">
