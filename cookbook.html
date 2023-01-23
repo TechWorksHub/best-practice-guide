@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+<meta name="generator" content="Docutils 0.14: http://docutils.sourceforge.net/" />
 <title>cookbook.rst</title>
 <style type="text/css">
 
@@ -82,7 +82,7 @@ TechNES AI Best Practices Group:
 
 
 <div class="contents sidebar topic" id="table-of-contents">
-<p class="topic-title">Table of Contents</p>
+<p class="topic-title first">Table of Contents</p>
 <ul class="simple">
 <li><a class="reference internal" href="#summary" id="id1">Summary</a></li>
 <li><a class="reference internal" href="#target-audience" id="id2">Target Audience</a></li>
@@ -92,7 +92,7 @@ TechNES AI Best Practices Group:
 </ul>
 </li>
 <li><a class="reference internal" href="#running-ai-projects" id="id6">Running AI Projects</a><ul>
-<li><a class="reference internal" href="#should-i-ai" id="id7">Should I AI?</a></li>
+<li><a class="reference internal" href="#using-ai" id="id7">Using AI</a></li>
 <li><a class="reference internal" href="#ai-project-decisions" id="id8">AI Project Decisions</a></li>
 <li><a class="reference internal" href="#ai-project-workflow" id="id9">AI Project Workflow</a></li>
 </ul>
@@ -210,7 +210,7 @@ manual are algorithms that learn mathematical models of the world from some
 data, in order to make predictions about other unseen or future data. One
 important idea that we need to consider first is <strong>structured
 data</strong> and <strong>unstructured data</strong>.</p>
-<p>Breakaway: Structured vs Unstructured Data
+<p><em>Breakaway: Structured vs Unstructured Data:</em>
 AI and Machine Learning models are no different from any other computer program
 in that they require their input data to follow a consistent format.
 Unfortunately, data collected in the real world rarely follows the type of
@@ -233,8 +233,8 @@ this distinction is important for many parts of AI and Machine Learning, the
 distinction between whether an AI and Machine Learning algorithm is trying to
 predict continuous and discrete data is so important that it has its own
 nomenclature of <strong>regression</strong> and <strong>classification</strong> algorithms respectively.</p>
-<p>Breakaway: Regression vs Classification Algorithms
-The distinction between <strong>regression</strong> (continuous output data) and <strong>classification</strong>
+<p><em>Breakaway: Regression vs Classification Algorithms: *
+The distinction between **regression*</em> (continuous output data) and <strong>classification</strong>
 (discrete output data) is particularly important in AI and Machine Learning
 algorithms, because the type of data that the algorithm outputs has a
 significant effect on how it must function. Notably, some algorithms (e.g.
@@ -252,7 +252,7 @@ most prominent of two of these ideas are <strong>supervised learning</strong> an
 learning</strong>, which are concerned whether we learn from data that list the correct
 output the algorithms should produce for some given input data (<strong>labeled data</strong>),
 or simply the input data themselves (<strong>unlabeled data</strong>).</p>
-<p>Breakaway: Supervised vs Unsupervised vs Reinforcement vs Other Learning
+<p><em>Breakaway: Supervised vs Unsupervised vs Reinforcement vs Other Learning:</em>
 We use the nomenclature of <strong>Supervised</strong> vs <strong>Unsupervised</strong> (vs others) to describe
 the way in which our algorithms are learning. In Supervised learning, we learn
 from matched input data/output data pairs, data for which we already have the
@@ -286,6 +286,61 @@ set of data, but selects which piece of data it wants to learn from in future
 from the pieces of data it has had up until now. Another common paradigm is
 <strong>semi-supervised learning</strong>, in which an algorithm learns from some set data that
 is labeled, and some (usually larger) set of data that is unlabelled.</p>
+<p>No matter which of these learning types we want to use, we need to be able to
+evaluate the performance of the AI and Machine Learning models we create. The
+way we approach this is no different to any other testing we would do - we
+compare the predictions that our model makes to some known ground truth data. An
+easy way to do this would be, once we have <strong>trained</strong> our algorithm on the data
+that we have to hand, to test how well it performs on this same data (evaluate
+the <strong>training error</strong>) as a ground truth. Unfortunately, this is a bad idea.
+AI and Machine Learning algorithms will fit fairly well to the data they’ve
+trained on (it’s <strong>training data</strong>), independently of how well they work for
+other “unseen” data. Since the goal of our algorithm is to have it work well
+across all data points (including ones it wasn’t trained on), how well it
+performs on the training data will be a misleading and overconfident measure of
+overall performance.</p>
+<p>Instead, we try to estimate how well our model will perform on data we’ve not
+trained on by randomly reserving a small amount of our data in a testing set
+(our <strong>testing data</strong>). Sometimes, in addition to the <strong>training</strong> and
+<strong>testing</strong> sets we’ve described, we will make a further split of our data to
+also include a small set of <strong>validation</strong> data. We might do this if we need to
+validate the results of testing, for example, in more advanced applications in
+which we might use the testing data itself to make decisions about the learning
+process. It is generally best practice not just to break your data up into
+training and testing (and validation, if needed) sets once, but to repeat this
+process multiple times and aggregate the results. This process is called cross
+validation, and in most cases will be the more appropriate way to evaluate our
+AI and Machine learning model’s performance.</p>
+<p><em>Breakaway: Measures of Performance: *
+There are multiple ways for us to evaluate performance of any given model. Some
+common choices are **Mean Squared Error*</em> (continuous data) or <strong>Cross Entropy</strong>
+(discrete data). It’s best to stick to standard measures unless you understand
+what you’re doing, but there are usually multiple valid ways of measuring
+performance with their own consequences. The best measure of performance is the
+one that solves your problem best.</p>
+<p>With a measure of performance, we have a way of comparing different models to
+select the best one. Practically though, there are too many different algorithms
+and approaches for us to run them all and directly compare them in this way. We
+need a way of selecting likely candidates a-priori, without directly testing
+them. Our goal in AI and Machine Learning is to make predictions about all of
+our data from a small subset of it. We want a model that accurately reflects the
+reality of the data we’re training it on. An abstraction that can help us think
+about this is to think in terms of <strong>model complexity</strong>. Our models exist
+broadly on a spectrum of complexity from simple linear models with only a few
+parameters that fit a line to our data at one end, and billion-parameter neural
+networks at the other. It’s probably clear to see that an overly simple model of
+our data will be bad. If we can’t capture the complexity of what is happening in
+our data, we’ll never be able to model it well. We call this <strong>underfitting</strong>.
+However, it’s also the case that fitting a model that is too complex is
+problematic. Models that are too complicated will fit randomness in the specific
+data they are trained on, and will not generalise well to data outside of that.
+We call this problem <strong>overfitting</strong>.</p>
+<p>Our goal should be to pick a model that is complicated enough to fit to the
+parts of the data we are interested in (the <strong>signal</strong>), without overfitting to
+the noise in our data too. We also want to take advantage of prior knowledge we
+have about our problem, for example, if we know our problem is linear, it would
+be sensible to pick a linear model. When in doubt, it’s often more favourable
+to go for simpler models, for reasons we will discuss later.</p>
 <div class="section" id="putting-it-together-creating-modern-ai-and-machine-learning">
 <h2><a class="toc-backref" href="#id5">Putting it Together: Creating Modern AI and Machine Learning</a></h2>
 <p>WIP</p>
@@ -293,8 +348,37 @@ is labeled, and some (usually larger) set of data that is unlabelled.</p>
 </div>
 <div class="section" id="running-ai-projects">
 <h1><a class="toc-backref" href="#id6">Running AI Projects</a></h1>
-<div class="section" id="should-i-ai">
-<h2><a class="toc-backref" href="#id7">Should I AI?</a></h2>
+<p>In this section, we discuss the problem of designing and managing an AI and
+Machine Learning project. Importantly, this is <em>not</em> a technical guide to
+solving these problems, but a guide to solving all the problems that precede
+and surround the technical parts of the problem.</p>
+<div class="section" id="using-ai">
+<h2><a class="toc-backref" href="#id7">Using AI</a></h2>
+<p>The first, and most important problem to solve in any AI and Machine Learning
+project is to be able to formulate a clear and concise answer to the question
+“why do I want to solve this problem with AI and Machine Learning”? AI and
+Machine Learning algorithms are far from universally appropriate solutions,
+and suffer from several fundamental difficulties that make them undesirable:</p>
+<ul class="simple">
+<li>They require collection and processing of data to feed them</li>
+<li>They are stochastic, dealing fundamentally in probabilities</li>
+<li>They are difficult to validate, and further yet, many algorithms are difficult
+even to interpret</li>
+</ul>
+<p>The reason these algorithms have received so much attention <em>despite</em> these
+difficulties is that they make it plausible (or possible) to solve sets of
+problems that are otherwise difficult to get at. These challenges, and the
+motivation we gave for AI in our previous sections (understand a large data set
+by learning from a (relatively) small amount of data) speak to a litmus test for
+whether a problem is suitable to be solved with AI and Machine learning. A
+problem is a good candidate if:</p>
+<ul class="simple">
+<li>It is infeasible to solve the problem in a more direct or analytical way</li>
+<li>It is feasible to access a useful set of data points to indirectly learn a
+solution</li>
+<li>It is infeasible to access all (or almost all) of the data points we’re
+interested in</li>
+</ul>
 </div>
 <div class="section" id="ai-project-decisions">
 <h2><a class="toc-backref" href="#id8">AI Project Decisions</a></h2>

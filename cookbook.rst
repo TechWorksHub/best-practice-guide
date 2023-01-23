@@ -106,7 +106,7 @@ data, in order to make predictions about other unseen or future data. One
 important idea that we need to consider first is **structured 
 data** and **unstructured data**.
 
-Breakaway: Structured vs Unstructured Data
+*Breakaway: Structured vs Unstructured Data:*
 AI and Machine Learning models are no different from any other computer program
 in that they require their input data to follow a consistent format.
 Unfortunately, data collected in the real world rarely follows the type of
@@ -131,7 +131,7 @@ distinction between whether an AI and Machine Learning algorithm is trying to
 predict continuous and discrete data is so important that it has its own
 nomenclature of **regression** and **classification** algorithms respectively.
 
-Breakaway: Regression vs Classification Algorithms
+*Breakaway: Regression vs Classification Algorithms: *
 The distinction between **regression** (continuous output data) and **classification**
 (discrete output data) is particularly important in AI and Machine Learning
 algorithms, because the type of data that the algorithm outputs has a
@@ -152,7 +152,7 @@ learning**, which are concerned whether we learn from data that list the correct
 output the algorithms should produce for some given input data (**labeled data**),
 or simply the input data themselves (**unlabeled data**). 
 
-Breakaway: Supervised vs Unsupervised vs Reinforcement vs Other Learning
+*Breakaway: Supervised vs Unsupervised vs Reinforcement vs Other Learning:*
 We use the nomenclature of **Supervised** vs **Unsupervised** (vs others) to describe 
 the way in which our algorithms are learning. In Supervised learning, we learn 
 from matched input data/output data pairs, data for which we already have the 
@@ -189,6 +189,66 @@ from the pieces of data it has had up until now. Another common paradigm is
 **semi-supervised learning**, in which an algorithm learns from some set data that 
 is labeled, and some (usually larger) set of data that is unlabelled.
 
+No matter which of these learning types we want to use, we need to be able to
+evaluate the performance of the AI and Machine Learning models we create. The
+way we approach this is no different to any other testing we would do - we
+compare the predictions that our model makes to some known ground truth data. An
+easy way to do this would be, once we have **trained** our algorithm on the data
+that we have to hand, to test how well it performs on this same data (evaluate
+the **training error**) as a ground truth. Unfortunately, this is a bad idea.
+AI and Machine Learning algorithms will fit fairly well to the data they’ve
+trained on (it’s **training data**), independently of how well they work for
+other “unseen” data. Since the goal of our algorithm is to have it work well
+across all data points (including ones it wasn’t trained on), how well it
+performs on the training data will be a misleading and overconfident measure of
+overall performance.
+
+Instead, we try to estimate how well our model will perform on data we’ve not
+trained on by randomly reserving a small amount of our data in a testing set
+(our **testing data**). Sometimes, in addition to the **training** and
+**testing** sets we’ve described, we will make a further split of our data to
+also include a small set of **validation** data. We might do this if we need to
+validate the results of testing, for example, in more advanced applications in
+which we might use the testing data itself to make decisions about the learning
+process. It is generally best practice not just to break your data up into
+training and testing (and validation, if needed) sets once, but to repeat this
+process multiple times and aggregate the results. This process is called cross
+validation, and in most cases will be the more appropriate way to evaluate our
+AI and Machine learning model’s performance.
+
+*Breakaway: Measures of Performance: *
+There are multiple ways for us to evaluate performance of any given model. Some
+common choices are **Mean Squared Error** (continuous data) or **Cross Entropy**
+(discrete data). It’s best to stick to standard measures unless you understand
+what you’re doing, but there are usually multiple valid ways of measuring
+performance with their own consequences. The best measure of performance is the
+one that solves your problem best.
+
+With a measure of performance, we have a way of comparing different models to
+select the best one. Practically though, there are too many different algorithms
+and approaches for us to run them all and directly compare them in this way. We
+need a way of selecting likely candidates a-priori, without directly testing
+them. Our goal in AI and Machine Learning is to make predictions about all of
+our data from a small subset of it. We want a model that accurately reflects the
+reality of the data we’re training it on. An abstraction that can help us think
+about this is to think in terms of **model complexity**. Our models exist
+broadly on a spectrum of complexity from simple linear models with only a few
+parameters that fit a line to our data at one end, and billion-parameter neural
+networks at the other. It’s probably clear to see that an overly simple model of
+our data will be bad. If we can’t capture the complexity of what is happening in
+our data, we’ll never be able to model it well. We call this **underfitting**.
+However, it’s also the case that fitting a model that is too complex is
+problematic. Models that are too complicated will fit randomness in the specific
+data they are trained on, and will not generalise well to data outside of that.
+We call this problem **overfitting**.
+
+Our goal should be to pick a model that is complicated enough to fit to the
+parts of the data we are interested in (the **signal**), without overfitting to
+the noise in our data too. We also want to take advantage of prior knowledge we
+have about our problem, for example, if we know our problem is linear, it would
+be sensible to pick a linear model. When in doubt, it’s often more favourable
+to go for simpler models, for reasons we will discuss later. 
+
 
 Putting it Together: Creating Modern AI and Machine Learning
 ------------------------------------------------------------
@@ -198,8 +258,39 @@ WIP
 Running AI Projects
 =============================================
 
-Should I AI?
+In this section, we discuss the problem of designing and managing an AI and
+Machine Learning project. Importantly, this is *not* a technical guide to 
+solving these problems, but a guide to solving all the problems that precede
+and surround the technical parts of the problem.
+
+Using AI
 ------------
+
+The first, and most important problem to solve in any AI and Machine Learning
+project is to be able to formulate a clear and concise answer to the question
+“why do I want to solve this problem with AI and Machine Learning”? AI and
+Machine Learning algorithms are far from universally appropriate solutions,
+and suffer from several fundamental difficulties that make them undesirable:
+
+* They require collection and processing of data to feed them
+* They are stochastic, dealing fundamentally in probabilities
+* They are difficult to validate, and further yet, many algorithms are difficult
+  even to interpret
+
+The reason these algorithms have received so much attention *despite* these
+difficulties is that they make it plausible (or possible) to solve sets of
+problems that are otherwise difficult to get at. These challenges, and the
+motivation we gave for AI in our previous sections (understand a large data set
+by learning from a (relatively) small amount of data) speak to a litmus test for
+whether a problem is suitable to be solved with AI and Machine learning. A
+problem is a good candidate if:
+
+* It is infeasible to solve the problem in a more direct or analytical way
+* It is feasible to access a useful set of data points to indirectly learn a
+  solution
+* It is infeasible to access all (or almost all) of the data points we’re
+  interested in
+
 
 AI Project Decisions
 --------------------
