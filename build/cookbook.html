@@ -1,0 +1,382 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Executive Summary &#8212; ai-best-practices v0.4.0 documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/haiku.css" />
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Welcome to ai-best-practices’s documentation!" href="index.html" /> 
+  </head><body>
+      <div class="header" role="banner"><h1 class="heading"><a href="index.html">
+          <span>ai-best-practices v0.4.0 documentation</span></a></h1>
+        <h2 class="heading"><span>Executive Summary</span></h2>
+      </div>
+      <div class="topnav" role="navigation" aria-label="top navigation">
+      
+        <p>
+        «&#160;&#160;<a href="index.html">Welcome to ai-best-practices’s documentation!</a>
+        &#160;&#160;::&#160;&#160;
+        <a class="uplink" href="index.html">Contents</a>
+        </p>
+
+      </div>
+      <div class="content" role="main">
+        
+        
+  <section id="executive-summary">
+<h1>Executive Summary<a class="headerlink" href="#executive-summary" title="Permalink to this headline">¶</a></h1>
+<p>Artificial Intelligence (AI) and Machine Learning (ML) technologies are key to
+many modern engineering projects due to their ability to solve many problems
+that are difficult or impossible with other methods. While most engineers will
+find themselves enjoying a significant overlap between these techniques and
+their existing skill set, they are also liable to find that AI and Machine
+Learning is its own field with its own unique demands and (often hidden)
+pitfalls. While there are many resources available for self teaching, it is
+generally assumed the practitioner is either an absolute beginner to
+engineering, or already a seasoned expert in AI and ML. In this document, we
+provide a practical guide to AI and Machine learning for  electronic systems
+engineers who already have a strong base of knowledge in electronic systems but
+no specialized expertise. This guide will be practice focused, with the goal of
+helping engineers to make good decisions and avoid problems. The guide will
+cover, among many others areas:</p>
+<ul class="simple">
+<li><p>Preliminary problem assessment</p></li>
+<li><p>Data collection</p></li>
+<li><p>Pipelining</p></li>
+<li><p>Testing and Validation</p></li>
+<li><p>Privacy and Security</p></li>
+<li><p>Ethical and Legal considerations</p></li>
+</ul>
+</section>
+<section id="target-audience">
+<h1>Target Audience<a class="headerlink" href="#target-audience" title="Permalink to this headline">¶</a></h1>
+<p>The target audience for this guide is electronic systems engineers with little
+to no specific expertise in AI and Machine Learning techniques. It will be
+assumed, because of this background, that readers will have a base level of
+competence in programming and mathematics, though the guide will err on the side
+of caution in respect of assumed knowledge. We may, for example, assume our
+reader has knowledge of concepts in basic calculus, but are unlikely to assume
+that they are able to remember any specific formula. We are also assuming that
+the primary interest in practically deploying these techniques rather than
+understanding the theory and context of their development. For readers
+interested in a more theoretical treatment, we list several texts in the
+resources section appropriate to a range of different levels of background
+knowledge.</p>
+</section>
+<section id="using-this-guide">
+<h1>Using this Guide<a class="headerlink" href="#using-this-guide" title="Permalink to this headline">¶</a></h1>
+<p>This guide provides a preamble discussing the key issues in each section,
+followed by a questionnaire for each section dictating, for each AI risk and
+privacy level, key steps to take. Where AI and Privacy levels are both
+specified, you must fulfill this requirement if you meet either of these
+specifications.</p>
+<p>In terms of structure, this guide specifies several different categories of
+requirements. Creating an effective AI project is an iterative process, and it
+is not intended that the ordering of the requirements specifies a strong order
+in which to tackle the requirements, beyond the obvious (e.g. we must collect
+the data before we can do anything with it). The only exception to this is the
+Preliminary Assessment that forms the first step of any project, and establishes
+the AI and Privacy risk levels discussed below.</p>
+<section id="ai-risk-levels">
+<h2>AI Risk Levels<a class="headerlink" href="#ai-risk-levels" title="Permalink to this headline">¶</a></h2>
+<p>One of the key concepts leveraged in this guide in order to provide an
+appropriate level of risk management to AI is the classification of different AI
+applications into different risk categories. This framework strongly mimics the
+approach proposed in the upcoming EU Artificial Intelligence act, and defines
+four categories of risk for AI:</p>
+<ul class="simple">
+<li><p>Unacceptable risk. Applications that are a clear threat to the safety,
+livelihoods or rights of people.</p></li>
+<li><p>High risk. Applications that are critical to the safety or wellbeing of
+people, that require special mitigations to adequately cover the risks they
+pose</p></li>
+<li><p>Limited risk. Applications with lower impacts to safety or wellbeing, but
+which still require some level of mitigation</p></li>
+<li><p>Minimal or no risk. Applications with minimal to zero risk.</p></li>
+<li><p>We define these terms in more detail, with examples, in the appendix.</p></li>
+</ul>
+<p>The framework this guide provides dictates different requirements according to
+each category.</p>
+</section>
+<section id="privacy-risk-levels">
+<h2>Privacy Risk Levels<a class="headerlink" href="#privacy-risk-levels" title="Permalink to this headline">¶</a></h2>
+<p>The other key concepts used in this guide are privacy and security requirements.
+As data driven methods, AI and Machine Learning algorithms have the potential to
+pose significant risks in these areas. We define three levels of privacy and
+security requirements:</p>
+<ul class="simple">
+<li><p>High risk. Applications that deal with personal data that may pose a risk to
+the safety or wellbeing of people</p></li>
+<li><p>Limited risk. Applications that deal with personal data with lower impacts to
+safety or wellbeing, but which still require some level of mitigation</p></li>
+<li><p>Minimal or no risk. Applications that either do not deal with personal data,
+or do so with minimal to zero risk.</p></li>
+</ul>
+</section>
+</section>
+<section id="preliminary-assessment">
+<h1>Preliminary Assessment<a class="headerlink" href="#preliminary-assessment" title="Permalink to this headline">¶</a></h1>
+<p>In order to usefully realize the content of this guide, the AI and Privacy risks
+that the project poses need to be defined. To do this, we need to undertake
+several preliminary steps to define the project.</p>
+<p>The very first step is to establish that AI and Machine Learning algorithms are
+an effective and suitable approach to the proposed problem. The goals of the
+project should be reviewed in the context of what AI and Machine Learning
+algorithms can achieve, and compared to other (non AI) approaches. Simpler
+approaches may lead to comparable or better results, without the overhead of
+managing an AI and Machine Learning project.</p>
+<p>The next step is to scope out the goals and requirements of the proposed product
+in the context of the business constraints it is subject to. Given the
+challenges of validating AI approaches, it is imperative to define clear,
+specific goals for the project. When the goals and requirements of the proposed
+project have been established, well defined metrics of what success in achieving
+these goals will look like need to be created.</p>
+<p>Once these goals and metrics are defined, it is then appropriate to undertake a
+risk assessment of the project. This risk assessment should, without exception,
+inform a fair assessment of the AI risk and privacy risk category that the
+proposed projects outcomes fall into.</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 31%" />
+<col style="width: 15%" />
+<col style="width: 17%" />
+<col style="width: 22%" />
+<col style="width: 15%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Requirement</p></th>
+<th class="head"><p>Evidence</p></th>
+<th class="head"><p>AI Risk</p></th>
+<th class="head"><p>Privacy Risk</p></th>
+<th class="head"><p>Complete</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Assess alternative
+approaches</p></td>
+<td><ul class="simple">
+<li></li>
+</ul>
+</td>
+<td><p>Mandatory</p></td>
+<td><p>Mandatory</p></td>
+<td><ul class="simple">
+<li></li>
+</ul>
+</td>
+</tr>
+<tr class="row-odd"><td><p>Risk Assessment</p></td>
+<td><ul class="simple">
+<li></li>
+</ul>
+</td>
+<td><p>Mandatory</p></td>
+<td><p>Mandatory</p></td>
+<td><ul class="simple">
+<li></li>
+</ul>
+</td>
+</tr>
+<tr class="row-even"><td><p>Risk Categories</p></td>
+<td><ul class="simple">
+<li></li>
+</ul>
+</td>
+<td><p>Mandatory</p></td>
+<td><p>Mandatory</p></td>
+<td><ul class="simple">
+<li></li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="data-collection">
+<h1>Data Collection<a class="headerlink" href="#data-collection" title="Permalink to this headline">¶</a></h1>
+<p>In all approaches that learn from data, the quality and availability of data are
+of paramount importance.</p>
+<p>The first step is to establish what kind of data needs to be collected in order
+to solve the problem of interest, and where and how it is going to be obtained
+at a high quality. It’s important to consider how much data is likely to be
+needed to solve the problem while maintaining realistic expectations of what
+data is cost effectively obtainable. It’s also important to pick data that both
+accurately represents your quality of interest, and is amenable to computation.
+AI methods are fundamentally statistical methods that deal with quantitative
+data, and subjective measures (e.g. free text answers) are substantially more
+difficult to manage. Whatever is decided, it is important to consider and record
+factors that may impact data quality, or introduce sampling biases.</p>
+<p>The process of establishing a data collection pipeline should be an iterative
+process: it is unlikely the first solutions to the above questions will be the
+best ones. Data exploration should be undertaken to establish interesting
+patterns, and to identify problems in the data (and remedies thereto) as early
+as possible. Note that it is possible to introduce biases by doing this
+carelessly. Even with a carefully designed data pipeline, data will, almost
+universally, require preprocessing before it is handed off to any AI pipeline.
+It may, for example, require cleaning, transformation, and/or labeling. This
+step may be revisited in light of later processing stages, but should still be
+carried out at this stage. In all instances, it is imperative that the processes
+used to achieve this are tracked and can be replicated. Raw collected data
+should be permanently stored where practicable for limited risk projects, or
+always for high risk projects.</p>
+<p>The risk level and privacy requirements of the AI application may dictate
+additional steps. All projects should undertake a risk assessment on the
+potential risks and harms the data collection process may cause, but High risk
+projects must further provide an appropriate mitigation strategy to reduce
+identified harms, and human oversight. High risk projects must also take
+adequate steps at the data collection stage to screen data for biases that may
+cause discriminatory outcomes of the AI and Machine Learning algorithm. Projects
+with high privacy requirements must take extra steps at this stage to ensure
+that data is kept properly secured and anonymized, in addition to the ones
+specified in the “Privacy and Security” section.</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 53%" />
+<col style="width: 8%" />
+<col style="width: 14%" />
+<col style="width: 17%" />
+<col style="width: 8%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Requirement</p></th>
+<th class="head"><p>Evidence</p></th>
+<th class="head"><p>Risk Requirement</p></th>
+<th class="head"><p>Privacy Requirement</p></th>
+<th class="head"><p>Complete</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Establish the goals that the data collection process is achieving</p></td>
+<td><ul class="simple">
+<li></li>
+</ul>
+</td>
+<td><p>Mandatory</p></td>
+<td><p>Mandatory</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>Select target data</p></td>
+<td><ul class="simple">
+<li></li>
+</ul>
+</td>
+<td><p>Mandatory</p></td>
+<td><p>Mandatory</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>Target data quality analysis</p></td>
+<td><ul class="simple">
+<li></li>
+</ul>
+</td>
+<td><p>Mandatory</p></td>
+<td><p>Mandatory</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>Establish data quantization process</p></td>
+<td><ul class="simple">
+<li></li>
+</ul>
+</td>
+<td><p>Mandatory</p></td>
+<td><p>Mandatory</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>Create data quality checks</p></td>
+<td><ul class="simple">
+<li></li>
+</ul>
+</td>
+<td><p>Mandatory</p></td>
+<td><p>Mandatory</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>Create data collection process</p></td>
+<td><ul class="simple">
+<li></li>
+</ul>
+</td>
+<td><p>Mandatory</p></td>
+<td><p>Mandatory</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>Create data pre-processing pipeline</p></td>
+<td></td>
+<td><p>Mandatory</p></td>
+<td><p>Mandatory</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>Establish infrastructure for storing raw data</p></td>
+<td></td>
+<td><p>High</p></td>
+<td><p>None</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>Data biases and discrimination analysis</p></td>
+<td></td>
+<td><p>High</p></td>
+<td><p>None</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>Data collection harm risk assessment</p></td>
+<td></td>
+<td><p>Mandatory</p></td>
+<td><p>Mandatory</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>Data collection harm risk mitigation strategy</p></td>
+<td></td>
+<td><p>High</p></td>
+<td><p>Moderate</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>Data is anonymised</p></td>
+<td></td>
+<td><p>High</p></td>
+<td><p>High</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>Data transmitted during the collection process must be encrypted</p></td>
+<td></td>
+<td><p>High</p></td>
+<td><p>High</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>Data must be secured after collection</p></td>
+<td></td>
+<td><p>High</p></td>
+<td><p>High</p></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</section>
+
+
+      </div>
+      <div class="bottomnav" role="navigation" aria-label="bottom navigation">
+      
+        <p>
+        «&#160;&#160;<a href="index.html">Welcome to ai-best-practices’s documentation!</a>
+        &#160;&#160;::&#160;&#160;
+        <a class="uplink" href="index.html">Contents</a>
+        </p>
+
+      </div>
+
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2023, William Jones.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.1.1.
+    </div>
+  </body>
+</html>
