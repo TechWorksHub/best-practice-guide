@@ -153,7 +153,7 @@ best ones. Data exploration should be undertaken to establish interesting
 patterns, and to identify problems in the data (and remedies thereto) as early
 as possible. Note that it is possible to introduce biases by doing this
 carelessly. Even with a carefully designed data pipeline, data will, almost
-universally, require preprocessing before it is handed off to any AI pipeline.
+universally, require preprocessing before it is handed off to any AI model.
 It may, for example, require cleaning, transformation, and/or labeling. This
 step may be revisited in light of later processing stages, but should still be
 carried out at this stage. In all instances, it is imperative that the processes
@@ -205,3 +205,113 @@ specified in the “Privacy and Security” section.
 +-------------------------------------------------------------------+----------+------------------+---------------------+----------+
 | Data must be secured after collection                             |          | High             | High                |          |
 +-------------------------------------------------------------------+----------+------------------+---------------------+----------+
+
+Pipelining
+===============
+
+Pipelining is the process of creating a set of sequential steps that orchestrate
+the flow of data, all the way from the extraction of the raw data to the final
+output of the model. This section covers the practical aspects of designing and
+maintaining such a construct.
+
+Designing a pipeline is fundamentally a software engineering problem, and
+typical software engineering best practices are all appropriate here. Data
+pipelines should be version controlled, different concurrent versions of the
+code should be siloed into different branches with appropriate restrictions on
+who can change them, and updates to the pipeline should be peer reviewed.
+Testing is also very important, so much so that it has its own later section in
+this guide dedicated to it. 
+
+In a similar vein, maintaining comprehensive documentation and logging are a
+significant part of creating and maintaining an AI pipeline. This is especially
+important in AI and Machine Learning projects that have any significant AI risk
+or privacy risks, which might be called to account for the processes that go
+into their decision making.
+
+Hardware considerations are also a significant part of pipelining, especially
+for projects at a large scale. Data pipelines may significantly expand any
+storage requirements for raw data, prompting decisions about data storage at
+scale. Larger projects may make it desirable or necessary to orchestrate data
+pipelining across multiple machines. This requires these machines to be sourced,
+and prompts the question of how this orchestration is going to happen. 
+
+One often desirable decision is to have some, or all, data pipelining to happen
+in the cloud. While this can be advantageous, transferring data and compute
+outside of your direct custody can be problematic. Additional steps will need to
+be taken for pipelines that advantage cloud computing, especially those with
+high AI or, especially, privacy risks.
+
++-------------------------------------------------------------------+----------+------------------+---------------------+----------+
+| Requirement                                                       | Evidence | Risk Requirement | Privacy Requirement | Complete |
++===================================================================+==========+==================+=====================+==========+
+| Establish version control system                                  | -        | Mandatory        | Mandatory           |          |
++-------------------------------------------------------------------+----------+------------------+---------------------+----------+
+| Separate project into branches                                    | -        | Mandatory        | Mandatory           |          |
++-------------------------------------------------------------------+----------+------------------+---------------------+----------+
+| Define permissions on version control structure                   | -        | Mandatory        | Mandatory           |          |
++-------------------------------------------------------------------+----------+------------------+---------------------+----------+
+| Establish peer review process                                     | -        | Mandatory        | Mandatory           |          |
++-------------------------------------------------------------------+----------+------------------+---------------------+----------+
+| Establish documentation process                                   | -        | Mandatory        | Mandatory           |          |
++-------------------------------------------------------------------+----------+------------------+---------------------+----------+
+| Establish logging process                                         | -        | Mandatory        | Mandatory           |          |
++-------------------------------------------------------------------+----------+------------------+---------------------+----------+
+| Create data pre-processing pipeline                               |          | Mandatory        | Mandatory           |          |
++-------------------------------------------------------------------+----------+------------------+---------------------+----------+
+| Define data storage requirements                                  |          | Mandatory        | Mandatory           |          |
++-------------------------------------------------------------------+----------+------------------+---------------------+----------+
+| Establish distributed computing requirements                      |          | Mandatory        | Mandatory           |          |
++-------------------------------------------------------------------+----------+------------------+---------------------+----------+
+| Cloud data harm risk mitigation strategy                          |          | Mandatory        | Mandatory           |          |
++-------------------------------------------------------------------+----------+------------------+---------------------+----------+
+| Data is anonymised                                                |          | High             | High                |          |
++-------------------------------------------------------------------+----------+------------------+---------------------+----------+
+| Data transmitted during the collection process must be encrypted  |          | High             | High                |          |
++-------------------------------------------------------------------+----------+------------------+---------------------+----------+
+| Data must be secured after collection                             |          | High             | High                |          |
++-------------------------------------------------------------------+----------+------------------+---------------------+----------+
+
+
+Testing
+===============
+
+Testing AI and Machine Learning algorithms is the process of designing an
+automated set of tests to make sure our algorithms are behaving correctly. The
+process is extremely similar to testing in software engineering. In this
+section, we describe how to test these algorithms covering, in turn, general
+software testing principles, and the special considerations of AI and Machine
+Learning Algorithms. 
+
+AI and Machine Learning has no exemption from normal software engineering best
+practices. Testing should be fully automated. We should have unit tests for
+individual units of functionality, integration tests of how these fit together,
+and system tests of wider functionality. There should be a suite of regression
+tests to ensure that new additions and changes don’t introduce regressions of
+bugs in performance in the existing code. Tests should be clearly written and
+documented and have well defined pass and failure conditions.
+
+It is important to understand when designing these tests that performance on
+the data the algorithms have been trained on (training data), does not reflect
+performance in general. Algorithms specialize to their training data, and will
+perform better on this data than they will in general. To mitigate this, it is
+sufficient to have testing split the data into sets, and ensure that training
+and testing occur separately. Two sets is often sufficient, but sometimes
+additional splits will be needed. In the cases in which we wish to tune the
+hyperparameters of an algorithm, for example, we will need a further split
+(often called a validation set in this case) to evaluate the performance of this
+tuning. 
+
+Unlike testing in many other software applications, the testing for AI and
+Machine Learning algorithms often requires continuous attention, even in the
+absence of changes to the software. Especially when human factors are involved,
+it is not uncommon for data collected over time to observe patterns and concepts
+drifting or changing. It’s important to understand the risk of this in any
+project, and to monitor key performance indicators to track this. Without doing
+this, it is difficult to be able to distinguish drops in performance and
+failures in tests caused by this drift from real errors caused by mistakes.
+
+For high AI risk or privacy risk applications, there are additional burdens in
+testing in order to fulfill the requirements dictated. High AI risk applications
+must demonstrate how threats to wellbeing and safety are mitigated. High privacy
+risk applications must similarly test for appropriate classes of privacy
+violations. 
