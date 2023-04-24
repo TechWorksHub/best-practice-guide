@@ -133,45 +133,13 @@ proposed projects outcomes fall into.
 
 Data Collection
 ===============
-In all approaches that learn from data, the quality and availability of data are
-of paramount importance.
-
-The first step is to establish what kind of data needs to be collected in order
-to solve the problem of interest, and where and how it is going to be obtained
-at a high quality. It’s important to consider how much data is likely to be
-needed to solve the problem while maintaining realistic expectations of what
-data is cost effectively obtainable. It’s also important to pick data that both
-accurately represents your quality of interest, and is amenable to computation.
-AI methods are fundamentally statistical methods that deal with quantitative
-data, and subjective measures (e.g. free text answers) are substantially more
-difficult to manage. Whatever is decided, it is important to consider and record
-factors that may impact data quality, or introduce sampling biases.
-
-The process of establishing a data collection pipeline should be an iterative
-process: it is unlikely the first solutions to the above questions will be the
-best ones. Data exploration should be undertaken to establish interesting
-patterns, and to identify problems in the data (and remedies thereto) as early
-as possible. Note that it is possible to introduce biases by doing this
-carelessly. Even with a carefully designed data pipeline, data will, almost
-universally, require preprocessing before it is handed off to any AI model.
-It may, for example, require cleaning, transformation, and/or labeling. This
-step may be revisited in light of later processing stages, but should still be
-carried out at this stage. In all instances, it is imperative that the processes
-used to achieve this are tracked and can be replicated. Raw collected data
-should be permanently stored where practicable for limited risk projects, or
-always for high risk projects. 
-
-The risk level and privacy requirements of the AI application may dictate
-additional steps. All projects should undertake a risk assessment on the
-potential risks and harms the data collection process may cause, but High risk
-projects must further provide an appropriate mitigation strategy to reduce
-identified harms, and human oversight. High risk projects must also take
-adequate steps at the data collection stage to screen data for biases that may
-cause discriminatory outcomes of the AI and Machine Learning algorithm. Projects
-with high privacy requirements must take extra steps at this stage to ensure
-that data is kept properly secured and anonymized, in addition to the ones
-specified in the “Privacy and Security” section.
-
+Establishing a data collection pipeline is an iterative process that requires
+careful consideration of factors that may impact data quality and introduce
+sampling biases. It's important to explore the data to identify interesting
+patterns and problems early on, but this must be done carefully to avoid
+introducing biases. The risk level and privacy requirements of the AI
+application may dictateadditional steps, including a risk assessment,
+appropriate mitigation strategies, and screening data for biases.
 
 
 +-------------------------------------------------------------------+----------+------------------+---------------------+----------+
@@ -205,6 +173,129 @@ specified in the “Privacy and Security” section.
 +-------------------------------------------------------------------+----------+------------------+---------------------+----------+
 | Data must be secured after collection                             |          | High             | High                |          |
 +-------------------------------------------------------------------+----------+------------------+---------------------+----------+
+
+Requirements
+------------
+
+Creating target dataset
++++++++++++++++++++++++
+The first step of the preliminary assessment was to create an overarching goal
+and corresponding set of tangible, measurable outcomes. In data collection, our
+first step is to establish the data that we need to achieve these goals. To do
+this, we need to understand what good data is in the context of our desired
+outcomes, and to temper this with what is realistically achievable.
+
+Good data is, first and foremost, the data that leads us to our desired
+outcomes. Important considerations are:
+
+* Accuracy
+    * Does the data accurately measure the quantity of interest?
+* Completeness
+    * Does the dataset represent a complete view of all data points of interest?
+    * Does it have more data about some quantities than others? Should it?
+* Relevance
+    * To what extent is the collected data relevant to the measure of interest?
+* Missingness
+    * Are there missing values in the data?
+* Timeliness
+    * Is the data still relevant now?
+* Subjectivity
+    * AI methods are fundamentally quantitative, and deal best with quantitative data
+* Attainability
+    * Is it realistic to obtain the data in the quantities required?
+* Standardization
+    * Is the data collectable/attainable in a standardized format amenable to computation
+
+
+It’s unlikely that we will be able to establish a perfect dataset, and the
+quality of the collected data will significantly affect subsequent steps that
+consume it. The purpose of this step is therefore to establish both what a
+realistic and useful set of data to collect, and to inventory the limitations of
+this same data to anticipate later risks and problems. For example, missing
+data, depending on how that missingness manifests, might be either a non-issue
+or a serious problem. If it manifests as a problem, an appropriate mitigation
+might be data imputation.
+
+To complete the outcome of this step, fill out the following questionnaire.
+
+Create automated data quality checks
+++++++++++++++++++++++++++++++++++++
+
+In the Create Target Dataset step, we established a measure of the potential
+limitations of our dataset. In this step, we establish a process for monitoring
+the level that these problems manifest in our data. 
+
+This should be achieved algorithmically in almost all instances. Where this is
+not possible, it is imperative that any decision making process is recorded as
+clearly as possible, with any persons involved in the process recorded. 
+
+The output of this step is a document detailing how each of the limitations
+identified in the previous step can be automatically monitored in collected
+data. 
+Create data collection process
+Having established the target data, the next major step is to establish a
+process by which the data can be collected. 
+
+Before considering the details of how to achieve this, an important preliminary
+step is to consider where the data is going to be stored. In all applications,
+it is an extremely good idea to store raw data forever. For high AI risk
+applications, storing (and keeping) the raw data should be considered mandatory. 
+
+This step is likely to end up revealing additional limitations in the dataset.
+
+Establish data storage
+++++++++++++++++++++++
+Create data pre-processing pipeline
+Raw data will almost universally require pre-processing before integration into
+any AI pipeline.
+
+This should be achieved algorithmically in almost all instances. Where this is
+not possible, it is imperative that any decision making process is recorded as
+clearly as possible, with any persons involved in the process recorded. 
+Data biases and discrimination analysis
+In high AI risk applications, biases in the training dataset may cascade into
+discriminative or other harmful outcomes for the project as a whole. 
+
+It is not usually feasible to remove all biases from a dataset. Indeed, even
+removing direct references to characteristics may not be enough to remove biases
+associated with them. For example, a hiring AI trained on gender-biased data
+will continue to be gender-biased even when direct references to gender are
+removed, by identifying proxy identifiers (e.g. female-only colleges)[].
+
+This step is about identifying and cataloging potential biases in the data.
+Some of the biases identified may be able to be (and should be) mitigated at
+this early stage. Others may not be feasible to tackle until later steps. 
+Data collection ethics
+In some applications, especially those involving human factors, the data
+collection process may have the potential to cause harm. The nature of
+collecting health data by assessing volunteers, for example, may come with risks
+to their wellbeing. 
+
+These potential problems should be cataloged and risk assessed.
+
+Data is anonymised
+++++++++++++++++++
+All collected data should be stripped of personal identifying information.
+
+This can be more challenging than it may first appear. It is not always
+sufficient to remove directly identifiable data. Classically, 87% of the US
+population can be uniquely identified by zip code, gender and date of birth.
+Fully mitigating this issue may require steps to be taken further down the line. 
+
+This step requires data to be stripped of all directly identifying personal
+information, and a risk assessment of non-directly identifying data. 
+
+Data transmitted during the collection process must be encrypted
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+All data collected should be fully encrypted from the point of collection to
+the point of storage.
+
+Data must be secured after collection
++++++++++++++++++++++++++++++++++++++
+Data must be fully secured after collection. Data should be secured by an
+access control system. Data should only be accessible to those that need it. 
+
+
 
 Pipelining
 ===============
