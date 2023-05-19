@@ -1,18 +1,17 @@
 
 <!DOCTYPE html>
 
-<html>
+<html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-
     <title>Executive Summary &#8212; ai-best-practices v0.4.0 documentation</title>
-    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="_static/haiku.css" />
-    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
-    <script src="_static/jquery.js"></script>
-    <script src="_static/underscore.js"></script>
-    <script src="_static/doctools.js"></script>
+    <link rel="stylesheet" href="_static/haiku.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/language_data.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="prev" title="Welcome to ai-best-practices’s documentation!" href="index.html" /> 
@@ -33,7 +32,7 @@
       <div class="content" role="main">
         
         
-  <section id="executive-summary">
+  <div class="section" id="executive-summary">
 <h1>Executive Summary<a class="headerlink" href="#executive-summary" title="Permalink to this headline">¶</a></h1>
 <p>Artificial Intelligence (AI) and Machine Learning (ML) technologies are key to
 many modern engineering projects due to their ability to solve many problems
@@ -47,18 +46,18 @@ engineering, or already a seasoned expert in AI and ML. In this document, we
 provide a practical guide to AI and Machine learning for  electronic systems
 engineers who already have a strong base of knowledge in electronic systems but
 no specialized expertise. This guide will be practice focused, with the goal of
-helping engineers to make good decisions and avoid problems. The guide will
-cover, among many others areas:</p>
+helping engineers to make good decisions and avoid problems.</p>
+<p>The guide will cover, in order:</p>
 <ul class="simple">
-<li><p>Preliminary problem assessment</p></li>
-<li><p>Data collection</p></li>
-<li><p>Pipelining</p></li>
-<li><p>Testing and Validation</p></li>
-<li><p>Privacy and Security</p></li>
-<li><p>Ethical and Legal considerations</p></li>
+<li><p>Should I AI?</p></li>
+<li><p>Defining the Project</p></li>
+<li><p>Collecting Data</p></li>
+<li><p>Training your AI Application</p></li>
+<li><p>Deploying your AI Application</p></li>
+<li><p>Testing your AI Application</p></li>
 </ul>
-</section>
-<section id="target-audience">
+</div>
+<div class="section" id="target-audience">
 <h1>Target Audience<a class="headerlink" href="#target-audience" title="Permalink to this headline">¶</a></h1>
 <p>The target audience for this guide is electronic systems engineers with little
 to no specific expertise in AI and Machine Learning techniques. It will be
@@ -72,28 +71,73 @@ understanding the theory and context of their development. For readers
 interested in a more theoretical treatment, we list several texts in the
 resources section appropriate to a range of different levels of background
 knowledge.</p>
-</section>
-<section id="using-this-guide">
+</div>
+<div class="section" id="using-this-guide">
 <h1>Using this Guide<a class="headerlink" href="#using-this-guide" title="Permalink to this headline">¶</a></h1>
-<p>This guide provides a preamble discussing the key issues in each section,
-followed by a questionnaire for each section dictating, for each AI risk and
-privacy level, key steps to take. Where AI and Privacy levels are both
-specified, you must fulfill this requirement if you meet either of these
-specifications.</p>
-<p>In terms of structure, this guide specifies several different categories of
-requirements. Creating an effective AI project is an iterative process, and it
-is not intended that the ordering of the requirements specifies a strong order
-in which to tackle the requirements, beyond the obvious (e.g. we must collect
-the data before we can do anything with it). The only exception to this is the
-Preliminary Assessment that forms the first step of any project, and establishes
-the AI and Privacy risk levels discussed below.</p>
-<section id="ai-risk-levels">
-<h2>AI Risk Levels<a class="headerlink" href="#ai-risk-levels" title="Permalink to this headline">¶</a></h2>
-<p>One of the key concepts leveraged in this guide in order to provide an
-appropriate level of risk management to AI is the classification of different AI
-applications into different risk categories. This framework strongly mimics the
-approach proposed in the upcoming EU Artificial Intelligence act, and defines
-four categories of risk for AI:</p>
+<p>This guide is laid out as a series of steps taking you from conceptualizing your
+AI application through to deploying it in the real world. These steps are broken
+into sections, and set out in the order they should be initially considered.
+It’s strongly suggested you don’t “skip ahead” to later steps from earlier ones.
+However, it is expected reviewing later sections may prompt you to reevaluate
+previous decisions and return to earlier steps.</p>
+<p>Each step discusses a problem to be solved, what needs to be done to solve it,
+and what evidence needs to be provided to support this. The steps are enumerated
+in a table available in each section, to be filled in as the steps are worked
+through. The table lists 3 columns. The first lists the name of the requirement.
+The second is for recording the evidence supporting the fulfillment of the
+requirement, and the third is a checkbox to note when the requirement has been
+completed. An example table with the first requirement filled out is below:</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 31%" />
+<col style="width: 56%" />
+<col style="width: 13%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Requirement</p></th>
+<th class="head"><p>Evidence</p></th>
+<th class="head"><p>Complete</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Example requirement 1</p></td>
+<td><p>Example Risk Assessment.pdf,
+Example document.pdf</p></td>
+<td><p>Yes</p></td>
+</tr>
+<tr class="row-odd"><td><p>Example requirement 2</p></td>
+<td><ul class="simple">
+<li></li>
+</ul>
+</td>
+<td><ul class="simple">
+<li></li>
+</ul>
+</td>
+</tr>
+<tr class="row-even"><td><p>…</p></td>
+<td><ul class="simple">
+<li></li>
+</ul>
+</td>
+<td><ul class="simple">
+<li></li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Not every part of every step will need to be fulfilled for every application.
+Some applications may pose their own classes of problems that will need to be
+dealt with separately. We discuss these below.</p>
+<div class="section" id="application-specific-requirements">
+<h2>Application Specific Requirements<a class="headerlink" href="#application-specific-requirements" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="ai-risk">
+<h3>AI Risk<a class="headerlink" href="#ai-risk" title="Permalink to this headline">¶</a></h3>
+<p>Direct regulation of AI in the EU is tending to a risk based approach examining
+the harm of AI applications to people. Applications are classified into risk
+categories, and those that pose a high risk are to be subject to more stringent
+requirements. These categories are currently:</p>
 <ul class="simple">
 <li><p>Unacceptable risk. Applications that are a clear threat to the safety,
 livelihoods or rights of people.</p></li>
@@ -103,303 +147,490 @@ pose</p></li>
 <li><p>Limited risk. Applications with lower impacts to safety or wellbeing, but
 which still require some level of mitigation</p></li>
 <li><p>Minimal or no risk. Applications with minimal to zero risk.</p></li>
-<li><p>We define these terms in more detail, with examples, in the appendix.</p></li>
 </ul>
-<p>The framework this guide provides dictates different requirements according to
-each category.</p>
-</section>
-<section id="privacy-risk-levels">
-<h2>Privacy Risk Levels<a class="headerlink" href="#privacy-risk-levels" title="Permalink to this headline">¶</a></h2>
-<p>The other key concepts used in this guide are privacy and security requirements.
-As data driven methods, AI and Machine Learning algorithms have the potential to
-pose significant risks in these areas. We define three levels of privacy and
-security requirements:</p>
+<p>Providing guidance on any upcoming or current legislation is out of the scope of
+this guide. However, this categorization of the risk that AI applications pose
+is a useful tool for discussing best engineering practices. These risk levels
+will recur in this guide, and we will refer to them as AI Risk.</p>
+</div>
+<div class="section" id="data-protection">
+<h3>Data Protection<a class="headerlink" href="#data-protection" title="Permalink to this headline">¶</a></h3>
+<p>AI models are data driven. This leaves them significantly subject to data
+protection regulation, especially GDPR. According to GDPR, if you process data,
+you have to do so according to seven protection and accountability principles:</p>
 <ul class="simple">
-<li><p>High risk. Applications that deal with personal data that may pose a risk to
-the safety or wellbeing of people</p></li>
-<li><p>Limited risk. Applications that deal with personal data with lower impacts to
-safety or wellbeing, but which still require some level of mitigation</p></li>
-<li><p>Minimal or no risk. Applications that either do not deal with personal data,
-or do so with minimal to zero risk.</p></li>
+<li><p>Lawfulness, fairness and transparency — Processing must be lawful, fair, and
+transparent to the data subject.</p></li>
+<li><p>Purpose limitation — You must process data for the legitimate purposes
+specified explicitly to the data subject when you collected it.</p></li>
+<li><p>Data minimization — You should collect and process only as much data as
+absolutely necessary for the purposes specified.</p></li>
+<li><p>Accuracy — You must keep personal data accurate and up to date.</p></li>
+<li><p>Storage limitation — You may only store personally identifying data for as
+long as necessary for the specified purpose.</p></li>
+<li><p>Integrity and confidentiality — Processing must be done in such a way as to
+ensure appropriate security, integrity, and confidentiality (e.g. by using
+encryption).</p></li>
+<li><p>Accountability — The data controller is responsible for being able to
+demonstrate GDPR compliance with all of these principles.</p></li>
 </ul>
-</section>
-</section>
-<section id="preliminary-assessment">
-<h1>Preliminary Assessment<a class="headerlink" href="#preliminary-assessment" title="Permalink to this headline">¶</a></h1>
-<p>In order to usefully realize the content of this guide, the AI and Privacy risks
-that the project poses need to be defined. To do this, we need to undertake
-several preliminary steps to define the project.</p>
-<p>The very first step is to establish that AI and Machine Learning algorithms are
-an effective and suitable approach to the proposed problem. The goals of the
-project should be reviewed in the context of what AI and Machine Learning
-algorithms can achieve, and compared to other (non AI) approaches. Simpler
-approaches may lead to comparable or better results, without the overhead of
-managing an AI and Machine Learning project.</p>
-<p>The next step is to scope out the goals and requirements of the proposed product
-in the context of the business constraints it is subject to. Given the
-challenges of validating AI approaches, it is imperative to define clear,
-specific goals for the project. When the goals and requirements of the proposed
-project have been established, well defined metrics of what success in achieving
-these goals will look like need to be created.</p>
-<p>Once these goals and metrics are defined, it is then appropriate to undertake a
-risk assessment of the project. This risk assessment should, without exception,
-inform a fair assessment of the AI risk and privacy risk category that the
-proposed projects outcomes fall into.</p>
+<p>There are also certain categories of data that must be given special
+consideration. Providing guidance on legislation remains out of the scope of
+this guide. However, once again, the ideas put forward in GDPR are important in
+framing the discussion of best engineering practices, and will recur in this
+guide.</p>
+</div>
+<div class="section" id="safety-security-and-robustness">
+<h3>Safety, Security and Robustness<a class="headerlink" href="#safety-security-and-robustness" title="Permalink to this headline">¶</a></h3>
+<p>A core requirement of any system is that it functions correctly, both in
+conditions of normal use, as well as conditions of misuse (intentional or
+otherwise), or other adverse conditions. An AI system should be:</p>
+<ul class="simple">
+<li><p>Safe: either functioning correctly or failing safely in all conditions</p></li>
+<li><p>Secure: resilient against misuse or abuse (intentionally or otherwise), and</p></li>
+<li><p>Robust: ensuring functionality in as wide a range of conditions as possible</p></li>
+</ul>
+<p>While the need to meet these challenges is not unique to AI systems, AI systems
+bring several unique problems to each of these areas. For example:</p>
+<ul class="simple">
+<li><p>Safety is a continual challenge in AI systems that are fundamentally
+statistical. Guaranteeing safe behavior in the wide range of situations an
+automotive AI may encounter, for example, remains a continuous challenge.</p></li>
+<li><p>AI models present unique attack surfaces that must be secured. For example,
+in many situations, models will leak information about the data that they were
+trained on.</p></li>
+<li><p>Similarly, AI models struggle to robustly deal with novel data outside of
+their training set. This can both cause problems in normal use, and be
+exploited by attackers.</p></li>
+</ul>
+<p>Safety, security and robustness will be important ideas throughout this document.</p>
+</div>
+<div class="section" id="transparency-and-explainability">
+<h3>Transparency and Explainability<a class="headerlink" href="#transparency-and-explainability" title="Permalink to this headline">¶</a></h3>
+<p>Another core requirement of any system is that we can understand how it
+functions. This imperative should be familiar to any electronic systems
+engineer, through the value of clear code and documentation. We use two terms to
+describe these requirements:</p>
+<ul class="simple">
+<li><p>Transparency: the communication of appropriate information about an AI system
+to relevant people (for example, information on how, when, and for which
+purposes an AI system is being used), and</p></li>
+<li><p>Explainability: the extent to which it is possible for relevant parties to
+access, interpret and understand the decision-making processes of an AI system</p></li>
+</ul>
+<p>Many AI systems are uniquely troublesome in these respects. Many common methods,
+such as Neural Networks are effectively “black boxes”. These methods provide a
+solution, but through a means that is ultimately not human interpretable.</p>
+</div>
+<div class="section" id="fairness">
+<h3>Fairness<a class="headerlink" href="#fairness" title="Permalink to this headline">¶</a></h3>
+<p>Fairness is another core requirement of any system, especially in light of the
+above ideas of transparency and explainability. By fairness, we mean a system
+that:</p>
+<p>Does not undermine the legal rights of individuals or organizations,
+discriminate unfairly against individuals or create unfair market outcomes.</p>
+<p>Fairness is a challenge in AI systems that learn from data. The decisions these
+systems make are a reflection of the patterns in the data they are trained on.
+If the data is biased, the systems trained on them will also be biased. This has
+been proven expensively and at length in the real world, for example through
+attempts at creating criminal justice AI or hiring AI.</p>
+</div>
+<div class="section" id="accountability-and-governance">
+<h3>Accountability and Governance<a class="headerlink" href="#accountability-and-governance" title="Permalink to this headline">¶</a></h3>
+<p>Any system that has the potential to cause harm requires oversight. Any AI
+system will therefore require systems of:</p>
+<ul class="simple">
+<li><p>Governance, a framework for managing the development, deployment and operation
+of AI</p></li>
+<li><p>Accountability, clear lines of responsibility for all aspects of the AI
+applications</p></li>
+</ul>
+<p>The full scope of requirements is unlikely to be fully addressed by engineering.
+Nonetheless, these principles are important in the greater context of the AI
+application, and will be an important part of development.</p>
+</div>
+<div class="section" id="contestability-and-redress">
+<h3>Contestability and Redress<a class="headerlink" href="#contestability-and-redress" title="Permalink to this headline">¶</a></h3>
+<p>Any system that has the potential to cause harm also requires ways for this harm
+to be recognised and reversed. Any AI system will therefore require systems of:</p>
+<ul class="simple">
+<li><p>Contestability, those who may be adversely affected must have a route to
+contest decisions or outcomes</p></li>
+<li><p>Redress, there must be a system in place to assess these concerns, and redress
+the affected party when necessary</p></li>
+</ul>
+<p>The full scope of requirements is unlikely to be fully addressed by engineering.
+Nonetheless, these principles are important in the greater context of the AI
+application, and will be an important part of development.</p>
+</div>
+</div>
+</div>
+<div class="section" id="should-i-ai">
+<h1>Should I AI?<a class="headerlink" href="#should-i-ai" title="Permalink to this headline">¶</a></h1>
+<p>Developing an AI application can present significant challenges. Collection of
+data is burdensome. Testing and validation are problematic. As seen in the
+previous section, many applications of AI will come with special requirements
+that can be a challenge in themselves. To address this, the very first step in
+this guide is to be able answer the following: should I use AI to solve my
+problem? This greater question is broken down into 3 sub questions to be
+completed.</p>
 <table class="docutils align-default">
 <colgroup>
-<col style="width: 31%" />
-<col style="width: 15%" />
-<col style="width: 17%" />
-<col style="width: 22%" />
-<col style="width: 15%" />
+<col style="width: 60%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
 </colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>Requirement</p></th>
 <th class="head"><p>Evidence</p></th>
-<th class="head"><p>AI Risk</p></th>
-<th class="head"><p>Privacy Risk</p></th>
 <th class="head"><p>Complete</p></th>
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p>Assess alternative
-approaches</p></td>
+<tr class="row-even"><td><p>Evaluate engineering case</p></td>
 <td><ul class="simple">
 <li></li>
 </ul>
 </td>
-<td><p>Mandatory</p></td>
-<td><p>Mandatory</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>Initial AI Risk Assessment</p></td>
 <td><ul class="simple">
 <li></li>
 </ul>
 </td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>Initial Data Risk Assessment</p></td>
+<td><ul class="simple">
+<li></li>
+</ul>
+</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="defining-the-project">
+<h1>Defining the Project<a class="headerlink" href="#defining-the-project" title="Permalink to this headline">¶</a></h1>
+<p>The next step is to scope out the goals and requirements of the proposed product
+in the context of the constraints it is subject to. There are two steps here.
+Firstly, defining a clear set of goals and metrics for success. Secondly,
+undertaking a more complete risk assessment of the project, including a full
+assessment of the AI risk of the project, and any risks around the data likely
+to be required.</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 60%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Requirement</p></th>
+<th class="head"><p>Evidence</p></th>
+<th class="head"><p>Complete</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Establish Goals</p></td>
+<td><ul class="simple">
+<li></li>
+</ul>
+</td>
+<td></td>
 </tr>
 <tr class="row-odd"><td><p>Risk Assessment</p></td>
 <td><ul class="simple">
 <li></li>
 </ul>
 </td>
-<td><p>Mandatory</p></td>
-<td><p>Mandatory</p></td>
-<td><ul class="simple">
-<li></li>
-</ul>
-</td>
-</tr>
-<tr class="row-even"><td><p>Risk Categories</p></td>
-<td><ul class="simple">
-<li></li>
-</ul>
-</td>
-<td><p>Mandatory</p></td>
-<td><p>Mandatory</p></td>
-<td><ul class="simple">
-<li></li>
-</ul>
-</td>
+<td></td>
 </tr>
 </tbody>
 </table>
-</section>
-<section id="data-collection">
-<h1>Data Collection<a class="headerlink" href="#data-collection" title="Permalink to this headline">¶</a></h1>
-<p>Establishing a data collection pipeline is an iterative process that requires
-careful consideration of factors that may impact data quality and introduce
-sampling biases. It’s important to explore the data to identify interesting
-patterns and problems early on, but this must be done carefully to avoid
-introducing biases. The risk level and privacy requirements of the AI
-application may dictateadditional steps, including a risk assessment,
-appropriate mitigation strategies, and screening data for biases.</p>
+</div>
+<div class="section" id="collecting-data">
+<h1>Collecting Data<a class="headerlink" href="#collecting-data" title="Permalink to this headline">¶</a></h1>
+<p>One of the requirements of any AI application is that it is data driven. This
+usually means that you will need to collect some data, or at the very least to
+process some. It’s very important to get this right, as the strength of the data
+will have a strong effect on the efficacy of training and deploying our AI
+application. Our primary challenges are:</p>
+<ul class="simple">
+<li><p>Making sure the data we’re collecting contains the information we’re
+interested in</p></li>
+<li><p>Making sure our data is in a form easily understood by potential AI algorithms</p></li>
+<li><p>Making sure our infrastructure and collection process is robust</p></li>
+</ul>
 <table class="docutils align-default">
 <colgroup>
-<col style="width: 53%" />
-<col style="width: 8%" />
-<col style="width: 14%" />
-<col style="width: 17%" />
-<col style="width: 8%" />
+<col style="width: 67%" />
+<col style="width: 16%" />
+<col style="width: 16%" />
 </colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>Requirement</p></th>
 <th class="head"><p>Evidence</p></th>
-<th class="head"><p>Risk Requirement</p></th>
-<th class="head"><p>Privacy Requirement</p></th>
 <th class="head"><p>Complete</p></th>
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p>Establish the goals that the data collection process is achieving</p></td>
+<tr class="row-even"><td><p>Create a Target Dataset</p></td>
 <td><ul class="simple">
 <li></li>
 </ul>
 </td>
-<td><p>Mandatory</p></td>
-<td><p>Mandatory</p></td>
 <td></td>
 </tr>
-<tr class="row-odd"><td><p>Select target data</p></td>
+<tr class="row-odd"><td><p>Eatsblish a Data Quantization Process</p></td>
 <td><ul class="simple">
 <li></li>
 </ul>
 </td>
-<td><p>Mandatory</p></td>
-<td><p>Mandatory</p></td>
 <td></td>
 </tr>
-<tr class="row-even"><td><p>Target data quality analysis</p></td>
+<tr class="row-even"><td><p>Automate Data Quality Checking</p></td>
 <td><ul class="simple">
 <li></li>
 </ul>
 </td>
-<td><p>Mandatory</p></td>
-<td><p>Mandatory</p></td>
 <td></td>
 </tr>
-<tr class="row-odd"><td><p>Establish data quantization process</p></td>
+<tr class="row-odd"><td><p>Create a Data Collection Process</p></td>
 <td><ul class="simple">
 <li></li>
 </ul>
 </td>
-<td><p>Mandatory</p></td>
-<td><p>Mandatory</p></td>
 <td></td>
 </tr>
-<tr class="row-even"><td><p>Create data quality checks</p></td>
+<tr class="row-even"><td><p>Automate Data Cleaning</p></td>
 <td><ul class="simple">
 <li></li>
 </ul>
 </td>
-<td><p>Mandatory</p></td>
-<td><p>Mandatory</p></td>
 <td></td>
 </tr>
-<tr class="row-odd"><td><p>Create data collection process</p></td>
+<tr class="row-odd"><td><p>Data Biases and Discrimination Analysis</p></td>
 <td><ul class="simple">
 <li></li>
 </ul>
 </td>
-<td><p>Mandatory</p></td>
-<td><p>Mandatory</p></td>
 <td></td>
 </tr>
-<tr class="row-even"><td><p>Create data pre-processing pipeline</p></td>
-<td></td>
-<td><p>Mandatory</p></td>
-<td><p>Mandatory</p></td>
-<td></td>
-</tr>
-<tr class="row-odd"><td><p>Establish infrastructure for storing raw data</p></td>
-<td></td>
-<td><p>High</p></td>
-<td><p>None</p></td>
+<tr class="row-even"><td><p>Data Anonymization</p></td>
+<td><ul class="simple">
+<li></li>
+</ul>
+</td>
 <td></td>
 </tr>
-<tr class="row-even"><td><p>Data biases and discrimination analysis</p></td>
-<td></td>
-<td><p>High</p></td>
-<td><p>None</p></td>
-<td></td>
-</tr>
-<tr class="row-odd"><td><p>Data collection harm risk assessment</p></td>
-<td></td>
-<td><p>Mandatory</p></td>
-<td><p>Mandatory</p></td>
+<tr class="row-odd"><td><p>Data Transmission Safety</p></td>
+<td><ul class="simple">
+<li></li>
+</ul>
+</td>
 <td></td>
 </tr>
-<tr class="row-even"><td><p>Data collection harm risk mitigation strategy</p></td>
-<td></td>
-<td><p>High</p></td>
-<td><p>Moderate</p></td>
-<td></td>
-</tr>
-<tr class="row-odd"><td><p>Data is anonymised</p></td>
-<td></td>
-<td><p>High</p></td>
-<td><p>High</p></td>
-<td></td>
-</tr>
-<tr class="row-even"><td><p>Data transmitted during the collection process must be encrypted</p></td>
-<td></td>
-<td><p>High</p></td>
-<td><p>High</p></td>
-<td></td>
-</tr>
-<tr class="row-odd"><td><p>Data must be secured after collection</p></td>
-<td></td>
-<td><p>High</p></td>
-<td><p>High</p></td>
+<tr class="row-even"><td><p>Data Security</p></td>
+<td><ul class="simple">
+<li></li>
+</ul>
+</td>
 <td></td>
 </tr>
 </tbody>
 </table>
-<section id="requirements">
-<h2>Requirements<a class="headerlink" href="#requirements" title="Permalink to this headline">¶</a></h2>
-<section id="creating-target-dataset">
-<h3>Creating target dataset<a class="headerlink" href="#creating-target-dataset" title="Permalink to this headline">¶</a></h3>
-<p>The first step of the preliminary assessment was to create an overarching goal
-and corresponding set of tangible, measurable outcomes. In data collection, our
-first step is to establish the data that we need to achieve these goals. To do
-this, we need to understand what good data is in the context of our desired
-outcomes, and to temper this with what is realistically achievable.</p>
-<p>Good data is, first and foremost, the data that leads us to our desired
-outcomes. Important considerations are:</p>
+</div>
+<div class="section" id="training-your-ai-application">
+<h1>Training your AI Application<a class="headerlink" href="#training-your-ai-application" title="Permalink to this headline">¶</a></h1>
+<p>Our next step is to train our AI application on the data collected in the last
+step. This step is about three things:</p>
 <ul class="simple">
-<li><dl class="simple">
-<dt>Accuracy</dt><dd><ul>
+<li><p>Establishing which AI approach we’re going to use</p></li>
+<li><p>Engineering a pipeline to train our approach in the best possible way</p></li>
+<li><p>Checking this training results in an AI algorithm that does all the things it
+should, and none of the things it shouldn’t</p></li>
+</ul>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 55%" />
+<col style="width: 23%" />
+<col style="width: 23%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Requirement</p></th>
+<th class="head"><p>Evidence</p></th>
+<th class="head"><p>Complete</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Training Requirement 1</p></td>
+<td><ul class="simple">
+<li></li>
+</ul>
+</td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>Training Requirement 2</p></td>
+<td><ul class="simple">
+<li></li>
+</ul>
+</td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>Training Requirement 3</p></td>
+<td><ul class="simple">
+<li></li>
+</ul>
+</td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>…</p></td>
+<td><ul class="simple">
+<li></li>
+</ul>
+</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="deploying-your-ai-application">
+<h1>Deploying your AI Application<a class="headerlink" href="#deploying-your-ai-application" title="Permalink to this headline">¶</a></h1>
+</div>
+<div class="section" id="testing-your-ai-application">
+<h1>Testing your AI Application<a class="headerlink" href="#testing-your-ai-application" title="Permalink to this headline">¶</a></h1>
+</div>
+<div class="section" id="task-list">
+<h1>Task list<a class="headerlink" href="#task-list" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="id1">
+<h2>Should I AI?<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="evaluate-engineering-case">
+<h3>Evaluate Engineering Case<a class="headerlink" href="#evaluate-engineering-case" title="Permalink to this headline">¶</a></h3>
+<p>AI is a powerful tool in many applications, but it may not be immediately
+appropriate for the problem you are trying to solve. This step requires the
+enumeration and assessment of available alternative approaches to solving the
+problem.</p>
+<p>In this step, you should consider at least the following:</p>
+<ul class="simple">
+<li><p>Is it possible to solve the problem without using a data driven approach?</p>
+<ul>
+<li><p>What are the benefits and consequences of doing this?</p></li>
+</ul>
+</li>
+<li><p>Is it possible to solve the problem using a data driven approach without
+learning? What are the benefits and consequences of doing this?</p>
+<ul>
+<li><p>For example, clickthrough rate is likely to be a very good way of ranking
+the effectiveness of an advert. A fairly effective spam filter may be to
+simply block a list of domains known for producing spam.</p></li>
+</ul>
+</li>
+</ul>
+<p>To complete this step, at least both of these questions should be answered.</p>
+</div>
+<div class="section" id="assess-ai-risk">
+<h3>Assess AI Risk<a class="headerlink" href="#assess-ai-risk" title="Permalink to this headline">¶</a></h3>
+<p>In the Using This Guide section, we defined AI risk in several categories:
+Unacceptable, High, Limited, and Minimal. An important question to answer at
+this early stage is whether your application is likely to fall into the
+Unacceptable category. These are applications that are a clear threat to the
+safety, livelihoods or rights of people. Examples include:</p>
+<ul class="simple">
+<li><p>AI systems using subliminal techniques, or manipulative or deceptive
+techniques to distort behavior</p></li>
+<li><p>AI systems exploiting vulnerabilities of individuals or specific groups</p></li>
+<li><p>Biometric categorization systems based on sensitive attributes or
+characteristics</p></li>
+<li><p>AI systems used for social scoring or evaluating trustworthiness</p></li>
+<li><p>AI systems used for risk assessments predicting criminal or administrative
+offenses</p></li>
+<li><p>AI systems creating or expanding facial recognition databases through
+untargeted scraping</p></li>
+<li><p>AI systems inferring emotions in law enforcement, border management, the
+workplace, and education</p></li>
+</ul>
+<p>At this stage, you may not have fully fleshed out the scope of your application.
+Nonetheless, this initial assessment is important to pre-empt these risks. If
+your application falls into this category, it may not be appropriate to develop.
+To complete this step, a categorisation of the proposed project into
+unacceptable or not should be created, along with a justification.</p>
+</div>
+<div class="section" id="assess-data-risk">
+<h3>Assess Data Risk<a class="headerlink" href="#assess-data-risk" title="Permalink to this headline">¶</a></h3>
+<p>In the Using this Guide section, discussed how data protection principles fall
+into best practices. In this section, we evaluate the practicality of collecting
+the type of data we’re likely to be required for our project in the light of
+these principles.</p>
+<p>At this early stage, it’s unlikely that the full scope of the dataset required
+will have been set out. Nonetheless, it is important to get a good understanding
+of whether collecting the data required for the proposed project is likely to be
+practicable. The questions that need to be answered in this step are:</p>
+<ul class="simple">
+<li><p>What personal data am I likely to need to collect for my application?</p></li>
+<li><p>What restrictions might there be on collecting this data?</p></li>
+</ul>
+<p>To complete this step, provide answers to the two above questions.</p>
+</div>
+</div>
+<div class="section" id="id2">
+<h2>Defining the Project<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="establish-goals">
+<h3>Establish goals<a class="headerlink" href="#establish-goals" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="risk-assessment">
+<h3>Risk Assessment<a class="headerlink" href="#risk-assessment" title="Permalink to this headline">¶</a></h3>
+</div>
+</div>
+<div class="section" id="id3">
+<h2>Collecting Data<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="create-a-target-dataset">
+<h3>Create a Target Dataset<a class="headerlink" href="#create-a-target-dataset" title="Permalink to this headline">¶</a></h3>
+<p>The first step of the preliminary assessment was to create an overarching goal and corresponding set of tangible, measurable outcomes. In data collection, our first step is to establish the data that we need to achieve these goals. To do this, we need to understand what good data is in the context of our desired outcomes, and to temper this with what is realistically achievable.</p>
+<p>Good data is, first and foremost, the data that leads us to our desired outcomes. Important considerations are:</p>
+<ul class="simple">
+<li><p>Accuracy</p>
+<ul>
 <li><p>Does the data accurately measure the quantity of interest?</p></li>
 </ul>
-</dd>
-</dl>
 </li>
-<li><dl class="simple">
-<dt>Completeness</dt><dd><ul>
+<li><p>Completeness</p>
+<ul>
 <li><p>Does the dataset represent a complete view of all data points of interest?</p></li>
 <li><p>Does it have more data about some quantities than others? Should it?</p></li>
 </ul>
-</dd>
-</dl>
 </li>
-<li><dl class="simple">
-<dt>Relevance</dt><dd><ul>
+<li><p>Relevance</p>
+<ul>
 <li><p>To what extent is the collected data relevant to the measure of interest?</p></li>
 </ul>
-</dd>
-</dl>
 </li>
-<li><dl class="simple">
-<dt>Missingness</dt><dd><ul>
+<li><p>Missingness</p>
+<ul>
 <li><p>Are there missing values in the data?</p></li>
 </ul>
-</dd>
-</dl>
 </li>
-<li><dl class="simple">
-<dt>Timeliness</dt><dd><ul>
+<li><p>Timeliness</p>
+<ul>
 <li><p>Is the data still relevant now?</p></li>
 </ul>
-</dd>
-</dl>
 </li>
-<li><dl class="simple">
-<dt>Subjectivity</dt><dd><ul>
-<li><p>AI methods are fundamentally quantitative, and deal best with quantitative data</p></li>
+<li><p>Subjectivity</p>
+<ul>
+<li><p>AI methods are fundamentally quantitative, and deal best with quantitative
+data</p></li>
 </ul>
-</dd>
-</dl>
 </li>
-<li><dl class="simple">
-<dt>Attainability</dt><dd><ul>
+<li><p>Attainability</p>
+<ul>
 <li><p>Is it realistic to obtain the data in the quantities required?</p></li>
 </ul>
-</dd>
-</dl>
 </li>
-<li><dl class="simple">
-<dt>Standardization</dt><dd><ul>
-<li><p>Is the data collectable/attainable in a standardized format amenable to computation</p></li>
+<li><p>Standardization</p>
+<ul>
+<li><p>Is the data collectable/attainable in a standardized format amenable to
+computation</p></li>
 </ul>
-</dd>
-</dl>
 </li>
 </ul>
 <p>It’s unlikely that we will be able to establish a perfect dataset, and the
@@ -410,11 +641,22 @@ this same data to anticipate later risks and problems. For example, missing
 data, depending on how that missingness manifests, might be either a non-issue
 or a serious problem. If it manifests as a problem, an appropriate mitigation
 might be data imputation.</p>
-<p>To complete the outcome of this step, fill out the following questionnaire.</p>
-</section>
-<section id="create-automated-data-quality-checks">
-<h3>Create automated data quality checks<a class="headerlink" href="#create-automated-data-quality-checks" title="Permalink to this headline">¶</a></h3>
-<p>In the Create Target Dataset step, we established a measure of the potential
+</div>
+<div class="section" id="establish-a-data-quantization-process">
+<h3>Establish a data quantization process<a class="headerlink" href="#establish-a-data-quantization-process" title="Permalink to this headline">¶</a></h3>
+<p>In many instances, dealing with data involving some measure of subjectivity is
+unavoidable. To avoid problems using such data in what are fundamentally
+quantitative algorithms, it is important to establish a clear process for
+converting this subjective data to quantitative measurement.</p>
+<p>It is strongly preferable to do this quantisation algorithmically. Where this is
+not possible, it is imperative that any decision making process is recorded as
+clearly as possible, with any persons involved in the process recorded.</p>
+<p>The output of this step is a document listing all processes used to quantize
+data.</p>
+</div>
+<div class="section" id="automate-data-quality-checking">
+<h3>Automate Data Quality Checking<a class="headerlink" href="#automate-data-quality-checking" title="Permalink to this headline">¶</a></h3>
+<p>In the Crate Target Dataset step, we established a measure of the potential
 limitations of our dataset. In this step, we establish a process for monitoring
 the level that these problems manifest in our data.</p>
 <p>This should be achieved algorithmically in almost all instances. Where this is
@@ -422,26 +664,30 @@ not possible, it is imperative that any decision making process is recorded as
 clearly as possible, with any persons involved in the process recorded.</p>
 <p>The output of this step is a document detailing how each of the limitations
 identified in the previous step can be automatically monitored in collected
-data.
-Create data collection process
-Having established the target data, the next major step is to establish a
+data.</p>
+</div>
+<div class="section" id="create-a-data-collection-process">
+<h3>Create a Data Collection Process<a class="headerlink" href="#create-a-data-collection-process" title="Permalink to this headline">¶</a></h3>
+<p>Having established the target data, the next major step is to establish a
 process by which the data can be collected.</p>
 <p>Before considering the details of how to achieve this, an important preliminary
 step is to consider where the data is going to be stored. In all applications,
 it is an extremely good idea to store raw data forever. For high AI risk
 applications, storing (and keeping) the raw data should be considered mandatory.</p>
-<p>This step is likely to end up revealing additional limitations in the dataset.</p>
-</section>
-<section id="establish-data-storage">
-<h3>Establish data storage<a class="headerlink" href="#establish-data-storage" title="Permalink to this headline">¶</a></h3>
-<p>Create data pre-processing pipeline
-Raw data will almost universally require pre-processing before integration into
+<p>This step is likely to end up revealing additional limitations in the dataset.
+Record them.</p>
+</div>
+<div class="section" id="automate-data-cleaning">
+<h3>Automate Data Cleaning<a class="headerlink" href="#automate-data-cleaning" title="Permalink to this headline">¶</a></h3>
+<p>Raw data will almost universally require pre-processing before integration into
 any AI pipeline.</p>
 <p>This should be achieved algorithmically in almost all instances. Where this is
 not possible, it is imperative that any decision making process is recorded as
-clearly as possible, with any persons involved in the process recorded.
-Data biases and discrimination analysis
-In high AI risk applications, biases in the training dataset may cascade into
+clearly as possible, with any persons involved in the process recorded.</p>
+</div>
+<div class="section" id="data-biases-and-discrimination-analysis">
+<h3>Data Biases and Discrimination Analysis<a class="headerlink" href="#data-biases-and-discrimination-analysis" title="Permalink to this headline">¶</a></h3>
+<p>In high AI risk applications, biases in the training dataset may cascade into
 discriminative or other harmful outcomes for the project as a whole.</p>
 <p>It is not usually feasible to remove all biases from a dataset. Indeed, even
 removing direct references to characteristics may not be enough to remove biases
@@ -450,16 +696,10 @@ will continue to be gender-biased even when direct references to gender are
 removed, by identifying proxy identifiers (e.g. female-only colleges)[].</p>
 <p>This step is about identifying and cataloging potential biases in the data.
 Some of the biases identified may be able to be (and should be) mitigated at
-this early stage. Others may not be feasible to tackle until later steps.
-Data collection ethics
-In some applications, especially those involving human factors, the data
-collection process may have the potential to cause harm. The nature of
-collecting health data by assessing volunteers, for example, may come with risks
-to their wellbeing.</p>
-<p>These potential problems should be cataloged and risk assessed.</p>
-</section>
-<section id="data-is-anonymised">
-<h3>Data is anonymised<a class="headerlink" href="#data-is-anonymised" title="Permalink to this headline">¶</a></h3>
+this early stage. Others may not be feasible to tackle until later steps.</p>
+</div>
+<div class="section" id="data-anonymization">
+<h3>Data Anonymization<a class="headerlink" href="#data-anonymization" title="Permalink to this headline">¶</a></h3>
 <p>All collected data should be stripped of personal identifying information.</p>
 <p>This can be more challenging than it may first appear. It is not always
 sufficient to remove directly identifiable data. Classically, 87% of the US
@@ -467,203 +707,19 @@ population can be uniquely identified by zip code, gender and date of birth.
 Fully mitigating this issue may require steps to be taken further down the line.</p>
 <p>This step requires data to be stripped of all directly identifying personal
 information, and a risk assessment of non-directly identifying data.</p>
-</section>
-<section id="data-transmitted-during-the-collection-process-must-be-encrypted">
-<h3>Data transmitted during the collection process must be encrypted<a class="headerlink" href="#data-transmitted-during-the-collection-process-must-be-encrypted" title="Permalink to this headline">¶</a></h3>
-<p>All data collected should be fully encrypted from the point of collection to
-the point of storage.</p>
-</section>
-<section id="data-must-be-secured-after-collection">
-<h3>Data must be secured after collection<a class="headerlink" href="#data-must-be-secured-after-collection" title="Permalink to this headline">¶</a></h3>
-<p>Data must be fully secured after collection. Data should be secured by an
-access control system. Data should only be accessible to those that need it.</p>
-</section>
-</section>
-</section>
-<section id="pipelining">
-<h1>Pipelining<a class="headerlink" href="#pipelining" title="Permalink to this headline">¶</a></h1>
-<p>Pipelining is the process of creating a set of sequential steps that orchestrate
-the flow of data, all the way from the extraction of the raw data to the final
-output of the model. This section covers the practical aspects of designing and
-maintaining such a construct.</p>
-<p>Designing a pipeline is fundamentally a software engineering problem, and
-typical software engineering best practices are all appropriate here. Data
-pipelines should be version controlled, different concurrent versions of the
-code should be siloed into different branches with appropriate restrictions on
-who can change them, and updates to the pipeline should be peer reviewed.
-Testing is also very important, so much so that it has its own later section in
-this guide dedicated to it.</p>
-<p>In a similar vein, maintaining comprehensive documentation and logging are a
-significant part of creating and maintaining an AI pipeline. This is especially
-important in AI and Machine Learning projects that have any significant AI risk
-or privacy risks, which might be called to account for the processes that go
-into their decision making.</p>
-<p>Hardware considerations are also a significant part of pipelining, especially
-for projects at a large scale. Data pipelines may significantly expand any
-storage requirements for raw data, prompting decisions about data storage at
-scale. Larger projects may make it desirable or necessary to orchestrate data
-pipelining across multiple machines. This requires these machines to be sourced,
-and prompts the question of how this orchestration is going to happen.</p>
-<p>One often desirable decision is to have some, or all, data pipelining to happen
-in the cloud. While this can be advantageous, transferring data and compute
-outside of your direct custody can be problematic. Additional steps will need to
-be taken for pipelines that advantage cloud computing, especially those with
-high AI or, especially, privacy risks.</p>
-<table class="docutils align-default">
-<colgroup>
-<col style="width: 53%" />
-<col style="width: 8%" />
-<col style="width: 14%" />
-<col style="width: 17%" />
-<col style="width: 8%" />
-</colgroup>
-<thead>
-<tr class="row-odd"><th class="head"><p>Requirement</p></th>
-<th class="head"><p>Evidence</p></th>
-<th class="head"><p>Risk Requirement</p></th>
-<th class="head"><p>Privacy Requirement</p></th>
-<th class="head"><p>Complete</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td><p>Establish version control system</p></td>
-<td><ul class="simple">
-<li></li>
-</ul>
-</td>
-<td><p>Mandatory</p></td>
-<td><p>Mandatory</p></td>
-<td></td>
-</tr>
-<tr class="row-odd"><td><p>Separate project into branches</p></td>
-<td><ul class="simple">
-<li></li>
-</ul>
-</td>
-<td><p>Mandatory</p></td>
-<td><p>Mandatory</p></td>
-<td></td>
-</tr>
-<tr class="row-even"><td><p>Define permissions on version control structure</p></td>
-<td><ul class="simple">
-<li></li>
-</ul>
-</td>
-<td><p>Mandatory</p></td>
-<td><p>Mandatory</p></td>
-<td></td>
-</tr>
-<tr class="row-odd"><td><p>Establish peer review process</p></td>
-<td><ul class="simple">
-<li></li>
-</ul>
-</td>
-<td><p>Mandatory</p></td>
-<td><p>Mandatory</p></td>
-<td></td>
-</tr>
-<tr class="row-even"><td><p>Establish documentation process</p></td>
-<td><ul class="simple">
-<li></li>
-</ul>
-</td>
-<td><p>Mandatory</p></td>
-<td><p>Mandatory</p></td>
-<td></td>
-</tr>
-<tr class="row-odd"><td><p>Establish logging process</p></td>
-<td><ul class="simple">
-<li></li>
-</ul>
-</td>
-<td><p>Mandatory</p></td>
-<td><p>Mandatory</p></td>
-<td></td>
-</tr>
-<tr class="row-even"><td><p>Create data pre-processing pipeline</p></td>
-<td></td>
-<td><p>Mandatory</p></td>
-<td><p>Mandatory</p></td>
-<td></td>
-</tr>
-<tr class="row-odd"><td><p>Define data storage requirements</p></td>
-<td></td>
-<td><p>Mandatory</p></td>
-<td><p>Mandatory</p></td>
-<td></td>
-</tr>
-<tr class="row-even"><td><p>Establish distributed computing requirements</p></td>
-<td></td>
-<td><p>Mandatory</p></td>
-<td><p>Mandatory</p></td>
-<td></td>
-</tr>
-<tr class="row-odd"><td><p>Cloud data harm risk mitigation strategy</p></td>
-<td></td>
-<td><p>Mandatory</p></td>
-<td><p>Mandatory</p></td>
-<td></td>
-</tr>
-<tr class="row-even"><td><p>Data is anonymised</p></td>
-<td></td>
-<td><p>High</p></td>
-<td><p>High</p></td>
-<td></td>
-</tr>
-<tr class="row-odd"><td><p>Data transmitted during the collection process must be encrypted</p></td>
-<td></td>
-<td><p>High</p></td>
-<td><p>High</p></td>
-<td></td>
-</tr>
-<tr class="row-even"><td><p>Data must be secured after collection</p></td>
-<td></td>
-<td><p>High</p></td>
-<td><p>High</p></td>
-<td></td>
-</tr>
-</tbody>
-</table>
-</section>
-<section id="testing">
-<h1>Testing<a class="headerlink" href="#testing" title="Permalink to this headline">¶</a></h1>
-<p>Testing AI and Machine Learning algorithms is the process of designing an
-automated set of tests to make sure our algorithms are behaving correctly. The
-process is extremely similar to testing in software engineering. In this
-section, we describe how to test these algorithms covering, in turn, general
-software testing principles, and the special considerations of AI and Machine
-Learning Algorithms.</p>
-<p>AI and Machine Learning has no exemption from normal software engineering best
-practices. Testing should be fully automated. We should have unit tests for
-individual units of functionality, integration tests of how these fit together,
-and system tests of wider functionality. There should be a suite of regression
-tests to ensure that new additions and changes don’t introduce regressions of
-bugs in performance in the existing code. Tests should be clearly written and
-documented and have well defined pass and failure conditions.</p>
-<p>It is important to understand when designing these tests that performance on
-the data the algorithms have been trained on (training data), does not reflect
-performance in general. Algorithms specialize to their training data, and will
-perform better on this data than they will in general. To mitigate this, it is
-sufficient to have testing split the data into sets, and ensure that training
-and testing occur separately. Two sets is often sufficient, but sometimes
-additional splits will be needed. In the cases in which we wish to tune the
-hyperparameters of an algorithm, for example, we will need a further split
-(often called a validation set in this case) to evaluate the performance of this
-tuning.</p>
-<p>Unlike testing in many other software applications, the testing for AI and
-Machine Learning algorithms often requires continuous attention, even in the
-absence of changes to the software. Especially when human factors are involved,
-it is not uncommon for data collected over time to observe patterns and concepts
-drifting or changing. It’s important to understand the risk of this in any
-project, and to monitor key performance indicators to track this. Without doing
-this, it is difficult to be able to distinguish drops in performance and
-failures in tests caused by this drift from real errors caused by mistakes.</p>
-<p>For high AI risk or privacy risk applications, there are additional burdens in
-testing in order to fulfill the requirements dictated. High AI risk applications
-must demonstrate how threats to wellbeing and safety are mitigated. High privacy
-risk applications must similarly test for appropriate classes of privacy
-violations.</p>
-</section>
+</div>
+<div class="section" id="data-transmission-safety">
+<h3>Data Transmission Safety<a class="headerlink" href="#data-transmission-safety" title="Permalink to this headline">¶</a></h3>
+<p>All data collected should be fully encrypted from the point of collection to the
+point of storage.</p>
+</div>
+<div class="section" id="data-security">
+<h3>Data Security<a class="headerlink" href="#data-security" title="Permalink to this headline">¶</a></h3>
+<p>Data must be fully secured after collection. Data should be secured by an access
+control system. Data should only be accessible to those that need it.</p>
+</div>
+</div>
+</div>
 
 
       </div>
@@ -679,7 +735,7 @@ violations.</p>
 
     <div class="footer" role="contentinfo">
         &#169; Copyright 2023, William Jones.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.1.1.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 2.2.0.
     </div>
   </body>
 </html>
