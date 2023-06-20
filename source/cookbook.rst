@@ -1,5 +1,8 @@
 .. header:: TechNES AI Best Practices Group: 
 
+
+.. _Executive Summary:
+
 Executive Summary
 =============================
 
@@ -12,14 +15,14 @@ Learning is its own field with its own unique demands and (often hidden)
 pitfalls. While there are many resources available for self teaching, it is
 generally assumed the practitioner is either an absolute beginner to
 engineering, or already a seasoned expert in AI and ML. In this document, we
-provide a practical guide to AI and Machine learning for  electronic systems
+provide a practical guide to AI and Machine learning for electronic systems
 engineers who already have a strong base of knowledge in electronic systems but
 no specialized expertise. This guide will be practice focused, with the goal of
 helping engineers to make good decisions and avoid problems. 
 
 The guide will cover, in order:
 
-* Should I AI?
+* Should I Use AI?
 * Defining the Project
 * Collecting Data
 * Training your AI Application
@@ -27,21 +30,7 @@ The guide will cover, in order:
 * Testing your AI Application
 
 
-
-Target Audience
-===============
-The target audience for this guide is electronic systems engineers with little
-to no specific expertise in AI and Machine Learning techniques. It will be
-assumed, because of this background, that readers will have a base level of
-competence in programming and mathematics, though the guide will err on the side
-of caution in respect of assumed knowledge. We may, for example, assume our
-reader has knowledge of concepts in basic calculus, but are unlikely to assume
-that they are able to remember any specific formula. We are also assuming that
-the primary interest in practically deploying these techniques rather than
-understanding the theory and context of their development. For readers
-interested in a more theoretical treatment, we list several texts in the
-resources section appropriate to a range of different levels of background
-knowledge.
+.. _Using this Guide:
 
 Using this Guide
 ================
@@ -50,15 +39,17 @@ AI application through to deploying it in the real world. These steps are broken
 into sections, and set out in the order they should be initially considered.
 It’s strongly suggested you don’t “skip ahead” to later steps from earlier ones.
 However, it is expected reviewing later sections may prompt you to reevaluate
-previous decisions and return to earlier steps.
+earlier steps and return to previous decisions.
 
 Each step discusses a problem to be solved, what needs to be done to solve it,
 and what evidence needs to be provided to support this. The steps are enumerated
-in a table available in each section, to be filled in as the steps are worked
-through. The table lists 3 columns. The first lists the name of the requirement.
-The second is for recording the evidence supporting the fulfillment of the
+in a table available in each section, with details on each entry available
+further down the document. The table is to be filled in as the steps are worked
+through and lists 3 columns. The first lists the name of the requirement. The
+second is for recording the evidence supporting the fulfillment of the
 requirement, and the third is a checkbox to note when the requirement has been
 completed. An example table with the first requirement filled out is below:
+
 
 +-----------------------+------------------------------------------+----------+
 | Requirement           | Evidence                                 | Complete |
@@ -73,19 +64,23 @@ completed. An example table with the first requirement filled out is below:
 
 
 Not every part of every step will need to be fulfilled for every application.
-Some applications may pose their own classes of problems that will need to be
-dealt with separately. We discuss these below.
+Different applications may require different approaches. We discuss some
+recurring issues that many engineers will have to deal with these below.
+
+.. _Application Specific Requirements:
 
 Application Specific Requirements
 ---------------------------------
 
+.. _AI Risk:
+
 AI Risk
 ++++++++
 
-Direct regulation of AI in the EU is tending to a risk based approach examining
-the harm of AI applications to people. Applications are classified into risk
-categories, and those that pose a high risk are to be subject to more stringent
-requirements. These categories are currently:
+Direct regulation of AI in the EU is tending to a risk based approach based on
+the harm of AI an application poses to people. Applications are classified into
+risk categories, and those that pose a high risk are to be subject to more
+stringent requirements. These categories are currently:
 
 * Unacceptable risk. Applications that are a clear threat to the safety,
   livelihoods or rights of people.
@@ -100,6 +95,8 @@ Providing guidance on any upcoming or current legislation is out of the scope of
 this guide. However, this categorization of the risk that AI applications pose
 is a useful tool for discussing best engineering practices. These risk levels
 will recur in this guide, and we will refer to them as AI Risk. 
+
+.. _Data Protection:
 
 Data Protection
 +++++++++++++++
@@ -129,6 +126,8 @@ this guide. However, once again, the ideas put forward in GDPR are important in
 framing the discussion of best engineering practices, and will recur in this
 guide.
 
+.. _Safety, Security and Robustness:
+
 Safety, Security and Robustness
 +++++++++++++++++++++++++++++++
 
@@ -155,6 +154,8 @@ bring several unique problems to each of these areas. For example:
 
 Safety, security and robustness will be important ideas throughout this document.
 
+.. _Transparency and Explainability:
+
 Transparency and Explainability
 +++++++++++++++++++++++++++++++
 
@@ -173,20 +174,27 @@ Many AI systems are uniquely troublesome in these respects. Many common methods,
 such as Neural Networks are effectively “black boxes”. These methods provide a
 solution, but through a means that is ultimately not human interpretable. 
 
+.. _Fairness:
+
 Fairness
 ++++++++
 Fairness is another core requirement of any system, especially in light of the
 above ideas of transparency and explainability. By fairness, we mean a system
 that:
 
-Does not undermine the legal rights of individuals or organizations,
-discriminate unfairly against individuals or create unfair market outcomes. 
+* Does not undermine the legal rights of individuals or organizations,
+  discriminate unfairly against individuals or create unfair market outcomes. 
 
 Fairness is a challenge in AI systems that learn from data. The decisions these
 systems make are a reflection of the patterns in the data they are trained on.
 If the data is biased, the systems trained on them will also be biased. This has
 been proven expensively and at length in the real world, for example through
-attempts at creating criminal justice AI or hiring AI.
+attempts at creating `criminal justice AI <https://www.technologyreview.com/2019
+/01/21/137783/algorithms-criminal-justice-ai/>`_ or 
+`hiring AI <https://www.reuters.com/article/us-amazon-com-jobs-automation-
+insight-idUSKCN1MK08G>`_.
+
+.. _Accountability and Governance:
 
 Accountability and Governance
 +++++++++++++++++++++++++++++
@@ -202,6 +210,8 @@ The full scope of requirements is unlikely to be fully addressed by engineering.
 Nonetheless, these principles are important in the greater context of the AI
 application, and will be an important part of development. 
 
+.. _Contestability and Redress:
+
 Contestability and Redress
 ++++++++++++++++++++++++++
 Any system that has the potential to cause harm also requires ways for this harm
@@ -216,145 +226,282 @@ The full scope of requirements is unlikely to be fully addressed by engineering.
 Nonetheless, these principles are important in the greater context of the AI
 application, and will be an important part of development.
 
+.. _Should I Use AI?:
 
-Should I AI?
+Should I Use AI?
 ======================
 Developing an AI application can present significant challenges. Collection of
 data is burdensome. Testing and validation are problematic. As seen in the
 previous section, many applications of AI will come with special requirements
 that can be a challenge in themselves. To address this, the very first step in
 this guide is to be able answer the following: should I use AI to solve my
-problem? This greater question is broken down into 3 sub questions to be
-completed.
+problem? We break this problem down into two parts:
 
-+------------------------------+----------+----------+
-| Requirement                  | Evidence | Complete |
-+==============================+==========+==========+
-| Evaluate engineering case    | -        |          |
-+------------------------------+----------+----------+
-| Initial AI Risk Assessment   | -        |          |
-+------------------------------+----------+----------+
-| Initial Data Risk Assessment | -        |          |
-+------------------------------+----------+----------+
+* What is the engineering case for using AI to solve the problem, over other
+  approaches?
+* Does the problem touch on any “project killing” application or data areas?
+
+  * What is the risk that the project falls into the unacceptable AI Risk
+    category?
+  * What is the risk that the project makes use of problematic data?
+
+
++------------------------------------------+----------+----------+
+| Requirement                              | Evidence | Complete |
++==========================================+==========+==========+
+| :ref:`Evaluate engineering case`         | -        |          |
++------------------------------------------+----------+----------+
+| :ref:`Unacceptable AI Risk`              | -        |          |
++------------------------------------------+----------+----------+
+| :ref:`Problematic Data Risk`             | -        |          |
++------------------------------------------+----------+----------+
+
+.. _Defining the Project:
 
 Defining the Project
 ======================
-The next step is to scope out the goals and requirements of the proposed product
-in the context of the constraints it is subject to. There are two steps here.
-Firstly, defining a clear set of goals and metrics for success. Secondly,
-undertaking a more complete risk assessment of the project, including a full
-assessment of the AI risk of the project, and any risks around the data likely
-to be required. 
+In the previous step we worked on an engineering case for AI in our project. In
+this step, we will take the first step in realizing our project by setting the
+goals and bounds of the project. There are three steps to complete in this
+section:
 
-+------------------------------+----------+----------+
-| Requirement                  | Evidence | Complete |
-+==============================+==========+==========+
-| Establish Goals              | -        |          |
-+------------------------------+----------+----------+
-| Risk Assessment              | -        |          |
-+------------------------------+----------+----------+
+* Defining goals and metrics for success
+* Defining limitations and boundaries on the project
+* Completing a risk assessment of the project as a whole
+
+
++-------------------------------------------+----------+----------+
+| Requirement                               | Evidence | Complete |
++===========================================+==========+==========+
+| :ref:`Define Goals and Metrics`           | -        |          |
++-------------------------------------------+----------+----------+
+| :ref:`Define Limitations and Boundaries`  | -        |          |
++-------------------------------------------+----------+----------+
+| :ref:`Complete a Project Risk Assessment` | -        |          |
++-------------------------------------------+----------+----------+
+
+.. _Collecting Data:
 
 Collecting Data
 ===============
-One of the requirements of any AI application is that it is data driven. This
-usually means that you will need to collect some data, or at the very least to
-process some. It’s very important to get this right, as the strength of the data
+In the previous step, we defined the scope of our project. In this step, we move
+on to the first part of the practical engineering of our AI project, collecting
+the data. It is a core requirement of any AI application that it is data driven.
+This means that some data will need to be collected, or at the very least,
+processed. It’s very important to get this right, as the strength of the data
 will have a strong effect on the efficacy of training and deploying our AI
-application. Our primary challenges are:
+application. We set out a number of steps for this section, but our primary
+challenges are:
 
-* Making sure the data we’re collecting contains the information we’re
-  interested in
-* Making sure our data is in a form easily understood by potential AI algorithms
-* Making sure our infrastructure and collection process is robust
+* Making sure the data we’re collecting useful, effective data
+* Making sure we transform our raw data to a form that can effectively utilized
+  by AI algorithms
+* Making sure our infrastructure for collection, storage, and access is
+  appropriate and robust
 
 
-+-----------------------------------------+----------+----------+
-| Requirement                             | Evidence | Complete |
-+=========================================+==========+==========+
-| Create a Target Dataset                 | -        |          |
-+-----------------------------------------+----------+----------+
-| Eatsblish a Data Quantization Process   | -        |          |
-+-----------------------------------------+----------+----------+
-| Automate Data Quality Checking          | -        |          |
-+-----------------------------------------+----------+----------+
-| Create a Data Collection Process        | -        |          |
-+-----------------------------------------+----------+----------+
-| Automate Data Cleaning                  | -        |          |
-+-----------------------------------------+----------+----------+
-| Data Biases and Discrimination Analysis | -        |          |
-+-----------------------------------------+----------+----------+
-| Data Anonymization                      | -        |          |
-+-----------------------------------------+----------+----------+
-| Data Transmission Safety                | -        |          |
-+-----------------------------------------+----------+----------+
-| Data Security                           | -        |          |
-+-----------------------------------------+----------+----------+
++------------------------------------------------+----------+----------+
+| Requirement                                    | Evidence | Complete |
++================================================+==========+==========+
+| :ref:`Creating and Collecting your Data Set`   | -        |          |
++------------------------------------------------+----------+----------+
+| :ref:`Version Control, CI/CD for Data`         | -        |          |
++------------------------------------------------+----------+----------+
+| :ref:`Documentation and Logging`               | -        |          |
++------------------------------------------------+----------+----------+
+| :ref:`Formatting your Data for AI`             | -        |          |
++------------------------------------------------+----------+----------+
+| :ref:`Data Exploration & Biases`               | -        |          |
++------------------------------------------------+----------+----------+
+| :ref:`Cleaning your Data`                      | -        |          |
++------------------------------------------------+----------+----------+
+| :ref:`Validation and Testing`                  | -        |          |
++------------------------------------------------+----------+----------+
+| :ref:`Scaling and Automation: Data Collection` | -        |          |
++------------------------------------------------+----------+----------+
+| :ref:`Scaling and Automation: Data Storage`    | -        |          |
++------------------------------------------------+----------+----------+
+| :ref:`Scaling and Automation: Data Access`     | -        |          |
++------------------------------------------------+----------+----------+
 
-Training your AI Application
+
+.. _Training Your AI Application:
+
+Training Your AI Application
 ============================
 
-Our next step is to train our AI application on the data collected in the last
-step. This step is about three things:
+In the previous step, we collected the data for our AI project. In this step,
+we will make use of it by using it to train an AI algorithm of our choice to
+meet the goals of our project. This is also the step where systematic problems
+from decisions in earlier steps are likely to start manifesting in force. We
+strongly suggest that readers don’t hesitate to revisit earlier decisions at
+this stage if they prove to be unfruitful. Once again, we set out a number of
+steps for this section, but our primary challenges are:
 
 * Establishing which AI approach we’re going to use
 * Engineering a pipeline to train our approach in the best possible way
 * Checking this training results in an AI algorithm that does all the things it
   should, and none of the things it shouldn’t
 
-+------------------------+----------+----------+
-| Requirement            | Evidence | Complete |
-+========================+==========+==========+
-| Training Requirement 1 | -        |          |
-+------------------------+----------+----------+
-| Training Requirement 2 | -        |          |
-+------------------------+----------+----------+
-| Training Requirement 3 | -        |          |
-+------------------------+----------+----------+
-| ...                    | -        |          |
-+------------------------+----------+----------+
+
++----------------------------------------------------+----------+----------+
+| Requirement                                        | Evidence | Complete |
++====================================================+==========+==========+
+| :ref:`Choosing Your AI approach`                   | -        |          |
++----------------------------------------------------+----------+----------+
+| :ref:`Version Control, CI/CD, Training`            | -        |          |
++----------------------------------------------------+----------+----------+
+| :ref:`Documentation and Logging, Training`         | -        |          |
++----------------------------------------------------+----------+----------+
+| :ref:`Data Pre-processing`                         | -        |          |
++----------------------------------------------------+----------+----------+
+| :ref:`Training Infrastructure`                     | -        |          |
++----------------------------------------------------+----------+----------+
+| :ref:`Creating a Training Process`                 | -        |          |
++----------------------------------------------------+----------+----------+
+| :ref:`Testing and Validation, Training`            | -        |          |
++----------------------------------------------------+----------+----------+
+| :ref:`Exploring Outcomes and Biases`               | -        |          |
++----------------------------------------------------+----------+----------+
+| :ref:`Scaling and Automation: Training Pipeline`   | -        |          |
++----------------------------------------------------+----------+----------+
+
+.. _Deploying your AI Application:
 
 Deploying your AI Application
 =============================
 
-Testing your AI Application
-===========================
+After training our AI application, we can finally deploy it and (hopefully)
+achieve the goals set out in our previous steps. This step will likely represent
+a welcome return to familiarity for the professional engineer, as the process
+for deploying an AI application is fairly similar to that of deploying any other
+software application. Our process will proceed broadly in three steps:
 
-Task list
+* Preparing our trained the model for a live environment
+* Engineering a process for deployment
+* Setting up continuous monitoring for our model
+
+
++----------------------------------------------------+----------+----------+
+| Requirement                                        | Evidence | Complete |
++====================================================+==========+==========+
+| :ref:`Version Control, CI/CD, Deployment`          | -        |          |
++----------------------------------------------------+----------+----------+
+| :ref:`Documentation and Logging, Deployment`       | -        |          |
++----------------------------------------------------+----------+----------+
+| :ref:`Preparing a Trained Model`                   | -        |          |
++----------------------------------------------------+----------+----------+
+| :ref:`Deployment Infrastructure`                   | -        |          |
++----------------------------------------------------+----------+----------+
+| :ref:`Deploying Your Model`                        | -        |          |
++----------------------------------------------------+----------+----------+
+| :ref:`Testing and Validation, Deployment`          | -        |          |
++----------------------------------------------------+----------+----------+
+| :ref:`Model Monitoring`                            | -        |          |
++----------------------------------------------------+----------+----------+
+| :ref:`Scaling and Automation: Deployment Pipeline` | -        |          |
++----------------------------------------------------+----------+----------+
+
+
+.. _Task List:
+
+Task List
 =========
 
-Should I AI?
-------------
+.. _Should I Use AI? Task List :
 
-Evaluate Engineering Case
-+++++++++++++++++++++++++
+:ref:`Should I Use AI?`
+-----------------------
 
-AI is a powerful tool in many applications, but it may not be immediately
-appropriate for the problem you are trying to solve. This step requires the
-enumeration and assessment of available alternative approaches to solving the
-problem.
+.. _Evaluate Engineering Case:
 
-In this step, you should consider at least the following:
+:ref:`Evaluate Engineering Case<Should I Use AI?>`
++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-* Is it possible to solve the problem without using a data driven approach?
+As we discussed  previously, while AI is a powerful tool in many applications,
+it may not be immediately appropriate for the problem you are trying to solve.
+This step requires you to enumerate and assess what available alternative
+approaches to solving the problem, and how they compare to an AI solution.
 
-  * What are the benefits and consequences of doing this?
+This step is fairly short, and to complete it, you simply need to list the
+viable approaches to solving your problem (including the AI approach), and
+compare them. Don’t forget to include both solutions that might not take a data
+driven approach, or those that use data without what most would consider
+learning, for example, heuristics. The choice of how to compare these will be
+dictated by your use case, but you’re likely to want to consider the following:
 
-* Is it possible to solve the problem using a data driven approach without
-  learning? What are the benefits and consequences of doing this?
+* What are the financial burdens of each case?
+* What are the engineering burdens of each case?
+* What are the legal burdens?
 
-  * For example, clickthrough rate is likely to be a very good way of ranking
-    the effectiveness of an advert. A fairly effective spam filter may be to
-    simply block a list of domains known for producing spam.
+Examples
+###########
 
-To complete this step, at least both of these questions should be answered.
+In this example, we work through the engineering case for a phishing email
+detector. There is an 
+:ref:`example engineering case document<example_engineering>`, with a
+discussion of the problem below.  
 
-Assess AI Risk
-++++++++++++++
+Our use case is a filter to reduce the success rate of phishing emails. We
+consider three alternatives:
+
+* A non data driven (or minimally data driven) approach. All emails that are
+  from external email addresses automatically have a header attached warning
+  employees that the sender may not be trustworthy, and to apply caution in
+  respect of the contents.
+* A data driven approach that uses engineer designed heuristics instead of a
+  learning approach. For example, emails are filtered if they:
+
+  * Are from a list of known “bad” addresses
+  * Contain too many known “bad” words, e.g. “low interest rate loans”
+    Has “.exe” attachments
+* An AI approach that learns from a corpus of previous emails to read an email's
+   content, and classifies it as phishing, or not phishing. 
+
+The respective advantages of each approach are:
+
+* The non data driven approach is simple to implement, requires few resources to
+  execute, and is simple and cheap to maintain. It will never incorrectly filter
+  out legitimate emails, as it passes the burden of decision making to employees
+  (with extra information).
+* The heuristic approach is also fairly simple to implement, and requires few
+  resources to execute. It is also very easy to tune for specific requirements
+  (e.g. never do this, always do this).
+* The AI approach will likely have the best performance at identifying spam
+  emails, if trained on sufficient data. It is also likely to adapt fairly well
+  to changes in phishing approaches over time, if continually fed with data. 
+
+The disadvantages of each are:
+
+* The non-data driven approach provides extra information, but the decision
+  making ultimately places responsibility on the end user.
+* The heuristic approach requires each rule to be created manually, scaling
+  poorly to large scale problems. Creating effective heuristic rules that do not
+  result in any real emails being filtered out is also likely to be challenging.
+  Adapting to new phishing approaches is also likely to be a significant burden,
+  requiring runes to be written or rewritten.
+* The AI approach will need a large corpus of data to learn from which will
+  have to be prepared appropriately. It will flag real emails incorrectly some
+  of the time (no matter how well trained), and this may not be easy to fix.
+  Adoption will require more data preparation and training.
+
+Picking the best approach (or approaches) to use depends on our context. In this
+particular example, our non-AI examples are significantly simpler to implement,
+and are likely to do better for small scale problems. Other conditions may also
+influence the decision. An organization of phishing-aware people that mostly
+communicate internally may hugely benefit from the first approach. 
+
+
+.. _Unacceptable AI Risk:
+
+:ref:`Unacceptable AI Risk<Should I Use AI?>`
++++++++++++++++++++++++++++++++++++++++++++++++++++++
 In the Using This Guide section, we defined AI risk in several categories:
-Unacceptable, High, Limited, and Minimal. An important question to answer at
-this early stage is whether your application is likely to fall into the
+Unacceptable, High, Limited, and Minimal. Before continuing any further in this
+guide, it is important to consider the risk that your project may fall into the
 Unacceptable category. These are applications that are a clear threat to the
-safety, livelihoods or rights of people. Examples include:
+safety, livelihoods or rights of people, and are not suitable to be tackled with
+AI. Examples include:
 
 * AI systems using subliminal techniques, or manipulative or deceptive
   techniques to distort behavior
@@ -366,67 +513,131 @@ safety, livelihoods or rights of people. Examples include:
   offenses
 * AI systems creating or expanding facial recognition databases through
   untargeted scraping
-* AI systems inferring emotions in law enforcement, border management, the 
+* AI systems inferring emotions in law enforcement, border management, the
   workplace, and education
 
 At this stage, you may not have fully fleshed out the scope of your application.
-Nonetheless, this initial assessment is important to pre-empt these risks. If
-your application falls into this category, it may not be appropriate to develop.
-To complete this step, a categorisation of the proposed project into
-unacceptable or not should be created, along with a justification.  
+Nonetheless, this initial assessment is important to pre-empt this risk. If you
+believe your application may fall into this category, discontinue further work
+on it until you have resolved this issue.
 
-Assess Data Risk
-++++++++++++++++
-In the Using this Guide section, discussed how data protection principles fall
-into best practices. In this section, we evaluate the practicality of collecting
-the type of data we’re likely to be required for our project in the light of
-these principles. 
+To complete this step, complete a risk assessment on the harms your AI project
+may pose to the safety, livelihoods or rights of people.
+ 
+Examples
+###########
 
-At this early stage, it’s unlikely that the full scope of the dataset required
-will have been set out. Nonetheless, it is important to get a good understanding
-of whether collecting the data required for the proposed project is likely to be
-practicable. The questions that need to be answered in this step are:
+.. _Problematic Data Risk:
 
-* What personal data am I likely to need to collect for my application?
-* What restrictions might there be on collecting this data?
+:ref:`Problematic Data Risk<Should I Use AI?>`
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Some types of data are subject to extra difficulties that will either require
+extra licensing, oversight, or may be effectively impracticable to collect. This
+section is about evaluating the risk that the data you are likely to wish to
+collect is available within the constraints of your business. Note that this
+section isn’t a dive into data collection requirements under GDPR, but a higher
+level feasibility check. Some examples of types of data that will be
+problematic:
 
-To complete this step, provide answers to the two above questions.
+* Criminal Conviction Data, only processable: 
 
+  * under the control of official authority; or
+  * authorized by domestic law.
 
-Defining the Project
---------------------
+* Data collected by experimenting on humans or animals
 
-Establish goals
-+++++++++++++++
+  * requiring extra licensing and oversight
 
-Risk Assessment
-+++++++++++++++
+* Data surrounding experimentation with infectious diseases
 
-Collecting Data
----------------
+The specifics of problematic data will depend on the domain the data is being
+collected in. At this stage, you may not have fully fleshed out the scope of
+your application. Nonetheless, you should, before proceeding further, assess the
+risk that this applies to you. If you believe your application may fall into
+this category, you should once again discontinue further work on it until you
+have resolved this issue.
 
-Create a Target Dataset
-+++++++++++++++++++++++
-The first step of the preliminary assessment was to create an overarching goal and corresponding set of tangible, measurable outcomes. In data collection, our first step is to establish the data that we need to achieve these goals. To do this, we need to understand what good data is in the context of our desired outcomes, and to temper this with what is realistically achievable.
+To complete this step, complete a risk assessment on potential problems
+surrounding the collection of the type of data you are likely to require. 
 
-Good data is, first and foremost, the data that leads us to our desired outcomes. Important considerations are:
+Examples
+###########
+
+.. _Defining the Project Task List:
+
+:ref:`Defining the Project`
+---------------------------
+
+.. _Define Goals and Metrics:
+
+:ref:`Define Goals and Metrics<Defining the Project>`
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+.. _Define Limitations and Boundaries:
+
+:ref:`Define Limitations and Boundaries<Defining the Project>`
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+.. _Complete a Project Risk Assessment:
+
+:ref:`Complete a Project Risk Assessment<Defining the Project>`
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+.. _Collecting Data Task List:
+
+:ref:`Collecting Data`
+----------------------
+
+.. _Creating and Collecting your Data Set:
+
+:ref:`Creating and Collecting your Data Set<Collecting Data>`
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+The first step in creating our AI application is to create and (with caveats)
+implement a plan to collect a dataset to drive your AI application. The plan
+will include:
+
+* What data you are going to collect
+* Where/who you are going to collect it from
+* How you are going to do this
+
+The best way to initially approach this is to approach it as you would any novel
+software problem: do not reinvent the wheel and never build anything yourself
+that you could fairly appropriate from somebody else. There are many free
+datasets for a wide range of problems publicly available. Observe what types of
+data others who are solving problems similar to you have collected, and what you
+can learn about the datasets they used. It may be appropriate in the first
+instance, if a suitable dataset exists, to initially use a public dataset and
+iterate. If you do use other datasets, do make sure you respect the licenses
+that may come with them.
+
+In most business cases, you will at some point end up collecting your own data.
+Even if you don’t, it’s important to be aware of what kind of data is desirable
+for AI and machine learning, and what kind of data is not. When looking at
+potential data, some key criteria to consider are:
 
 * Accuracy
 
-  * Does the data accurately measure the quantity of interest?
+  * Does the data accurately measure a quantity you are interested in?
+  * This sounds obvious, but not all data can be trusted. Data from asking human
+  * participants questions, for example, can be inaccurate and contradictory. 
 
 * Completeness
-  
+
   * Does the dataset represent a complete view of all data points of interest?
   * Does it have more data about some quantities than others? Should it?
+  * Your models cannot learn from examples that are not in the data
 
 * Relevance
 
   * To what extent is the collected data relevant to the measure of interest?
+  * Including data that is only weakly relevant may cause more problems than it
+    solves
 
 * Missingness
 
   * Are there missing values in the data?
+  * Distinct from completeness. Completeness is about overall coverage,
+    missingness is about which bits of your collected data are not present. 
 
 * Timeliness
 
@@ -436,114 +647,297 @@ Good data is, first and foremost, the data that leads us to our desired outcomes
 
   * AI methods are fundamentally quantitative, and deal best with quantitative
     data
-
+  
 * Attainability
 
-  * Is it realistic to obtain the data in the quantities required?
+  * Can the data be realistically obtained (and in the quantities required)?
 
 * Standardization
 
-  * Is the data collectable/attainable in a standardized format amenable to
+  * Is the data collectable/attainable in a standardized format amenable to 
     computation
 
+What data you intend to collect is likely to be very tightly tied to where you
+collect your data. The best source of data is usually the source that gives the
+best data by the criteria we list above. This is not always the only
+consideration though, it is also wise to consider:
 
-It’s unlikely that we will be able to establish a perfect dataset, and the
-quality of the collected data will significantly affect subsequent steps that
-consume it. The purpose of this step is therefore to establish both what a
-realistic and useful set of data to collect, and to inventory the limitations of
-this same data to anticipate later risks and problems. For example, missing
-data, depending on how that missingness manifests, might be either a non-issue
-or a serious problem. If it manifests as a problem, an appropriate mitigation
-might be data imputation.
+* Licensing. This applies both if you’re using an existing dataset licensed by
+  a third party (even a free one), or if your data might contain licensed work. As
+  an example of the latter building a dataset of artwork may require you to
+  consider the licenses of those artworks.
+* Personal Data: classes of data (e.g., personal data) must be treated
+  specially. More on this at the bottom of this section
+* Special Cases: Depending on the data and end goal, you may be required to take
+  additional steps in data collection. For example, data collected by
+  experimenting on animals is likely to require extra licenses and oversight.
 
-Establish a data quantization process
-+++++++++++++++++++++++++++++++++++++
+We discussed supervised and unsupervised learning in the Establishing Goals
+section. If you are dealing with a supervised learning problem (as is likely),
+the largest concern of data collection is how the data can be labeled. In a
+supervised learning application, we want to learn to predict some quantity from
+our data. To do that, we need examples which match our data and that quantity
+together. For example if we want an AI application that detects spam, we need to
+collect as data a set of emails, and divide them up into two categories - spam
+or not.
 
-In many instances, dealing with data involving some measure of subjectivity is
-unavoidable. To avoid problems using such data in what are fundamentally
-quantitative algorithms, it is important to establish a clear process for
-converting this subjective data to quantitative measurement.
+Fundamentally, you have two choices of how to do this. Firstly, you can
+contrive a way to achieve this automatically. If you are predicting how sales
+from your website occur based on how people engage with it, it might be a fairly
+simple affair for you to match these two bits of information up. Otherwise, if
+you can’t contrive a way to do otherwise, the data must be labeled manually, by
+hand. For example, in a dataset of pictures of animals, the only way to
+effectively know what animal is present in the picture is to get a human to
+decide. In general, we wish to avoid this - for the purposes of this type of
+task, humans are expensive, prone to error and hard to scale. 
 
-It is strongly preferable to do this quantisation algorithmically. Where this is
-not possible, it is imperative that any decision making process is recorded as
-clearly as possible, with any persons involved in the process recorded. 
+Other than this, the process of how you will collect your data is simply the
+practical realization of what you’ve set out in the previous steps. Your focus
+here is making the process as simple and replicable as possible. As a general
+rule, the more automated the process can be, the better. Automated collection
+processes scale better, and involving human factors in the collection process is
+usually an excellent way to introduce an extra set of errors. Automated data
+collection isn’t possible in every application though. If you do have to have
+people involved in your data collection process, try and work as hard as you can
+to maximize the consistency of the process for them.
 
-The output of this step is a document listing all processes used to quantize
-data.
+It’s worth saying that regardless of the initial choices you make, it’s likely
+you’ll revisit this step as you follow the other instructions and find out what
+works for you and what doesn’t. This is perfectly fine, and it's much better
+initially to pick a dataset, make a start, and iterate, rather than trying to
+get it perfect the first time.
 
-Automate Data Quality Checking
-++++++++++++++++++++++++++++++
+The criteria to complete this step are:
 
-In the Crate Target Dataset step, we established a measure of the potential
-limitations of our dataset. In this step, we establish a process for monitoring
-the level that these problems manifest in our data. 
+To create and implement (with exceptions, see below) a Data Collection Plan.
+This is a plan that details:
 
-This should be achieved algorithmically in almost all instances. Where this is
-not possible, it is imperative that any decision making process is recorded as
-clearly as possible, with any persons involved in the process recorded. 
+* What data you are going to collect
+* Where/who you are going to collect it from
+* How you are going to collect the data
+* Any extra considerations
 
-The output of this step is a document detailing how each of the limitations
-identified in the previous step can be automatically monitored in collected
-data.
+What data you are going to collect should include a data blueprint, a sample of
+exactly what you think the data you are going to collect should look like. The
+where/who should include specific populations you can feasibly target. The How
+should be a plan of action to collect the data from the first step from the
+groups you defined in the second step including, where required, a plan for how
+the data is to be labeled.
 
-Create a Data Collection Process
-++++++++++++++++++++++++++++++++
+If your AI application is in the high AI Risk category, or you are dealing with
+personal data, some special considerations exist. Create this plan, but do not
+implement it until you have worked through the following:
 
-Having established the target data, the next major step is to establish a
-process by which the data can be collected. 
+For high AI Risk applications:
 
-Before considering the details of how to achieve this, an important preliminary
-step is to consider where the data is going to be stored. In all applications,
-it is an extremely good idea to store raw data forever. For high AI risk
-applications, storing (and keeping) the raw data should be considered mandatory. 
+* You will be required to provide adequate documentation around data collection,
+  and log all data collection activity. You will also be required to have human
+  oversight over the data collection process. Make sure you visit the
+  Documentation and Logging section of the guide that covers these areas before
+  collecting any data
+* You have a duty to make sure the data you collect is of a high quality to
+  minimize discriminatory outcomes. Make sure you visit the Data Exploration and
+  Biases section of the guide before collecting data.
 
-This step is likely to end up revealing additional limitations in the dataset.
-Record them.
+For AI applications dealing with personal data:
 
-Automate Data Cleaning
-++++++++++++++++++++++
+* You must collect data according to GDPR regulation. This topic is expanded on
+  in our Appendix on GDPR.
 
-Raw data will almost universally require pre-processing before integration into
-any AI pipeline.
+Examples
+###########
 
-This should be achieved algorithmically in almost all instances. Where this is
-not possible, it is imperative that any decision making process is recorded as
-clearly as possible, with any persons involved in the process recorded.
+In this example, we work through the case of an oncologist looking to create an
+AI application to help other physicians detect the presence of tumors in a chest
+x-ray. There is an `example data set creation document<dataset_creation>`,
+and a description below:
 
-Data Biases and Discrimination Analysis
-+++++++++++++++++++++++++++++++++++++++
-In high AI risk applications, biases in the training dataset may cascade into
-discriminative or other harmful outcomes for the project as a whole. 
+The data I’ll need for my application is a set of chest x-rays, and whether
+they contain cancer or not. An example data blueprint might be as follows:
 
-It is not usually feasible to remove all biases from a dataset. Indeed, even
-removing direct references to characteristics may not be enough to remove biases
-associated with them. For example, a hiring AI trained on gender-biased data
-will continue to be gender-biased even when direct references to gender are
-removed, by identifying proxy identifiers (e.g. female-only colleges)[].
++--------------+----------------+
+| Data         | classification |
++==============+================+
+| x-ray0.png   | cancerous      |
++--------------+----------------+
+| x-ray1.png   | non-cancerous  |
++--------------+----------------+
+| x-ray2.png   | cancerous      |
++--------------+----------------+
+| ...          | ...            |
++--------------+----------------+
 
-This step is about identifying and cataloging potential biases in the data.
-Some of the biases identified may be able to be (and should be) mitigated at
-this early stage. Others may not be feasible to tackle until later steps.
+In respect to where I can find the data, a starting point is obviously the data
+that I, as an oncologist, can collect from my own patients. I may be able to get
+data from other patients from people in my professional network, or simply
+search online (there are several publicly available datasets on this particular
+topic).
 
-Data Anonymization
-++++++++++++++++++
+In respect of how I can go about collecting (and labeling) my data. I can get
+chest X-rays from the sources described above. To label them, I can use my own
+expert knowledge, and/or ask other physicians to also contribute to corroborate. 
 
-All collected data should be stripped of personal identifying information.
+In respect of extra considerations: I am working with personal health data. I’d
+likely need to obtain consent from the patients, must respect GDP, and may have
+additional requirements to fulfill in respect of my medical license, or an
+ethics board to satisfy. It’s likely that this application would also fall into
+a high AI Risk category, and be subject to extra requirements. 
 
-This can be more challenging than it may first appear. It is not always
-sufficient to remove directly identifiable data. Classically, 87% of the US
-population can be uniquely identified by zip code, gender and date of birth.
-Fully mitigating this issue may require steps to be taken further down the line. 
 
-This step requires data to be stripped of all directly identifying personal
-information, and a risk assessment of non-directly identifying data. 
 
-Data Transmission Safety
-++++++++++++++++++++++++
-All data collected should be fully encrypted from the point of collection to the
-point of storage.
+.. _Version Control, CI/CD for Data:
 
-Data Security
-+++++++++++++
-Data must be fully secured after collection. Data should be secured by an access
-control system. Data should only be accessible to those that need it. 
+:ref:`Version Control, CI/CD for Data<Collecting Data>`
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+.. _Documentation and Logging:
+
+:ref:`Documentation and Logging<Collecting Data>`
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+.. _Formatting your Data for AI:
+
+:ref:`Formatting your Data for AI<Collecting Data>`
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+.. _Data Exploration & Biases:
+
+:ref:`Data Exploration & Biases<Collecting Data>`
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+.. _Cleaning your Data:
+
+:ref:`Cleaning your Data<Collecting Data>`
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+.. _Validation and Testing:
+
+:ref:`Validation and Testing<Collecting Data>`
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+.. _Scaling and Automation\: Data Collection:
+
+:ref:`Scaling and Automation: Data Collection<Collecting Data>`
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+.. _Scaling and Automation\: Data Storage:
+
+:ref:`Scaling and Automation: Data Storage<Collecting Data>`
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+.. _Scaling and Automation\: Data Access:
+
+:ref:`Scaling and Automation: Data Access<Collecting Data>`
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+.. _Training Your AI Application Task List:
+
+:ref:`Training Your AI Application`
+-----------------------------------
+
+.. _Choosing Your AI approach:
+
+:ref:`Choosing Your AI approach<Training Your AI Application>`
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+.. _Version Control, CI/CD, Training:
+
+:ref:`Version Control, CI/CD, Training<Training Your AI Application>`
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+.. _Documentation and Logging, Training:
+
+:ref:`Documentation and Logging, Training<Training Your AI Application>`
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+.. _Data Pre-processing:
+
+:ref:`Data Pre-processing<Training Your AI Application>`
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+.. _Training Infrastructure:
+
+:ref:`Training Infrastructure<Training Your AI Application>`
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+.. _Creating a Training Process:
+
+:ref:`Creating a Training Process<Training Your AI Application>`
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+.. _Testing and Validation, Training:
+
+:ref:`Testing and Validation, Training<Training Your AI Application>`
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+.. _Exploring Outcomes and Biases:
+
+:ref:`Exploring Outcomes and Biases<Training Your AI Application>`
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+.. _Scaling and Automation\: Training Pipeline:
+
+:ref:`Scaling and Automation: Training Pipeline<Training Your AI Application>`
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+.. _Deploying your AI Application Task List:
+
+:ref:`Deploying your AI Application`
+------------------------------------
+
+.. _Version Control, CI/CD, Deployment:
+
+:ref:`Version Control, CI/CD, Deployment<Deploying your AI Application>`
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+.. _Documentation and Logging, Deployment:
+
+:ref:`Documentation and Logging, Deployment<Deploying your AI Application>`
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+.. _Preparing a Trained Model:
+
+:ref:`Preparing a Trained Model<Deploying your AI Application>`
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+.. _Deployment Infrastructure:
+
+:ref:`Deployment Infrastructure<Deploying your AI Application>`
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+.. _Deploying Your Model:
+
+:ref:`Deploying Your Model<Deploying your AI Application>`
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+.. _Testing and Validation, Deployment:
+
+:ref:`Testing and Validation, Deployment<Deploying your AI Application>`
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+.. _Model Monitoring:
+
+:ref:`Model Monitoring<Deploying your AI Application>`
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+.. _Scaling and Automation\: Deployment Pipeline:
+
+:ref:`Scaling and Automation: Deployment Pipeline<Deploying your AI Application>`
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+.. _Examples:
+
+:ref:`Examples`
+-----------------------------------
+
+.. _Example_Engineering:
+
+:ref:`Example Engineering Document<Example_Engineering>`
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+.. _Dataset_Creation:
+
+:ref:`Example Dataset Creation Document<Dataset_Creation>`
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
