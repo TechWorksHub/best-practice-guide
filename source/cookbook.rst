@@ -10,15 +10,15 @@ Artificial Intelligence (AI) and Machine Learning (ML) technologies are key to
 many modern engineering projects due to their ability to solve many problems
 that are difficult or impossible with other methods. While most engineers will
 find themselves enjoying a significant overlap between these techniques and
-their existing skill set, they are also liable to find that AI and Machine
-Learning is its own field with its own unique demands and (often hidden)
-pitfalls. While there are many resources available for self teaching, it is
-generally assumed the practitioner is either an absolute beginner to
-engineering, or already a seasoned expert in AI and ML. In this document, we
-provide a practical guide to AI and Machine learning for electronic systems
-engineers who already have a strong base of knowledge in electronic systems but
-no specialized expertise. This guide will be practice focused, with the goal of
-helping engineers to make good decisions and avoid problems. 
+their existing skill set, they are also liable to find that AI and ML is its own
+field with its own unique demands and (often hidden) pitfalls. While there are
+many resources available for self teaching, it is generally assumed the
+practitioner is either an absolute beginner to engineering, or already a
+seasoned expert in AI and ML. In this document, we provide a practical guide to
+AI and ML for electronic systems engineers who already have a strong base of
+knowledge in electronic systems but no specialized expertise. This guide will be
+practice focused, with the goal of helping engineers to make good decisions and
+avoid problems. 
 
 The guide will cover, in order:
 
@@ -27,7 +27,6 @@ The guide will cover, in order:
 * Collecting Data
 * Training your AI Application
 * Deploying your AI Application
-* Testing your AI Application
 
 
 .. _Using this Guide:
@@ -78,8 +77,8 @@ AI Risk
 ++++++++
 
 Direct regulation of AI in the EU is tending to a risk based approach based on
-the harm of AI an application poses to people. Applications are classified into
-risk categories, and those that pose a high risk are to be subject to more
+the harm than an AI application poses to people. Applications are classified
+into risk categories, and those that pose a high risk are to be subject to more
 stringent requirements. These categories are currently:
 
 * Unacceptable risk. Applications that are a clear threat to the safety,
@@ -159,10 +158,10 @@ Safety, security and robustness will be important ideas throughout this document
 Transparency and Explainability
 +++++++++++++++++++++++++++++++
 
-Another core requirement of any system is that we can understand how it
-functions. This imperative should be familiar to any electronic systems
-engineer, through the value of clear code and documentation. We use two terms to
-describe these requirements:
+It is important in many cases that we can understand how our systems function.
+This imperative should be familiar to any electronic systems engineer, through
+the value of clear code and documentation. We use two terms to describe these
+requirements:
 
 * Transparency: the communication of appropriate information about an AI system
   to relevant people (for example, information on how, when, and for which
@@ -214,8 +213,9 @@ application, and will be an important part of development.
 
 Contestability and Redress
 ++++++++++++++++++++++++++
-Any system that has the potential to cause harm also requires ways for this harm
-to be recognised and reversed. Any AI system will therefore require systems of:
+Any system that has the potential to cause harm to people also requires ways for
+this harm to be recognised and reversed. Any such AI system will therefore
+require systems of:
 
 * Contestability, those who may be adversely affected must have a route to
   contest decisions or outcomes
@@ -231,15 +231,16 @@ application, and will be an important part of development.
 Should I Use AI?
 ======================
 Developing an AI application can present significant challenges. Collection of
-data is burdensome. Testing and validation are problematic. As seen in the
-previous section, many applications of AI will come with special requirements
-that can be a challenge in themselves. To address this, the very first step in
-this guide is to be able answer the following: should I use AI to solve my
-problem? We break this problem down into two parts:
+data, testing and validation are challenges. As seen in the previous section,
+many applications of AI will come with special requirements that can be a
+challenge in themselves. To address this, the very first step in this guide is
+to be able answer the following: should I use AI to solve my problem? We break
+this problem down into two parts:
 
 * What is the engineering case for using AI to solve the problem, over other
   approaches?
-* Does the problem touch on any “project killing” application or data areas?
+* Does the problem touch on any application or data areas that may effectively
+  prohibit development?
 
   * What is the risk that the project falls into the unacceptable AI Risk
     category?
@@ -251,9 +252,9 @@ problem? We break this problem down into two parts:
 +==========================================+==========+==========+
 | :ref:`Evaluate engineering case`         | -        |          |
 +------------------------------------------+----------+----------+
-| :ref:`Unacceptable AI Risk`              | -        |          |
+| :ref:`Assess Unacceptable AI Risk`       | -        |          |
 +------------------------------------------+----------+----------+
-| :ref:`Problematic Data Risk`             | -        |          |
+| :ref:`Assess Problematic Data Risk`      | -        |          |
 +------------------------------------------+----------+----------+
 
 .. _Defining the Project:
@@ -293,9 +294,9 @@ will have a strong effect on the efficacy of training and deploying our AI
 application. We set out a number of steps for this section, but our primary
 challenges are:
 
-* Making sure the data we’re collecting useful, effective data
-* Making sure we transform our raw data to a form that can effectively utilized
-  by AI algorithms
+* Making sure the data we’re is collecting useful, truthful, and effective data
+* Making sure we transform our raw data into a form that can effectively 
+  utilized by AI algorithms
 * Making sure our infrastructure for collection, storage, and access is
   appropriate and robust
 
@@ -340,8 +341,8 @@ steps for this section, but our primary challenges are:
 
 * Establishing which AI approach we’re going to use
 * Engineering a pipeline to train our approach in the best possible way
-* Checking this training results in an AI algorithm that does all the things it
-  should, and none of the things it shouldn’t
+* Building confidence that this training results in an AI algorithm that does
+  all the things it should, and none of the things it shouldn’t
 
 
 +----------------------------------------------------+----------+----------+
@@ -378,7 +379,7 @@ for deploying an AI application is fairly similar to that of deploying any other
 software application. Our process will proceed broadly in three steps:
 
 * Preparing our trained the model for a live environment
-* Engineering a process for deployment
+* Engineering a process for deployment and model updating
 * Setting up continuous monitoring for our model
 
 
@@ -421,13 +422,15 @@ Task List
 As we discussed  previously, while AI is a powerful tool in many applications,
 it may not be immediately appropriate for the problem you are trying to solve.
 This step requires you to enumerate and assess what available alternative
-approaches to solving the problem, and how they compare to an AI solution.
+approaches to solving the problem, and how they compare to an AI solution. This
+isn’t intended as a deep dive into the details and risks of your prospective
+systems, but a high level check that this engineering approach is right for you. 
 
 This step is fairly short, and to complete it, you simply need to list the
 viable approaches to solving your problem (including the AI approach), and
-compare them. Don’t forget to include both solutions that might not take a data
-driven approach, or those that use data without what most would consider
-learning, for example, heuristics. The choice of how to compare these will be
+compare them. This should include solutions that might not take a data driven
+approach, as well as data driven approaches that don’t use learning, for
+example, heuristic based approaches. The choice of how to compare these will be
 dictated by your use case, but you’re likely to want to consider the following:
 
 * What are the financial burdens of each case?
@@ -442,8 +445,9 @@ detector. There is an
 :ref:`example engineering case document<example_engineering>`, with a
 discussion of the problem below.  
 
-Our use case is a filter to reduce the success rate of phishing emails. We
-consider three alternatives:
+Our use case is a filter to reduce the success rate of phishing emails. As an
+example of how we might think about this, we consider three alternative internal
+solutions:
 
 * A non data driven (or minimally data driven) approach. All emails that are
   from external email addresses automatically have a header attached warning
@@ -455,8 +459,9 @@ consider three alternatives:
   * Are from a list of known “bad” addresses
   * Contain too many known “bad” words, e.g. “low interest rate loans”
     Has “.exe” attachments
+
 * An AI approach that learns from a corpus of previous emails to read an email's
-   content, and classifies it as phishing, or not phishing. 
+  content, and classifies it as phishing, or not phishing. 
 
 The respective advantages of each approach are:
 
@@ -492,9 +497,9 @@ influence the decision. An organization of phishing-aware people that mostly
 communicate internally may hugely benefit from the first approach. 
 
 
-.. _Unacceptable AI Risk:
+.. _Assess Unacceptable AI Risk:
 
-:ref:`Unacceptable AI Risk<Should I Use AI?>`
+:ref:`Assess Unacceptable AI Risk<Should I Use AI?>`
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 In the Using This Guide section, we defined AI risk in several categories:
 Unacceptable, High, Limited, and Minimal. Before continuing any further in this
@@ -527,9 +532,9 @@ may pose to the safety, livelihoods or rights of people.
 Examples
 ###########
 
-.. _Problematic Data Risk:
+.. _Assess Problematic Data Risk:
 
-:ref:`Problematic Data Risk<Should I Use AI?>`
+:ref:`Assess Problematic Data Risk<Should I Use AI?>`
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 Some types of data are subject to extra difficulties that will either require
 extra licensing, oversight, or may be effectively impracticable to collect. This
@@ -592,12 +597,16 @@ Examples
 
 :ref:`Creating and Collecting your Data Set<Collecting Data>`
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Defining the Plan
+#################
+
 The first step in creating our AI application is to create and (with caveats)
 implement a plan to collect a dataset to drive your AI application. The plan
 will include:
 
 * What data you are going to collect
-* Where/who you are going to collect it from
+* Where/whom you are going to collect it from
 * How you are going to do this
 
 The best way to initially approach this is to approach it as you would any novel
@@ -672,14 +681,17 @@ consideration though, it is also wise to consider:
   additional steps in data collection. For example, data collected by
   experimenting on animals is likely to require extra licenses and oversight.
 
-We discussed supervised and unsupervised learning in the Establishing Goals
-section. If you are dealing with a supervised learning problem (as is likely),
-the largest concern of data collection is how the data can be labeled. In a
-supervised learning application, we want to learn to predict some quantity from
-our data. To do that, we need examples which match our data and that quantity
-together. For example if we want an AI application that detects spam, we need to
-collect as data a set of emails, and divide them up into two categories - spam
-or not.
+Implementing the Plan
+#####################
+
+We discussed supervised and unsupervised learning in the :ref:`Define Goals and
+Metrics<Define Goals and Metrics>` section. If you are dealing with a
+supervised learning problem (as is likely), the largest concern of data
+collection is how the data can be labeled. In a supervised learning application,
+we want to learn to predict some quantity from our data. To do that, we need
+examples which match our data and that quantity together. For example if we want
+an AI application that detects spam, we need to collect as data a set of emails,
+and divide them up into two categories - spam or not.
 
 Fundamentally, you have two choices of how to do this. Firstly, you can
 contrive a way to achieve this automatically. If you are predicting how sales
@@ -752,8 +764,8 @@ AI application to help other physicians detect the presence of tumors in a chest
 x-ray. There is an `example data set creation document<dataset_creation>`,
 and a description below:
 
-The data I’ll need for my application is a set of chest x-rays, and whether
-they contain cancer or not. An example data blueprint might be as follows:
+The data I, as our imaginary oncologist, will need for my application is a set
+of chest x-rays, and whether they contain cancer or not.
 
 +--------------+----------------+
 | Data         | classification |
@@ -768,10 +780,9 @@ they contain cancer or not. An example data blueprint might be as follows:
 +--------------+----------------+
 
 In respect to where I can find the data, a starting point is obviously the data
-that I, as an oncologist, can collect from my own patients. I may be able to get
-data from other patients from people in my professional network, or simply
-search online (there are several publicly available datasets on this particular
-topic).
+that I can collect from my own patients. I may be able to get data from other
+patients from people in my professional network, or simply search online (there
+are several publicly available datasets on this particular topic).
 
 In respect of how I can go about collecting (and labeling) my data. I can get
 chest X-rays from the sources described above. To label them, I can use my own
