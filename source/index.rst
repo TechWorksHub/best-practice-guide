@@ -10,7 +10,7 @@ Welcome to ai-best-practices's documentation!
    :maxdepth: 2
    :caption: Contents:
 
-   cookbook.rst
+   best-practice.rst
 
 Indices and tables
 ==================
