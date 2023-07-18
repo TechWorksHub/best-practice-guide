@@ -18,7 +18,7 @@
 # -- Project information -----------------------------------------------------
 
 project = 'ai-best-practices'
-copyright = '2023, William Jones'
+copyright = '2023'
 author = 'William Jones'
 
 # The full version, including alpha/beta/rc tags

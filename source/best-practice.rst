@@ -1,6 +1,20 @@
 .. header:: TechNES AI Best Practices Group: 
 
 
+This document is the best practices in AI guide for electronic systems engineers
+produced by the Best Practices in AI workstream at TechNES. This guide is
+currently maintained in Sphinx on GitHub, and we welcome any and all
+contributions.
+
+While we maintain our core document in Sphinx, we’re aware that this may not fit
+everybody's day-to-day workflows. We therefore currently publish versions of
+this document in the following formats:
+
+* `Online <https://technes-uk.github.io/best-practice-guide>`_
+* `PDF <https://raw.githubusercontent.com/TechNES-UK/best-practice-guide/gh-pages/best-practices-guide.pdf>`_
+* `docx <https://github.com/TechNES-UK/best-practice-guide/raw/gh-pages/best-practices-guide.docx>`_
+
+
 .. _Executive Summary:
 
 Executive Summary
