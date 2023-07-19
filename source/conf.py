@@ -17,9 +17,9 @@
 
 # -- Project information -----------------------------------------------------
 
-project = 'ai-best-practices'
+project = 'Techworks Best Practices in AI'
 copyright = '2023'
-author = 'William Jones'
+author = 'Best Practices Working Group'
 
 # The full version, including alpha/beta/rc tags
 release = 'v0.4.0'
@@ -31,7 +31,9 @@ release = 'v0.4.0'
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
 extensions = ['rst2pdf.pdfbuilder']
-pdf_documents = [('index', u'best-practices-guide', u'AI Best Practices', u'William Jones'),]
+pdf_documents = [('index', u'best-practices-guide',
+                  u'Techworks Best Practices in AI',
+                  u'Best Practices Working Group'),]
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']

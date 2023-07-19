@@ -3,17 +3,35 @@
 
 This document is the best practices in AI guide for electronic systems engineers
 produced by the Best Practices in AI workstream at TechNES. This guide is
-currently maintained in Sphinx on GitHub, and we welcome any and all
-contributions.
+currently maintained in `Sphinx <https://www.sphinx-doc.org/en/master/>`_ on
+`GitHub <https://github.com/TechNES-UK/best-practice-guide/>`_.
 
 While we maintain our core document in Sphinx, we’re aware that this may not fit
 everybody's day-to-day workflows. We therefore currently publish versions of
 this document in the following formats:
 
 * `Online <https://technes-uk.github.io/best-practice-guide>`_
-* `PDF <https://raw.githubusercontent.com/TechNES-UK/best-practice-guide/gh-pages/best-practices-guide.pdf>`_
-* `docx <https://github.com/TechNES-UK/best-practice-guide/raw/gh-pages/best-practices-guide.docx>`_
+* `PDF <https://raw.githubusercontent.com/TechNES-UK/best-practice-guide/gh-pag
+  es/best-practices-guide.pdf>`_
+* `docx <https://github.com/TechNES-UK/best-practice-guide/raw/gh-pages/best-pra
+  ctices-guide.docx>`_
 
+We welcome any and all contributors to this guide. You don't necessarily need to
+author content to contribute - feeding back on the guide is a
+valuable contribution. We current coordinate group activities via 
+`Basecamp <https://basecamp.com/>`_. If you want to get involved then:
+
+* Get `in touch <mailto:william.jones@embecosm.com>`_
+
+We're also very happy to take feedback on this guide directly. You can do this
+by:
+
+* `Sending us <mailto:william.jones@embecosm.com>`_ your comments
+* Opening an `issue
+  <https://github.com/TechNES-UK/best-practice-guide/issues/>`_ 
+  or a 
+  `pull request <https://github.com/TechNES-UK/best-practice-guide/pulls/>`_
+  on Github. 
 
 .. _Executive Summary:
 
@@ -966,3 +984,52 @@ a high AI Risk category, and be subject to extra requirements.
 
 :ref:`Example Dataset Creation Document<Dataset_Creation>`
 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+.. _Contributors:
+
+Contributors
+==========================================
+We thank all contributors and reviewers of this project.
+
+
+Authors and Contributors
+-------------------------
+
+Alex Wang
+
+Allison Lowndes
+
+Andrew Rogoyski
+
+Andy Bond
+
+Arezou Nayebi
+
+Charles Sturman
+
+Dimitra Georgiadou
+
+Elliot Stein
+
+Gopal Ramchurn
+
+James Watson
+
+Jeremy Bennett
+
+Lauren Thompson
+
+Mark Zwolinski
+
+Mike Bartley
+
+Prethveraj M S
+
+Tim Santos
+
+William Jones
+
+
+Reviewers
+----------

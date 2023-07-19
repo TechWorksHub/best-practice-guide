@@ -3,8 +3,8 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Welcome to ai-best-practices's documentation!
-=============================================
+Welcome to the Techworks Best Practices in AI Guide
+===================================================
 
 .. toctree::
    :maxdepth: 2
