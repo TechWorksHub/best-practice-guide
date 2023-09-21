@@ -340,7 +340,9 @@ challenges are:
 +------------------------------------------------+----------+----------+
 | :ref:`Version Control, CI/CD for Data`         | -        |          |
 +------------------------------------------------+----------+----------+
-| :ref:`Documentation and Logging`               | -        |          |
+| :ref:`Documentation`                           | -        |          |
++------------------------------------------------+----------+----------+
+| :ref:`Logging`                                 | -        |          |
 +------------------------------------------------+----------+----------+
 | :ref:`Formatting your Data for AI`             | -        |          |
 +------------------------------------------------+----------+----------+
@@ -833,9 +835,133 @@ a high AI Risk category, and be subject to extra requirements.
 :ref:`Version Control, CI/CD for Data<Collecting Data>`
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-.. _Documentation and Logging:
+Any electronic systems engineer should be familiar with version control. These
+ideas are just as important in developing AI applications as any other software
+product. In this step we explore:
 
-:ref:`Documentation and Logging<Collecting Data>`
+* Version control systems for all data collection code
+* Version control systems for all data collected
+
+Our reasons for developing version control for data collection code are the same
+as they would be for any other software project. We need to facilitate multiple
+developers working on the same source without destructively inferring with each
+other, and we need tracking and accountability for changes and versions of code.
+We have similar requirements of the datasets we collect with this code. Just
+like our code, our data is not something we can consider static. Not only is it
+possible we will collect more, but our existing data may be reorganized, fixed,
+or updated.
+
+Version control for code is very well established, with a range of standard free
+tools (e.g. Git, Mercurial, Subversion) available. Version control of data
+requires a little more work. The standard tools used for code control are only
+appropriate for a (relatively) small number of small files, tracking a
+relatively small number of changes. Many datasets will not meet these criteria.
+In these cases we can either extend existing version control with “large file”
+control, or with an entirely separate data version control system. Free and Open
+Source examples of the above are Git LFS and Data Version Control respectively.
+
+To complete this section, you must:
+
+* Set up a version control system for your code
+
+* Set up a version control system for your data
+
+* Write a document about how they are to be used
+
+Examples
+###########
+
+.. _Documentation:
+
+:ref:`Documentation<Collecting Data>`
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Another task that any electronic systems engineer should be familiar with is
+documentation. As with version control, good documentation is just as important,
+or perhaps even more so, as any other software development project. In this step
+we will explore:
+
+* Documentation for the code and;
+
+* Documentation for data
+
+Compared to many software engineering projects, AI projects can often suffer
+from large variances in behavior due to the stochastic nature of the algorithms
+involved. A consequence of this is that it is imperative to maintain clear
+documentation. We must be able to clearly distinguish between acceptable
+variances in behavior due to irreducible randomness in our processes, and
+unacceptable variances in behavior due to mistakes.
+
+Documentation should follow standard best practices. This is quite a large topic
+that has been extensively covered elsewhere (e.g. Write The Docs), that we won’t
+repeat in this guide. Instead, we devote this section to discussing the
+additional considerations required for documentation of data. Documentation for
+data serves not just a similar function to documentation for code in terms of
+bringing clarity and transparency to what has been done, but it also has a
+strong role in ensuring reproducibility. In many cases, and especially when
+dealing with challenging data (such as data involving human factors), how you
+went about collecting this data is just as important as what you ultimately
+collected. Ultimately, we suggest that documentation for data should consider
+the following three things:
+
+**What you collected**. A good description should (if reasonable) include a way of
+positively identifying what was collected, where it was collected from and when.
+
+**How you collected it**. A good description should both include a succinct high
+level description of what was done, and include enough detail to allow a full
+replication. Especially for complicated data collection paradigms, the devil is
+often in the details, and seemingly unimportant details can become important
+later. 
+
+**Why you did it this way**. Should both rationalize the process you took and,
+crucially, why you did this instead of other things. This gives important
+contextual hints to anyone trying to replicate your results that may be absent
+from a pure “how” description, and can help them avoid any problems you
+encountered in the process.
+
+To achieve this we suggest that:
+
+* Each piece of data comes with metadata, describing what it is
+
+* Each group of data should be accompanied by a short document describing how
+  and why it was collected.
+
+This may sound like a significant overhead but, especially if your data is being
+collected digitally, the burden is not especially high. Populating metadata can
+often be significantly automated, and written documentation may overlap
+significantly with the existence and documentation of relevant code. For
+example, consider a dataset of images collected by a web scraper. It would be
+very easy to include a hash to positively identify what was collected, the web
+location it was collected from, and at what time during the scraping process. In
+respect of how this data was collected, the code for the webscraper itself
+provides a strong description of this. Even in respect of why it was done this
+way, the documentation for this code provides a significant amount of context. 
+
+
+High AI Risk applications:
+
+* For high AI risk applications, documentation is no longer an internally driven
+  process to improve productivity, but a (likely mandated) part of the
+  requirement to demonstrate traceability and auditability of the software
+  
+* High risk AI Applications must have human oversight. Automated documentation of
+  data collection will require a level of human oversight and validation.
+
+
+The criteria to complete this step are:
+
+* Creating documentation for all code written to this point, and standards for
+  future code
+
+* Creating documentation for any data collected to this point, and a process for
+  documenting future data
+
+Examples
+###########
+
+.. _Logging:
+
+:ref:`Logging<Collecting Data>`
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 .. _Formatting your Data for AI:
