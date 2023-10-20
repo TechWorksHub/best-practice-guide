@@ -344,9 +344,7 @@ challenges are:
 +------------------------------------------------+----------+----------+
 | :ref:`Logging`                                 | -        |          |
 +------------------------------------------------+----------+----------+
-| :ref:`Formatting your Data for AI`             | -        |          |
-+------------------------------------------------+----------+----------+
-| :ref:`Data Exploration & Biases`               | -        |          |
+| :ref:`Data Exploration`                        | -        |          |
 +------------------------------------------------+----------+----------+
 | :ref:`Cleaning your Data`                      | -        |          |
 +------------------------------------------------+----------+----------+
@@ -964,15 +962,139 @@ Examples
 :ref:`Logging<Collecting Data>`
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-.. _Formatting your Data for AI:
+Logging is a core requirement of the software development process. It must be
+accepted that software will break or not fulfill its function correctly, and
+when it does we need to be able to diagnose those faults effectively.
+Furthermore, software is rarely static, and in order to change it we must
+understand how it works. Finally, in many cases we may wish (or be required) to
+audit and review our software, and logging is an important part of this. In this
+step, we will explore:
 
-:ref:`Formatting your Data for AI<Collecting Data>`
+* How to create a logging process for out data collection
+
+When creating a logging process, the first question is always “What should we
+log?”. The best place to start with this is to instead start with the question
+“what questions do we want to answer about our software?”. Obviously, the answer
+to this will depend on the specifics of our data collection, but some recurring
+questions you will often need to answer are:
+
+* Where did I get this piece of data?
+* When did I get this piece of data?
+* What was the state of my collection program when I collected this data?
+* Was collecting this piece of data successful?
+* Why was collecting this piece of data unsuccessful?
+
+For high AI Risk applications:
+
+* For high AI risk applications, logging is no longer optional. Logging of all
+  actions relevant to proving compliance with the EU AI Act (see appendix) must
+  be undertaken.
+
+The criteria to complete this step are:
+
+* Creating a logging process for all data collection code
+
+.. _Data Exploration:
+
+:ref:`Data Exploration<Collecting Data>`
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-.. _Data Exploration & Biases:
+This step is separated from the Data Cleaning step for clarity, but in reality
+these two steps are likely to be quite closely linked together. In this step we
+will 
 
-:ref:`Data Exploration & Biases<Collecting Data>`
-++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+In our steps so far we have designed an AI application, designed a dataset we
+think achieve our goals, and have taken the initial steps to ensure that there
+is a robust coding framework around this. Before going any further, we need to
+take a look at the data we have collected and try and understand it’s key
+characteristics, strengths, and weaknesses of the data to establish:
+
+* An understanding of the the key characteristics, strengths, and weaknesses of
+  the data
+* What patterns and relationships exist in the data
+* Whether it is likely to be useful for the purpose we intended
+* What further data collection should fix, and what it should do more of
+
+We discussed previously in the guide that you may wish to return to earlier
+steps, and this data exploration step is one of the steps which is likely to
+encourage this. While this initial examination obviously can’t understand the
+end result of our full AI pipeline ahead of time, we can build up an
+understanding of our data. It’s likely that, especially for the first time, our
+data may not be exactly as we had hoped it would be. 
+
+Our data exploration process is  about trying to digest information about our
+dataset. The methods we use to do this are very fundamental, intuitive ideas:
+
+* Looking directly at the data and subsets thereof
+* Trying to understand the data in an intuitive visual way
+* Trying to understand the data through summaries and heuristics
+
+The best approach for this will vary, but standard approaches for these are:
+* Tabular reports
+* Data Visualization
+* Data Profiling
+
+**Tabular reports.** Forming tabular reports is a very simple way to look at our
+data directly. This is simply structuring our data set in a row/column format.
+There are no hard rules about how we might want to do this. We could look at
+subsets of the data, look at ordered columns, or anything else. Just looking at
+the raw data can often be very useful. We can check our intuitions about the
+data, identify potential patterns, and notice errors that may be hard to
+identify other ways.
+
+**Data Visualization.** Directly examining data is useful in a way that should not
+be discarded. However, most of us will find it more useful to process data
+visually. There are a very large number of ways to do this. Edward Tuft lists a
+series of key ideas that are often cited for this:
+
+* show the data
+* induce the viewer to think about the substance rather than about methodology,
+  graphic design, the technology of graphic production, or something else
+* avoid distorting what the data has to say
+* present many numbers in a small space
+* make large data sets coherent
+* encourage the eye to compare different pieces of data
+* reveal the data at several levels of detail, from a broad overview to the
+  fine structure
+* serve a reasonably clear purpose: description, exploration, tabulation, or
+  decoration
+* be closely integrated with the statistical and verbal descriptions of a data
+  set.
+
+
+Good visualizations are often as much of an art as a science. As with many
+things for which this is the case, the best initial approaches are as follows:
+
+* Start from the basics, the simple tools that everyone else's uses (line plot,
+  scatter graphs, heatmaps)
+* Unashamedly appropriate good idea from other people doing similar things
+* Explore your own ideas to find out works for you and what doesn’t
+
+**Data Profiling.** Data profiling tries to capture yet another approach to
+understanding our data, this time through the use of summarizations and
+statistics about our data. 
+
+* What groupings (or clusters) within in our data
+* Averages (mean, median, etc.)
+* Spreads (standard deviation, quartiles, etc.)
+
+As part of this we might want to explore how different bits of our data relate
+to each other. For example:
+
+* Comparing different data
+* Correlating different data
+
+Alongside these broad techniques, we might also choose to do a detailed
+“drilldown” into our data and run a more detailed analysis of some parts. We
+might look at some more advanced statistics or visualizations of these subsets,
+or even perform a small scale trial run of some AI approaches we are considering
+later. 
+
+To criteria to complete this step is to:
+
+* Create a data exploration process
+* Create a data exploration report
+
 
 .. _Cleaning your Data:
 
