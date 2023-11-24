@@ -841,13 +841,10 @@ product. In this step we explore:
 * Version control systems for all data collected
 
 Our reasons for developing version control for data collection code are the same
-as they would be for any other software project. We need to facilitate multiple
-developers working on the same source without destructively inferring with each
-other, and we need tracking and accountability for changes and versions of code.
-We have similar requirements of the datasets we collect with this code. Just
-like our code, our data is not something we can consider static. Not only is it
-possible we will collect more, but our existing data may be reorganized, fixed,
-or updated.
+as they would be for any other software project. We have similar requirements of
+the datasets we collect with this code. Just like our code, our data is not
+something we can consider static. Not only is it possible we will collect more,
+but our existing data may be reorganized, fixed, or updated.
 
 Version control for code is very well established, with a range of standard free
 tools (e.g. Git, Mercurial, Subversion) available. Version control of data
@@ -874,10 +871,9 @@ Examples
 :ref:`Documentation<Collecting Data>`
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-Another task that any electronic systems engineer should be familiar with is
-documentation. As with version control, good documentation is just as important,
-or perhaps even more so, as any other software development project. In this step
-we will explore:
+As with version control, good documentation is just as important, or perhaps
+even more so, as any other software development project. In this step we will
+explore:
 
 * Documentation for the code and;
 
@@ -1001,7 +997,11 @@ The criteria to complete this step are:
 
 This step is separated from the Data Cleaning step for clarity, but in reality
 these two steps are likely to be quite closely linked together. In this step we
-will 
+will look at the process of exploring the data we collect.
+
+We discussed previously in the guide that you may wish to return to earlier
+steps, and this data exploration step is one of the steps which is likely to
+encourage this. 
 
 In our steps so far we have designed an AI application, designed a dataset we
 think achieve our goals, and have taken the initial steps to ensure that there
@@ -1015,9 +1015,7 @@ characteristics, strengths, and weaknesses of the data to establish:
 * Whether it is likely to be useful for the purpose we intended
 * What further data collection should fix, and what it should do more of
 
-We discussed previously in the guide that you may wish to return to earlier
-steps, and this data exploration step is one of the steps which is likely to
-encourage this. While this initial examination obviously can’t understand the
+While this initial examination obviously can’t understand the
 end result of our full AI pipeline ahead of time, we can build up an
 understanding of our data. It’s likely that, especially for the first time, our
 data may not be exactly as we had hoped it would be. 
