@@ -18,7 +18,7 @@
 # -- Project information -----------------------------------------------------
 
 project = 'Techworks Best Practices in AI'
-copyright = '2023'
+copyright = '2024'
 author = 'Best Practices Working Group'
 
 # The full version, including alpha/beta/rc tags
@@ -49,9 +49,26 @@ exclude_patterns = []
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
 #
-html_theme = 'haiku'
+html_theme = 'furo'
 
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
 # so a file named "default.css" will overwrite the builtin "default.css".
 html_static_path = ['_static']
+# html_theme_path = ["_themes"]
+
+html_logo = "_static/twheaderlogo.png"
+
+
+html_theme_options = {
+    "announcement": "<em>Important</em> announcement!",
+    "light_css_variables": {
+        "color-announcement-background": "#4d8fbacc",
+        "font-stack": "Open Sans,sans-serif",
+        "color": "#676767",
+        "color-foreground-primary" : "#333333",
+        "color-brand-primary": "#106098",
+        "color-brand-content": "#4d8fba",
+        "color-admonition-background": "orange",
+    },
+}
