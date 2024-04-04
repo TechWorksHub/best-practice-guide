@@ -30,11 +30,11 @@ required smaller questions, requirements and tasks are addressed, you will
 have your answer to the main question, and can move on to the next of the 5
 questions.
 
-+---------------------------+--------------------------------------+------+
-| Question/Task/Requirement | Evidence                             | Done |
-+===========================+======================================+======+
-| Example requirement 1     | Example Risk Assessment.pdf,         | Yes  |
-|                           | Example document.pdf                 |      |
++---------------------------+--------------------------------------+----------+
+| Question/Task/Requirement | Evidence                             | Done     |
++===========================+======================================+==========+
+| Example requirement 1     | Example Risk Assessment.pdf,         | Yes      |
+|                           | Example document.pdf                 |          |
 +-----------------------+------------------------------------------+----------+
 | Example requirement 2 | -                                        | -        |
 +-----------------------+------------------------------------------+----------+
