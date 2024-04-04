@@ -16,35 +16,33 @@ This guide will help you answer 5 questions step by step:
 Answering these questions will take you from conceptualizing your
 AI application through to deploying it in the real world.
 
-These 5 questions are broken into smaller questions, requirements and tasks to
-be done to gain the answers to the the questions.  We set out the question in
-the order they should be considered.  We strongly recommend you don't skip
-ahead, although from time to time you may want to go back and review your
-answers to earlier questions.
+These 5 questions are broken into smaller questions, requirements, and tasks to
+be completed.  We set out the question in the order they should be considered.
+We strongly recommend you don't skip ahead, although from time to time you may
+want to go back and review your answers to earlier questions.
 
-These smaller questions, requirements and tasks for each of the 5 main
-questions are recorded in a table, showing what the activity is, and where you
-should record the documentary evidence of that activity being completed. Some
-of the entries may be optional, depending on earlier answers.  Once all the
-required smaller questions, requirements and tasks are addressed, you will
-have your answer to the main question, and can move on to the next of the 5
-questions.
+These smaller questions, requirements and tasks for each of the 5 main questions
+are recorded in a table, showing what the activity is, and where you should
+record the documentary evidence of that activity being completed. Some of the
+entries may be optional, depending on earlier answers.  Once all the required
+smaller questions, requirements, and tasks are addressed, you will have your
+answer to the main question, and can move on to the next of these 5 questions.
 
-+---------------------------+--------------------------------------+----------+
-| Question/Task/Requirement | Evidence                             | Done     |
-+===========================+======================================+==========+
-| Example requirement 1     | Example Risk Assessment.pdf,         | Yes      |
-|                           | Example document.pdf                 |          |
-+-----------------------+------------------------------------------+----------+
-| Example requirement 2 | -                                        | -        |
-+-----------------------+------------------------------------------+----------+
-| ...                   | -                                        | -        |
-+-----------------------+------------------------------------------+----------+
++----------------------------+--------------------------------------+----------+
+| Question/Task/Requirement  | Evidence                             | Done     |
++============================+======================================+==========+
+| Example requirement 1      | Example Risk Assessment.pdf,         | Yes      |
+|                            | Example document.pdf                 |          |
++----------------------------+--------------------------------------+----------+
+| Example requirement 2      | -                                    | -        |
++----------------------------+--------------------------------------+----------+
+| ...                        | -                                    | -        |
++----------------------------+--------------------------------------+----------+
 
-.. _Should I Use AI?:
+.. _Should I Use AI/ML?:
 
-Should I use AI?
-----------------
+Should I use AI/ML?
+-------------------
 
 Developing an AI application can present significant challenges. Collection of
 data, testing and validation are challenges. As seen in the previous section,
@@ -62,17 +60,17 @@ this problem down into two parts:
     category?
   * What is the risk that the project makes use of problematic data?
 
-+------------------------------------------+----------+----------+
-| Requirement                              | Evidence | Complete |
-+==========================================+==========+==========+
-| :ref:`Evaluate engineering case`         | -        |          |
-+------------------------------------------+----------+----------+
-| :ref:`Assess Unacceptable AI Risk`       | -        |          |
-+------------------------------------------+----------+----------+
-| :ref:`Assess Problematic Data Risk`      | -        |          |
-+------------------------------------------+----------+----------+
++--------------------------------------------------------+----------+----------+
+| Requirement                                            | Evidence | Complete |
++========================================================+==========+==========+
+| :ref:`Evaluate Engineering Case`                       | -        |          |
++--------------------------------------------------------+----------+----------+
+| :ref:`Unacceptable AI Risk`                            | -        |          |
++--------------------------------------------------------+----------+----------+
+| :ref:`Problematic Data Risk`                           | -        |          |
++--------------------------------------------------------+----------+----------+
 
-.. _Defining the Project:
+.. _How do I define my AI project?:
 
 How do I define my AI project?
 ------------------------------
@@ -86,65 +84,58 @@ section:
 * Defining limitations and boundaries on the project
 * Completing a risk assessment of the project as a whole
 
-+-------------------------------------------+----------+----------+
-| Requirement                               | Evidence | Complete |
-+===========================================+==========+==========+
-| :ref:`Define Goals and Metrics`           | -        |          |
-+-------------------------------------------+----------+----------+
-| :ref:`Define Limitations and Boundaries`  | -        |          |
-+-------------------------------------------+----------+----------+
-| :ref:`Complete a Project Risk Assessment` | -        |          |
-+-------------------------------------------+----------+----------+
++--------------------------------------------------------+----------+----------+
+| Requirement                                            | Evidence | Complete |
++========================================================+==========+==========+
+| :ref:`Establish Goals and KPIs`                        | -        |          |
++--------------------------------------------------------+----------+----------+
+| :ref:`Risk Assessment`                                 | -        |          |
++--------------------------------------------------------+----------+----------+
 
-.. _Collecting Data:
+.. _How do I collect data for my AI/ML project?:
 
-How do I collect data for my project?
--------------------------------------
+How do I collect data for my AI/ML project?
+-------------------------------------------
 
 In the previous step, we defined the scope of our project. In this step, we move
-on to the first part of the practical engineering of our AI project, collecting
-the data. It is a core requirement of any AI application that it is data driven.
-This means that some data will need to be collected, or at the very least,
-processed. It’s very important to get this right, as the strength of the data
-will have a strong effect on the efficacy of training and deploying our AI
-application. We set out a number of steps for this section, but our primary
-challenges are:
+on to the first part of the practical engineering of our AI project: collecting
+the data. AI/ML applications are, at their core, data driven. At some level,
+data will need to be collected, or at the very least, processed. It’s very
+important to get this right, as the strength of the data will have a strong
+effect on the efficacy of training and deploying our AI application. We set out
+a number of steps for this section, but our primary challenges are:
 
 * Making sure the data we’re is collecting useful, truthful, and effective data
 * Making sure we transform our raw data into a form that can effectively 
-  utilized by AI algorithms
+  utilized by AI/ML algorithms
 * Making sure our infrastructure for collection, storage, and access is
   appropriate and robust
 
 
-+------------------------------------------------+----------+----------+
-| Requirement                                    | Evidence | Complete |
-+================================================+==========+==========+
-| :ref:`Creating and Collecting your Data Set`   | -        |          |
-+------------------------------------------------+----------+----------+
-| :ref:`Version Control, CI/CD for Data`         | -        |          |
-+------------------------------------------------+----------+----------+
-| :ref:`Documentation`                           | -        |          |
-+------------------------------------------------+----------+----------+
-| :ref:`Logging`                                 | -        |          |
-+------------------------------------------------+----------+----------+
-| :ref:`Data Exploration`                        | -        |          |
-+------------------------------------------------+----------+----------+
-| :ref:`Cleaning your Data`                      | -        |          |
-+------------------------------------------------+----------+----------+
-| :ref:`Validation and Testing`                  | -        |          |
-+------------------------------------------------+----------+----------+
-| :ref:`Scaling and Automation: Data Collection` | -        |          |
-+------------------------------------------------+----------+----------+
-| :ref:`Scaling and Automation: Data Storage`    | -        |          |
-+------------------------------------------------+----------+----------+
-| :ref:`Scaling and Automation: Data Access`     | -        |          |
-+------------------------------------------------+----------+----------+
++--------------------------------------------------------+----------+----------+
+| Requirement                                            | Evidence | Complete |
++========================================================+==========+==========+
+| :ref:`Collecting your Data Set`                        | -        |          |
++--------------------------------------------------------+----------+----------+
+| :ref:`Version Control, CI/CD for Data`                 | -        |          |
++--------------------------------------------------------+----------+----------+
+| :ref:`Documentation`                                   | -        |          |
++--------------------------------------------------------+----------+----------+
+| :ref:`Logging`                                         | -        |          |
++--------------------------------------------------------+----------+----------+
+| :ref:`Data Exploration`                                | -        |          |
++--------------------------------------------------------+----------+----------+
+| :ref:`Data Cleaning`                                   | -        |          |
++--------------------------------------------------------+----------+----------+
+| :ref:`Validation and Testing`                          | -        |          |
++--------------------------------------------------------+----------+----------+
+| :ref:`Data Storage and Access`                         | -        |          |
++--------------------------------------------------------+----------+----------+
 
-.. _Training Your AI Application:
+.. _How do I train my AI/ML application?:
 
-How do I train my AI application?
----------------------------------
+How do I train my AI/ML application?
+------------------------------------
 
 In the previous step, we collected the data for our AI project. In this step,
 we will make use of it by using it to train an AI algorithm of our choice to
@@ -160,29 +151,23 @@ steps for this section, but our primary challenges are:
   all the things it should, and none of the things it shouldn’t
 
 
-+----------------------------------------------------+----------+----------+
-| Requirement                                        | Evidence | Complete |
-+====================================================+==========+==========+
-| :ref:`Choosing Your AI approach`                   | -        |          |
-+----------------------------------------------------+----------+----------+
-| :ref:`Version Control, CI/CD, Training`            | -        |          |
-+----------------------------------------------------+----------+----------+
-| :ref:`Documentation and Logging, Training`         | -        |          |
-+----------------------------------------------------+----------+----------+
-| :ref:`Data Pre-processing`                         | -        |          |
-+----------------------------------------------------+----------+----------+
-| :ref:`Training Infrastructure`                     | -        |          |
-+----------------------------------------------------+----------+----------+
-| :ref:`Creating a Training Process`                 | -        |          |
-+----------------------------------------------------+----------+----------+
-| :ref:`Testing and Validation, Training`            | -        |          |
-+----------------------------------------------------+----------+----------+
-| :ref:`Exploring Outcomes and Biases`               | -        |          |
-+----------------------------------------------------+----------+----------+
-| :ref:`Scaling and Automation: Training Pipeline`   | -        |          |
-+----------------------------------------------------+----------+----------+
++--------------------------------------------------------+----------+----------+
+| Requirement                                            | Evidence | Complete |
++========================================================+==========+==========+
+| :ref:`Selecting an AI/ML Approach`                     | -        |          |
++--------------------------------------------------------+----------+----------+
+| :ref:`Data Pre-processing`                             | -        |          |
++--------------------------------------------------------+----------+----------+
+| :ref:`Creating a Training Pipeline`                    | -        |          |
++--------------------------------------------------------+----------+----------+
+| :ref:`Testing, Validation & Biases in Training`        | -        |          |
++--------------------------------------------------------+----------+----------+
+| :ref:`Version Control, CI/CD`                          | -        |          |
++--------------------------------------------------------+----------+----------+
+| :ref:`Documentation and Logging`                       | -        |          |
++--------------------------------------------------------+----------+----------+
 
-.. _Deploying your AI Application:
+.. _How do I deploy my AI application?:
 
 How do I deploy my AI application?
 ----------------------------------
@@ -198,22 +183,10 @@ software application. Our process will proceed broadly in three steps:
 * Setting up continuous monitoring for our model
 
 
-+----------------------------------------------------+----------+----------+
-| Requirement                                        | Evidence | Complete |
-+====================================================+==========+==========+
-| :ref:`Version Control, CI/CD, Deployment`          | -        |          |
-+----------------------------------------------------+----------+----------+
-| :ref:`Documentation and Logging, Deployment`       | -        |          |
-+----------------------------------------------------+----------+----------+
-| :ref:`Preparing a Trained Model`                   | -        |          |
-+----------------------------------------------------+----------+----------+
-| :ref:`Deployment Infrastructure`                   | -        |          |
-+----------------------------------------------------+----------+----------+
-| :ref:`Deploying Your Model`                        | -        |          |
-+----------------------------------------------------+----------+----------+
-| :ref:`Testing and Validation, Deployment`          | -        |          |
-+----------------------------------------------------+----------+----------+
-| :ref:`Model Monitoring`                            | -        |          |
-+----------------------------------------------------+----------+----------+
-| :ref:`Scaling and Automation: Deployment Pipeline` | -        |          |
-+----------------------------------------------------+----------+----------+
++--------------------------------------------------------+----------+----------+
+| Requirement                                            | Evidence | Complete |
++========================================================+==========+==========+
+| :ref:`Deploying Your Model`                            | -        |          |
++--------------------------------------------------------+----------+----------+
+| :ref:`Testing, Validation & Biases in Deployment`      | -        |          |
++--------------------------------------------------------+----------+----------+

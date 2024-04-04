@@ -22,7 +22,7 @@ copyright = '2024'
 author = 'Best Practices Working Group'
 
 # The full version, including alpha/beta/rc tags
-release = 'v0.4.0'
+release = 'v0.5.0'
 
 
 # -- General configuration ---------------------------------------------------
@@ -60,8 +60,12 @@ html_static_path = ['_static']
 html_logo = "_static/twheaderlogo.png"
 
 
+
 html_theme_options = {
-    "announcement": "<em>Important</em> announcement!",
+    "announcement": 
+    "Get involved with Techworks best practices in AI\
+    <a href='https://techworkshub.github.io/best-practice-guide/index.html#getting-involved'>here</a>",
+    "sidebar_hide_name": "True",
     "light_css_variables": {
         "color-announcement-background": "#4d8fbacc",
         "font-stack": "Open Sans,sans-serif",

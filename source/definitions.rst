@@ -3,12 +3,12 @@
 .. _Application Specific Requirements:
 
 Application Specific Requirements
----------------------------------
+==================================
 
 .. _AI Risk:
 
 AI Risk
-++++++++
+--------
 
 Direct regulation of AI in the EU is tending to a risk based approach based on
 the harm than an AI application poses to people. Applications are classified
@@ -32,7 +32,7 @@ will recur in this guide, and we will refer to them as AI Risk.
 .. _Data Protection:
 
 Data Protection
-+++++++++++++++
+----------------
 
 AI models are data driven. This leaves them significantly subject to data
 protection regulation, especially GDPR. According to GDPR, if you process data,
@@ -62,7 +62,7 @@ guide.
 .. _Safety, Security and Robustness:
 
 Safety, Security and Robustness
-+++++++++++++++++++++++++++++++
+----------------------------------
 
 A core requirement of any system is that it functions correctly, both in
 conditions of normal use, as well as conditions of misuse (intentional or
@@ -90,7 +90,7 @@ Safety, security and robustness will be important ideas throughout this document
 .. _Transparency and Explainability:
 
 Transparency and Explainability
-+++++++++++++++++++++++++++++++
+----------------------------------
 
 It is important in many cases that we can understand how our systems function.
 This imperative should be familiar to any electronic systems engineer, through
@@ -110,7 +110,7 @@ solution, but through a means that is ultimately not human interpretable.
 .. _Fairness:
 
 Fairness
-++++++++
+---------
 Fairness is another core requirement of any system, especially in light of the
 above ideas of transparency and explainability. By fairness, we mean a system
 that:
@@ -130,7 +130,7 @@ insight-idUSKCN1MK08G>`_.
 .. _Accountability and Governance:
 
 Accountability and Governance
-+++++++++++++++++++++++++++++
+------------------------------
 Any system that has the potential to cause harm requires oversight. Any AI
 system will therefore require systems of:
 
@@ -146,7 +146,7 @@ application, and will be an important part of development.
 .. _Contestability and Redress:
 
 Contestability and Redress
-++++++++++++++++++++++++++
+-----------------------------
 Any system that has the potential to cause harm to people also requires ways for
 this harm to be recognised and reversed. Any such AI system will therefore
 require systems of:
