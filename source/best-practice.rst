@@ -63,8 +63,8 @@ solutions:
   * Contain too many known “bad” words, e.g. “low interest rate loans”
   * Has “.exe” attachments
 
-* An AI approach that learns from a corpus of previous emails to read an emails
-  content, and classifies it as phishing, or not phishing. 
+* An AI approach that learns from a corpus of previous emails to read an email's
+  content, and classify it as phishing, or not phishing. 
 
 The respective advantages of each approach are:
 
@@ -197,7 +197,7 @@ natural part of using the guide. Our previous effort is not wasted, but informs
 our current and future decisions. 
 
 We can break AI approaches into 3 categories. We provide a more detailed
-explanation of these terms in the [appendix]. However, briefly:
+explanation of these terms in the [appendix - WHERE?]. However, briefly:
 
 * In supervised learning approaches we are learning by example. We have a set of
   input data points with corresponding known output data points (labels) for
@@ -247,13 +247,13 @@ We will not cover again the work of general goal setting here, which we assume
 should be familiar to any competent engineer. However, over other engineering
 projects AI and Machine learning projects have several uncommon considerations.
 
-The first is that AI and Machine Learning algorithms are often stochastic in
+One such consideration is that AI and Machine Learning algorithms are often stochastic in
 nature, behaving in a non-deterministic and statistical way. All goals and KPIs
 must be aware of this. For example, for a face detection software it is
 appropriate to set goals such as “95% of this set of faces can be recognised”
 rather than “the software must recognise all these specific people”.
 
-The second is that human interpretability is a difficult topic in AI and Machine
+A second consideration is that human interpretability is a difficult topic in AI and Machine
 Learning, and it may be difficult to define why the software is doing the things
 or making the decisions that it makes. We will cover this topic (and its
 mitigations in more detail) in later sections, but it is important to be aware
@@ -492,6 +492,8 @@ a high AI Risk category, and be subject to extra requirements.
 :ref:`Version Control, CI/CD for Data<How do I collect data for my AI/ML project?>`
 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
+IS "CI/CD" REALLY THE APPROPRIATE TERMINOLOGY HERE?
+
 Any electronic systems engineer should be familiar with version control. These
 ideas are just as important in developing AI applications as any other software
 product. In this step we explore:
@@ -526,7 +528,7 @@ Examples
 :ref:`Documentation<How do I collect data for my AI/ML project?>`
 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-Another task that any electronic systems engineer should be familiar with is
+Another task that any software engineer should be familiar with is
 documentation. As with version control, good documentation is just as important,
 or perhaps even more so, as any other software development project. In this step
 we will explore:
@@ -824,7 +826,7 @@ wealth of resources elsewhere (imputation), but we note that the extent to which
 any of these strategies is plausible depends on how the missingness in our data
 has come about. There are three ways the data might be missing:
 
-* Missing totally at random (MCAR) - the data is missing completely randomly
+* Missing completely at random (MCAR) - the data is missing completely randomly
   with no pattern at all
 * Missing random (MAR) - the data is missing randomly, but in a way that is
   explained by the data you are using to predict things
