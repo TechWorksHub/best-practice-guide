@@ -2,31 +2,31 @@
 
 .. _Using this Guide:
 
-Using this guide: The 5 questions
+Using this guide: The five questions
 =================================
 
-This guide will help you answer 5 questions step by step:
+This guide will help you answer five questions step by step:
 
-* Should I use AI/ML?
-* How do I define my AI/ML project
-* How do I collect data?
-* How do I train my AI/ML application?
-* How do I deploy my AI/ML application?
+1. Should I use AI/ML?
+2. How do I define my AI/ML project
+3. How do I collect data?
+4. How do I train my AI/ML application?
+5. How do I deploy my AI/ML application?
 
 Answering these questions will take you from conceptualizing your
 AI application through to deploying it in the real world.
 
-These 5 questions are broken into smaller questions, requirements, and tasks to
+These five questions are broken into subsidiary questions, requirements, and tasks to
 be completed.  We set out the question in the order they should be considered.
 We strongly recommend you don't skip ahead, although from time to time you may
 want to go back and review your answers to earlier questions.
 
-These smaller questions, requirements and tasks for each of the 5 main questions
+These smaller questions, requirements and tasks for each of the five main questions
 are recorded in a table, showing what the activity is, and where you should
 record the documentary evidence of that activity being completed. Some of the
 entries may be optional, depending on earlier answers.  Once all the required
-smaller questions, requirements, and tasks are addressed, you will have your
-answer to the main question, and can move on to the next of these 5 questions.
+subsidiary questions, requirements, and tasks are addressed, you will have your
+answer to the main question, and can move on to the next of these five questions.
 
 +----------------------------+--------------------------------------+----------+
 | Question/Task/Requirement  | Evidence                             | Done     |
@@ -41,12 +41,12 @@ answer to the main question, and can move on to the next of these 5 questions.
 
 .. _Should I Use AI/ML?:
 
-Should I use AI/ML?
--------------------
+Question 1: Should I use AI/ML?
+-------------------------------
 
 Developing an AI application can present significant challenges. Collection of
-data, testing and validation are challenges. As seen in the previous section,
-many applications of AI will come with special requirements that can be a
+data, testing and validation are challenges.
+Many applications of AI will come with special requirements that can be a
 challenge in themselves. To address this, the very first step in this guide is
 to be able answer the following: should I use AI to solve my problem? We break
 this problem down into two parts:
@@ -55,10 +55,9 @@ this problem down into two parts:
   approaches?
 * Does the problem touch on any application or data areas that may effectively
   prohibit development?
-
-  * What is the risk that the project falls into the unacceptable AI Risk
-    category?
-  * What is the risk that the project makes use of problematic data?
+  * What is the risk that the project falls into the :ref:`unacceptable AI Risk
+    category<Unacceptable AI Risk>`?
+  * What is the risk that the project makes use of :ref:`problematic data<Problematic Data Risk>`?
 
 +--------------------------------------------------------+----------+----------+
 | Requirement                                            | Evidence | Complete |
@@ -72,15 +71,15 @@ this problem down into two parts:
 
 .. _How do I define my AI project?:
 
-How do I define my AI project?
-------------------------------
+Question 2: How do I define my AI project?
+------------------------------------------
 
 In the previous step we worked on an engineering case for AI in our project. In
 this step, we will take the first step in realizing our project by setting the
 goals and bounds of the project. There are three steps to complete in this
 section:
 
-* Defining goals and metrics for success
+* Defining goals and metrics for success (KPIs)
 * Defining limitations and boundaries on the project
 * Completing a risk assessment of the project as a whole
 
@@ -89,23 +88,25 @@ section:
 +========================================================+==========+==========+
 | :ref:`Establish Goals and KPIs`                        | -        |          |
 +--------------------------------------------------------+----------+----------+
+| LIMITATIONS AND BOUNDARIES ON THE PROJECT?             | -        |          |
++--------------------------------------------------------+----------+----------+
 | :ref:`Risk Assessment`                                 | -        |          |
 +--------------------------------------------------------+----------+----------+
 
 .. _How do I collect data for my AI/ML project?:
 
-How do I collect data for my AI/ML project?
--------------------------------------------
+Question 3: How do I collect data for my AI/ML project?
+-------------------------------------------------------
 
 In the previous step, we defined the scope of our project. In this step, we move
 on to the first part of the practical engineering of our AI project: collecting
 the data. AI/ML applications are, at their core, data driven. At some level,
 data will need to be collected, or at the very least, processed. It’s very
 important to get this right, as the strength of the data will have a strong
-effect on the efficacy of training and deploying our AI application. We set out
+impact on the efficacy of training and deploying our AI application. We set out
 a number of steps for this section, but our primary challenges are:
 
-* Making sure the data we’re is collecting useful, truthful, and effective data
+* Making sure the data we’re is collecting useful, truthful, and effective
 * Making sure we transform our raw data into a form that can effectively 
   utilized by AI/ML algorithms
 * Making sure our infrastructure for collection, storage, and access is
@@ -134,8 +135,8 @@ a number of steps for this section, but our primary challenges are:
 
 .. _How do I train my AI/ML application?:
 
-How do I train my AI/ML application?
-------------------------------------
+Question 4: How do I train my AI/ML application?
+------------------------------------------------
 
 In the previous step, we collected the data for our AI project. In this step,
 we will make use of it by using it to train an AI algorithm of our choice to
@@ -169,8 +170,8 @@ steps for this section, but our primary challenges are:
 
 .. _How do I deploy my AI application?:
 
-How do I deploy my AI application?
-----------------------------------
+Question 5: How do I deploy my AI application?
+----------------------------------------------
 
 After training our AI application, we can finally deploy it and (hopefully)
 achieve the goals set out in our previous steps. This step will likely represent
@@ -178,7 +179,7 @@ a welcome return to familiarity for the professional engineer, as the process
 for deploying an AI application is fairly similar to that of deploying any other
 software application. Our process will proceed broadly in three steps:
 
-* Preparing our trained the model for a live environment
+* Preparing our trained model for a live environment
 * Engineering a process for deployment and model updating
 * Setting up continuous monitoring for our model
 
