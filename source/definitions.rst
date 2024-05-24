@@ -1,8 +1,8 @@
 .. header:: TechNES AI Best Practices Group: Definitions
 
-.. _Application Specific Requirements:
+.. _Key Definitions:
 
-Application Specific Requirements
+Key Definitions
 ==================================
 
 .. _AI Risk:
