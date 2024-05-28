@@ -3,10 +3,10 @@
   <head><meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
     <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-<link rel="author" title="About these documents" href="about.html" /><link rel="index" title="Index" href="genindex.html" /><link rel="search" title="Search" href="search.html" /><link rel="next" title="Using this guide" href="using-this-guide.html" /><link rel="prev" title="Getting Involved" href="getting-involved.html" />
+<link rel="author" title="About these documents" href="about.html" /><link rel="index" title="Index" href="genindex.html" /><link rel="search" title="Search" href="search.html" /><link rel="next" title="How do I collect data for my AI/ML project: Task List" href="collect-data-tasks.html" /><link rel="prev" title="Should I use AI/ML: Task List" href="should-ai-tasks.html" />
 
     <meta name="generator" content="sphinx-4.1.1, furo 2022.04.07"/>
-        <title>Executive Summary - Techworks Best Practices in AI v0.5.0 documentation</title>
+        <title>How do I define my AI project: Task List - Techworks Best Practices in AI v0.5.0 documentation</title>
       <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="_static/styles/furo.css?digest=68f4518137b9aefe99b631505a2064c3c42c9852" />
     <link rel="stylesheet" type="text/css" href="_static/styles/furo-extensions.css?digest=30d1aed668e5c3a91c3e3bf6a60b675221979f0e" />
@@ -145,7 +145,7 @@
           <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
         </button>
       </div>
-      <label class="toc-overlay-icon toc-header-icon no-toc" for="__toc">
+      <label class="toc-overlay-icon toc-header-icon" for="__toc">
         <div class="visually-hidden">Toggle table of contents sidebar</div>
         <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
       </label>
@@ -171,12 +171,12 @@
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="about.html">About</a></li>
 <li class="toctree-l1"><a class="reference internal" href="getting-involved.html">Getting Involved</a></li>
-<li class="toctree-l1 current current-page"><a class="current reference internal" href="#">Executive Summary</a></li>
+<li class="toctree-l1"><a class="reference internal" href="executive-summary.html">Executive Summary</a></li>
 <li class="toctree-l1"><a class="reference internal" href="using-this-guide.html">Using this guide</a></li>
 <li class="toctree-l1"><a class="reference internal" href="the-five-questions.html">The 5 Questions</a></li>
 <li class="toctree-l1"><a class="reference internal" href="definitions.html">Key Definitions</a></li>
 <li class="toctree-l1"><a class="reference internal" href="should-ai-tasks.html">Should I use AI/ML: Task List</a></li>
-<li class="toctree-l1"><a class="reference internal" href="define-project-tasks.html">How do I define my AI project: Task List</a></li>
+<li class="toctree-l1 current current-page"><a class="current reference internal" href="#">How do I define my AI project: Task List</a></li>
 <li class="toctree-l1"><a class="reference internal" href="collect-data-tasks.html">How do I collect data for my AI/ML project: Task List</a></li>
 <li class="toctree-l1"><a class="reference internal" href="training-tasks.html">How do I train my AI/ML application: Task List</a></li>
 <li class="toctree-l1"><a class="reference internal" href="testing-tasks.html">How do I deploy my AI application: Task List</a></li>
@@ -206,25 +206,115 @@
               <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
             </button>
           </div>
-          <label class="toc-overlay-icon toc-content-icon no-toc" for="__toc">
+          <label class="toc-overlay-icon toc-content-icon" for="__toc">
             <div class="visually-hidden">Toggle table of contents sidebar</div>
             <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
           </label>
         </div>
         <article role="main">
-          <section id="executive-summary">
-<span id="id1"></span><h1>Executive Summary<a class="headerlink" href="#executive-summary" title="Permalink to this headline">#</a></h1>
-<p>This guide is for professional software engineers in the electronics systems
-industry who now need to implement Artificial Intelligence and Machine Learning
-(AI/ML) solutions. We make the following two assumptions:</p>
-<ol class="arabic simple">
-<li><p>the reader is an experienced software engineer; and</p></li>
-<li><p>the reader has no prior experience of AI/ML.</p></li>
-</ol>
-<p>The guide takes the form of a series of questions to be answered.
-Comprehensive supplementary information is provided to help answer these
-questions. The outcome is an optimally designed, implemented and deployed
-AI/ML solution.</p>
+          <section id="how-do-i-define-my-ai-project-task-list">
+<span id="id1"></span><h1>How do I define my AI project: Task List<a class="headerlink" href="#how-do-i-define-my-ai-project-task-list" title="Permalink to this headline">#</a></h1>
+<section id="how-do-i-define-my-ai-project">
+<h2><a class="reference internal" href="the-five-questions.html#how-do-i-define-my-ai-project"><span class="std std-ref">How do I define my AI project?</span></a><a class="headerlink" href="#how-do-i-define-my-ai-project" title="Permalink to this headline">#</a></h2>
+<section id="establish-goals-and-kpis">
+<span id="id2"></span><h3><a class="reference internal" href="the-five-questions.html#how-do-i-define-my-ai-project"><span class="std std-ref">Establish Goals and KPIs</span></a><a class="headerlink" href="#establish-goals-and-kpis" title="Permalink to this headline">#</a></h3>
+<p>In the previous section we established, at a high level, the viability of the
+project we intend to undertake. In this section we refine the proposed project
+into a set of concrete engineering goals. To do this, we open this section by
+setting out a little bit more about how AI approaches can be used to solve
+problems. We then move through a standard goal setting approach (making sure
+goals are Specific, Measurable, etc.), and discuss some of the challenges that
+AI approaches can bring for this.</p>
+<p>As we discussed, the scope of this guide is such that one can expect to revisit
+earlier steps while evaluating later ones. This step in particular, setting a
+concrete definition for the project is one that is likely to cause us to
+re-evaluate the checks we made in the previous steps. This is fine, and a
+natural part of using the guide. Our previous effort is not wasted, but informs
+our current and future decisions.</p>
+<p>We can break AI approaches into 3 categories. We provide a more detailed
+explanation of these terms in the [appendix]. However, briefly:</p>
+<ul class="simple">
+<li><p>In supervised learning approaches we are learning by example. We have a set of
+input data points with corresponding known output data points (labels) for
+each. We’re trying to learn what this relationship is so that we can predict
+the outputs that correspond to the inputs for unknown data points. For
+example:</p>
+<ul>
+<li><p>Learning to predict stock prices from economic indicators</p></li>
+<li><p>Learning to translate one language into another</p></li>
+<li><p>Learning the relationship between images chest x-rays and the presence of
+cancer</p></li>
+</ul>
+</li>
+<li><p>In unsupervised learning we are learning patterns. We have a set of input data
+points without any corresponding output data points. Our goal isn’t to learn
+an input-output relationship (because there isn’t one), but to learn things
+about the input data points that will generalize to all possible input data
+points. For example:</p>
+<ul>
+<li><p>Learning to identify clusters of like behavior</p></li>
+<li><p>Learning to identify outliers</p></li>
+<li><p>Dimensionality reduction</p></li>
+</ul>
+</li>
+<li><p>In reinforcement learning approaches, we are learning by example with an
+algorithm that interacts with its environment to select the data points it wants
+to learn from. Our goal is to create a policy from which tells the algorithm the
+best action to take at any point. For example:</p>
+<ul>
+<li><p>Learning to play chess</p></li>
+<li><p>Learning to play atari video games</p></li>
+<li><p>Autonomous vehicles</p></li>
+</ul>
+</li>
+</ul>
+<p>Previously, we assumed that you entered this guide with a broad project goal in
+mind. With the above in mind, the goal of this section is to convert that idea
+into:</p>
+<ul class="simple">
+<li><p>A set of project goals, defining:</p>
+<ul>
+<li><p>What will define when the project will be complete</p></li>
+<li><p>What, specifically it needs to achieve</p></li>
+<li><p>When this should be completed by</p></li>
+</ul>
+</li>
+<li><p>A set of KPIs, defining:</p>
+<ul>
+<li><p>How well the project is currently performing on some important benchmarks</p></li>
+</ul>
+</li>
+</ul>
+<p>We will not cover again the work of general goal setting here, which we assume
+should be familiar to any competent engineer. However, over other engineering
+projects AI and Machine learning projects have several uncommon considerations.</p>
+<p>The first is that AI and Machine Learning algorithms are often stochastic in
+nature, behaving in a non-deterministic and statistical way. All goals and KPIs
+must be aware of this. For example, for a face detection software it is
+appropriate to set goals such as “95% of this set of faces can be recognised”
+rather than “the software must recognise all these specific people”.</p>
+<p>The second is that human interpretability is a difficult topic in AI and Machine
+Learning, and it may be difficult to define why the software is doing the things
+or making the decisions that it makes. We will cover this topic (and its
+mitigations in more detail) in later sections, but it is important to be aware
+that metrics that rely on a deep understanding of functionality may be difficult
+to resolve at later stages.</p>
+<p>To complete this step:</p>
+<ul class="simple">
+<li><p>Define a set of Goals and KPIs</p></li>
+</ul>
+</section>
+<section id="risk-assessment">
+<span id="id3"></span><h3><a class="reference internal" href="the-five-questions.html#how-do-i-define-my-ai-project"><span class="std std-ref">Risk Assessment</span></a><a class="headerlink" href="#risk-assessment" title="Permalink to this headline">#</a></h3>
+<p>In the last section, we did a preliminary assessment of some high level project
+sinking risks to establish that our project was viable. In this section we do a
+more detailed analysis of the risks of our proposed project.</p>
+<p>Risk assessment is a basic engineering skill and we will not cover the basics of
+performing a risk assessment here. There are a multitude of resources available
+on how to do this. In future versions of this document, this section we discuss
+some common risks in more detail.</p>
+</section>
+</section>
 </section>
 
         </article>
@@ -232,23 +322,23 @@ AI/ML solution.</p>
       <footer>
         
         <div class="related-pages">
-          <a class="next-page" href="using-this-guide.html">
+          <a class="next-page" href="collect-data-tasks.html">
               <div class="page-info">
                 <div class="context">
                   <span>Next</span>
                 </div>
-                <div class="title">Using this guide</div>
+                <div class="title">How do I collect data for my AI/ML project: Task List</div>
               </div>
               <svg><use href="#svg-arrow-right"></use></svg>
             </a>
-          <a class="prev-page" href="getting-involved.html">
+          <a class="prev-page" href="should-ai-tasks.html">
               <svg><use href="#svg-arrow-right"></use></svg>
               <div class="page-info">
                 <div class="context">
                   <span>Previous</span>
                 </div>
                 
-                <div class="title">Getting Involved</div>
+                <div class="title">Should I use AI/ML: Task List</div>
                 
               </div>
             </a>
@@ -272,8 +362,31 @@ AI/ML solution.</p>
         
       </footer>
     </div>
-    <aside class="toc-drawer no-toc">
+    <aside class="toc-drawer">
       
+      
+      <div class="toc-sticky toc-scroll">
+        <div class="toc-title-container">
+          <span class="toc-title">
+            Contents
+          </span>
+        </div>
+        <div class="toc-tree-container">
+          <div class="toc-tree">
+            <ul>
+<li><a class="reference internal" href="#">How do I define my AI project: Task List</a><ul>
+<li><a class="reference internal" href="#how-do-i-define-my-ai-project"><span class="xref std std-ref">How do I define my AI project?</span></a><ul>
+<li><a class="reference internal" href="#establish-goals-and-kpis"><span class="xref std std-ref">Establish Goals and KPIs</span></a></li>
+<li><a class="reference internal" href="#risk-assessment"><span class="xref std std-ref">Risk Assessment</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+          </div>
+        </div>
+      </div>
       
       
     </aside>

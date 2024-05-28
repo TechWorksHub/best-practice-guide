@@ -3,60 +3,51 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Techworks Best Practices in AI
+
+
+.. image:: _static/TechWorks-Logo_Hres.jpg
+
+\
 ===============================
 
-About
-------
+Welcome to the hub for the Techworks Best Practices in AI guide.
 
-This is a best practices guide in Artificial Intelligence (AI) and
-Machine Learning (ML) for electronic systems engineers in the UK. It aims to
-help electronic system engineers to navigate these fields and to
-transfer their highly relevant skill-sets into these important domains.
+The guide is one of the core activities of the 
+`Techworks AI Innovation Cross Working Group <https://www.techworks.org.uk/Ai>`_
+(AI xWG). The goal of the guide is to provide best practices guidance to
+electronic systems engineers in the UK to bridge the UK AI skill gap. 
 
-This guide is being actively developed in the open by Techworks, and we welcome
-external contributors. While this is primarily a guide for engineers, we
-recognize the importance of a diverse skill-set and opinions in our working
-group. If you think your experience is relevant to the guide we are producing,
-please consider getting involved.
+To get started:
 
-This document is available in three formats:
+* :ref:`Read more <About>` about this project and the guide.
+
+* Learn about how you can :ref:`get involved. <Getting Involved>`
+
+* Read the :ref:`executive summary <Executive Summary>`.
+
+* Or jump straight to the :ref:`first page <Using this Guide>` of the guide. 
+
+
+This guide is currently maintained in several formats:
 
 * `Online <https://techworkshub.github.io/best-practice-guide>`_
 * `PDF <https://raw.githubusercontent.com/techworkshub/best-practice-guide/gh-pages/best-practices-guide.pdf>`_
 * `docx <https://github.com/techworkshub/best-practice-guide/raw/gh-pages/best-practices-guide.docx>`_
 
 
-Getting Involved
-----------------
-
-Group activity for developing this guide is currently co-ordinated via Basecamp.
-The group currently meets virtually once a month on each fourth tuesday. If you
-are interested in taking part, or you have thoughts or comments then:
-
-* Get `in touch <mailto:william.jones+best-practice@embecosm.com>`_
-
-You are also welcome to feedback on this guide directly. You can do this by:
-
-* `Sending us <mailto:william.jones+best-practice@embecosm.com>`_ your comments
-* Opening an `issue
-  <https://github.com/TechWorksHub/best-practice-guide/issues/>`_ 
-  or a 
-  `pull request <https://github.com/TechWorksHub/best-practice-guide/pulls/>`_
-  on Github. 
-
-This guide is
-currently maintained in `Sphinx <https://www.sphinx-doc.org/en/master/>`_ on
-`GitHub <https://github.com/TechWorksHub/best-practice-guide/>`_.
-
 .. _Contributors:
 
 Contributors
 -------------
-We thank all contributors and reviewers of this project.
+We thank all contributors and reviewers of this project. 
+
+Authors
+++++++++
+
+William Jones
 
 
-Authors and Contributors
+Contributors
 ++++++++++++++++++++++++
 
 Alex Wang
@@ -91,26 +82,22 @@ Prethveraj M S
 
 Tim Santos
 
-William Jones
-
-.. The addition of this section is a bit of a hack to get Sphinx to play nicely
- .. with different title levels in the pdf and doc versions
-
-Best Practice Guide
-===================
-
-Click :ref:`here <Executive Summary>` to get started with the best practices guide
-
 .. toctree::
    :hidden:
    :maxdepth: 2
    :caption: Contents:
 
-   
+   about.rst
+   getting-involved.rst
    executive-summary.rst
-   using-the-guide.rst
+   using-this-guide.rst
+   the-five-questions.rst
    definitions.rst
-   best-practice.rst
+   should-ai-tasks.rst
+   define-project-tasks.rst
+   collect-data-tasks.rst
+   training-tasks.rst
+   testing-tasks.rst
 
 .. Indices and tables
 .. ==================

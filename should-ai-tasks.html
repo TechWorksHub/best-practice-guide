@@ -3,10 +3,10 @@
   <head><meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
     <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-<link rel="author" title="About these documents" href="about.html" /><link rel="index" title="Index" href="genindex.html" /><link rel="search" title="Search" href="search.html" /><link rel="next" title="Should I use AI/ML: Task List" href="should-ai-tasks.html" /><link rel="prev" title="The 5 Questions" href="the-five-questions.html" />
+<link rel="author" title="About these documents" href="about.html" /><link rel="index" title="Index" href="genindex.html" /><link rel="search" title="Search" href="search.html" /><link rel="next" title="How do I define my AI project: Task List" href="define-project-tasks.html" /><link rel="prev" title="Key Definitions" href="definitions.html" />
 
     <meta name="generator" content="sphinx-4.1.1, furo 2022.04.07"/>
-        <title>Key Definitions - Techworks Best Practices in AI v0.5.0 documentation</title>
+        <title>Should I use AI/ML: Task List - Techworks Best Practices in AI v0.5.0 documentation</title>
       <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="_static/styles/furo.css?digest=68f4518137b9aefe99b631505a2064c3c42c9852" />
     <link rel="stylesheet" type="text/css" href="_static/styles/furo-extensions.css?digest=30d1aed668e5c3a91c3e3bf6a60b675221979f0e" />
@@ -174,8 +174,8 @@
 <li class="toctree-l1"><a class="reference internal" href="executive-summary.html">Executive Summary</a></li>
 <li class="toctree-l1"><a class="reference internal" href="using-this-guide.html">Using this guide</a></li>
 <li class="toctree-l1"><a class="reference internal" href="the-five-questions.html">The 5 Questions</a></li>
-<li class="toctree-l1 current current-page"><a class="current reference internal" href="#">Key Definitions</a></li>
-<li class="toctree-l1"><a class="reference internal" href="should-ai-tasks.html">Should I use AI/ML: Task List</a></li>
+<li class="toctree-l1"><a class="reference internal" href="definitions.html">Key Definitions</a></li>
+<li class="toctree-l1 current current-page"><a class="current reference internal" href="#">Should I use AI/ML: Task List</a></li>
 <li class="toctree-l1"><a class="reference internal" href="define-project-tasks.html">How do I define my AI project: Task List</a></li>
 <li class="toctree-l1"><a class="reference internal" href="collect-data-tasks.html">How do I collect data for my AI/ML project: Task List</a></li>
 <li class="toctree-l1"><a class="reference internal" href="training-tasks.html">How do I train my AI/ML application: Task List</a></li>
@@ -212,142 +212,162 @@
           </label>
         </div>
         <article role="main">
-          <section id="key-definitions">
-<span id="id1"></span><h1>Key Definitions<a class="headerlink" href="#key-definitions" title="Permalink to this headline">#</a></h1>
-<section id="ai-risk">
-<span id="id2"></span><h2>AI Risk<a class="headerlink" href="#ai-risk" title="Permalink to this headline">#</a></h2>
-<p>Direct regulation of AI in the EU is tending to a risk based approach based on
-the harm than an AI application poses to people. Applications are classified
-into risk categories, and those that pose a high risk are to be subject to more
-stringent requirements. These categories are currently:</p>
+          <section id="should-i-use-ai-ml-task-list">
+<span id="id1"></span><h1>Should I use AI/ML: Task List<a class="headerlink" href="#should-i-use-ai-ml-task-list" title="Permalink to this headline">#</a></h1>
+<section id="should-i-use-ai-ml">
+<h2><a class="reference internal" href="the-five-questions.html#should-i-use-ai-ml"><span class="std std-ref">Should I use AI/ML?</span></a><a class="headerlink" href="#should-i-use-ai-ml" title="Permalink to this headline">#</a></h2>
+<section id="evaluate-engineering-case">
+<span id="id2"></span><h3><a class="reference internal" href="the-five-questions.html#should-i-use-ai-ml"><span class="std std-ref">Evaluate Engineering Case</span></a><a class="headerlink" href="#evaluate-engineering-case" title="Permalink to this headline">#</a></h3>
+<p>In this guide, we assume you have a broad end goal in mind to achieve with AI
+and Machine Learning. Through this guide, we will take you through the process
+of converting this broad goal to a concrete plan.</p>
+<p>As we discussed previously, while AI is a powerful tool in many applications it
+may not be immediately appropriate for the problem you are trying to solve. This
+step requires you to enumerate and assess what available alternative approaches
+to solving the problem, and how they compare to an AI solution. This isn’t
+intended as a deep dive into the details and risks of your prospective systems,
+but a high level check that this engineering approach is right for you.</p>
+<p>At this stage, you may not have a complete and full understanding of the scope
+and limitations of an AI and Machine Learning approach. However, the design of
+this guide is such that you should expect to revisit earlier steps (like this
+one) from later steps as your understanding improves. You should therefore fill
+this out to the best of your ability, then return to this later as the project
+and your understanding evolve.</p>
+<p>This step is fairly short, and to complete it, you simply need to list the
+viable approaches to solving your problem (including the AI approach), and
+compare them. This should include solutions that might not take a data driven
+approach, as well as data driven approaches that don’t use learning, for
+example, heuristic based approaches. The choice of how to compare these will be
+dictated by your use case, but you’re likely to want to consider the following:</p>
 <ul class="simple">
-<li><p>Unacceptable risk. Applications that are a clear threat to the safety,
-livelihoods or rights of people.</p></li>
-<li><p>High risk. Applications that are critical to the safety or wellbeing of
-people, that require special mitigations to adequately cover the risks they
-pose</p></li>
-<li><p>Limited risk. Applications with lower impacts to safety or wellbeing, but
-which still require some level of mitigation</p></li>
-<li><p>Minimal or no risk. Applications with minimal to zero risk.</p></li>
+<li><p>What are the financial burdens of each case?</p></li>
+<li><p>What are the engineering burdens of each case?</p></li>
+<li><p>What are the legal burdens?</p></li>
 </ul>
-<p>Providing guidance on any upcoming or current legislation is out of the scope of
-this guide. However, this categorization of the risk that AI applications pose
-is a useful tool for discussing best engineering practices. These risk levels
-will recur in this guide, and we will refer to them as AI Risk.</p>
+<section id="examples">
+<h4>Examples<a class="headerlink" href="#examples" title="Permalink to this headline">#</a></h4>
+<p>In this example, we work through the engineering case for a phishing email
+detector.</p>
+<p>Our use case is a filter to reduce the success rate of phishing emails. As an
+example of how we might think about this, we consider three alternative internal
+solutions:</p>
+<ul class="simple">
+<li><p>A non data driven (or minimally data driven) approach. All emails that are
+from external email addresses automatically have a header attached warning
+employees that the sender may not be trustworthy, and to apply caution in
+respect of the contents.</p></li>
+<li><p>A data driven approach that uses engineer designed heuristics instead of a
+learning approach. For example, emails are filtered if they:</p>
+<ul>
+<li><p>Are from a list of known “bad” addresses</p></li>
+<li><p>Contain too many known “bad” words, e.g. “low interest rate loans”</p></li>
+<li><p>Has “.exe” attachments</p></li>
+</ul>
+</li>
+<li><p>An AI approach that learns from a corpus of previous emails to read an emails
+content, and classifies it as phishing, or not phishing.</p></li>
+</ul>
+<p>The respective advantages of each approach are:</p>
+<ul class="simple">
+<li><p>The non data driven approach is simple to implement, requires few resources to
+execute, and is simple and cheap to maintain. It will never incorrectly filter
+out legitimate emails as it passes the burden of decision making to employees
+(with extra information).</p></li>
+<li><p>The heuristic approach is also fairly simple to implement, and requires few
+resources to execute. It is also very easy to tune for specific requirements
+(e.g. never do this, always do this).</p></li>
+<li><p>The AI approach will likely have the best performance at identifying spam
+emails, if trained on sufficient data. It is also likely to adapt fairly well
+to changes in phishing approaches over time, if continually fed with data.</p></li>
+</ul>
+<p>The disadvantages of each are:</p>
+<ul class="simple">
+<li><p>The non-data driven approach provides extra information, but the decision
+making ultimately places responsibility on the end user.</p></li>
+<li><p>The heuristic approach requires each rule to be created manually, scaling
+poorly to large scale problems. Creating effective heuristic rules that do not
+result in any real emails being filtered out is also likely to be challenging.
+Adapting to new phishing approaches is also likely to be a significant burden,
+requiring new rules to be written or old rules to be rewritten.</p></li>
+<li><p>The AI approach will need a large corpus of data to learn from which will
+have to be prepared appropriately. It will flag real emails incorrectly some
+of the time (no matter how well trained), and this may not be easy to fix.
+Adoption will require more data preparation and training.</p></li>
+</ul>
+<p>Picking the best approach (or approaches) to use depends on our context. In this
+particular example, our non-AI examples are significantly simpler to implement,
+and are likely to do better for small scale problems. Other conditions may also
+influence the decision. An organization of phishing-aware staff that largely
+communicates internally may hugely benefit from the first approach.</p>
 </section>
-<section id="data-protection">
-<span id="id3"></span><h2>Data Protection<a class="headerlink" href="#data-protection" title="Permalink to this headline">#</a></h2>
-<p>AI models are data driven. This leaves them significantly subject to data
-protection regulation, especially GDPR. According to GDPR, if you process data,
-you have to do so according to seven protection and accountability principles:</p>
-<ul class="simple">
-<li><p>Lawfulness, fairness and transparency — Processing must be lawful, fair, and
-transparent to the data subject.</p></li>
-<li><p>Purpose limitation — You must process data for the legitimate purposes
-specified explicitly to the data subject when you collected it.</p></li>
-<li><p>Data minimization — You should collect and process only as much data as
-absolutely necessary for the purposes specified.</p></li>
-<li><p>Accuracy — You must keep personal data accurate and up to date.</p></li>
-<li><p>Storage limitation — You may only store personally identifying data for as
-long as necessary for the specified purpose.</p></li>
-<li><p>Integrity and confidentiality — Processing must be done in such a way as to
-ensure appropriate security, integrity, and confidentiality (e.g. by using
-encryption).</p></li>
-<li><p>Accountability — The data controller is responsible for being able to
-demonstrate GDPR compliance with all of these principles.</p></li>
-</ul>
-<p>There are also certain categories of data that must be given special
-consideration. Providing guidance on legislation remains out of the scope of
-this guide. However, once again, the ideas put forward in GDPR are important in
-framing the discussion of best engineering practices, and will recur in this
-guide.</p>
 </section>
-<section id="safety-security-and-robustness">
-<span id="id4"></span><h2>Safety, Security and Robustness<a class="headerlink" href="#safety-security-and-robustness" title="Permalink to this headline">#</a></h2>
-<p>A core requirement of any system is that it functions correctly, both in
-conditions of normal use, as well as conditions of misuse (intentional or
-otherwise), or other adverse conditions. An AI system should be:</p>
+<section id="unacceptable-ai-risk">
+<span id="id3"></span><h3><a class="reference internal" href="the-five-questions.html#should-i-use-ai-ml"><span class="std std-ref">Unacceptable AI Risk</span></a><a class="headerlink" href="#unacceptable-ai-risk" title="Permalink to this headline">#</a></h3>
+<p>In the Using This Guide section, we defined AI risk in several categories:
+Unacceptable, High, Limited, and Minimal. Before continuing any further in this
+guide, it is important to consider the risk that your project may fall into the
+Unacceptable category. These are applications that are a clear threat to the
+safety, livelihoods or rights of people, and are not suitable to be solved with
+AI. Examples include:</p>
 <ul class="simple">
-<li><p>Safe: either functioning correctly or failing safely in all conditions</p></li>
-<li><p>Secure: resilient against misuse or abuse (intentionally or otherwise), and</p></li>
-<li><p>Robust: ensuring functionality in as wide a range of conditions as possible</p></li>
+<li><p>AI systems using subliminal techniques, or manipulative or deceptive
+techniques to distort behavior</p></li>
+<li><p>AI systems exploiting vulnerabilities of individuals or specific groups</p></li>
+<li><p>Biometric categorization systems based on sensitive attributes or
+characteristics</p></li>
+<li><p>AI systems used for social scoring or evaluating trustworthiness</p></li>
+<li><p>AI systems used for risk assessments predicting criminal or administrative
+offenses</p></li>
+<li><p>AI systems creating or expanding facial recognition databases through
+untargeted scraping</p></li>
+<li><p>AI systems inferring emotions in law enforcement, border management, the
+workplace, and education</p></li>
 </ul>
-<p>While the need to meet these challenges is not unique to AI systems, AI systems
-bring several unique problems to each of these areas. For example:</p>
-<ul class="simple">
-<li><p>Safety is a continual challenge in AI systems that are fundamentally
-statistical. Guaranteeing safe behavior in the wide range of situations an
-automotive AI may encounter, for example, remains a continuous challenge.</p></li>
-<li><p>AI models present unique attack surfaces that must be secured. For example,
-in many situations, models will leak information about the data that they were
-trained on.</p></li>
-<li><p>Similarly, AI models struggle to robustly deal with novel data outside of
-their training set. This can both cause problems in normal use, and be
-exploited by attackers.</p></li>
-</ul>
-<p>Safety, security and robustness will be important ideas throughout this document.</p>
+<p>At this stage, you may not have fully fleshed out the scope of your application.
+Nonetheless, this initial assessment is important to pre-empt this risk. If you
+believe your application may fall into this category, discontinue further work
+on it until you have resolved this issue.</p>
+<p>To complete this step, complete a risk assessment on the harms your AI project
+may pose to the safety, livelihoods or rights of people.</p>
+<section id="id4">
+<h4>Examples<a class="headerlink" href="#id4" title="Permalink to this headline">#</a></h4>
 </section>
-<section id="transparency-and-explainability">
-<span id="id5"></span><h2>Transparency and Explainability<a class="headerlink" href="#transparency-and-explainability" title="Permalink to this headline">#</a></h2>
-<p>It is important in many cases that we can understand how our systems function.
-This imperative should be familiar to any electronic systems engineer, through
-the value of clear code and documentation. We use two terms to describe these
-requirements:</p>
-<ul class="simple">
-<li><p>Transparency: the communication of appropriate information about an AI system
-to relevant people (for example, information on how, when, and for which
-purposes an AI system is being used), and</p></li>
-<li><p>Explainability: the extent to which it is possible for relevant parties to
-access, interpret and understand the decision-making processes of an AI system</p></li>
-</ul>
-<p>Many AI systems are uniquely troublesome in these respects. Many common methods,
-such as Neural Networks are effectively “black boxes”. These methods provide a
-solution, but through a means that is ultimately not human interpretable.</p>
 </section>
-<section id="fairness">
-<span id="id6"></span><h2>Fairness<a class="headerlink" href="#fairness" title="Permalink to this headline">#</a></h2>
-<p>Fairness is another core requirement of any system, especially in light of the
-above ideas of transparency and explainability. By fairness, we mean a system
-that:</p>
+<section id="problematic-data-risk">
+<span id="id5"></span><h3><a class="reference internal" href="the-five-questions.html#should-i-use-ai-ml"><span class="std std-ref">Problematic Data Risk</span></a><a class="headerlink" href="#problematic-data-risk" title="Permalink to this headline">#</a></h3>
+<p>Some types of data are subject to extra difficulties that will either require
+extra licensing, oversight, or may be effectively impracticable to collect. This
+section is about evaluating the risk that the data you are likely to wish to
+collect is available within the constraints of your business. Note that this
+section <em>is not</em> a dive into data collection requirements under GDPR, but a higher
+level feasibility check. Some examples of types of data that will be
+problematic:</p>
 <ul class="simple">
-<li><p>Does not undermine the legal rights of individuals or organizations,
-discriminate unfairly against individuals or create unfair market outcomes.</p></li>
+<li><p>Criminal Conviction Data, only processable:</p>
+<ul>
+<li><p>under the control of official authority; or</p></li>
+<li><p>authorized by domestic law.</p></li>
 </ul>
-<p>Fairness is a challenge in AI systems that learn from data. The decisions these
-systems make are a reflection of the patterns in the data they are trained on.
-If the data is biased, the systems trained on them will also be biased. This has
-been proven expensively and at length in the real world, for example through
-attempts at creating <a class="reference external" href="https://www.technologyreview.com/2019/01/21/137783/algorithms-criminal-justice-ai/">criminal justice AI</a> or
-<a class="reference external" href="https://www.reuters.com/article/us-amazon-com-jobs-automation-insight-idUSKCN1MK08G">hiring AI</a>.</p>
+</li>
+<li><p>Data collected by experimenting on humans or animals</p>
+<ul>
+<li><p>requiring extra licensing and oversight</p></li>
+</ul>
+</li>
+<li><p>Data surrounding experimentation with infectious diseases</p></li>
+</ul>
+<p>The specifics of problematic data will depend on the domain the data is being
+collected in. At this stage, you may not have fully fleshed out the scope of
+your application. Nonetheless, you should, before proceeding further, assess the
+risk that this applies to you. If you believe your application may fall into
+this category, you should once again discontinue further work on it until you
+have resolved this issue.</p>
+<p>To complete this step, complete a risk assessment on potential problems
+surrounding the collection of the type of data you are likely to require.</p>
+<section id="id6">
+<h4>Examples<a class="headerlink" href="#id6" title="Permalink to this headline">#</a></h4>
 </section>
-<section id="accountability-and-governance">
-<span id="id7"></span><h2>Accountability and Governance<a class="headerlink" href="#accountability-and-governance" title="Permalink to this headline">#</a></h2>
-<p>Any system that has the potential to cause harm requires oversight. Any AI
-system will therefore require systems of:</p>
-<ul class="simple">
-<li><p>Governance, a framework for managing the development, deployment and operation
-of AI</p></li>
-<li><p>Accountability, clear lines of responsibility for all aspects of the AI
-applications</p></li>
-</ul>
-<p>The full scope of requirements is unlikely to be fully addressed by engineering.
-Nonetheless, these principles are important in the greater context of the AI
-application, and will be an important part of development.</p>
 </section>
-<section id="contestability-and-redress">
-<span id="id8"></span><h2>Contestability and Redress<a class="headerlink" href="#contestability-and-redress" title="Permalink to this headline">#</a></h2>
-<p>Any system that has the potential to cause harm to people also requires ways for
-this harm to be recognised and reversed. Any such AI system will therefore
-require systems of:</p>
-<ul class="simple">
-<li><p>Contestability, those who may be adversely affected must have a route to
-contest decisions or outcomes</p></li>
-<li><p>Redress, there must be a system in place to assess these concerns, and redress
-the affected party when necessary</p></li>
-</ul>
-<p>The full scope of requirements is unlikely to be fully addressed by engineering.
-Nonetheless, these principles are important in the greater context of the AI
-application, and will be an important part of development.</p>
 </section>
 </section>
 
@@ -356,23 +376,23 @@ application, and will be an important part of development.</p>
       <footer>
         
         <div class="related-pages">
-          <a class="next-page" href="should-ai-tasks.html">
+          <a class="next-page" href="define-project-tasks.html">
               <div class="page-info">
                 <div class="context">
                   <span>Next</span>
                 </div>
-                <div class="title">Should I use AI/ML: Task List</div>
+                <div class="title">How do I define my AI project: Task List</div>
               </div>
               <svg><use href="#svg-arrow-right"></use></svg>
             </a>
-          <a class="prev-page" href="the-five-questions.html">
+          <a class="prev-page" href="definitions.html">
               <svg><use href="#svg-arrow-right"></use></svg>
               <div class="page-info">
                 <div class="context">
                   <span>Previous</span>
                 </div>
                 
-                <div class="title">The 5 Questions</div>
+                <div class="title">Key Definitions</div>
                 
               </div>
             </a>
@@ -408,14 +428,22 @@ application, and will be an important part of development.</p>
         <div class="toc-tree-container">
           <div class="toc-tree">
             <ul>
-<li><a class="reference internal" href="#">Key Definitions</a><ul>
-<li><a class="reference internal" href="#ai-risk">AI Risk</a></li>
-<li><a class="reference internal" href="#data-protection">Data Protection</a></li>
-<li><a class="reference internal" href="#safety-security-and-robustness">Safety, Security and Robustness</a></li>
-<li><a class="reference internal" href="#transparency-and-explainability">Transparency and Explainability</a></li>
-<li><a class="reference internal" href="#fairness">Fairness</a></li>
-<li><a class="reference internal" href="#accountability-and-governance">Accountability and Governance</a></li>
-<li><a class="reference internal" href="#contestability-and-redress">Contestability and Redress</a></li>
+<li><a class="reference internal" href="#">Should I use AI/ML: Task List</a><ul>
+<li><a class="reference internal" href="#should-i-use-ai-ml"><span class="xref std std-ref">Should I Use AI/ML?</span></a><ul>
+<li><a class="reference internal" href="#evaluate-engineering-case"><span class="xref std std-ref">Evaluate Engineering Case</span></a><ul>
+<li><a class="reference internal" href="#examples">Examples</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#unacceptable-ai-risk"><span class="xref std std-ref">Unacceptable AI Risk</span></a><ul>
+<li><a class="reference internal" href="#id4">Examples</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#problematic-data-risk"><span class="xref std std-ref">Problematic Data Risk</span></a><ul>
+<li><a class="reference internal" href="#id6">Examples</a></li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>

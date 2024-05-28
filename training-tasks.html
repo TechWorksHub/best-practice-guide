@@ -1,0 +1,490 @@
+<!doctype html>
+<html class="no-js" lang="en">
+  <head><meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+<link rel="author" title="About these documents" href="about.html" /><link rel="index" title="Index" href="genindex.html" /><link rel="search" title="Search" href="search.html" /><link rel="next" title="How do I deploy my AI application: Task List" href="testing-tasks.html" /><link rel="prev" title="How do I collect data for my AI/ML project: Task List" href="collect-data-tasks.html" />
+
+    <meta name="generator" content="sphinx-4.1.1, furo 2022.04.07"/>
+        <title>How do I train my AI/ML application: Task List - Techworks Best Practices in AI v0.5.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/furo.css?digest=68f4518137b9aefe99b631505a2064c3c42c9852" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/furo-extensions.css?digest=30d1aed668e5c3a91c3e3bf6a60b675221979f0e" />
+    
+    
+
+
+<style>
+  body {
+    --color-code-background: #f8f8f8;
+  --color-code-foreground: black;
+  --color-announcement-background: #4d8fbacc;
+  --font-stack: Open Sans,sans-serif;
+  --color: #676767;
+  --color-foreground-primary: #333333;
+  --color-brand-primary: #106098;
+  --color-brand-content: #4d8fba;
+  --color-admonition-background: orange;
+  
+  }
+  @media not print {
+    body[data-theme="dark"] {
+      --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  
+    }
+    @media (prefers-color-scheme: dark) {
+      body:not([data-theme="light"]) {
+        --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  
+      }
+    }
+  }
+</style></head>
+  <body>
+    
+    <script>
+      document.body.dataset.theme = localStorage.getItem("theme") || "auto";
+    </script>
+    
+
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+  <symbol id="svg-toc" viewBox="0 0 24 24">
+    <title>Contents</title>
+    <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024">
+      <path d="M408 442h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8zm-8 204c0 4.4 3.6 8 8 8h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56zm504-486H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zm0 632H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zM115.4 518.9L271.7 642c5.8 4.6 14.4.5 14.4-6.9V388.9c0-7.4-8.5-11.5-14.4-6.9L115.4 505.1a8.74 8.74 0 0 0 0 13.8z"/>
+    </svg>
+  </symbol>
+  <symbol id="svg-menu" viewBox="0 0 24 24">
+    <title>Menu</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-menu">
+      <line x1="3" y1="12" x2="21" y2="12"></line>
+      <line x1="3" y1="6" x2="21" y2="6"></line>
+      <line x1="3" y1="18" x2="21" y2="18"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-arrow-right" viewBox="0 0 24 24">
+    <title>Expand</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-chevron-right">
+      <polyline points="9 18 15 12 9 6"></polyline>
+    </svg>
+  </symbol>
+  <symbol id="svg-sun" viewBox="0 0 24 24">
+    <title>Light mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather-sun">
+      <circle cx="12" cy="12" r="5"></circle>
+      <line x1="12" y1="1" x2="12" y2="3"></line>
+      <line x1="12" y1="21" x2="12" y2="23"></line>
+      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+      <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+      <line x1="1" y1="12" x2="3" y2="12"></line>
+      <line x1="21" y1="12" x2="23" y2="12"></line>
+      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+      <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-moon" viewBox="0 0 24 24">
+    <title>Dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-moon">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+      <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z" />
+    </svg>
+  </symbol>
+  <symbol id="svg-sun-half" viewBox="0 0 24 24">
+    <title>Auto light/dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-shadow">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+      <circle cx="12" cy="12" r="9" />
+      <path d="M13 12h5" />
+      <path d="M13 15h4" />
+      <path d="M13 18h1" />
+      <path d="M13 9h4" />
+      <path d="M13 6h1" />
+    </svg>
+  </symbol>
+</svg>
+
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation">
+<input type="checkbox" class="sidebar-toggle" name="__toc" id="__toc">
+<label class="overlay sidebar-overlay" for="__navigation">
+  <div class="visually-hidden">Hide navigation sidebar</div>
+</label>
+<label class="overlay toc-overlay" for="__toc">
+  <div class="visually-hidden">Hide table of contents sidebar</div>
+</label>
+
+<div class="announcement">
+  <aside class="announcement-content">
+     Get involved with Techworks best practices in AI    <a href='https://techworkshub.github.io/best-practice-guide/index.html#getting-involved'>here</a> 
+  </aside>
+</div>
+
+<div class="page">
+  <header class="mobile-header">
+    <div class="header-left">
+      <label class="nav-overlay-icon" for="__navigation">
+        <div class="visually-hidden">Toggle site navigation sidebar</div>
+        <i class="icon"><svg><use href="#svg-menu"></use></svg></i>
+      </label>
+    </div>
+    <div class="header-center">
+      <a href="index.html"><div class="brand">Techworks Best Practices in AI v0.5.0 documentation</div></a>
+    </div>
+    <div class="header-right">
+      <div class="theme-toggle-container theme-toggle-header">
+        <button class="theme-toggle">
+          <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+          <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
+          <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+          <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+        </button>
+      </div>
+      <label class="toc-overlay-icon toc-header-icon" for="__toc">
+        <div class="visually-hidden">Toggle table of contents sidebar</div>
+        <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+      </label>
+    </div>
+  </header>
+  <aside class="sidebar-drawer">
+    <div class="sidebar-container">
+      
+      <div class="sidebar-sticky"><a class="sidebar-brand centered" href="index.html">
+  
+  <div class="sidebar-logo-container">
+    <img class="sidebar-logo" src="_static/twheaderlogo.png" alt="Logo"/>
+  </div>
+  
+  
+</a><form class="sidebar-search-container" method="get" action="search.html" role="search">
+  <input class="sidebar-search" placeholder=Search name="q" aria-label="Search">
+  <input type="hidden" name="check_keywords" value="yes">
+  <input type="hidden" name="area" value="default">
+</form>
+<div id="searchbox"></div><div class="sidebar-scroll"><div class="sidebar-tree">
+  <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="about.html">About</a></li>
+<li class="toctree-l1"><a class="reference internal" href="getting-involved.html">Getting Involved</a></li>
+<li class="toctree-l1"><a class="reference internal" href="executive-summary.html">Executive Summary</a></li>
+<li class="toctree-l1"><a class="reference internal" href="using-this-guide.html">Using this guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="the-five-questions.html">The 5 Questions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="definitions.html">Key Definitions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="should-ai-tasks.html">Should I use AI/ML: Task List</a></li>
+<li class="toctree-l1"><a class="reference internal" href="define-project-tasks.html">How do I define my AI project: Task List</a></li>
+<li class="toctree-l1"><a class="reference internal" href="collect-data-tasks.html">How do I collect data for my AI/ML project: Task List</a></li>
+<li class="toctree-l1 current current-page"><a class="current reference internal" href="#">How do I train my AI/ML application: Task List</a></li>
+<li class="toctree-l1"><a class="reference internal" href="testing-tasks.html">How do I deploy my AI application: Task List</a></li>
+</ul>
+
+</div>
+</div>
+
+      </div>
+      
+    </div>
+  </aside>
+  <div class="main">
+    <div class="content">
+      <div class="article-container">
+        <a href="#" class="back-to-top muted-link">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"></path>
+          </svg>
+          <span>Back to top</span>
+        </a>
+        <div class="content-icon-container"><div class="theme-toggle-container theme-toggle-content">
+            <button class="theme-toggle">
+              <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+              <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
+              <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+              <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+            </button>
+          </div>
+          <label class="toc-overlay-icon toc-content-icon" for="__toc">
+            <div class="visually-hidden">Toggle table of contents sidebar</div>
+            <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+          </label>
+        </div>
+        <article role="main">
+          <section id="how-do-i-train-my-ai-ml-application-task-list">
+<h1>How do I train my AI/ML application: Task List<a class="headerlink" href="#how-do-i-train-my-ai-ml-application-task-list" title="Permalink to this headline">#</a></h1>
+<section id="how-do-i-train-my-ai-ml-application">
+<span id="id1"></span><h2><a class="reference internal" href="the-five-questions.html#how-do-i-train-my-ai-ml-application"><span class="std std-ref">How do I train my AI/ML application?</span></a><a class="headerlink" href="#how-do-i-train-my-ai-ml-application" title="Permalink to this headline">#</a></h2>
+<section id="selecting-an-ai-ml-approach">
+<span id="id2"></span><h3><a class="reference internal" href="the-five-questions.html#how-do-i-train-my-ai-ml-application"><span class="std std-ref">Selecting an AI/ML Approach</span></a><a class="headerlink" href="#selecting-an-ai-ml-approach" title="Permalink to this headline">#</a></h3>
+<p>There is not a set way of picking an AI algorithm to use in every case. In the
+appendix we list how some common algorithms match up to the problems we
+describe below, but this should not be taken prescriptively. The most practical
+suggestion in most cases is to use these as suggestions for as a starting point,
+and iterate. What others are doing with similar problems is another good
+starting point.</p>
+<p>We break up the problems you need to think about when selecting an algorithm
+into three parts. The first are practical considerations:</p>
+<ul class="simple">
+<li><p>What computational resources do you have available?</p></li>
+<li><p>How much data do you have, and how are you going to get it to the computer
+that you are using to train?</p></li>
+<li><p>How many resources (time, money, etc.) are you willing to spend on training?</p></li>
+</ul>
+<p>A lot of the decisions in this area boil down to scaling. Almost any algorithm
+can be deployed at some scale. The key question is what is the best algorithm
+that I can deploy for my scale of data and available resources? It is important
+to remember as part of this that not all algorithms scale equally - either with
+amount of data or dimensionality.</p>
+<p>The second set of considerations are use case based. Especially, what, if any,
+special requirements do you have for your end system? For example:</p>
+<ul class="simple">
+<li><p>Do the outcomes need to be explained in a human understandable way?</p></li>
+<li><p>Do I need to be able to enforce certain behavior in my model?</p></li>
+<li><p>Do I need to be able to explain or understand uncertainty in my model?</p></li>
+</ul>
+<p>A lot of the above are common requirements that significantly limit the
+available choices of algorithms.</p>
+<p>Our third and final category are technical considerations:</p>
+<ul class="simple">
+<li><p>How do prospective approaches match up with the underlying assumptions of each
+algorithm?</p></li>
+<li><p>Is the complexity of my prospective algorithm appropriate for the problem I’m
+solving</p></li>
+<li><p>How do limitations of my data affect my choice?</p></li>
+</ul>
+<p>It is important to remember with these points that all AI models are just
+models, and will never reflect reality in full detail. Nor do we necessarily
+want them to - as we see in the appendix on Bias and Variance, often a
+purposely simpler model can produce better results than a more complex one,
+especially when data or training is limited. Limitations on training data can be
+important too. Some AI algorithms cannot deal with data that has missing parts,
+for example. This must either be addressed, or a different approach used.</p>
+<p>To complete this section you must:</p>
+<ul class="simple">
+<li><p>Select an AI approach (or approaches) to use in subsequent steps</p></li>
+</ul>
+</section>
+<section id="data-pre-processing">
+<span id="id3"></span><h3><a class="reference internal" href="the-five-questions.html#how-do-i-train-my-ai-ml-application"><span class="std std-ref">Data Pre-processing</span></a><a class="headerlink" href="#data-pre-processing" title="Permalink to this headline">#</a></h3>
+<p>This step has a lot of overlap with our previous Collecting Data subsection on
+Data Cleaning. Our focus here is slightly different, with us instead looking at
+maximizing the efficacy of our training process, rather than specifically
+focusing on fixing deficiencies in the data.</p>
+<p><strong>Missing data.</strong> Depending on your choice of AI Algorithm, missing data may
+have suddenly become extremely important. If this is the case, revisit the Data
+Collection section, Data Cleaning subsection in the issue.</p>
+<p><strong>Scaling and Transforming data.</strong> For many models, the training process can be
+improved by scaling or transforming the data. For example, scaling all values to
+be on the same scale.</p>
+<p>There are a range of reasons you might want to do this. A common example is two
+features being on different scales. If we have one feature that takes on values
+in the range 0-1, and another that takes on values in the range 0-100, some
+types of analysis may cause us to weigh one more heavily than the other.</p>
+<p>Which technique will be applied will depend on your analysis and goals. Some
+common techniques would be:</p>
+<ul class="simple">
+<li><p>Removing the average from a set of numbers</p></li>
+<li><p>Transforming all values to the same scale</p></li>
+<li><p>Scaling all values to a normal distribution</p></li>
+</ul>
+<p><strong>Dimensionality Reduction.</strong> Sometimes our datasets include a large number of
+features. This can be a blessing because it gives us more information to
+integrate into our analysis, but it can also cause difficulties:</p>
+<ul class="simple">
+<li><p>It increases computational cost of training</p></li>
+<li><p>It can cause overfitting, especially if the extra features are not useful</p></li>
+<li><p>Multiple weak features are often a less useful explanation than one or two
+strong ones</p></li>
+</ul>
+<p>A way of dealing with this is to reduce the dimensionality of the data. There
+are two very broad ways of approaching this:</p>
+<ul class="simple">
+<li><p>We can select the most useful features from our existing set of features</p></li>
+<li><p>We can aggregate our current features to create a new set of features with
+beneficial features</p></li>
+</ul>
+<p>The advantage of the first is that we can perform dimensionality reduction with
+the existing features to select the best ones. The advantage of the second is
+that, although our constructed dimensions lose interpretability, the process by
+which we create them typically makes them very strong at explaining our data.</p>
+<p>To complete this step you must:</p>
+<ul class="simple">
+<li><p>Create a pre-processing procedure for your data</p></li>
+</ul>
+</section>
+<section id="creating-a-training-pipeline">
+<span id="id4"></span><h3><a class="reference internal" href="the-five-questions.html#how-do-i-train-my-ai-ml-application"><span class="std std-ref">Creating a Training Pipeline</span></a><a class="headerlink" href="#creating-a-training-pipeline" title="Permalink to this headline">#</a></h3>
+<p>In this step you must create an automated process to ingest the data collected,
+cleaned and preprocessed, and use it to train a model.</p>
+<p>For small projects, this may be a very simple script consisting of a few lines
+of code collecting the data and running the training function. For larger
+projects, larger datasets, or non-standard tools this may be significantly
+harder.</p>
+<p><strong>Hardware Acceleration.</strong> Many machine workloads can be significantly sped up
+using hardware that shifts computationally intensive parts of the training
+process to specialized processing units. These technologies generally work by
+improving matrix arithmetic. It is not always necessary or desirable to do this,
+but it can be very beneficial for some workloads. Neural Networks are one
+example where hardware acceleration has been very successful.</p>
+<p>Though there are special processors available for this, modern graphics cards
+also do this type of processing, are often competitive on cost-per-processing
+power basis, and have additional uses (e.g. as graphics processors).</p>
+<p><strong>Storage Mediums.</strong> This is an excellent opportunity to revisit the Collecting
+Data section, under the subsection of Data Storage and Access. The discussion on
+different data storage mediums is extremely relevant to training.</p>
+<p><strong>Large Datasets &amp; Resource Intensive Projects.</strong> Larger projects may end up in
+a situation in which the dataset is not stored on one machine, and/or
+computation must be spread across multiple distributed units. Future iterations
+of this guide will cover this issue, currently we suggest that readers seek
+expert advice on this complex topic.</p>
+<p>To complete this step:</p>
+<ul class="simple">
+<li><p>Create a training pipeline</p></li>
+</ul>
+</section>
+<section id="testing-validation-biases-in-training">
+<span id="id5"></span><h3><a class="reference internal" href="the-five-questions.html#how-do-i-train-my-ai-ml-application"><span class="std std-ref">Testing, Validation &amp; Biases in Training</span></a><a class="headerlink" href="#testing-validation-biases-in-training" title="Permalink to this headline">#</a></h3>
+<p>Testing how the model performs through its training process is extremely
+important. For models of small scale, it is a vital diagnostic tool. For models
+of a large scale, it allows us to identify problems early, before too many
+resources are committed to them.</p>
+<p><strong>Training Error.</strong> It’s important to split your dataset into at least 2 parts -
+a training dataset and a testing dataset. Most (e.g. 90%) of your data will be
+in the training dataset, and this will be what you use to do your training.
+Entirely separately from this</p>
+<p><strong>Parameters and Hyperparameters.</strong> As important as always. We are essentially
+testing for extremely similar things as the testing and validation for the data
+collection, but the downstream versions.</p>
+<p><strong>Bias.</strong> If there are specific biases of concern in your dataset, you should
+check these during training. This should be done by creating a test of bias, and
+periodically running it during the training process.</p>
+<p>To complete this step:</p>
+<ul class="simple">
+<li><p>Create an automated testing process</p></li>
+</ul>
+</section>
+<section id="version-control-ci-cd">
+<span id="id6"></span><h3><a class="reference internal" href="the-five-questions.html#how-do-i-train-my-ai-ml-application"><span class="std std-ref">Version Control, CI/CD</span></a><a class="headerlink" href="#version-control-ci-cd" title="Permalink to this headline">#</a></h3>
+<p>A large part of this is discussed in the previous section under “collecting
+data”. The extra considerations for the training process are that we must now
+firmly keep track of two, nested versionings. We need to keep track of not just
+the version of the code that was used to train a model, but the version of any
+data used to train the model too.</p>
+<p>Large trained models may not be suitable for normal version control and may
+require similar techniques (though at a comparatively smaller scale) to data
+version control.</p>
+<p>To complete this step:</p>
+<ul class="simple">
+<li><p>Include your training process within your version control</p></li>
+</ul>
+</section>
+<section id="documentation-and-logging">
+<span id="id7"></span><h3><a class="reference internal" href="the-five-questions.html#how-do-i-train-my-ai-ml-application"><span class="std std-ref">Documentation and Logging</span></a><a class="headerlink" href="#documentation-and-logging" title="Permalink to this headline">#</a></h3>
+<p>There is significant overlap between this section and the Documentation and
+Logging section of the Collecting Data section.</p>
+<p>One thing to clearly document in the training process is any hyperparameters
+associated with the algorithm you are using. These will have a significant
+effect on the training process. For example, learning rate in a neural network,
+or the parameters of the kernel in a Support Vector Machine. In addition to
+these, it is important to keep track of and document all decisions you are
+making in your training pipeline. Qualities like the batch size of training in a
+neural network might not be a hyperparameter in a certain narrow sense, but can
+make almost as much difference to the outcome of training.</p>
+<p>Logging remains important. it is important to keep track of how training
+progressed even in failed testing cases and how well your model is training
+throughout the process.</p>
+<p>To complete this step:</p>
+<ul class="simple">
+<li><p>Create documentation and a logging process</p></li>
+</ul>
+</section>
+</section>
+</section>
+
+        </article>
+      </div>
+      <footer>
+        
+        <div class="related-pages">
+          <a class="next-page" href="testing-tasks.html">
+              <div class="page-info">
+                <div class="context">
+                  <span>Next</span>
+                </div>
+                <div class="title">How do I deploy my AI application: Task List</div>
+              </div>
+              <svg><use href="#svg-arrow-right"></use></svg>
+            </a>
+          <a class="prev-page" href="collect-data-tasks.html">
+              <svg><use href="#svg-arrow-right"></use></svg>
+              <div class="page-info">
+                <div class="context">
+                  <span>Previous</span>
+                </div>
+                
+                <div class="title">How do I collect data for my AI/ML project: Task List</div>
+                
+              </div>
+            </a>
+        </div>
+        <div class="bottom-of-page">
+          <div class="left-details">
+            <div class="copyright">
+                Copyright &#169; 2024
+            </div>
+            Made with <a href="https://www.sphinx-doc.org/">Sphinx</a> and <a class="muted-link" href="https://pradyunsg.me">@pradyunsg</a>'s
+            
+            <a href="https://github.com/pradyunsg/furo">Furo</a>
+            
+          </div>
+          <div class="right-details">
+            <div class="icons">
+              
+            </div>
+          </div>
+        </div>
+        
+      </footer>
+    </div>
+    <aside class="toc-drawer">
+      
+      
+      <div class="toc-sticky toc-scroll">
+        <div class="toc-title-container">
+          <span class="toc-title">
+            Contents
+          </span>
+        </div>
+        <div class="toc-tree-container">
+          <div class="toc-tree">
+            <ul>
+<li><a class="reference internal" href="#">How do I train my AI/ML application: Task List</a><ul>
+<li><a class="reference internal" href="#how-do-i-train-my-ai-ml-application"><span class="xref std std-ref">How do I train my AI/ML application?</span></a><ul>
+<li><a class="reference internal" href="#selecting-an-ai-ml-approach"><span class="xref std std-ref">Selecting an AI/ML Approach</span></a></li>
+<li><a class="reference internal" href="#data-pre-processing"><span class="xref std std-ref">Data Pre-processing</span></a></li>
+<li><a class="reference internal" href="#creating-a-training-pipeline"><span class="xref std std-ref">Creating a Training Pipeline</span></a></li>
+<li><a class="reference internal" href="#testing-validation-biases-in-training"><span class="xref std std-ref">Testing, Validation &amp; Biases in Training</span></a></li>
+<li><a class="reference internal" href="#version-control-ci-cd"><span class="xref std std-ref">Version Control, CI/CD</span></a></li>
+<li><a class="reference internal" href="#documentation-and-logging"><span class="xref std std-ref">Documentation and Logging</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+          </div>
+        </div>
+      </div>
+      
+      
+    </aside>
+  </div>
+</div><script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/scripts/furo.js"></script>
+    </body>
+</html>

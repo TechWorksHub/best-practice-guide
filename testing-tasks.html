@@ -3,10 +3,10 @@
   <head><meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
     <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-<link rel="author" title="About these documents" href="about.html" /><link rel="index" title="Index" href="genindex.html" /><link rel="search" title="Search" href="search.html" /><link rel="next" title="Using this guide" href="using-this-guide.html" /><link rel="prev" title="Getting Involved" href="getting-involved.html" />
+<link rel="author" title="About these documents" href="about.html" /><link rel="index" title="Index" href="genindex.html" /><link rel="search" title="Search" href="search.html" /><link rel="prev" title="How do I train my AI/ML application: Task List" href="training-tasks.html" />
 
     <meta name="generator" content="sphinx-4.1.1, furo 2022.04.07"/>
-        <title>Executive Summary - Techworks Best Practices in AI v0.5.0 documentation</title>
+        <title>How do I deploy my AI application: Task List - Techworks Best Practices in AI v0.5.0 documentation</title>
       <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="_static/styles/furo.css?digest=68f4518137b9aefe99b631505a2064c3c42c9852" />
     <link rel="stylesheet" type="text/css" href="_static/styles/furo-extensions.css?digest=30d1aed668e5c3a91c3e3bf6a60b675221979f0e" />
@@ -145,7 +145,7 @@
           <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
         </button>
       </div>
-      <label class="toc-overlay-icon toc-header-icon no-toc" for="__toc">
+      <label class="toc-overlay-icon toc-header-icon" for="__toc">
         <div class="visually-hidden">Toggle table of contents sidebar</div>
         <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
       </label>
@@ -171,7 +171,7 @@
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="about.html">About</a></li>
 <li class="toctree-l1"><a class="reference internal" href="getting-involved.html">Getting Involved</a></li>
-<li class="toctree-l1 current current-page"><a class="current reference internal" href="#">Executive Summary</a></li>
+<li class="toctree-l1"><a class="reference internal" href="executive-summary.html">Executive Summary</a></li>
 <li class="toctree-l1"><a class="reference internal" href="using-this-guide.html">Using this guide</a></li>
 <li class="toctree-l1"><a class="reference internal" href="the-five-questions.html">The 5 Questions</a></li>
 <li class="toctree-l1"><a class="reference internal" href="definitions.html">Key Definitions</a></li>
@@ -179,7 +179,7 @@
 <li class="toctree-l1"><a class="reference internal" href="define-project-tasks.html">How do I define my AI project: Task List</a></li>
 <li class="toctree-l1"><a class="reference internal" href="collect-data-tasks.html">How do I collect data for my AI/ML project: Task List</a></li>
 <li class="toctree-l1"><a class="reference internal" href="training-tasks.html">How do I train my AI/ML application: Task List</a></li>
-<li class="toctree-l1"><a class="reference internal" href="testing-tasks.html">How do I deploy my AI application: Task List</a></li>
+<li class="toctree-l1 current current-page"><a class="current reference internal" href="#">How do I deploy my AI application: Task List</a></li>
 </ul>
 
 </div>
@@ -206,25 +206,122 @@
               <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
             </button>
           </div>
-          <label class="toc-overlay-icon toc-content-icon no-toc" for="__toc">
+          <label class="toc-overlay-icon toc-content-icon" for="__toc">
             <div class="visually-hidden">Toggle table of contents sidebar</div>
             <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
           </label>
         </div>
         <article role="main">
-          <section id="executive-summary">
-<span id="id1"></span><h1>Executive Summary<a class="headerlink" href="#executive-summary" title="Permalink to this headline">#</a></h1>
-<p>This guide is for professional software engineers in the electronics systems
-industry who now need to implement Artificial Intelligence and Machine Learning
-(AI/ML) solutions. We make the following two assumptions:</p>
-<ol class="arabic simple">
-<li><p>the reader is an experienced software engineer; and</p></li>
-<li><p>the reader has no prior experience of AI/ML.</p></li>
-</ol>
-<p>The guide takes the form of a series of questions to be answered.
-Comprehensive supplementary information is provided to help answer these
-questions. The outcome is an optimally designed, implemented and deployed
-AI/ML solution.</p>
+          <section id="how-do-i-deploy-my-ai-application-task-list">
+<h1>How do I deploy my AI application: Task List<a class="headerlink" href="#how-do-i-deploy-my-ai-application-task-list" title="Permalink to this headline">#</a></h1>
+<section id="how-do-i-deploy-my-ai-application">
+<span id="id1"></span><h2><a class="reference internal" href="the-five-questions.html#how-do-i-deploy-my-ai-application"><span class="std std-ref">How do I deploy my AI application?</span></a><a class="headerlink" href="#how-do-i-deploy-my-ai-application" title="Permalink to this headline">#</a></h2>
+<section id="deploying-your-model">
+<span id="id2"></span><h3><a class="reference internal" href="the-five-questions.html#how-do-i-deploy-my-ai-application"><span class="std std-ref">Deploying Your Model</span></a><a class="headerlink" href="#deploying-your-model" title="Permalink to this headline">#</a></h3>
+<p>Deployment means taking your trained model from an offline environment to a real
+world or production system. Exactly what you will need to do for this will
+depend a lot on what your application is and what you want to do with it.
+However, some things that you should always consider:</p>
+<p><strong>Where you are deploying it (edge, vs centralized).</strong> As with training, an
+important part of realizing your deployment will be formulating a way of getting
+your data from wherever it is collected, to the deployed model. One of the ways
+that you can reduce the cost of getting your data to your models is to deploy
+them in a location near the source of the data they will be ingesting. The
+advantages of this are:</p>
+<ul class="simple">
+<li><p>Model receives data quickly and can respond quickly, possibly in real time</p></li>
+<li><p>Data transfer costs are reduced</p></li>
+<li><p>Security burden of transfers is reduced</p></li>
+</ul>
+<p>However, there are some disadvantages:</p>
+<ul class="simple">
+<li><p>Spreading computing power reduces the capacity of each individual unit</p></li>
+<li><p>Deploying and maintaining a large number of systems in physically diverse set
+of locations introduces difficulties</p></li>
+<li><p>For security purposes, deploying a large number of nodes introduces a larger
+attack surface</p></li>
+</ul>
+<p>The calculus of this decision will vary between projects, however we note that
+large projects often find that the cost of transferring large amounts of data
+can be very substantial.</p>
+<p><strong>How you are deploying it (internally, externally).</strong> All of the usual caveats
+and problems in deploying systems apply. Our product must be prepared for all
+cases of misuse we can reasonably prepare for, malicious or otherwise.</p>
+<p>For AI systems there are several additional complications to consider, both when
+deploying systems internally or (especially) externally. Unfortunately, a theme
+of these issues is that they are all currently difficult to completely
+eliminate. This shouldn’t necessarily prevent you from deployment, but might
+require you to take some extra care.</p>
+<p><strong>Out of Sample errors.</strong> For some AI systems, making queries that are
+substantially outside the scope of the training data will lead to nonsensical
+results. This can be a problem because it is not usually clear to the user what
+is in scope and what is out of scope. Knowing how much a result can be trusted
+can be problematic.</p>
+<p>An extension from this if the system is exposed externally is that an adversary
+may attempt to purposely design an input to the system that produces unexpected
+results. As a real world example consider a research project designing stickers
+that, when applied to speed signs, cause an onboard computer vision AI to
+misread the speed limit.</p>
+<p>This is difficult to fully resolve, and there is no single solution to this
+problem currently. If it is of utmost imperative that this behavior is fixed,
+some possible solutions are:</p>
+<ul class="simple">
+<li><p>Use techniques that can guarantee behavior (e.g. statistical models can bound
+error rate if their assumptions hold)</p></li>
+<li><p>Some techniques (e.g. Bayesian methods) can estimate confidence in solutions.</p></li>
+</ul>
+<p>The difficulty with both of these approaches is that they place substantial
+restrictions on the overall class of available models. Practically in most
+cases, the solution needs to be considered at a higher level than the algorithm
+itself. Whatever process it is part of should consider the fact that solutions
+cannot be guaranteed to be sensible. Rigorous testing should identify and
+eliminate as many of these problems as possible.</p>
+<p><strong>Training Data/Model Leakage.</strong> When somebody queries an AI model, they learn
+two things. They learn something about how the model understands data, and
+something about the data it was trained on itself. This is a problem because
+with enough effort, an attacker can steal both of these things.</p>
+<p><strong>Data Leakage.</strong> Consider the statistic that 87% of the US population can be
+uniquely identified by gender, ZIP code and full date of birth. It can take a
+surprisingly small amount of information to uniquely identify individual points
+of data. Large, data driven systems like AI are especially vulnerable to this.
+Some AI systems (notably large language models) have also been known to leak
+training data when queried directly.</p>
+<p>This is a problem that is difficult to fully prevent. There are some techniques
+that can substantially reduce the threat:</p>
+<ul class="simple">
+<li><p>Removal of identifying variables</p></li>
+<li><p>Differential privacy mechanisms</p></li>
+<li><p>Private model training techniques</p></li>
+<li><p>Use of synthetic data</p></li>
+</ul>
+<p>Again, a problem with these techniques is that they introduce limitations and
+complexity on the final result. Whether this is worth it depends on the
+application.</p>
+<p><strong>Model Leakage.</strong> Querying a model gives information about how it sees the
+relationship between input and output variables. With enough examples of this,
+it is possible for an adversary to effectively recover the model. Examples don
+not necessarily even need to be related to the original training set, though it
+is beneficial.</p>
+<p>There are several approaches that can reduce the impact of this:</p>
+<ul class="simple">
+<li><p>Restricting the number of queries to the model</p></li>
+<li><p>Watermarking the model, to identify stolen models</p></li>
+<li><p>Adding noise, and Differential Privacy approaches</p></li>
+</ul>
+<p>What you are deploying it on (hardware)
+This section strongly corresponds to the training pipeline set out in the
+training section, and will be expanded in future.</p>
+<p>To complete this step:</p>
+<ul class="simple">
+<li><p>Deploy your model</p></li>
+</ul>
+</section>
+<section id="testing-validation-biases-in-deployment">
+<span id="id3"></span><h3><a class="reference internal" href="the-five-questions.html#how-do-i-deploy-my-ai-application"><span class="std std-ref">Testing, Validation &amp; Biases in Deployment</span></a><a class="headerlink" href="#testing-validation-biases-in-deployment" title="Permalink to this headline">#</a></h3>
+<p>This section strongly corresponds to the testing and validation set out in the
+training section, and will be expanded in future.</p>
+</section>
+</section>
 </section>
 
         </article>
@@ -232,23 +329,15 @@ AI/ML solution.</p>
       <footer>
         
         <div class="related-pages">
-          <a class="next-page" href="using-this-guide.html">
-              <div class="page-info">
-                <div class="context">
-                  <span>Next</span>
-                </div>
-                <div class="title">Using this guide</div>
-              </div>
-              <svg><use href="#svg-arrow-right"></use></svg>
-            </a>
-          <a class="prev-page" href="getting-involved.html">
+          
+          <a class="prev-page" href="training-tasks.html">
               <svg><use href="#svg-arrow-right"></use></svg>
               <div class="page-info">
                 <div class="context">
                   <span>Previous</span>
                 </div>
                 
-                <div class="title">Getting Involved</div>
+                <div class="title">How do I train my AI/ML application: Task List</div>
                 
               </div>
             </a>
@@ -272,8 +361,31 @@ AI/ML solution.</p>
         
       </footer>
     </div>
-    <aside class="toc-drawer no-toc">
+    <aside class="toc-drawer">
       
+      
+      <div class="toc-sticky toc-scroll">
+        <div class="toc-title-container">
+          <span class="toc-title">
+            Contents
+          </span>
+        </div>
+        <div class="toc-tree-container">
+          <div class="toc-tree">
+            <ul>
+<li><a class="reference internal" href="#">How do I deploy my AI application: Task List</a><ul>
+<li><a class="reference internal" href="#how-do-i-deploy-my-ai-application"><span class="xref std std-ref">How do I deploy my AI application?</span></a><ul>
+<li><a class="reference internal" href="#deploying-your-model"><span class="xref std std-ref">Deploying Your Model</span></a></li>
+<li><a class="reference internal" href="#testing-validation-biases-in-deployment"><span class="xref std std-ref">Testing, Validation &amp; Biases in Deployment</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+          </div>
+        </div>
+      </div>
       
       
     </aside>

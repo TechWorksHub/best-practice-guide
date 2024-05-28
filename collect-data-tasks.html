@@ -1,12 +1,12 @@
 <!doctype html>
-<html class="no-js">
+<html class="no-js" lang="en">
   <head><meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
     <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-<link rel="index" title="Index" href="genindex.html" /><link rel="search" title="Search" href="search.html" /><link rel="prev" title="Application Specific Requirements" href="definitions.html" />
+<link rel="author" title="About these documents" href="about.html" /><link rel="index" title="Index" href="genindex.html" /><link rel="search" title="Search" href="search.html" /><link rel="next" title="How do I train my AI/ML application: Task List" href="training-tasks.html" /><link rel="prev" title="How do I define my AI project: Task List" href="define-project-tasks.html" />
 
     <meta name="generator" content="sphinx-4.1.1, furo 2022.04.07"/>
-        <title>Task List - Techworks Best Practices in AI v0.5.0 documentation</title>
+        <title>How do I collect data for my AI/ML project: Task List - Techworks Best Practices in AI v0.5.0 documentation</title>
       <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="_static/styles/furo.css?digest=68f4518137b9aefe99b631505a2064c3c42c9852" />
     <link rel="stylesheet" type="text/css" href="_static/styles/furo-extensions.css?digest=30d1aed668e5c3a91c3e3bf6a60b675221979f0e" />
@@ -169,10 +169,17 @@
 <div id="searchbox"></div><div class="sidebar-scroll"><div class="sidebar-tree">
   <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
 <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="about.html">About</a></li>
+<li class="toctree-l1"><a class="reference internal" href="getting-involved.html">Getting Involved</a></li>
 <li class="toctree-l1"><a class="reference internal" href="executive-summary.html">Executive Summary</a></li>
-<li class="toctree-l1"><a class="reference internal" href="using-the-guide.html">Using this guide: The 5 questions</a></li>
-<li class="toctree-l1"><a class="reference internal" href="definitions.html">Application Specific Requirements</a></li>
-<li class="toctree-l1 current current-page"><a class="current reference internal" href="#">Task List</a></li>
+<li class="toctree-l1"><a class="reference internal" href="using-this-guide.html">Using this guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="the-five-questions.html">The 5 Questions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="definitions.html">Key Definitions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="should-ai-tasks.html">Should I use AI/ML: Task List</a></li>
+<li class="toctree-l1"><a class="reference internal" href="define-project-tasks.html">How do I define my AI project: Task List</a></li>
+<li class="toctree-l1 current current-page"><a class="current reference internal" href="#">How do I collect data for my AI/ML project: Task List</a></li>
+<li class="toctree-l1"><a class="reference internal" href="training-tasks.html">How do I train my AI/ML application: Task List</a></li>
+<li class="toctree-l1"><a class="reference internal" href="testing-tasks.html">How do I deploy my AI application: Task List</a></li>
 </ul>
 
 </div>
@@ -205,268 +212,12 @@
           </label>
         </div>
         <article role="main">
-          <section id="task-list">
-<span id="id1"></span><h1>Task List<a class="headerlink" href="#task-list" title="Permalink to this headline">#</a></h1>
-<section id="should-i-use-ai-ml">
-<span id="should-i-use-ai-ml-task-list"></span><h2><a class="reference internal" href="using-the-guide.html#should-i-use-ai-ml"><span class="std std-ref">Should I use AI/ML?</span></a><a class="headerlink" href="#should-i-use-ai-ml" title="Permalink to this headline">#</a></h2>
-<section id="evaluate-engineering-case">
-<span id="id2"></span><h3><a class="reference internal" href="using-the-guide.html#should-i-use-ai-ml"><span class="std std-ref">Evaluate Engineering Case</span></a><a class="headerlink" href="#evaluate-engineering-case" title="Permalink to this headline">#</a></h3>
-<p>In this guide, we assume you have a broad end goal in mind to achieve with AI
-and Machine Learning. Through this guide, we will take you through the process
-of converting this broad goal to a concrete plan.</p>
-<p>As we discussed previously, while AI is a powerful tool in many applications it
-may not be immediately appropriate for the problem you are trying to solve. This
-step requires you to enumerate and assess what available alternative approaches
-to solving the problem, and how they compare to an AI solution. This isn’t
-intended as a deep dive into the details and risks of your prospective systems,
-but a high level check that this engineering approach is right for you.</p>
-<p>At this stage, you may not have a complete and full understanding of the scope
-and limitations of an AI and Machine Learning approach. However, the design of
-this guide is such that you should expect to revisit earlier steps (like this
-one) from later steps as your understanding improves. You should therefore fill
-this out to the best of your ability, then return to this later as the project
-and your understanding evolve.</p>
-<p>This step is fairly short, and to complete it, you simply need to list the
-viable approaches to solving your problem (including the AI approach), and
-compare them. This should include solutions that might not take a data driven
-approach, as well as data driven approaches that don’t use learning, for
-example, heuristic based approaches. The choice of how to compare these will be
-dictated by your use case, but you’re likely to want to consider the following:</p>
-<ul class="simple">
-<li><p>What are the financial burdens of each case?</p></li>
-<li><p>What are the engineering burdens of each case?</p></li>
-<li><p>What are the legal burdens?</p></li>
-</ul>
-<section id="examples">
-<h4>Examples<a class="headerlink" href="#examples" title="Permalink to this headline">#</a></h4>
-<p>In this example, we work through the engineering case for a phishing email
-detector.</p>
-<p>Our use case is a filter to reduce the success rate of phishing emails. As an
-example of how we might think about this, we consider three alternative internal
-solutions:</p>
-<ul class="simple">
-<li><p>A non data driven (or minimally data driven) approach. All emails that are
-from external email addresses automatically have a header attached warning
-employees that the sender may not be trustworthy, and to apply caution in
-respect of the contents.</p></li>
-<li><p>A data driven approach that uses engineer designed heuristics instead of a
-learning approach. For example, emails are filtered if they:</p>
-<ul>
-<li><p>Are from a list of known “bad” addresses</p></li>
-<li><p>Contain too many known “bad” words, e.g. “low interest rate loans”</p></li>
-<li><p>Has “.exe” attachments</p></li>
-</ul>
-</li>
-<li><p>An AI approach that learns from a corpus of previous emails to read an emails
-content, and classifies it as phishing, or not phishing.</p></li>
-</ul>
-<p>The respective advantages of each approach are:</p>
-<ul class="simple">
-<li><p>The non data driven approach is simple to implement, requires few resources to
-execute, and is simple and cheap to maintain. It will never incorrectly filter
-out legitimate emails as it passes the burden of decision making to employees
-(with extra information).</p></li>
-<li><p>The heuristic approach is also fairly simple to implement, and requires few
-resources to execute. It is also very easy to tune for specific requirements
-(e.g. never do this, always do this).</p></li>
-<li><p>The AI approach will likely have the best performance at identifying spam
-emails, if trained on sufficient data. It is also likely to adapt fairly well
-to changes in phishing approaches over time, if continually fed with data.</p></li>
-</ul>
-<p>The disadvantages of each are:</p>
-<ul class="simple">
-<li><p>The non-data driven approach provides extra information, but the decision
-making ultimately places responsibility on the end user.</p></li>
-<li><p>The heuristic approach requires each rule to be created manually, scaling
-poorly to large scale problems. Creating effective heuristic rules that do not
-result in any real emails being filtered out is also likely to be challenging.
-Adapting to new phishing approaches is also likely to be a significant burden,
-requiring new rules to be written or old rules to be rewritten.</p></li>
-<li><p>The AI approach will need a large corpus of data to learn from which will
-have to be prepared appropriately. It will flag real emails incorrectly some
-of the time (no matter how well trained), and this may not be easy to fix.
-Adoption will require more data preparation and training.</p></li>
-</ul>
-<p>Picking the best approach (or approaches) to use depends on our context. In this
-particular example, our non-AI examples are significantly simpler to implement,
-and are likely to do better for small scale problems. Other conditions may also
-influence the decision. An organization of phishing-aware staff that largely
-communicates internally may hugely benefit from the first approach.</p>
-</section>
-</section>
-<section id="unacceptable-ai-risk">
-<span id="id3"></span><h3><a class="reference internal" href="using-the-guide.html#should-i-use-ai-ml"><span class="std std-ref">Unacceptable AI Risk</span></a><a class="headerlink" href="#unacceptable-ai-risk" title="Permalink to this headline">#</a></h3>
-<p>In the Using This Guide section, we defined AI risk in several categories:
-Unacceptable, High, Limited, and Minimal. Before continuing any further in this
-guide, it is important to consider the risk that your project may fall into the
-Unacceptable category. These are applications that are a clear threat to the
-safety, livelihoods or rights of people, and are not suitable to be solved with
-AI. Examples include:</p>
-<ul class="simple">
-<li><p>AI systems using subliminal techniques, or manipulative or deceptive
-techniques to distort behavior</p></li>
-<li><p>AI systems exploiting vulnerabilities of individuals or specific groups</p></li>
-<li><p>Biometric categorization systems based on sensitive attributes or
-characteristics</p></li>
-<li><p>AI systems used for social scoring or evaluating trustworthiness</p></li>
-<li><p>AI systems used for risk assessments predicting criminal or administrative
-offenses</p></li>
-<li><p>AI systems creating or expanding facial recognition databases through
-untargeted scraping</p></li>
-<li><p>AI systems inferring emotions in law enforcement, border management, the
-workplace, and education</p></li>
-</ul>
-<p>At this stage, you may not have fully fleshed out the scope of your application.
-Nonetheless, this initial assessment is important to pre-empt this risk. If you
-believe your application may fall into this category, discontinue further work
-on it until you have resolved this issue.</p>
-<p>To complete this step, complete a risk assessment on the harms your AI project
-may pose to the safety, livelihoods or rights of people.</p>
-<section id="id4">
-<h4>Examples<a class="headerlink" href="#id4" title="Permalink to this headline">#</a></h4>
-</section>
-</section>
-<section id="problematic-data-risk">
-<span id="id5"></span><h3><a class="reference internal" href="using-the-guide.html#should-i-use-ai-ml"><span class="std std-ref">Problematic Data Risk</span></a><a class="headerlink" href="#problematic-data-risk" title="Permalink to this headline">#</a></h3>
-<p>Some types of data are subject to extra difficulties that will either require
-extra licensing, oversight, or may be effectively impracticable to collect. This
-section is about evaluating the risk that the data you are likely to wish to
-collect is available within the constraints of your business. Note that this
-section <em>is not</em> a dive into data collection requirements under GDPR, but a higher
-level feasibility check. Some examples of types of data that will be
-problematic:</p>
-<ul class="simple">
-<li><p>Criminal Conviction Data, only processable:</p>
-<ul>
-<li><p>under the control of official authority; or</p></li>
-<li><p>authorized by domestic law.</p></li>
-</ul>
-</li>
-<li><p>Data collected by experimenting on humans or animals</p>
-<ul>
-<li><p>requiring extra licensing and oversight</p></li>
-</ul>
-</li>
-<li><p>Data surrounding experimentation with infectious diseases</p></li>
-</ul>
-<p>The specifics of problematic data will depend on the domain the data is being
-collected in. At this stage, you may not have fully fleshed out the scope of
-your application. Nonetheless, you should, before proceeding further, assess the
-risk that this applies to you. If you believe your application may fall into
-this category, you should once again discontinue further work on it until you
-have resolved this issue.</p>
-<p>To complete this step, complete a risk assessment on potential problems
-surrounding the collection of the type of data you are likely to require.</p>
-<section id="id6">
-<h4>Examples<a class="headerlink" href="#id6" title="Permalink to this headline">#</a></h4>
-</section>
-</section>
-</section>
-<section id="how-do-i-define-my-ai-project">
-<span id="how-do-i-define-my-ai-project-task-list"></span><h2><a class="reference internal" href="using-the-guide.html#how-do-i-define-my-ai-project"><span class="std std-ref">How do I define my AI project?</span></a><a class="headerlink" href="#how-do-i-define-my-ai-project" title="Permalink to this headline">#</a></h2>
-<section id="establish-goals-and-kpis">
-<span id="id7"></span><h3><a class="reference internal" href="using-the-guide.html#how-do-i-define-my-ai-project"><span class="std std-ref">Establish Goals and KPIs</span></a><a class="headerlink" href="#establish-goals-and-kpis" title="Permalink to this headline">#</a></h3>
-<p>In the previous section we established, at a high level, the viability of the
-project we intend to undertake. In this section we refine the proposed project
-into a set of concrete engineering goals. To do this, we open this section by
-setting out a little bit more about how AI approaches can be used to solve
-problems. We then move through a standard goal setting approach (making sure
-goals are Specific, Measurable, etc.), and discuss some of the challenges that
-AI approaches can bring for this.</p>
-<p>As we discussed, the scope of this guide is such that one can expect to revisit
-earlier steps while evaluating later ones. This step in particular, setting a
-concrete definition for the project is one that is likely to cause us to
-re-evaluate the checks we made in the previous steps. This is fine, and a
-natural part of using the guide. Our previous effort is not wasted, but informs
-our current and future decisions.</p>
-<p>We can break AI approaches into 3 categories. We provide a more detailed
-explanation of these terms in the [appendix]. However, briefly:</p>
-<ul class="simple">
-<li><p>In supervised learning approaches we are learning by example. We have a set of
-input data points with corresponding known output data points (labels) for
-each. We’re trying to learn what this relationship is so that we can predict
-the outputs that correspond to the inputs for unknown data points. For
-example:</p>
-<ul>
-<li><p>Learning to predict stock prices from economic indicators</p></li>
-<li><p>Learning to translate one language into another</p></li>
-<li><p>Learning the relationship between images chest x-rays and the presence of
-cancer</p></li>
-</ul>
-</li>
-<li><p>In unsupervised learning we are learning patterns. We have a set of input data
-points without any corresponding output data points. Our goal isn’t to learn
-an input-output relationship (because there isn’t one), but to learn things
-about the input data points that will generalize to all possible input data
-points. For example:</p>
-<ul>
-<li><p>Learning to identify clusters of like behavior</p></li>
-<li><p>Learning to identify outliers</p></li>
-<li><p>Dimensionality reduction</p></li>
-</ul>
-</li>
-<li><p>In reinforcement learning approaches, we are learning by example with an
-algorithm that interacts with its environment to select the data points it wants
-to learn from. Our goal is to create a policy from which tells the algorithm the
-best action to take at any point. For example:</p>
-<ul>
-<li><p>Learning to play chess</p></li>
-<li><p>Learning to play atari video games</p></li>
-<li><p>Autonomous vehicles</p></li>
-</ul>
-</li>
-</ul>
-<p>Previously, we assumed that you entered this guide with a broad project goal in
-mind. With the above in mind, the goal of this section is to convert that idea
-into:</p>
-<ul class="simple">
-<li><p>A set of project goals, defining:</p>
-<ul>
-<li><p>What will define when the project will be complete</p></li>
-<li><p>What, specifically it needs to achieve</p></li>
-<li><p>When this should be completed by</p></li>
-</ul>
-</li>
-<li><p>A set of KPIs, defining:</p>
-<ul>
-<li><p>How well the project is currently performing on some important benchmarks</p></li>
-</ul>
-</li>
-</ul>
-<p>We will not cover again the work of general goal setting here, which we assume
-should be familiar to any competent engineer. However, over other engineering
-projects AI and Machine learning projects have several uncommon considerations.</p>
-<p>The first is that AI and Machine Learning algorithms are often stochastic in
-nature, behaving in a non-deterministic and statistical way. All goals and KPIs
-must be aware of this. For example, for a face detection software it is
-appropriate to set goals such as “95% of this set of faces can be recognised”
-rather than “the software must recognise all these specific people”.</p>
-<p>The second is that human interpretability is a difficult topic in AI and Machine
-Learning, and it may be difficult to define why the software is doing the things
-or making the decisions that it makes. We will cover this topic (and its
-mitigations in more detail) in later sections, but it is important to be aware
-that metrics that rely on a deep understanding of functionality may be difficult
-to resolve at later stages.</p>
-<p>To complete this step:</p>
-<ul class="simple">
-<li><p>Define a set of Goals and KPIs</p></li>
-</ul>
-</section>
-<section id="risk-assessment">
-<span id="id8"></span><h3><a class="reference internal" href="using-the-guide.html#how-do-i-define-my-ai-project"><span class="std std-ref">Risk Assessment</span></a><a class="headerlink" href="#risk-assessment" title="Permalink to this headline">#</a></h3>
-<p>In the last section, we did a preliminary assessment of some high level project
-sinking risks to establish that our project was viable. In this section we do a
-more detailed analysis of the risks of our proposed project.</p>
-<p>Risk assessment is a basic engineering skill and we will not cover the basics of
-performing a risk assessment here. There are a multitude of resources available
-on how to do this. In future versions of this document, this section we discuss
-some common risks in more detail.</p>
-</section>
-</section>
+          <section id="how-do-i-collect-data-for-my-ai-ml-project-task-list">
+<h1>How do I collect data for my AI/ML project: Task List<a class="headerlink" href="#how-do-i-collect-data-for-my-ai-ml-project-task-list" title="Permalink to this headline">#</a></h1>
 <section id="how-do-i-collect-data-for-my-ai-ml-project">
-<span id="how-do-i-collect-data-for-my-ai-ml-project-task-list"></span><h2><a class="reference internal" href="using-the-guide.html#how-do-i-collect-data-for-my-ai-ml-project"><span class="std std-ref">How do I collect data for my AI/ML project?</span></a><a class="headerlink" href="#how-do-i-collect-data-for-my-ai-ml-project" title="Permalink to this headline">#</a></h2>
+<h2><a class="reference internal" href="the-five-questions.html#how-do-i-collect-data-for-my-ai-ml-project"><span class="std std-ref">How do I collect data for my AI/ML project?</span></a><a class="headerlink" href="#how-do-i-collect-data-for-my-ai-ml-project" title="Permalink to this headline">#</a></h2>
 <section id="collecting-your-data-set">
-<span id="id9"></span><h3><a class="reference internal" href="using-the-guide.html#how-do-i-collect-data-for-my-ai-ml-project"><span class="std std-ref">Collecting your Data Set</span></a><a class="headerlink" href="#collecting-your-data-set" title="Permalink to this headline">#</a></h3>
+<span id="id1"></span><h3><a class="reference internal" href="the-five-questions.html#how-do-i-collect-data-for-my-ai-ml-project"><span class="std std-ref">Collecting your Data Set</span></a><a class="headerlink" href="#collecting-your-data-set" title="Permalink to this headline">#</a></h3>
 <section id="defining-the-plan">
 <h4>Defining the Plan<a class="headerlink" href="#defining-the-plan" title="Permalink to this headline">#</a></h4>
 <p>The first step in creating our AI application is to create and (with caveats)
@@ -564,7 +315,7 @@ experimenting on animals is likely to require extra licenses and oversight.</p><
 <section id="implementing-the-plan">
 <h4>Implementing the Plan<a class="headerlink" href="#implementing-the-plan" title="Permalink to this headline">#</a></h4>
 <p>We discussed supervised and unsupervised learning in the
-<a class="reference internal" href="#establish-goals-and-kpis"><span class="std std-ref">Establish Goals and KPIs</span></a> section. If you are
+<a class="reference internal" href="define-project-tasks.html#establish-goals-and-kpis"><span class="std std-ref">Establish Goals and KPIs</span></a> section. If you are
 dealing with a supervised learning problem (as is likely), the largest concern
 of data collection is how the data can be labeled. In a supervised learning
 application, we want to learn to predict some quantity from our data. To do
@@ -632,8 +383,8 @@ Biases section of the guide before collecting data.</p></li>
 in our Appendix on GDPR.</p></li>
 </ul>
 </section>
-<section id="id10">
-<h4>Examples<a class="headerlink" href="#id10" title="Permalink to this headline">#</a></h4>
+<section id="examples">
+<h4>Examples<a class="headerlink" href="#examples" title="Permalink to this headline">#</a></h4>
 <p>In this example, we work through the case of an oncologist looking to create an
 AI application to help other physicians detect the presence of tumors in a chest
 x-ray. There is an <cite>example data set creation document&lt;dataset_creation&gt;</cite>,
@@ -680,7 +431,7 @@ a high AI Risk category, and be subject to extra requirements.</p>
 </section>
 </section>
 <section id="version-control-ci-cd-for-data">
-<span id="id11"></span><h3><a class="reference internal" href="using-the-guide.html#how-do-i-collect-data-for-my-ai-ml-project"><span class="std std-ref">Version Control, CI/CD for Data</span></a><a class="headerlink" href="#version-control-ci-cd-for-data" title="Permalink to this headline">#</a></h3>
+<span id="id2"></span><h3><a class="reference internal" href="the-five-questions.html#how-do-i-collect-data-for-my-ai-ml-project"><span class="std std-ref">Version Control, CI/CD for Data</span></a><a class="headerlink" href="#version-control-ci-cd-for-data" title="Permalink to this headline">#</a></h3>
 <p>Any electronic systems engineer should be familiar with version control. These
 ideas are just as important in developing AI applications as any other software
 product. In this step we explore:</p>
@@ -705,12 +456,12 @@ Source examples of the above are Git LFS and Data Version Control respectively.<
 <ul class="simple">
 <li><p>Set up a version control system for your code and data</p></li>
 </ul>
-<section id="id12">
-<h4>Examples<a class="headerlink" href="#id12" title="Permalink to this headline">#</a></h4>
+<section id="id3">
+<h4>Examples<a class="headerlink" href="#id3" title="Permalink to this headline">#</a></h4>
 </section>
 </section>
 <section id="documentation">
-<span id="id13"></span><h3><a class="reference internal" href="using-the-guide.html#how-do-i-collect-data-for-my-ai-ml-project"><span class="std std-ref">Documentation</span></a><a class="headerlink" href="#documentation" title="Permalink to this headline">#</a></h3>
+<span id="id4"></span><h3><a class="reference internal" href="the-five-questions.html#how-do-i-collect-data-for-my-ai-ml-project"><span class="std std-ref">Documentation</span></a><a class="headerlink" href="#documentation" title="Permalink to this headline">#</a></h3>
 <p>Another task that any electronic systems engineer should be familiar with is
 documentation. As with version control, good documentation is just as important,
 or perhaps even more so, as any other software development project. In this step
@@ -780,12 +531,12 @@ future code</p></li>
 <li><p>Creating documentation for any data collected to this point, and a process for
 documenting future data</p></li>
 </ul>
-<section id="id14">
-<h4>Examples<a class="headerlink" href="#id14" title="Permalink to this headline">#</a></h4>
+<section id="id5">
+<h4>Examples<a class="headerlink" href="#id5" title="Permalink to this headline">#</a></h4>
 </section>
 </section>
 <section id="logging">
-<span id="id15"></span><h3><a class="reference internal" href="using-the-guide.html#how-do-i-collect-data-for-my-ai-ml-project"><span class="std std-ref">Logging</span></a><a class="headerlink" href="#logging" title="Permalink to this headline">#</a></h3>
+<span id="id6"></span><h3><a class="reference internal" href="the-five-questions.html#how-do-i-collect-data-for-my-ai-ml-project"><span class="std std-ref">Logging</span></a><a class="headerlink" href="#logging" title="Permalink to this headline">#</a></h3>
 <p>Logging is a core requirement of the software development process. It must be
 accepted that software will break or not fulfill its function correctly, and
 when it does we need to be able to diagnose those faults effectively.
@@ -820,7 +571,7 @@ be undertaken.</p></li>
 </ul>
 </section>
 <section id="data-exploration">
-<span id="id16"></span><h3><a class="reference internal" href="using-the-guide.html#how-do-i-collect-data-for-my-ai-ml-project"><span class="std std-ref">Data Exploration</span></a><a class="headerlink" href="#data-exploration" title="Permalink to this headline">#</a></h3>
+<span id="id7"></span><h3><a class="reference internal" href="the-five-questions.html#how-do-i-collect-data-for-my-ai-ml-project"><span class="std std-ref">Data Exploration</span></a><a class="headerlink" href="#data-exploration" title="Permalink to this headline">#</a></h3>
 <p>This step is separated from the Data Cleaning step for clarity, but in reality
 these two steps are likely to be quite closely linked together. In this step we
 will look at the process of exploring the data we collect.</p>
@@ -914,7 +665,7 @@ later.</p>
 </ul>
 </section>
 <section id="data-cleaning">
-<span id="id17"></span><h3><a class="reference internal" href="using-the-guide.html#how-do-i-collect-data-for-my-ai-ml-project"><span class="std std-ref">Data Cleaning</span></a><a class="headerlink" href="#data-cleaning" title="Permalink to this headline">#</a></h3>
+<span id="id8"></span><h3><a class="reference internal" href="the-five-questions.html#how-do-i-collect-data-for-my-ai-ml-project"><span class="std std-ref">Data Cleaning</span></a><a class="headerlink" href="#data-cleaning" title="Permalink to this headline">#</a></h3>
 <p>The raw data that is collected through our data collection process is not
 necessarily the best data to use in training our algorithm. Some parts of our
 data might be poor quality for one reason or another. Following our previous
@@ -1049,7 +800,7 @@ measured it incorrectly.</p>
 </ul>
 </section>
 <section id="validation-and-testing">
-<span id="id18"></span><h3><a class="reference internal" href="using-the-guide.html#how-do-i-collect-data-for-my-ai-ml-project"><span class="std std-ref">Validation and Testing</span></a><a class="headerlink" href="#validation-and-testing" title="Permalink to this headline">#</a></h3>
+<span id="id9"></span><h3><a class="reference internal" href="the-five-questions.html#how-do-i-collect-data-for-my-ai-ml-project"><span class="std std-ref">Validation and Testing</span></a><a class="headerlink" href="#validation-and-testing" title="Permalink to this headline">#</a></h3>
 <p>We established a good idea of what qualities our data has (and does not have)
 from our previous steps. Unfortunately, if and when we collect more of this
 data, we have no guarantee that things are going to stay the same. Similarly, we
@@ -1082,7 +833,7 @@ trends, and so forth</p></li>
 </ul>
 </section>
 <section id="data-storage-and-access">
-<span id="id19"></span><h3><a class="reference internal" href="using-the-guide.html#how-do-i-collect-data-for-my-ai-ml-project"><span class="std std-ref">Data Storage and Access</span></a><a class="headerlink" href="#data-storage-and-access" title="Permalink to this headline">#</a></h3>
+<span id="id10"></span><h3><a class="reference internal" href="the-five-questions.html#how-do-i-collect-data-for-my-ai-ml-project"><span class="std std-ref">Data Storage and Access</span></a><a class="headerlink" href="#data-storage-and-access" title="Permalink to this headline">#</a></h3>
 <p>Having collected this data, we need to think about how it is going to be stored
 and accessed. The solution to this will vary significantly depending on the
 scale of the operations we are dealing with. Small, lightweight projects might
@@ -1177,301 +928,6 @@ for lower performance storage.</p>
 </ul>
 </section>
 </section>
-<section id="how-do-i-train-my-ai-ml-application">
-<span id="how-do-i-train-my-ai-ml-application-task-list"></span><h2><a class="reference internal" href="using-the-guide.html#how-do-i-train-my-ai-ml-application"><span class="std std-ref">How do I train my AI/ML application?</span></a><a class="headerlink" href="#how-do-i-train-my-ai-ml-application" title="Permalink to this headline">#</a></h2>
-<section id="selecting-an-ai-ml-approach">
-<span id="id20"></span><h3><a class="reference internal" href="using-the-guide.html#how-do-i-train-my-ai-ml-application"><span class="std std-ref">Selecting an AI/ML Approach</span></a><a class="headerlink" href="#selecting-an-ai-ml-approach" title="Permalink to this headline">#</a></h3>
-<p>There is not a set way of picking an AI algorithm to use in every case. In the
-appendix we list how some common algorithms match up to the problems we
-describe below, but this should not be taken prescriptively. The most practical
-suggestion in most cases is to use these as suggestions for as a starting point,
-and iterate. What others are doing with similar problems is another good
-starting point.</p>
-<p>We break up the problems you need to think about when selecting an algorithm
-into three parts. The first are practical considerations:</p>
-<ul class="simple">
-<li><p>What computational resources do you have available?</p></li>
-<li><p>How much data do you have, and how are you going to get it to the computer
-that you are using to train?</p></li>
-<li><p>How many resources (time, money, etc.) are you willing to spend on training?</p></li>
-</ul>
-<p>A lot of the decisions in this area boil down to scaling. Almost any algorithm
-can be deployed at some scale. The key question is what is the best algorithm
-that I can deploy for my scale of data and available resources? It is important
-to remember as part of this that not all algorithms scale equally - either with
-amount of data or dimensionality.</p>
-<p>The second set of considerations are use case based. Especially, what, if any,
-special requirements do you have for your end system? For example:</p>
-<ul class="simple">
-<li><p>Do the outcomes need to be explained in a human understandable way?</p></li>
-<li><p>Do I need to be able to enforce certain behavior in my model?</p></li>
-<li><p>Do I need to be able to explain or understand uncertainty in my model?</p></li>
-</ul>
-<p>A lot of the above are common requirements that significantly limit the
-available choices of algorithms.</p>
-<p>Our third and final category are technical considerations:</p>
-<ul class="simple">
-<li><p>How do prospective approaches match up with the underlying assumptions of each
-algorithm?</p></li>
-<li><p>Is the complexity of my prospective algorithm appropriate for the problem I’m
-solving</p></li>
-<li><p>How do limitations of my data affect my choice?</p></li>
-</ul>
-<p>It is important to remember with these points that all AI models are just
-models, and will never reflect reality in full detail. Nor do we necessarily
-want them to - as we see in the appendix on Bias and Variance, often a
-purposely simpler model can produce better results than a more complex one,
-especially when data or training is limited. Limitations on training data can be
-important too. Some AI algorithms cannot deal with data that has missing parts,
-for example. This must either be addressed, or a different approach used.</p>
-<p>To complete this section you must:</p>
-<ul class="simple">
-<li><p>Select an AI approach (or approaches) to use in subsequent steps</p></li>
-</ul>
-</section>
-<section id="data-pre-processing">
-<span id="id21"></span><h3><a class="reference internal" href="using-the-guide.html#how-do-i-train-my-ai-ml-application"><span class="std std-ref">Data Pre-processing</span></a><a class="headerlink" href="#data-pre-processing" title="Permalink to this headline">#</a></h3>
-<p>This step has a lot of overlap with our previous Collecting Data subsection on
-Data Cleaning. Our focus here is slightly different, with us instead looking at
-maximizing the efficacy of our training process, rather than specifically
-focusing on fixing deficiencies in the data.</p>
-<p><strong>Missing data.</strong> Depending on your choice of AI Algorithm, missing data may
-have suddenly become extremely important. If this is the case, revisit the Data
-Collection section, Data Cleaning subsection in the issue.</p>
-<p><strong>Scaling and Transforming data.</strong> For many models, the training process can be
-improved by scaling or transforming the data. For example, scaling all values to
-be on the same scale.</p>
-<p>There are a range of reasons you might want to do this. A common example is two
-features being on different scales. If we have one feature that takes on values
-in the range 0-1, and another that takes on values in the range 0-100, some
-types of analysis may cause us to weigh one more heavily than the other.</p>
-<p>Which technique will be applied will depend on your analysis and goals. Some
-common techniques would be:</p>
-<ul class="simple">
-<li><p>Removing the average from a set of numbers</p></li>
-<li><p>Transforming all values to the same scale</p></li>
-<li><p>Scaling all values to a normal distribution</p></li>
-</ul>
-<p><strong>Dimensionality Reduction.</strong> Sometimes our datasets include a large number of
-features. This can be a blessing because it gives us more information to
-integrate into our analysis, but it can also cause difficulties:</p>
-<ul class="simple">
-<li><p>It increases computational cost of training</p></li>
-<li><p>It can cause overfitting, especially if the extra features are not useful</p></li>
-<li><p>Multiple weak features are often a less useful explanation than one or two
-strong ones</p></li>
-</ul>
-<p>A way of dealing with this is to reduce the dimensionality of the data. There
-are two very broad ways of approaching this:</p>
-<ul class="simple">
-<li><p>We can select the most useful features from our existing set of features</p></li>
-<li><p>We can aggregate our current features to create a new set of features with
-beneficial features</p></li>
-</ul>
-<p>The advantage of the first is that we can perform dimensionality reduction with
-the existing features to select the best ones. The advantage of the second is
-that, although our constructed dimensions lose interpretability, the process by
-which we create them typically makes them very strong at explaining our data.</p>
-<p>To complete this step you must:</p>
-<ul class="simple">
-<li><p>Create a pre-processing procedure for your data</p></li>
-</ul>
-</section>
-<section id="creating-a-training-pipeline">
-<span id="id22"></span><h3><a class="reference internal" href="using-the-guide.html#how-do-i-train-my-ai-ml-application"><span class="std std-ref">Creating a Training Pipeline</span></a><a class="headerlink" href="#creating-a-training-pipeline" title="Permalink to this headline">#</a></h3>
-<p>In this step you must create an automated process to ingest the data collected,
-cleaned and preprocessed, and use it to train a model.</p>
-<p>For small projects, this may be a very simple script consisting of a few lines
-of code collecting the data and running the training function. For larger
-projects, larger datasets, or non-standard tools this may be significantly
-harder.</p>
-<p><strong>Hardware Acceleration.</strong> Many machine workloads can be significantly sped up
-using hardware that shifts computationally intensive parts of the training
-process to specialized processing units. These technologies generally work by
-improving matrix arithmetic. It is not always necessary or desirable to do this,
-but it can be very beneficial for some workloads. Neural Networks are one
-example where hardware acceleration has been very successful.</p>
-<p>Though there are special processors available for this, modern graphics cards
-also do this type of processing, are often competitive on cost-per-processing
-power basis, and have additional uses (e.g. as graphics processors).</p>
-<p><strong>Storage Mediums.</strong> This is an excellent opportunity to revisit the Collecting
-Data section, under the subsection of Data Storage and Access. The discussion on
-different data storage mediums is extremely relevant to training.</p>
-<p><strong>Large Datasets &amp; Resource Intensive Projects.</strong> Larger projects may end up in
-a situation in which the dataset is not stored on one machine, and/or
-computation must be spread across multiple distributed units. Future iterations
-of this guide will cover this issue, currently we suggest that readers seek
-expert advice on this complex topic.</p>
-<p>To complete this step:</p>
-<ul class="simple">
-<li><p>Create a training pipeline</p></li>
-</ul>
-</section>
-<section id="testing-validation-biases-in-training">
-<span id="id23"></span><h3><a class="reference internal" href="using-the-guide.html#how-do-i-train-my-ai-ml-application"><span class="std std-ref">Testing, Validation &amp; Biases in Training</span></a><a class="headerlink" href="#testing-validation-biases-in-training" title="Permalink to this headline">#</a></h3>
-<p>Testing how the model performs through its training process is extremely
-important. For models of small scale, it is a vital diagnostic tool. For models
-of a large scale, it allows us to identify problems early, before too many
-resources are committed to them.</p>
-<p><strong>Training Error.</strong> It’s important to split your dataset into at least 2 parts -
-a training dataset and a testing dataset. Most (e.g. 90%) of your data will be
-in the training dataset, and this will be what you use to do your training.
-Entirely separately from this</p>
-<p><strong>Parameters and Hyperparameters.</strong> As important as always. We are essentially
-testing for extremely similar things as the testing and validation for the data
-collection, but the downstream versions.</p>
-<p><strong>Bias.</strong> If there are specific biases of concern in your dataset, you should
-check these during training. This should be done by creating a test of bias, and
-periodically running it during the training process.</p>
-<p>To complete this step:</p>
-<ul class="simple">
-<li><p>Create an automated testing process</p></li>
-</ul>
-</section>
-<section id="version-control-ci-cd">
-<span id="id24"></span><h3><a class="reference internal" href="using-the-guide.html#how-do-i-train-my-ai-ml-application"><span class="std std-ref">Version Control, CI/CD</span></a><a class="headerlink" href="#version-control-ci-cd" title="Permalink to this headline">#</a></h3>
-<p>A large part of this is discussed in the previous section under “collecting
-data”. The extra considerations for the training process are that we must now
-firmly keep track of two, nested versionings. We need to keep track of not just
-the version of the code that was used to train a model, but the version of any
-data used to train the model too.</p>
-<p>Large trained models may not be suitable for normal version control and may
-require similar techniques (though at a comparatively smaller scale) to data
-version control.</p>
-<p>To complete this step:</p>
-<ul class="simple">
-<li><p>Include your training process within your version control</p></li>
-</ul>
-</section>
-<section id="documentation-and-logging">
-<span id="id25"></span><h3><a class="reference internal" href="using-the-guide.html#how-do-i-train-my-ai-ml-application"><span class="std std-ref">Documentation and Logging</span></a><a class="headerlink" href="#documentation-and-logging" title="Permalink to this headline">#</a></h3>
-<p>There is significant overlap between this section and the Documentation and
-Logging section of the Collecting Data section.</p>
-<p>One thing to clearly document in the training process is any hyperparameters
-associated with the algorithm you are using. These will have a significant
-effect on the training process. For example, learning rate in a neural network,
-or the parameters of the kernel in a Support Vector Machine. In addition to
-these, it is important to keep track of and document all decisions you are
-making in your training pipeline. Qualities like the batch size of training in a
-neural network might not be a hyperparameter in a certain narrow sense, but can
-make almost as much difference to the outcome of training.</p>
-<p>Logging remains important. it is important to keep track of how training
-progressed even in failed testing cases and how well your model is training
-throughout the process.</p>
-<p>To complete this step:</p>
-<ul class="simple">
-<li><p>Create documentation and a logging process</p></li>
-</ul>
-</section>
-</section>
-<section id="how-do-i-deploy-my-ai-application">
-<span id="how-do-i-deploy-my-ai-application-task-list"></span><h2><a class="reference internal" href="using-the-guide.html#how-do-i-deploy-my-ai-application"><span class="std std-ref">How do I deploy my AI application?</span></a><a class="headerlink" href="#how-do-i-deploy-my-ai-application" title="Permalink to this headline">#</a></h2>
-<section id="deploying-your-model">
-<span id="id26"></span><h3><a class="reference internal" href="using-the-guide.html#how-do-i-deploy-my-ai-application"><span class="std std-ref">Deploying Your Model</span></a><a class="headerlink" href="#deploying-your-model" title="Permalink to this headline">#</a></h3>
-<p>Deployment means taking your trained model from an offline environment to a real
-world or production system. Exactly what you will need to do for this will
-depend a lot on what your application is and what you want to do with it.
-However, some things that you should always consider:</p>
-<p><strong>Where you are deploying it (edge, vs centralized).</strong> As with training, an
-important part of realizing your deployment will be formulating a way of getting
-your data from wherever it is collected, to the deployed model. One of the ways
-that you can reduce the cost of getting your data to your models is to deploy
-them in a location near the source of the data they will be ingesting. The
-advantages of this are:</p>
-<ul class="simple">
-<li><p>Model receives data quickly and can respond quickly, possibly in real time</p></li>
-<li><p>Data transfer costs are reduced</p></li>
-<li><p>Security burden of transfers is reduced</p></li>
-</ul>
-<p>However, there are some disadvantages:</p>
-<ul class="simple">
-<li><p>Spreading computing power reduces the capacity of each individual unit</p></li>
-<li><p>Deploying and maintaining a large number of systems in physically diverse set
-of locations introduces difficulties</p></li>
-<li><p>For security purposes, deploying a large number of nodes introduces a larger
-attack surface</p></li>
-</ul>
-<p>The calculus of this decision will vary between projects, however we note that
-large projects often find that the cost of transferring large amounts of data
-can be very substantial.</p>
-<p><strong>How you are deploying it (internally, externally).</strong> All of the usual caveats
-and problems in deploying systems apply. Our product must be prepared for all
-cases of misuse we can reasonably prepare for, malicious or otherwise.</p>
-<p>For AI systems there are several additional complications to consider, both when
-deploying systems internally or (especially) externally. Unfortunately, a theme
-of these issues is that they are all currently difficult to completely
-eliminate. This shouldn’t necessarily prevent you from deployment, but might
-require you to take some extra care.</p>
-<p><strong>Out of Sample errors.</strong> For some AI systems, making queries that are
-substantially outside the scope of the training data will lead to nonsensical
-results. This can be a problem because it is not usually clear to the user what
-is in scope and what is out of scope. Knowing how much a result can be trusted
-can be problematic.</p>
-<p>An extension from this if the system is exposed externally is that an adversary
-may attempt to purposely design an input to the system that produces unexpected
-results. As a real world example consider a research project designing stickers
-that, when applied to speed signs, cause an onboard computer vision AI to
-misread the speed limit.</p>
-<p>This is difficult to fully resolve, and there is no single solution to this
-problem currently. If it is of utmost imperative that this behavior is fixed,
-some possible solutions are:</p>
-<ul class="simple">
-<li><p>Use techniques that can guarantee behavior (e.g. statistical models can bound
-error rate if their assumptions hold)</p></li>
-<li><p>Some techniques (e.g. Bayesian methods) can estimate confidence in solutions.</p></li>
-</ul>
-<p>The difficulty with both of these approaches is that they place substantial
-restrictions on the overall class of available models. Practically in most
-cases, the solution needs to be considered at a higher level than the algorithm
-itself. Whatever process it is part of should consider the fact that solutions
-cannot be guaranteed to be sensible. Rigorous testing should identify and
-eliminate as many of these problems as possible.</p>
-<p><strong>Training Data/Model Leakage.</strong> When somebody queries an AI model, they learn
-two things. They learn something about how the model understands data, and
-something about the data it was trained on itself. This is a problem because
-with enough effort, an attacker can steal both of these things.</p>
-<p><strong>Data Leakage.</strong> Consider the statistic that 87% of the US population can be
-uniquely identified by gender, ZIP code and full date of birth. It can take a
-surprisingly small amount of information to uniquely identify individual points
-of data. Large, data driven systems like AI are especially vulnerable to this.
-Some AI systems (notably large language models) have also been known to leak
-training data when queried directly.</p>
-<p>This is a problem that is difficult to fully prevent. There are some techniques
-that can substantially reduce the threat:</p>
-<ul class="simple">
-<li><p>Removal of identifying variables</p></li>
-<li><p>Differential privacy mechanisms</p></li>
-<li><p>Private model training techniques</p></li>
-<li><p>Use of synthetic data</p></li>
-</ul>
-<p>Again, a problem with these techniques is that they introduce limitations and
-complexity on the final result. Whether this is worth it depends on the
-application.</p>
-<p><strong>Model Leakage.</strong> Querying a model gives information about how it sees the
-relationship between input and output variables. With enough examples of this,
-it is possible for an adversary to effectively recover the model. Examples don
-not necessarily even need to be related to the original training set, though it
-is beneficial.</p>
-<p>There are several approaches that can reduce the impact of this:</p>
-<ul class="simple">
-<li><p>Restricting the number of queries to the model</p></li>
-<li><p>Watermarking the model, to identify stolen models</p></li>
-<li><p>Adding noise, and Differential Privacy approaches</p></li>
-</ul>
-<p>What you are deploying it on (hardware)
-This section strongly corresponds to the training pipeline set out in the
-training section, and will be expanded in future.</p>
-<p>To complete this step:</p>
-<ul class="simple">
-<li><p>Deploy your model</p></li>
-</ul>
-</section>
-<section id="testing-validation-biases-in-deployment">
-<span id="id27"></span><h3><a class="reference internal" href="using-the-guide.html#how-do-i-deploy-my-ai-application"><span class="std std-ref">Testing, Validation &amp; Biases in Deployment</span></a><a class="headerlink" href="#testing-validation-biases-in-deployment" title="Permalink to this headline">#</a></h3>
-<p>This section strongly corresponds to the testing and validation set out in the
-training section, and will be expanded in future.</p>
-</section>
-</section>
 </section>
 
         </article>
@@ -1479,15 +935,23 @@ training section, and will be expanded in future.</p>
       <footer>
         
         <div class="related-pages">
-          
-          <a class="prev-page" href="definitions.html">
+          <a class="next-page" href="training-tasks.html">
+              <div class="page-info">
+                <div class="context">
+                  <span>Next</span>
+                </div>
+                <div class="title">How do I train my AI/ML application: Task List</div>
+              </div>
+              <svg><use href="#svg-arrow-right"></use></svg>
+            </a>
+          <a class="prev-page" href="define-project-tasks.html">
               <svg><use href="#svg-arrow-right"></use></svg>
               <div class="page-info">
                 <div class="context">
                   <span>Previous</span>
                 </div>
                 
-                <div class="title">Application Specific Requirements</div>
+                <div class="title">How do I define my AI project: Task List</div>
                 
               </div>
             </a>
@@ -1523,40 +987,20 @@ training section, and will be expanded in future.</p>
         <div class="toc-tree-container">
           <div class="toc-tree">
             <ul>
-<li><a class="reference internal" href="#">Task List</a><ul>
-<li><a class="reference internal" href="#should-i-use-ai-ml"><span class="xref std std-ref">Should I Use AI/ML?</span></a><ul>
-<li><a class="reference internal" href="#evaluate-engineering-case"><span class="xref std std-ref">Evaluate Engineering Case</span></a><ul>
-<li><a class="reference internal" href="#examples">Examples</a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#unacceptable-ai-risk"><span class="xref std std-ref">Unacceptable AI Risk</span></a><ul>
-<li><a class="reference internal" href="#id4">Examples</a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#problematic-data-risk"><span class="xref std std-ref">Problematic Data Risk</span></a><ul>
-<li><a class="reference internal" href="#id6">Examples</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li><a class="reference internal" href="#how-do-i-define-my-ai-project"><span class="xref std std-ref">How do I define my AI project?</span></a><ul>
-<li><a class="reference internal" href="#establish-goals-and-kpis"><span class="xref std std-ref">Establish Goals and KPIs</span></a></li>
-<li><a class="reference internal" href="#risk-assessment"><span class="xref std std-ref">Risk Assessment</span></a></li>
-</ul>
-</li>
+<li><a class="reference internal" href="#">How do I collect data for my AI/ML project: Task List</a><ul>
 <li><a class="reference internal" href="#how-do-i-collect-data-for-my-ai-ml-project"><span class="xref std std-ref">How do I collect data for my AI/ML project?</span></a><ul>
 <li><a class="reference internal" href="#collecting-your-data-set"><span class="xref std std-ref">Collecting your Data Set</span></a><ul>
 <li><a class="reference internal" href="#defining-the-plan">Defining the Plan</a></li>
 <li><a class="reference internal" href="#implementing-the-plan">Implementing the Plan</a></li>
-<li><a class="reference internal" href="#id10">Examples</a></li>
+<li><a class="reference internal" href="#examples">Examples</a></li>
 </ul>
 </li>
 <li><a class="reference internal" href="#version-control-ci-cd-for-data"><span class="xref std std-ref">Version Control, CI/CD for Data</span></a><ul>
-<li><a class="reference internal" href="#id12">Examples</a></li>
+<li><a class="reference internal" href="#id3">Examples</a></li>
 </ul>
 </li>
 <li><a class="reference internal" href="#documentation"><span class="xref std std-ref">Documentation</span></a><ul>
-<li><a class="reference internal" href="#id14">Examples</a></li>
+<li><a class="reference internal" href="#id5">Examples</a></li>
 </ul>
 </li>
 <li><a class="reference internal" href="#logging"><span class="xref std std-ref">Logging</span></a></li>
@@ -1564,20 +1008,6 @@ training section, and will be expanded in future.</p>
 <li><a class="reference internal" href="#data-cleaning"><span class="xref std std-ref">Data Cleaning</span></a></li>
 <li><a class="reference internal" href="#validation-and-testing"><span class="xref std std-ref">Validation and Testing</span></a></li>
 <li><a class="reference internal" href="#data-storage-and-access"><span class="xref std std-ref">Data Storage and Access</span></a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#how-do-i-train-my-ai-ml-application"><span class="xref std std-ref">How do I train my AI/ML application?</span></a><ul>
-<li><a class="reference internal" href="#selecting-an-ai-ml-approach"><span class="xref std std-ref">Selecting an AI/ML Approach</span></a></li>
-<li><a class="reference internal" href="#data-pre-processing"><span class="xref std std-ref">Data Pre-processing</span></a></li>
-<li><a class="reference internal" href="#creating-a-training-pipeline"><span class="xref std std-ref">Creating a Training Pipeline</span></a></li>
-<li><a class="reference internal" href="#testing-validation-biases-in-training"><span class="xref std std-ref">Testing, Validation &amp; Biases in Training</span></a></li>
-<li><a class="reference internal" href="#version-control-ci-cd"><span class="xref std std-ref">Version Control, CI/CD</span></a></li>
-<li><a class="reference internal" href="#documentation-and-logging"><span class="xref std std-ref">Documentation and Logging</span></a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#how-do-i-deploy-my-ai-application"><span class="xref std std-ref">How do I deploy my AI application?</span></a><ul>
-<li><a class="reference internal" href="#deploying-your-model"><span class="xref std std-ref">Deploying Your Model</span></a></li>
-<li><a class="reference internal" href="#testing-validation-biases-in-deployment"><span class="xref std std-ref">Testing, Validation &amp; Biases in Deployment</span></a></li>
 </ul>
 </li>
 </ul>
