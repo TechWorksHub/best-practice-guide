@@ -3,7 +3,7 @@
   <head><meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
     <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-<link rel="author" title="About these documents" href="#" /><link rel="index" title="Index" href="genindex.html" /><link rel="search" title="Search" href="search.html" /><link rel="next" title="Getting Involved" href="getting-involved.html" /><link rel="prev" title="" href="index.html" />
+<link rel="author" title="About these documents" href="#" /><link rel="index" title="Index" href="genindex.html" /><link rel="search" title="Search" href="search.html" /><link rel="next" title="Getting Involved" href="getting-involved.html" /><link rel="prev" title="How do I deploy my AI application: Task List" href="testing-tasks.html" />
 
     <meta name="generator" content="sphinx-4.1.1, furo 2022.04.07"/>
         <title>About - Techworks Best Practices in AI v0.5.0 documentation</title>
@@ -145,7 +145,7 @@
           <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
         </button>
       </div>
-      <label class="toc-overlay-icon toc-header-icon no-toc" for="__toc">
+      <label class="toc-overlay-icon toc-header-icon" for="__toc">
         <div class="visually-hidden">Toggle table of contents sidebar</div>
         <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
       </label>
@@ -169,9 +169,6 @@
 <div id="searchbox"></div><div class="sidebar-scroll"><div class="sidebar-tree">
   <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
 <ul class="current">
-<li class="toctree-l1 current current-page"><a class="current reference internal" href="#">About</a></li>
-<li class="toctree-l1"><a class="reference internal" href="getting-involved.html">Getting Involved</a></li>
-<li class="toctree-l1"><a class="reference internal" href="executive-summary.html">Executive Summary</a></li>
 <li class="toctree-l1"><a class="reference internal" href="using-this-guide.html">Using this guide</a></li>
 <li class="toctree-l1"><a class="reference internal" href="the-five-questions.html">The 5 Questions</a></li>
 <li class="toctree-l1"><a class="reference internal" href="definitions.html">Key Definitions</a></li>
@@ -180,6 +177,8 @@
 <li class="toctree-l1"><a class="reference internal" href="collect-data-tasks.html">How do I collect data for my AI/ML project: Task List</a></li>
 <li class="toctree-l1"><a class="reference internal" href="training-tasks.html">How do I train my AI/ML application: Task List</a></li>
 <li class="toctree-l1"><a class="reference internal" href="testing-tasks.html">How do I deploy my AI application: Task List</a></li>
+<li class="toctree-l1 current current-page"><a class="current reference internal" href="#">About</a></li>
+<li class="toctree-l1"><a class="reference internal" href="getting-involved.html">Getting Involved</a></li>
 </ul>
 
 </div>
@@ -206,7 +205,7 @@
               <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
             </button>
           </div>
-          <label class="toc-overlay-icon toc-content-icon no-toc" for="__toc">
+          <label class="toc-overlay-icon toc-content-icon" for="__toc">
             <div class="visually-hidden">Toggle table of contents sidebar</div>
             <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
           </label>
@@ -218,6 +217,17 @@
 of the core activities of the
 <a class="reference external" href="https://www.techworks.org.uk/Ai">Techworks AI Innovation Cross Working Group</a>
 (AI xWG).</p>
+<p>This guide is for professional software engineers in the electronics systems
+industry who now need to implement Artificial Intelligence and Machine Learning
+(AI/ML) solutions. We make the following two assumptions:</p>
+<ol class="arabic simple">
+<li><p>the reader is an experienced software engineer; and</p></li>
+<li><p>the reader has no prior experience of AI/ML.</p></li>
+</ol>
+<p>The guide takes the form of a series of questions to be answered.
+Comprehensive supplementary information is provided to help answer these
+questions. The outcome is an optimally designed, implemented and deployed
+AI/ML solution.</p>
 <p>The goal of this guide is to help address the AI skill gap in the UK by
 empowering our existing engineers to fully adavantage of this technology. The
 guide achieves this by laying out best practices guidance for electronic
@@ -227,11 +237,33 @@ systems engineers that will allow them both to:</p>
 Learning; and</p></li>
 <li><p>Work through an AI project from first principles to a completed product.</p></li>
 </ul>
-<p>One of the key strengths of this guide is that it is specifically tailored to
-retraining existing electronic systems engineers. These engineers already have
-many essential skills, allowing the guide to be highly focused and compact. It
-provides a marked contrast to other guides, which typically assume very low
-levels of audience knowledge to reach the widest possible audience.</p>
+<section id="contributors">
+<span id="id2"></span><h2>Contributors<a class="headerlink" href="#contributors" title="Permalink to this headline">#</a></h2>
+<p>We thank all contributors and reviewers of this project.</p>
+<section id="authors">
+<h3>Authors<a class="headerlink" href="#authors" title="Permalink to this headline">#</a></h3>
+<p>William Jones</p>
+</section>
+<section id="id3">
+<h3>Contributors<a class="headerlink" href="#id3" title="Permalink to this headline">#</a></h3>
+<p>Alex Wang</p>
+<p>Allison Lowndes</p>
+<p>Andrew Rogoyski</p>
+<p>Andy Bond</p>
+<p>Arezou Nayebi</p>
+<p>Charles Sturman</p>
+<p>Dimitra Georgiadou</p>
+<p>Elliot Stein</p>
+<p>Gopal Ramchurn</p>
+<p>James Watson</p>
+<p>Jeremy Bennett</p>
+<p>Lauren Thompson</p>
+<p>Mark Zwolinski</p>
+<p>Mike Bartley</p>
+<p>Prethveraj M S</p>
+<p>Tim Santos</p>
+</section>
+</section>
 </section>
 
         </article>
@@ -248,14 +280,14 @@ levels of audience knowledge to reach the widest possible audience.</p>
               </div>
               <svg><use href="#svg-arrow-right"></use></svg>
             </a>
-          <a class="prev-page" href="index.html">
+          <a class="prev-page" href="testing-tasks.html">
               <svg><use href="#svg-arrow-right"></use></svg>
               <div class="page-info">
                 <div class="context">
                   <span>Previous</span>
                 </div>
                 
-                <div class="title">Home</div>
+                <div class="title">How do I deploy my AI application: Task List</div>
                 
               </div>
             </a>
@@ -279,8 +311,31 @@ levels of audience knowledge to reach the widest possible audience.</p>
         
       </footer>
     </div>
-    <aside class="toc-drawer no-toc">
+    <aside class="toc-drawer">
       
+      
+      <div class="toc-sticky toc-scroll">
+        <div class="toc-title-container">
+          <span class="toc-title">
+            Contents
+          </span>
+        </div>
+        <div class="toc-tree-container">
+          <div class="toc-tree">
+            <ul>
+<li><a class="reference internal" href="#">About</a><ul>
+<li><a class="reference internal" href="#contributors">Contributors</a><ul>
+<li><a class="reference internal" href="#authors">Authors</a></li>
+<li><a class="reference internal" href="#id3">Contributors</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+          </div>
+        </div>
+      </div>
       
       
     </aside>

@@ -7,89 +7,37 @@
 
 .. image:: _static/TechWorks-Logo_Hres.jpg
 
-\
-===============================
 
-Welcome to the hub for the Techworks Best Practices in AI guide.
+Welcome to the hub for the Techworks Best Practices in AI guide. This guide is
+also available in `PDF <https://raw.githubusercontent.com/techworkshub/best-practice-guide/gh-pages/best-practices-guide.pdf>`_
+format.
 
-The guide is one of the core activities of the 
-`Techworks AI Innovation Cross Working Group <https://www.techworks.org.uk/Ai>`_
-(AI xWG). The goal of the guide is to provide best practices guidance to
-electronic systems engineers in the UK to bridge the UK AI skill gap. 
+This guide will help you answer 5 questions step by step:
 
-To get started:
+* Should I use AI/ML?
+* How do I define my AI/ML project
+* How do I collect data?
+* How do I train my AI/ML application?
+* How do I deploy my AI/ML application?
+
+Answering these questions will take you from conceptualizing your
+AI application through to deploying it in the real world.
+
+**Click** :ref:`here <Using this Guide>` **to jump to the first page of the guide.**
+
+You can also:
 
 * :ref:`Read more <About>` about this project and the guide.
 
 * Learn about how you can :ref:`get involved. <Getting Involved>`
 
-* Read the :ref:`executive summary <Executive Summary>`.
 
-* Or jump straight to the :ref:`first page <Using this Guide>` of the guide. 
-
-
-This guide is currently maintained in several formats:
-
-* `Online <https://techworkshub.github.io/best-practice-guide>`_
-* `PDF <https://raw.githubusercontent.com/techworkshub/best-practice-guide/gh-pages/best-practices-guide.pdf>`_
-* `docx <https://github.com/techworkshub/best-practice-guide/raw/gh-pages/best-practices-guide.docx>`_
-
-
-.. _Contributors:
-
-Contributors
--------------
-We thank all contributors and reviewers of this project. 
-
-Authors
-++++++++
-
-William Jones
-
-
-Contributors
-++++++++++++++++++++++++
-
-Alex Wang
-
-Allison Lowndes
-
-Andrew Rogoyski
-
-Andy Bond
-
-Arezou Nayebi
-
-Charles Sturman
-
-Dimitra Georgiadou
-
-Elliot Stein
-
-Gopal Ramchurn
-
-James Watson
-
-Jeremy Bennett
-
-Lauren Thompson
-
-Mark Zwolinski
-
-Mike Bartley
-
-Prethveraj M S
-
-Tim Santos
 
 .. toctree::
    :hidden:
    :maxdepth: 2
    :caption: Contents:
 
-   about.rst
-   getting-involved.rst
-   executive-summary.rst
    using-this-guide.rst
    the-five-questions.rst
    definitions.rst
@@ -98,6 +46,8 @@ Tim Santos
    collect-data-tasks.rst
    training-tasks.rst
    testing-tasks.rst
+   about.rst
+   getting-involved.rst
 
 .. Indices and tables
 .. ==================
