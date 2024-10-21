@@ -10,33 +10,32 @@ Key Definitions
 AI Risk
 --------
 
-Direct regulation of AI in the EU is tending to a risk based approach based on
-the harm than an AI application poses to people. Applications are classified
-into risk categories, and those that pose a high risk are to be subject to more
-stringent requirements. These categories are currently:
+The EU is moving towards a risk based approach for regulating AI, focussing on
+the harm  an AI application could cause to people. Applications are classified
+by risk level, with  higher-risk applications facing stricter requirements.
+These categories are currently: 
 
 * Unacceptable risk. Applications that are a clear threat to the safety,
-  livelihoods or rights of people.
+  livelihoods or rights of people. 
 * High risk. Applications that are critical to the safety or wellbeing of
   people, that require special mitigations to adequately cover the risks they
-  pose 
+  pose.
 * Limited risk. Applications with lower impacts to safety or wellbeing, but
-  which still require some level of mitigation 
-* Minimal or no risk. Applications with minimal to zero risk. 
+  which still require some level of mitigation.
+* Minimal or no risk. Applications with minimal to zero risk.
 
-Providing guidance on any upcoming or current legislation is out of the scope of
-this guide. However, this categorization of the risk that AI applications pose
-is a useful tool for discussing best engineering practices. These risk levels
-will recur in this guide, and we will refer to them as AI Risk. 
+While this guide does not cover specific legislation, these risk categories
+offer a useful framework for discussing best engineering practices. You will
+encounter these risk levels throughout the guide, referred to as AI Risk.
 
 .. _Data Protection:
 
 Data Protection
 ----------------
 
-AI models are data driven. This leaves them significantly subject to data
-protection regulation, especially GDPR. According to GDPR, if you process data,
-you have to do so according to seven protection and accountability principles:
+AI models are fundamentally data driven making them subject to data protection
+regulation, especially GDPR. According to GDPR, any processing of data must
+adhere to  to seven key principles of protection and accountability principles: 
 
 * Lawfulness, fairness and transparency — Processing must be lawful, fair, and
   transparent to the data subject.
@@ -53,11 +52,10 @@ you have to do so according to seven protection and accountability principles:
 * Accountability — The data controller is responsible for being able to
   demonstrate GDPR compliance with all of these principles.
 
-There are also certain categories of data that must be given special
-consideration. Providing guidance on legislation remains out of the scope of
-this guide. However, once again, the ideas put forward in GDPR are important in
-framing the discussion of best engineering practices, and will recur in this
-guide.
+Certain categories of data require special consideration under these
+regulations. While this guide does not provide specific legislative guidance,
+the principles outlined in GDPR are essential for framing discussions on best
+engineering practices and will be referenced throughout the guide. 
 
 .. _Safety, Security and Robustness:
 

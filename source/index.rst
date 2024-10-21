@@ -8,11 +8,11 @@
 .. image:: _static/TechWorks-Logo_Hres.jpg
 
 
-Welcome to the hub for the Techworks Best Practices in AI guide. This guide is
+Welcome to Techworks Best Practices in AI guide hub. This guide is
 also available in `PDF <https://raw.githubusercontent.com/techworkshub/best-practice-guide/gh-pages/best-practices-guide.pdf>`_
 format.
 
-This guide will help you answer 5 questions step by step:
+This guide will walk you through 5 key questions step by step:
 
 * Should I use AI/ML?
 * How do I define my AI/ML project
@@ -20,7 +20,7 @@ This guide will help you answer 5 questions step by step:
 * How do I train my AI/ML application?
 * How do I deploy my AI/ML application?
 
-Answering these questions will take you from conceptualizing your
+Answering these questions will take you from the initial concept of your
 AI application through to deploying it in the real world.
 
 **Click** :ref:`here <Using this Guide>` **to jump to the first page of the guide.**

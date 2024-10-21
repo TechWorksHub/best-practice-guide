@@ -3,17 +3,17 @@
 Using this guide
 =================================
 
-These 5 questions are broken into smaller questions, requirements, and tasks to
-be completed.  We set out the question in the order they should be considered.
-We strongly recommend you don't skip ahead, although from time to time you may
-want to go back and review your answers to earlier questions.
+The 5 main questions are broken into smaller questions, requirements, and tasks
+to be completed. We have arranged them  in the order they should be considered
+and  strongly advise against skipping ahead. However, you may occasionally  want
+to go back and review your earlier answers. 
 
-These smaller questions, requirements and tasks for each of the 5 main questions
-are recorded in a table, showing what the activity is, and where you should
-record the documentary evidence of that activity being completed. Some of the
-entries may be optional, depending on earlier answers.  Once all the required
-smaller questions, requirements, and tasks are addressed, you will have your
-answer to the main question, and can move on to the next of these 5 questions.
+For each of the 5 main questions the smaller questions, requirements and tasks
+are recorded in a table. The table shows the specific activity, and where you
+should document evidence of its completion. Some activities may be optional,
+depending on earlier responses. Once you have completed all the necessary
+activities , you will have your answer to the main question, and can move on to
+the next step. 
 
 +----------------------------+--------------------------------------+----------+
 | Question/Task/Requirement  | Evidence                             | Done     |
