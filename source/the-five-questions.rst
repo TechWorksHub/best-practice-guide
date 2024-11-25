@@ -8,11 +8,14 @@ The 5 Questions
 Should I use AI/ML?
 -------------------
 
-Developing an AI application can be challenging, particularly in the areas of
-data collection, testing, and validation. As noted earlier, many applications of
-AI have unique requirements that present their own problems. To address this,
-the first step in this guide is to answer the key question: should I use AI to
-solve my problem? We break this problem down into two parts:
+Developing an AI application offers challenges in several areas not present in
+typical software engineering projects, for example the areas of data collection,
+management, testing, and validation. While there are areas in which the
+technology is beneficial it is important to evaluate the repsective costs and
+benefits of AI and Machine Learning for the proposed task. To address this,
+the first step in this guide is to provide a high level feasibility check of the
+key question: should I use AI for my project? We break this question down
+into three tasks:
 
 * What is the engineering case for using AI to solve the problem, over other
   approaches? 
@@ -97,13 +100,11 @@ We set out a number of steps for this section, but our primary challenges are:
 How do I train my AI/ML application?
 ------------------------------------
 
-In the previous step, we collected the data for our AI project. In this step,
-we will make use of it by using it to train an AI algorithm of our choice to
-meet the goals of our project. This is also the step where systematic problems
-from decisions in earlier steps are likely to start manifesting in force. We
-strongly suggest that readers don’t hesitate to revisit earlier decisions at
-this stage if they prove to be unfruitful. Once again, we set out a number of
-steps for this section, but our primary challenges are:
+In the previous step, we collected the data for our AI project. In this step, we
+will use it to train an AI algorithm of our choice to meet the goals of our
+project. This is a critical step at which issues from earlier decisions may
+start to surface, so we recommend reviewing earlier decisions if problems arise.
+This step addresses 3 primary challenges: 
 
 * Deciding which AI approach to use
 * Engineering a pipeline that optimizes the training
@@ -134,7 +135,7 @@ How do I deploy my AI application?
 
 After training our AI application, we can finally deploy it and (hopefully)
 achieve the goals set out in our previous steps. For many professional engineers
-his step will feel familiar , as the process for deploying an AI application is
+his step will feel familiar, as the process for deploying an AI application is
 similar to that of deploying any other software application. Our process has
 three steps: 
 
