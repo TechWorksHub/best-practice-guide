@@ -5,7 +5,7 @@
 
 
 
-.. image:: _static/TechWorks-Logo_Hres.jpg
+.. image:: _static/TechWorks-Logo_Hres.png
 
 
 Welcome to Techworks Best Practices in AI guide hub. This guide is

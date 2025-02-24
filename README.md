@@ -35,4 +35,4 @@ directory of the repository:
 
 To build the guide in pdf format:
 
-    sphinx-build -b html source build
+    sphinx-build -b pdf source build
