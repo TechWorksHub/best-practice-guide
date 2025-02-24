@@ -12,34 +12,68 @@ Should I use AI/ML: Task List
 :ref:`Evaluate Engineering Case<Should I Use AI/ML?>`
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-In this guide, we assume you have a broad end goal in mind to achieve with AI
-and Machine Learning. Through this guide, we will take you through the process
-of converting this broad goal to a concrete plan. 
+As we discussed previously, developing an AI and Machine learning approach to a
+project comes with a range of challenges over and above a typical software
+engineering project. AI and Machine Learning are also not suitable for solving
+some classes of problems compared to other approaches. The goal of this task is
+to provide a first pass at a high level to establish whether or not the AI and
+Machine Learning approach is right for your project. To do this, it will cover
+several key considerations, and guidance on completing a cost-benefit analysis.  
 
-As we discussed previously, while AI is a powerful tool in many applications it
-may not be immediately appropriate for the problem you are trying to solve. This
-step requires you to enumerate and assess what available alternative approaches
-to solving the problem, and how they compare to an AI solution. This isn’t
-intended as a deep dive into the details and risks of your prospective systems,
-but a high level check that this engineering approach is right for you.
+The first key point to enumerate is around data. Despite the
+anthropomorphization that terms like "AI" and "Machine learning" imply, current
+approaches are (fairly simple) algorithms with free parameters that are tuned in
+response to **data** ("learning") to affect their behavior. As an example,
+three key learning paradigms are: 
 
-At this stage, you may not have a complete and full understanding of the scope
-and limitations of an AI and Machine Learning approach. However, the design of
-this guide is such that you should expect to revisit earlier steps (like this
-one) from later steps as your understanding improves. You should therefore fill
-this out to the best of your ability, then return to this later as the project
-and your understanding evolve. 
+* Supervised Learning: The algorithms is tuned from a set of examples to create 
+  a mapping from an input to an output. For example, mapping an image as an
+  input to a label (e.g. "cat" or "dog") as output.
+* Unsupervised Learning: The algorithm is tuned on input data to understand
+  qualities of that data. For example, a clustering algorithm tuned on a set of
+  healthcare data to identify patterns of similar behaviour ("men are more prone
+  to heart disease").  
+* Reinforcement Learning. The algorithm itself selects input/output pairs to
+  learn from, to solve a specific task. For example, an algorithm learning to
+  drive a buggy will itself select which actions (direction, speed) it wishes to
+  learn from to drive without crashing. 
 
-This step is fairly short, and to complete it, you simply need to list the
-viable approaches to solving your problem (including the AI approach), and
-compare them. This should include solutions that might not take a data driven
-approach, as well as data driven approaches that don’t use learning, for
-example, heuristic based approaches. The choice of how to compare these will be
-dictated by your use case, but you’re likely to want to consider the following:
+Across all cases, the unifying factor is the presence of **data** driving
+the solution to the given problem. The data contains the key solution
+to each of the project in question, and the AI and Machine Learning approach
+simply leverages it. *A key criteria* for applying AI and Machine Learning to
+your project is that it can be driven by data in this way.
 
-* What are the financial burdens of each case?
-* What are the engineering burdens of each case?
-* What are the legal burdens?
+The second key point is that even with an abundance of data, alternative
+solutions are often better approaches than AI and Machine Learning ones. The
+collection, maintenence, and usage of data is a significant burden. For some
+types of problems, this burden is a worthwhile cost for the benefits gained. For
+many others it is not. 
+
+AI often struggles to make it's case in problem domains that are already well
+understood, and/or in which standard algorithmic solutions are strong. Problems
+like sorting, for example, are very well understood, and are poor targets for AI
+and Machine Learning. Areas in which AI excels versus standard algorithimic
+solutions are those in which the data (or the relationships between data) being
+dealt with are abstract or difficult for another reason to capture with a
+standard algorithmic approach. For example, explicitly programing an algorithm
+to determine whether a picture contains a cat is difficult, but learning a
+solution from many examples of cats is feasible. Size can be a motivation as
+well.
+
+With these key points in mind, to complete the goal of this first step, and
+determine at a very high level whether AI and Machine Learning are likely to be
+appropriate for your project you should:
+
+Propose answers to each of the following questions:
+
+* What data will drive your project?
+* How it will leveraged by an AI and Machine Learning approach?
+* An enumeration of alternative approaches to the project
+* The expected cost/benefits of the AI and Machine Learning approach versus
+  these alternatives
+
+
 
 Examples
 ###########
