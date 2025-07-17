@@ -18,11 +18,11 @@
 # -- Project information -----------------------------------------------------
 
 project = 'Techworks Best Practices in AI'
-copyright = '2024'
+copyright = '2025'
 author = 'Best Practices Working Group'
 
 # The full version, including alpha/beta/rc tags
-release = 'v0.5.0'
+release = 'v1.0.0'
 
 
 # -- General configuration ---------------------------------------------------
